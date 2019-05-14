@@ -53,8 +53,8 @@ router.get('/verification', function (req, res) {
     returnURL = process.env.BASE_URL + '/' + 'password' + '?accountEmail=' + accountEmail + '&continueURL=' + req.session.continueURL + '&serviceName=' + req.session.serviceName
 
     client.sendEmailWithTemplate({
-      'From': 'owilliams@companieshouse.gov.uk',
-      'To': 'test.user.lfp@gmail.com',
+      'From': process.env.FROM_EMAIL,
+      'To': process.env.TO_EMAIL,
       'TemplateId': process.env.ETID_REGISTER,
       'TemplateModel': {
         'accountEmail': accountEmail,
@@ -98,6 +98,7 @@ router.post('/password', function (req, res) {
   var accountEmail = req.body.accountEmail
   req.session.accountEmail = accountEmail
   req.session.serviceName = req.body.serviceName
+  req.session.serviceURL = req.body.serviceURL
   req.session.continueURL = req.body.continueURL
 
   var redirectURL = req.session.continueURL + '?accountEmail=' + accountEmail
@@ -132,8 +133,8 @@ router.get('/reset-email-sent', function (req, res) {
     returnURL = process.env.BASE_URL + '/' + 'password' + '?accountEmail=' + accountEmail + '&continueURL=' + req.session.continueURL + '&serviceName=' + req.session.serviceName
 
     client.sendEmailWithTemplate({
-      'From': 'owilliams@companieshouse.gov.uk',
-      'To': 'test.user.lfp@gmail.com',
+      'From': process.env.FROM_EMAIL,
+      'To': process.env.TO_EMAIL,
       'TemplateId': process.env.ETID_RESET_PASSWORD,
       'TemplateModel': {
         'accountEmail': accountEmail,
