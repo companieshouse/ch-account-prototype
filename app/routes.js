@@ -53,8 +53,8 @@ router.get('/verification', function (req, res) {
     returnURL = process.env.BASE_URL + '/' + 'password' + '?accountEmail=' + accountEmail + '&continueURL=' + req.session.continueURL + '&serviceName=' + req.session.serviceName
 
     client.sendEmailWithTemplate({
-      'From': 'owilliams@companieshouse.gov.uk',
-      'To': 'test.user.lfp@gmail.com',
+      'From': process.env.FROM_EMAIL,
+      'To': process.env.TO_EMAIL,
       'TemplateId': process.env.ETID_REGISTER,
       'TemplateModel': {
         'accountEmail': accountEmail,
@@ -98,6 +98,7 @@ router.post('/password', function (req, res) {
   var accountEmail = req.body.accountEmail
   req.session.accountEmail = accountEmail
   req.session.serviceName = req.body.serviceName
+  req.session.serviceURL = req.body.serviceURL
   req.session.continueURL = req.body.continueURL
 
   var redirectURL = req.session.continueURL + '?accountEmail=' + accountEmail
@@ -117,6 +118,45 @@ router.get('/reset-password', function (req, res) {
 router.post('/reset-password', function (req, res) {
   req.session.accountEmail = req.body.emailAddress
   res.redirect('/reset-email-sent')
+})
+
+// Reset password email
+router.get('/reset-email-sent', function (req, res) {
+  var accountEmail = req.session.accountEmail
+
+  // Send confirmation email
+  if (process.env.POSTMARK_API_KEY) {
+    var postmark = require('postmark')
+    var client = new postmark.Client(process.env.POSTMARK_API_KEY)
+    var returnURL = ''
+
+    returnURL = process.env.BASE_URL + '/' + 'password' + '?accountEmail=' + accountEmail + '&continueURL=' + req.session.continueURL + '&serviceName=' + req.session.serviceName
+
+    client.sendEmailWithTemplate({
+      'From': process.env.FROM_EMAIL,
+      'To': process.env.TO_EMAIL,
+      'TemplateId': process.env.ETID_RESET_PASSWORD,
+      'TemplateModel': {
+        'accountEmail': accountEmail,
+        'returnURL': returnURL,
+        'continueURL': req.session.continueURL,
+        'serviceName': req.session.serviceName
+      }
+    }, function (error, success) {
+      if (error) {
+        console.error('Unable to send via postmark: ' + error.message)
+      }
+    })
+  } else {
+    console.log('No Postmark API key detected. To test emails run app locally with `heroku local web`')
+  }
+
+  res.render('verification', {
+    backLink: '/register',
+    serviceName: req.session.serviceName,
+    accountEmail: accountEmail,
+    serviceURL: req.session.serviceURL
+  })
 })
 
 module.exports = router
