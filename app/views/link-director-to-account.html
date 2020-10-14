@@ -16,6 +16,10 @@
       <span class="govuk-caption-xl">Confirm your details</span>
       <h1 class="govuk-heading-xl">Are you Hannah Salt?</h1>
 
+      {{ govukInsetText({
+        text: "The name on your account matches the following company director on the Companies House register."
+      }) }}
+
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
@@ -88,9 +92,35 @@
         ]
       }) }}
 
+      {{ govukRadios({
+        idPrefix: "confirm-personal-details",
+        name: "confirm-personal-details",
+        fieldset: {
+          legend: {
+            text: "Are you the director listed above?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "yes",
+            text: "Yes, but some of my details are incorrect"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"company-profile/company-added"
         }) }}
 
 
