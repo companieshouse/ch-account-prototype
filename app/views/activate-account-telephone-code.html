@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Activate your Companies House account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Activate your account</span>
+        <h1 class="govuk-heading-xl">Enter the code sent to 07849 588 662</h1>
+        <p class="govuk-body">To activate your account, you'll need to enter the 6-digit code sent to 07849 588 662.</p>
+
+        {{ govukInput({
+          label: {
+            text: "6-digit code"
+          },
+          classes: "govuk-input--width-10",
+          id: "width-10",
+          name: "width-10"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="#">Resend code</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">Code entered not working</a>
+          </li>
+        </ul>
+
+
+  </div>
+  </div>
+{% endblock %}

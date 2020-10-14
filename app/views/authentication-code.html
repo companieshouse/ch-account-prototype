@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Understanding your role within a company
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Add company</span>
+        <h1 class="govuk-heading-xl">Enter Company test example authentication code</h1>
+
+        {{ govukInput({
+          label: {
+            text: ""
+          },
+          hint: {
+                text: "Enter the 6 digit authentication code"
+          },
+          classes: "govuk-input--width-10",
+          id: "authentication-code",
+          name: "authentication-code"
+        }) }}
+
+        {{ govukDetails({
+          summaryText: "Help with authentication code",
+          text: "Details of what an authentication code does, where it is usually sent to and how to request a authentication code."
+        }) }}
+
+        {{ govukButton({
+          text: "Continue",
+          href:"company-role"
+        }) }}
+
+
+
+
+
+
+
+  </div>
+  </div>
+{% endblock %}

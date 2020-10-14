@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Activate your Companies House account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Activate your account</span>
+        <h1 class="govuk-heading-xl">Select the link in the email</h1>
+
+
+        <p class="govuk-body">An activation email has been sent to ejames@companieshouse.gov.uk.</p>
+
+        <p class="govuk-body">Select the link in the email to verify the email address and activate your account.</p>
+
+        <p class="govuk-body">The link must be used within 24 hours or it will expire and you will need to start again.</p>
+
+
+        <p class="govuk-body govuk-!-font-weight-bold"> This page will automatically update once you have selected the link in the email. </p>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="#">Email  not received</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="activate-account-telephone-code">Page is not updating</a>
+          </li>
+        </ul>
+
+
+  </div>
+  </div>
+{% endblock %}
