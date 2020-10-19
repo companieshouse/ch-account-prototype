@@ -14,15 +14,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Create your account</span>
-        <h1 class="govuk-heading-xl">Enter your name and email address</h1>
+        <h1 class="govuk-heading-xl">Enter your details</h1>
 
-        <p class="govuk-body-l">Your email address will be used for two-factor authentication during login. </p>
 
-        <p class="govuk-body-l">When you log in, occasionally we will need you to confirm you are the correct person loggin in. You will need to  select a verification link sent to your email address. </p>
+        {{ govukInsetText({
+          text: "To confirm you are the correct person loging into your account, in addition to username and password, you'll be asked to enter a verification code sent by text message or select an email verification link."
+        }) }}
 
-        <p class="govuk-body-l">To confirm this is your email address we will send you a email with a link to verify your email address. </p>
-
-      
         {{ govukInput({
           label: {
             text: "Full name"
@@ -38,11 +36,33 @@
           label: {
             text: "Email address"
           },
+          hint:{
+
+            text:"We'll send you a verification link by email"
+
+          },
           id: "email",
           name: "email",
           type: "email",
           autocomplete: "email",
           spellcheck: false
+        }) }}
+
+
+        {{ govukInput({
+          label: {
+            text: "Mobile number"
+          },
+          hint:{
+
+            text:"We'll send you a verification code by text message"
+
+          },
+          id: "telephone-number",
+          name: "telephone-number",
+          type: "tel",
+          autocomplete: "tel",
+          classes: "govuk-input--width-20"
         }) }}
 
 

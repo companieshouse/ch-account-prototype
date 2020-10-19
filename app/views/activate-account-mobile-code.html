@@ -14,12 +14,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Activate your account</span>
-        <h1 class="govuk-heading-xl">Enter the code sent to 07849 588 662</h1>
-        <p class="govuk-body">To activate your account, you'll need to enter the 6-digit code sent to 07849 588 662.</p>
+        <h1 class="govuk-heading-xl">Check your phone</h1>
+        <p class="govuk-body">We have sent you a text message with a 6-digit code verification code.</p>
 
         {{ govukInput({
           label: {
-            text: "6-digit code"
+            text: "Enter the 6-digit code"
           },
           classes: "govuk-input--width-10",
           id: "width-10",
@@ -32,8 +32,8 @@
         }) }}
 
         {{ govukDetails({
-          summaryText: "I have not receieved the code.",
-          html: "The code may take a few minutes to arrive. Its subject line is: 'XXXXX code'. </br> </br> If it still has not arrived, you can <a href='' class='govuk-link'>Request a new code</a></a>. </br></br> If you have provided the wrong mobile number <a href='#' class='govuk-link'>you can provide another mobile number</a>."
+          summaryText: "Not recieved a text message?",
+          html: "Text messages sometimes take a few minutes to arrive. </br> </br> If you did not recieve the text, <a href='' class='govuk-link'>you can resend it</a>. </br></br> If you have provided the wrong mobile number <a href='#' class='govuk-link'>you can provide another mobile number</a>."
         }) }}
 
 

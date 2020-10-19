@@ -14,13 +14,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Activate your account</span>
-        <h1 class="govuk-heading-xl">Select the link in your email</h1>
+        <h1 class="govuk-heading-xl">Open your email</h1>
 
 
         <p class="govuk-body">We have sent an email to ejames@companieshouse.gov.uk.</p>
 
 
-        <p class="govuk-body">Select the link in the email to verify the email address and activate your account.</p>
+        <p class="govuk-body">Select the link in the email to verify your email address.</p>
 
         {{ govukInsetText({
           html: "If you use a browser to view access your email you may need to open a new window or tab to access your email. </br></br> The link must be used within 24 hours or it will expire and you will need to start again."
@@ -30,14 +30,14 @@
         <p class="govuk-body govuk-!-font-weight-bold"> This page will automatically update once you have selected the link in the email. </p>
 
         {{ govukDetails({
-          summaryText: "I have not receieved the email.",
-          html: "The email may take a few minutes to arrive. Its subject line is: 'Confirm your email address - Companies House'. </br> </br> Check your junk folder - if it still has not arrived, you can <a href='' class='govuk-link'>Request a new email</a></a>. </br></br> If you have provided the wrong email address <a href='#' class='govuk-link'>you can provide another email address</a>."
+          summaryText: "I have not receieved the email",
+          html: "The email may take a few minutes to arrive. Its subject line is: 'Confirm your email address - Companies House'. </br> </br> Check your junk folder - if it still has not arrived, you can <a href='' class='govuk-link'>request a new email</a></a>. </br></br> If you have provided the wrong email address <a href='#' class='govuk-link'>you can provide another email address</a>."
         }) }}
 
         {{ govukButton({
-          text: "Selected email link",
+          text: "Email link has been selected",
           classes: "govuk-button--secondary",
-          href:"telephone-for-authentication"
+          href:"activate-account-mobile-code"
         }) }}
 
 
