@@ -31,7 +31,13 @@
 
         {{ govukDetails({
           summaryText: "I have not receieved the email.",
-          html: "The email may take a few minutes to arrive. Its subject line is: 'Confirm your email address - Companies House'. </br> </br> Check your junk folder - if it still has not arrived, you can <a href='telephone-for-authentication' class='govuk-link'>Request a new email</a></a>. </br></br> If you have provided the wrong email address <a href='#' class='govuk-link'>you can provide another email address</a>."
+          html: "The email may take a few minutes to arrive. Its subject line is: 'Confirm your email address - Companies House'. </br> </br> Check your junk folder - if it still has not arrived, you can <a href='' class='govuk-link'>Request a new email</a></a>. </br></br> If you have provided the wrong email address <a href='#' class='govuk-link'>you can provide another email address</a>."
+        }) }}
+
+        {{ govukButton({
+          text: "Selected email link",
+          classes: "govuk-button--secondary",
+          href:"telephone-for-authentication"
         }) }}
 
 
