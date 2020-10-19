@@ -27,17 +27,14 @@
         }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"account-created"
         }) }}
 
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" href="#">Resend text message and the code</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="account-created">Incorrect mobile number</a>
-          </li>
-        </ul>
+        {{ govukDetails({
+          summaryText: "I have not receieved the code.",
+          html: "The code may take a few minutes to arrive. Its subject line is: 'XXXXX code'. </br> </br> If it still has not arrived, you can <a href='' class='govuk-link'>Request a new code</a></a>. </br></br> If you have provided the wrong mobile number <a href='#' class='govuk-link'>you can provide another mobile number</a>."
+        }) }}
 
 
 
