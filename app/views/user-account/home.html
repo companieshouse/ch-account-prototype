@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-account-options.html" %}
 
 {% block pageTitle %}
   Companies House account
@@ -6,63 +6,31 @@
 
 
 {% block content %}
-<div class="govuk-width-container">
-
-<main class="govuk-main-wrapper">
-
-
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-quarter">
-            <a href="./home" class="govuk-link">Home</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="./your-details" class="govuk-link">Your details</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="./messages" class="govuk-link">Messages (1)</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="./account-settings" class="govuk-link">Account settings</a>
-          </div>
-        </div>
-
-        
-
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-        <h1 class="govuk-heading-l">
-          <span class="govuk-caption-l">Home</span>
-          Hannah Salt
-        </h1>
-
-            <div class="govuk-grid-row">
-
-              <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l">Your companies</h2>
-              </div>
-              <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-m"><a href="#" class="govuk-link">Flowers LTD</a></h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Home</span>
+        Hannah Salt
+    </h1>
+    <h2 class="govuk-heading-l">Your companies</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-m"><a href="#" class="govuk-link">Flowers LTD</a></h1>
                 <p class="govuk-body govuk-!-font-weight-bold">18882777 - Incorporated on 11 December 2006</p>
                 <p class="govuk-body">2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
-              </div>
 
-              <div class="govuk-grid-column-one-third">
-                <p class="govuk-body"><a href="#" class="govuk-link">Manage presenters</a></p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <p class="govuk-body"><a href="#" class="govuk-link">Manage presenters</a></p>
                 <p class="govuk-body"><a href="#" class="govuk-link">Message settings</a></p>
                 <p class="govuk-body"><a href="#" class="govuk-link">More</a></p>
 
-              </div>
-            </div>
-
-          </main>
-          {{ govukButton({
-              text: "Add another company"
-            }) }}
-        </div>
+      </div>
+    </div>
+    {{ govukButton({
+      text: "Add another company"
+    }) }}
   </div>
 </div>
+
 {% endblock %}

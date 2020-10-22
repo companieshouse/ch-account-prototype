@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-account-options.html" %}
 
 {% block pageTitle %}
   Companies House account
@@ -7,38 +7,11 @@
 
 {% block content %}
 <div class="govuk-width-container">
-
 <main class="govuk-main-wrapper">
-
-
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Home</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Your details</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Messages</a>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Sign out</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-
         <h1 class="govuk-heading-l">Messages (1 unread)</h1>
-
 
         {{ govukTable({
           caption: "",
@@ -69,7 +42,7 @@
       </div>
     </div>
         
-    </main>
+</main>
 </div>
     
 {% endblock %}

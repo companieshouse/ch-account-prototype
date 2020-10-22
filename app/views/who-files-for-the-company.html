@@ -13,47 +13,38 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-      {{ govukCheckboxes({
-        idPrefix: "confirm-presenter-or-diy-filer",
-        name: "confirm-presenter-or-diy-filer",
+      <form action="" method="post">
+      
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "who-files",
+        name: "who-files",
         fieldset: {
           legend: {
-            text: "Who maintains your company information with Companies House?",
+            text: "Do you have an agent that updates your companies information with Companies House?",
             isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
+            classes: "govuk-fieldset__legend--l"
           }
         },
         hint: {
-          text: "Select all that apply."
+          text: "This includes accountant, third-party software company,..."
         },
         items: [
           {
-            value: "diy-filer",
-            text: "I do"
+            value: "yes",
+            text: "Yes"
           },
           {
-            value: "a-director",
-            text: "Another director in the company"
-          },
-          {
-            value: "presenter",
-            text: "An accountant or agent"
-          },
-          {
-            value: "friend",
-            text: "A friend"
+            value: "no",
+            text: "No"
           }
         ]
       }) }}
 
-        {{ govukButton({
-          text: "Continue",
-          href:"interruption-card-before-account"
-        }) }}
-
-
-  </div>
+      {{ govukButton({
+          text: "Continue"
+      }) }}
+      </form>
+    </div>
   </div>
 {% endblock %}
