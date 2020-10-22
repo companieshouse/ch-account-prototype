@@ -13,13 +13,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Activate your account</span>
+
         <h1 class="govuk-heading-xl">Check your phone</h1>
-        <p class="govuk-body">We have sent you a text message with a 6-digit code verification code.</p>
+        <p class="govuk-body">We've sent you a text message with a security code.</p>
 
         {{ govukInput({
           label: {
-            text: "Enter the 6-digit code"
+            text: "Text message code"
           },
           classes: "govuk-input--width-10",
           id: "width-10",
@@ -28,7 +28,7 @@
 
         {{ govukButton({
           text: "Continue",
-          href:"account-created"
+          href:"add-a-company"
         }) }}
 
         {{ govukDetails({

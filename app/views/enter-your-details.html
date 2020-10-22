@@ -18,7 +18,7 @@
 
 
         {{ govukInsetText({
-          text: "To confirm you are the correct person loging into your account, sometimes, in addition to your username and password, you'll be asked to enter a verification code sent by text message or select an email verification link."
+          text: "Sometimes, when you login, you'll be asked to enter a verification code sent by text message or select an email verification link."
         }) }}
 
         {{ govukInput({
@@ -61,14 +61,27 @@
           id: "telephone-number",
           name: "telephone-number",
           type: "tel",
-          autocomplete: "tel",
-          classes: "govuk-input--width-20"
+          autocomplete: "tel"
+        }) }}
+
+        {{ govukInput({
+          label: {
+          text: "Password"
+        },
+        hint:{
+
+            text:"At least 8 characters"
+
+          },
+        id: "password",
+        name: "password",
+        type: "password"
         }) }}
 
 
         {{ govukButton({
                   text: "Continue",
-                  href:"activate-account-email"
+                  href:"check-your-email"
         }) }}
   </div>
   </div>
