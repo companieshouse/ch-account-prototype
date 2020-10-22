@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+
+<main class="govuk-main-wrapper">
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <a href="#" class="govuk-link">Home</a>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <a href="#" class="govuk-link">Your details</a>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <a href="#" class="govuk-link">Messages</a>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <a href="#" class="govuk-link">Sign out</a>
+          </div>
+        </div>
+     
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">Your details</span>
+          Hannah Salt
+        </h1>
+         </div>
+    </div>
+
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Name"
+              },
+              value: {
+                text: "Hannah Salt"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Correspondance address"
+              },
+              value: {
+                html: "2nd Floor Red House</br>17 London Road</br> London</br>SA73 8PH"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "correspondance address"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Role"
+              },
+              value: {
+                html: "Director - Active"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "Role"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Date of birth"
+              },
+              value: {
+                text: "12 September 1978"
+              }
+          
+            }
+          ]
+        }) }}
+
+        </div>
+      </div>
+        
+    </main>
+  </div>
+    
+  </div>
+</div>
+{% endblock %}

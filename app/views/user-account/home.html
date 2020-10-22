@@ -14,30 +14,30 @@
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
+
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Home</a>
+            <a href="./home" class="govuk-link">Home</a>
           </div>
           <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Your details</a>
+            <a href="./your-details" class="govuk-link">Your details</a>
           </div>
           <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Messages</a>
+            <a href="./messages" class="govuk-link">Messages (1)</a>
           </div>
           <div class="govuk-grid-column-one-quarter">
-            <a href="#" class="govuk-link">Sign out</a>
+            <a href="./account-settings" class="govuk-link">Account settings</a>
           </div>
         </div>
+
+        
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
         <h1 class="govuk-heading-l">
-          <span class="govuk-caption-l">Account home</span>
+          <span class="govuk-caption-l">Home</span>
           Hannah Salt
         </h1>
-
-
-
 
             <div class="govuk-grid-row">
 
@@ -57,15 +57,12 @@
 
               </div>
             </div>
+
           </main>
+          {{ govukButton({
+              text: "Add another company"
+            }) }}
         </div>
-
-        {{ govukButton({
-          text: "Add another company"
-        }) }}
-
-
-    
-    </div>
   </div>
+</div>
 {% endblock %}
