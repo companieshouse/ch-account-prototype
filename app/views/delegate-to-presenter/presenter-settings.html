@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contact details for account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukCheckboxes({
+          idPrefix: "presenter-options",
+          name: "presenter-options",
+          fieldset: {
+            legend: {
+              text: "Select which documents you want your agent to file on behalf of your company",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "confirmation-statement",
+              text: "Confirmation statement (annual return)"
+            },
+            {
+              value: "company-accounts",
+              text: "Company accounts"
+            },
+            {
+              value: "changes-to-company-details",
+              text: "Change to company details"
+            },
+            {
+              value: "close-a-company",
+              text: "Close company"
+            }
+          ]
+        }) }}
+
+
+        {{ govukButton({
+                  text: "Continue",
+                  href:"/./interruption-card-before-account"
+        }) }}
+  </div>
+  </div>
+{% endblock %}
