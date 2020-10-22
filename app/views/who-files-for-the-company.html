@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add a company to your Companies House account
+  Confirming directors information
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,42 +14,45 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {{ govukRadios({
-        idPrefix: "what-is-your-role",
-        name: "what-is-your-role",
+   
+
+      {{ govukCheckboxes({
+        idPrefix: "confirm-presenter-or-diy-filer",
+        name: "confirm-presenter-or-diy-filer",
         fieldset: {
           legend: {
-            text: "What is your connection to Company XXX?",
+            text: "Who maintains your company information with Companies House?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
+        hint: {
+          text: "Select all that apply."
+        },
         items: [
           {
-            value: "director",
-            text: "Director"
+            value: "diy-filer",
+            text: "I do"
           },
           {
-            value: "psc",
-            text: "Person of significant control (PSC)"
+            value: "a-director",
+            text: "Another director in the company"
           },
           {
             value: "presenter",
-            text: "Presenter"
+            text: "An accountant or agent"
+          },
+          {
+            value: "friend",
+            text: "A friend"
           }
         ]
       }) }}
 
-
         {{ govukButton({
           text: "Continue",
-          href:"link-director-to-account"
+          href:"company-profile/company-added"
         }) }}
-
-
-
-
-
 
 
   </div>
