@@ -37,7 +37,7 @@
           },
           hint:{
 
-            text:"We'll send an email to your presenter and they will need to confirm..."
+            text:"We'll send an email to your presenter which they will need to confirm"
 
           },
           id: "email",
@@ -45,6 +45,21 @@
           type: "email",
           autocomplete: "email",
           spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Presenters mobile number"
+          },
+          hint:{
+
+            text:"We'll send an email to your presenter which they will need to confirm"
+
+          },
+          id: "presenters-telephone-number",
+          name: "telephone-number",
+          type: "tel",
+          autocomplete: "tel"
         }) }}
 
 
