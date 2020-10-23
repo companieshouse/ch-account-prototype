@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Sign in to Companies House
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+      <h1 class="govuk-heading-l">Companies House account</h1>
+
+      <h2 class="govuk-heading-m">Two factor authentication</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/start-page" class="govuk-link">Start page</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/enter-your-details" class="govuk-link">Enter your details</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/check-your-email" class="govuk-link">Check your email</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/check-your-phone" class="govuk-link">Check your phone</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Add a company to your account</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/account-created-interruption-page" class="govuk-link">Account created, add a company to your account</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/add-a-company" class="govuk-link">Add a company to your account</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/check-company-details" class="govuk-link">Check company details</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/authentication-code" class="govuk-link">Enter authentication code</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Identifying and matching the user</h2>
+
+      <h3 class="govuk-heading-s">Director</h3>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/link-director-to-a-company" class="govuk-link">One director name matches - Are you Hannah Salt?</a></li>
+        <li><a href="" class="govuk-link">More than one director name matches - Which director are you? </a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/who-files-for-the-company" class="govuk-link">Do you have an accountant (agent)?</a></li>
+      </ul>
+
+       <p> User taken to 'Director adding presenter details'.</p>
+
+      <h3 class="govuk-heading-s">Presenter (In progress)</h3>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="" class="govuk-link">What is your connection to the company?</a></li>
+        <li><a href="" class="govuk-link"> Enter full name, Company Number and email address a director.</a></li>
+        <li><a href="" class="govuk-link"> Request sent to director, they need to confirm before you can file for this company.</a></li>
+      </ul>
+
+      <p> User taken to 'Information page'.</p>
+
+
+      <h3 class="govuk-heading-s">Director adding presenter details </h3>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/enter-presenter-details" class="govuk-link">Enter your presenter details</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/presenter-settings" class="govuk-link">Which documents can the presenter file?</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/presenter-request-sent" class="govuk-link">Check presenter details</a></li>
+      </ul>
+
+       <h3 class="govuk-heading-s">Information page</h3>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Summary page of the new process and the features of the account.  </a></li>
+      </ul>
+
+
+       <h3 class="govuk-heading-s">User account</h3>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Home</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Your details</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Messages</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Account settings</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Manage presenters</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/interruption-card-before-account" class="govuk-link">Add another company</a></li>
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    </div>
+  </div>
+{% endblock %}
