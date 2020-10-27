@@ -13,26 +13,26 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Account created</h1>
+        <h1 class="govuk-heading-xl">You have created a Companies House account</h1>
 
       {{ govukInsetText({
-        text: "Your email address and mobile number have been verified. A confirmation email has been sent to you."
+        text: "Your email address and mobile number have been verified. We've sent you a confirmation email."
       }) }}
 
 
-      <h2 class="govuk-heading-m">Next steps</h2>
+      <h2 class="govuk-heading-m">What happens next</h2>
 
-      <p> We need to link your account to a company (or companies) and verify your identify. </p> 
+      <p>You should link your account to a company (or companies) that you are connected to. You will also need to verify your identity. </p>
 
-      <p class="govuk-body">You'll need your:</p>
+      <p class="govuk-body">You'll need:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>company number</li>
-        <li>Companies House authentication code</li>
-        <li> If you are a director or Person of Significant control, you will need to prove your identity</li>
+        <li>the company number (or numbers) that you want to link your account to</li>
+        <li>your Companies House authentication code</li>
+        <li>to verify your identity if you are a director or person of Significant control (PSC)</li>
       </ul>
 
       {{ govukButton({
-        text: "Add a company",
+        text: "Link a company",
         href:"add-a-company"
       }) }}
 

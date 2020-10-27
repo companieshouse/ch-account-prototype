@@ -14,20 +14,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="" method="post">
-      
+
       {{ govukRadios({
         classes: "govuk-radios--inline",
         idPrefix: "who-files",
         name: "who-files",
         fieldset: {
           legend: {
-            text: "Will another person be updating  your companies information with Companies House?",
+            text: "Do you want to add a presenter to your Companies House account?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
+
+
+
         hint: {
-          text: "This includes another director, accountant, third-party software company, ..."
+          text: "A presenter is a person who submits documents to Companies House on behalf of the company, such as another director, an accountant or a third party software company."
         },
         items: [
           {

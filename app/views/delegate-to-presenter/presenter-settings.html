@@ -19,19 +19,22 @@
           name: "presenter-options",
           fieldset: {
             legend: {
-              text: "Select the documents you want your presenter to file for your company",
+              text: "Select the documents you want the presenter to be able to file for your company",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
           },
+          hint: {
+   text: "Select all that apply"
+ },
           items: [
             {
               value: "confirmation-statement",
-              text: "Confirmation statement (annual return)"
+              text: "Confirmation statement"
             },
             {
               value: "company-accounts",
-              text: "Company accounts"
+              text: "Accounts"
             },
             {
               value: "changes-to-company-details",
@@ -39,7 +42,7 @@
             },
             {
               value: "close-a-company",
-              text: "Close company"
+              text: "Close the company"
             }
           ]
         }) }}

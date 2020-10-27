@@ -13,7 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">Check company details</h1>
+      <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
@@ -24,7 +24,7 @@
               classes: 'govuk-!-width-one-half'
             },
             value: {
-              text: "Company XXX",
+              text: "FLOWERS LIMITED",
               classes: 'govuk-!-width-one-half'
             }
           },
@@ -33,7 +33,7 @@
               text: "Company number"
             },
             value: {
-              text: "12345678"
+              text: "18882777"
             }
           },
           {
@@ -49,7 +49,7 @@
               text: "Incorporation date"
             },
             value: {
-              text: "31 December 1987"
+              text: "11 December 2006"
             }
           },
           {
@@ -57,7 +57,7 @@
               text: "Company type"
             },
             value: {
-              text: "Private limited Company"
+              text: "Private Limited Company"
             }
           },
           {
@@ -65,7 +65,7 @@
               text: "Registered office address"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE73 9FH"
+              html: "2nd Floor Red House<br>17 London Road<br>London<br>SA73 8PH"
             }
           }
         ]
@@ -74,7 +74,7 @@
       <p class="govuk-body"> <a href="#" class="govuk-link">Change company</a></p>
 
       {{ govukButton({
-          text: "Continue",
+          text: "Confirm and continue",
           href: "authentication-code"
       }) }}
 

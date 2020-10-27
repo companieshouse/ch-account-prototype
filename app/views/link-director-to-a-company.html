@@ -14,10 +14,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Are you Hannah Salt?</h1>
+      <h1 class="govuk-heading-xl">Check director details</h1>
 
       {{ govukInsetText({
-        text: "The name on your account matches the following company director on the Companies House register."
+        text: "The name on your account matches this director on the Companies House register."
       }) }}
 
       {{ govukSummaryList({
@@ -35,10 +35,10 @@
           },
           {
             key: {
-              text: "Correspondance address"
+              text: "Correspondence address"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE73 9FH"
+              html: "2nd Floor Red House<br>17 London Road<br>London<br>SA73 8PH"
             }
           },
           {
@@ -46,7 +46,7 @@
               text: "Role"
             },
             value: {
-              text: "Active - Director"
+              text: "Director (active)"
             }
           },
           {
@@ -54,7 +54,7 @@
               text: "Date of birth"
             },
             value: {
-              text: "12 September 1978"
+              text: "September 1978"
             }
           },
           {
@@ -62,7 +62,7 @@
               text: "Appointed on"
             },
             value: {
-              text: "16 March 2001"
+              text: "16 March 2007"
             }
           },
           {
@@ -97,7 +97,7 @@
         name: "confirm-personal-details",
         fieldset: {
           legend: {
-            text: "Are you the director listed above?",
+            text: "Are you Hannah Salt?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -109,7 +109,7 @@
           },
           {
             value: "yes",
-            text: "Yes, but some of my details are incorrect"
+            text: "Yes, but some of these details are incorrect"
           },
           {
             value: "no",
