@@ -8,14 +8,68 @@
 {% block content %}
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper">
+  <h1 class="govuk-heading-l">Manage account</h1>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Account settings</h1>
+        
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Email"
+              },
+              value: {
+                text: "hannah.salt@example.com"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Mobile number"
+              },
+              value: {
+                text: "+447865844995"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "date of birth"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Password"
+              },
+              value: {
+                html: "******************"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "contact information"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
 
-        <p class="govuk-body">A user can change their email, password, mobile number. </p>
 
-        <p class="govuk-body">A user may need to 2FA before details are changed. </p>
 
         </div>
       </div>
