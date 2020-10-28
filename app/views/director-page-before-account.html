@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your Companies House account has been updated</h1>
+
+
+      {{ govukInsetText({
+        text: "TEST LIMITED has been linked to your account."
+      }) }}
+
+
+      <p class="govuk-body"></p>
+
+      <h2 class="govuk-heading-m">Next steps</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>An email has been sent to 'PRESENTERS NAME'.</li>
+        <li>They need to click the link in the email to confirm they are your presenter.</li>
+        <li>Once this has been confirmed, they can file on behalf of your company.</li>
+        <li>Presenter information can be changed in your account.</li>
+      </ul>
+
+
+      {{ govukButton({
+        text: "View my account",
+        href:"user-account/home"
+      }) }}
+
+
+    </div>
+  </div>
+{% endblock %}
