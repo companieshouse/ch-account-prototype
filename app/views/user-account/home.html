@@ -6,35 +6,42 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full-width">
-    <h1 class="govuk-heading-l">
-        <span class="govuk-caption-l">Home</span>
-        Hannah Salt
-    </h1>
-    <h2 class="govuk-heading-l">Your companies</h2>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-m"><a href="#" class="govuk-link">FLOWERS LIMITED</a></h1>
-                <p class="govuk-body govuk-!-font-weight-bold">18882777 - Incorporated on 11 December 2006</p>
-                <p class="govuk-body">2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
-        <h2 class="govuk-heading-s">Presenters</h2>
-        <p class="govuk-body">Jill Edwards from TEST LIMITED (waiting confirmation)</p>
 
-      </div>
-      <div class="govuk-grid-column-one-third">
-        <p class="govuk-body"><a href="#" class="govuk-link">Manage presenters</a></p>
-                <p class="govuk-body"><a href="#" class="govuk-link">Message settings</a></p>
-                <p class="govuk-body"><a href="#" class="govuk-link">More</a></p>
+<span class="govuk-caption-xl" >Home</span>
+<h1 class="govuk-heading-l">Your companies</h1>
 
-      </div>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <div class="govuk-grid-row" style="margin-left: 2ex">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-m">FLOWERS LIMITED</h1>
     </div>
+  </div>
+  <div class="govuk-grid-row" style="margin-left: 2ex">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-body govuk-!-font-weight-bold">18882777 - Incorporated on 11 December 2006</span></br>
+        <p class="govuk-body">2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
+        <span class="govuk-body">Presenters</span></br>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Jill Edwards from TEST LIMITED (waiting for confirmation)</li>
+        </ul>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"> Manage presenters</button>
+       
+    </div>
+     
+  </div>
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
 
 
     {{ govukButton({
       text: "Link another company"
     }) }}
-  </div>
 </div>
 
 {% endblock %}
