@@ -5,7 +5,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-half">
-      <h1 class="govuk-heading-xl">Sign in to Companies House</h1>
+      <h1 class="govuk-heading-xl">Sign in to your Companies House account</h1>
       <form action="/sign-in" method="post">
         {% if errorEmail == true or errorPassword == true %}
           {{ govukErrorSummary({

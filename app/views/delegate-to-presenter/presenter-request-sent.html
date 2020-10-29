@@ -13,11 +13,11 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-xl">Check presenter details</h1>
+        <h1 class="govuk-heading-xl">Check the presenter's details</h1>
 
 
         {{ govukInsetText({
-          text: "You can change your agent's access permissions to file for your company in your account. "
+          text: "You can change what you allow the presenter to file for your company in the future."
         }) }}
 
 
@@ -28,7 +28,7 @@
                 text: "Name"
               },
               value: {
-                text: "Sarah Philips"
+                text: "Jill Edwards"
               },
               actions: {
                 items: [
@@ -45,7 +45,7 @@
                 text: "Email address"
               },
               value: {
-                text: "sarah.philips@example.com"
+                text: "jill.edwards@example.com"
               },
               actions: {
                 items: [
@@ -59,10 +59,10 @@
             },
             {
               key: {
-                text: "Presenter can file"
+                text: "What can the presenter do for the company?"
               },
               value: {
-                html: "Confirmation statement<br>Changes to company details<br>Close a company"
+                html: "File company accounts<br>File confirmation statements<br>Make changes to the company"
               },
               actions: {
                 items: [
