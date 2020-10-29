@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Confirming directors information
+  Add a presenter to your account
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,34 +15,37 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="" method="post">
 
-      {{ govukRadios({
-        classes: "govuk-radios--inline",
-        idPrefix: "who-files",
-        name: "who-files",
-        fieldset: {
-          legend: {
-            text: "Do you want to add a presenter to your Companies House account?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-
+        <h1 class="govuk-heading-xl" >Do you want to add a presenter to your Companies House account?</h1>
 
         {{ govukInsetText({
-        hint: {
-          text: "A presenter is a person who submits documents to Companies House on behalf of the company, such as another director, an accountant or a third party software company."
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes"
+        text: "A presenter is a person who submits documents to Companies House on behalf of the company, such as another director, an accountant or a third party software company."
+        }) }}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "who-files",
+          name: "who-files",
+          fieldset: {
+            legend: {
+              text: ""
+            }
           },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+      
+
+
+
 
       {{ govukButton({
           text: "Continue"
