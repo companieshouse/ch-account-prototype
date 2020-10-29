@@ -1,0 +1,62 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    href: "#",
+    text: "Back to Manage presenters"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukCheckboxes({
+          idPrefix: "presenter-options",
+          name: "presenter-options",
+          fieldset: {
+            legend: {
+              text: "What do you want the presenter to do for your company?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+           text: "Select all that apply"
+         },
+          items: [
+            {
+              value: "confirmation-statement",
+              text: "File company accounts"
+            },
+            {
+              value: "company-accounts",
+              text: "File confirmation statements"
+            },
+            {
+              value: "changes-to-company-details",
+              text: "Make changes to the company"
+            },
+            {
+              value: "close-a-company",
+              text: "Close the company"
+            }
+          ]
+        }) }}
+
+
+        {{ govukButton({
+                  text: "Continue",
+                  href:"manage-presenters-notification"
+        }) }}
+  </div>
+</div>
+
+{% endblock %}
