@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your Companies House account has been updated</h1>
+
+
+      {{ govukInsetText({
+        text: "FLOWERS LIMITED has been linked to your account."
+      }) }}
+
+
+     
+
+      {{ govukButton({
+        text: "View my account",
+        href:"user-account/home"
+      }) }}
+
+
+    </div>
+  </div>
+{% endblock %}
