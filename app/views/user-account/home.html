@@ -23,12 +23,17 @@
         <p class="govuk-body">2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
         <span class="govuk-body">Presenters</span></br>
         <ul class="govuk-list govuk-list--bullet">
-          <li>Henry Moore from FILINGS LIMITED (waiting for confirmation)</li>
+          <li>Jill Edwards (waiting for confirmation)</li>
+          <li>Henry Moore</li>
         </ul>
 
     </div>
     <div class="govuk-grid-column-one-third">
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button"> Manage presenters</button>
+        {{ govukButton({
+          text: "Manage presenters",
+          classes: "govuk-button--secondary",
+          href:".//manage-presenters"
+        }) }}
 
     </div>
 
