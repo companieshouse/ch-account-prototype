@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add a company to your account
+  Link a company to your account
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"account-created-interruption-page"
   }) }}
 {% endblock %}
 

@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Understanding your role within a company
+  Enter the company authentication code
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"check-company-details"
   }) }}
 {% endblock %}
 

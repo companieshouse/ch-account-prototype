@@ -21,3 +21,19 @@ router.post('/who-files-for-the-company', function (req, res) {
     }
   
 })
+
+
+
+// routing verification choice email or text
+router.post('/verify-choice', function (req, res) {
+ 
+    if(req.session.data['verify-choice'] == "email"){
+
+      res.redirect('check-your-email')
+    }
+    else if(req.session.data['verify-choice'] == "text-message"){
+
+      res.redirect('check-your-phone')
+    }
+  
+})

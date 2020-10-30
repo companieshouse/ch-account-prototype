@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Contact details for account
+  What are your contact details
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"start-now"
   }) }}
 {% endblock %}
 
@@ -65,7 +66,7 @@
 
         {{ govukButton({
                   text: "Continue",
-                  href:"check-your-email"
+                  href:"verify-choice"
         }) }}
   </div>
   </div>

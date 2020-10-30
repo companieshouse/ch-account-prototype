@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Activate your Companies House account
+  Verify your mobile number
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"verify-choice"
   }) }}
 {% endblock %}
 

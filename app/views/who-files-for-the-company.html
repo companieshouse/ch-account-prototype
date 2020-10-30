@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add a presenter to your account
+  Authorise a person to file for a company
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"link-director-to-a-company"
   }) }}
 {% endblock %}
 
@@ -41,11 +42,6 @@
             }
           ]
         }) }}
-
-
-
-
-
 
       {{ govukButton({
           text: "Continue"

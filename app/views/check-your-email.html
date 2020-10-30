@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Activate your Companies House account
+  Verify your email address
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href:"verify-choice"
   }) }}
 {% endblock %}
 
@@ -24,7 +25,7 @@
 
         {{ govukDetails({
           summaryText: "I have not received an email",
-          html: "The email may take a few minutes to arrive. Its subject line is 'Confirm your email address - Companies House'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have provided the wrong email address you can <a href='check-your-phone' class='govuk-link'>give us a different email address</a>."
+          html: "The email may take a few minutes to arrive. Its subject line is 'Confirm your email address - Companies House'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have provided the wrong email address you can <a href='create-your-password' class='govuk-link'>give us a different email address</a>."
         }) }}
 
   </div>
