@@ -13,16 +13,16 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Enter the presenter's details</h1>
+        <h1 class="govuk-heading-xl">Enter the authorised person's details</h1>
 
 
         {{ govukInsetText({
-          text: "Tell us the details of the presenter you want to give access to so that they can file for your company."
+          text: "Tell us the details of the authorised person you want to give access to so that they can file for your company."
         }) }}
 
         {{ govukInput({
           label: {
-            text: "Presenter's full name"
+            text: "Authorised person's full name"
           },
           id: "full-name",
           name: "full-name",
@@ -33,11 +33,11 @@
 
         {{ govukInput({
           label: {
-            text: "Presenter's email address"
+            text: "Authorised person's email address"
           },
           hint:{
 
-            text:"We'll send an email to the presenter which they will need to verify"
+            text:"We'll send an email to the authorised person which they will need to verify"
 
           },
           id: "email",
@@ -49,11 +49,11 @@
 
         {{ govukInput({
           label: {
-            text: "Presenter's mobile number"
+            text: "Authorised person's mobile number"
           },
           hint:{
 
-            text:"We'll send a text message to the presenter which they will need to verify"
+            text:"We'll send a text message to the authorised person which they will need to verify"
 
           },
           id: "presenters-telephone-number",

@@ -7,19 +7,19 @@
 
 {% block content %}
 
-<span class="govuk-caption-xl" >Flowers LTD</span>
+<span class="govuk-caption-xl" >FLOWERS LIMITED</span>
 
-<h1 class="govuk-heading-l">Manage presenters</h1>
+<h1 class="govuk-heading-l">People authorised to file for FLOWERS LIMITED</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
     {{ govukButton({
-        text: "Add a presenter",
+        text: "Add an authorised person",
         href:"add-presenter"
     }) }}
 
-    <h2 class="govuk-heading-s">Presenters</h2>
+    <h2 class="govuk-heading-s">Authorised people</h2>
 
     {{ govukSummaryList({
                 rows: [
@@ -59,7 +59,7 @@
                   },
                   {
                     key: {
-                      text: "What can the presenter do for the company?"
+                      text: "What can the authorised person do for the company?"
                     },
                     value: {
                       html: "File company accounts<br>File confirmation statements<br>Make changes to the company"
@@ -79,7 +79,7 @@
 
 
 
-    <h2 class="govuk-heading-s">Presenters (waiting for confirmation)</h2>
+    <h2 class="govuk-heading-s">Waiting for confirmation</h2>
 
     {{ govukSummaryList({
                 rows: [
@@ -119,7 +119,7 @@
                   },
                   {
                     key: {
-                      text: "What can the presenter do for the company?"
+                      text: "What can the authorised person do for the company?"
                     },
                     value: {
                       html: "File company accounts<br>File confirmation statements<br>Make changes to the company"

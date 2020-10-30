@@ -12,24 +12,23 @@
 
 
       {{ govukInsetText({
-        text: "FLOWERS LIMITED has been linked to your account."
+        text: "FLOWERS LIMITED is now linked to your account."
       }) }}
-
+      {{ govukInsetText({
+        text: "JILL EDWARDS is now authorised to file for this company."
+      }) }}
 
       <p class="govuk-body"></p>
 
-      <h2 class="govuk-heading-m">Next steps</h2>
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">An email has been sent to JILL EDWARDS.</p>
+      <p class="govuk-body">When JILL EDWARDS has verified their email address, they can file on behalf of this company.</p>
+      <p class="govuk-body">You can make changes to who is authorised to file for this company in your account.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>An email has been sent to 'PRESENTERS NAME'.</li>
-        <li>They need to click the link in the email to confirm they are your presenter.</li>
-        <li>Once this has been confirmed, they can file on behalf of your company.</li>
-        <li>Presenter information can be changed in your account.</li>
-      </ul>
 
 
       {{ govukButton({
-        text: "View my account",
+        text: "View your account",
         href:"user-account/home"
       }) }}
 
