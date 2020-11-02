@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Verify your account preference
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"enter-your-details"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="" method="post">
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "delegate-responsbility",
+        name: "delegate-responsbility",
+        fieldset: {
+          legend: {
+            text: "Would you be happy if Jill Edwards delegated their filing responsbility to another person within their organisation/someone else?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "......  "
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+          text: "Continue"
+      }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
