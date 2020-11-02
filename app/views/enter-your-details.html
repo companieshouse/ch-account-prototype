@@ -15,10 +15,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">What are your contact details?</h1>
-        <p class="govuk-body">We will verify that you have access to the email address or mobile number you give us to make your account more secure.</p>
+        <p class="govuk-body">We will ask you to verify that you have access to the email address or mobile number you give us to make your account more secure.</p>
 
         {{ govukInsetText({
-          text: "For your security, we may ask you to verify your details again when you sign in to your Companies House account in the future."
+          text: "For your security, we may ask you to verify your details again when you sign back in to your Companies House account."
         }) }}
 
         {{ govukInput({
@@ -36,11 +36,7 @@
           label: {
             text: "Email address"
           },
-          hint:{
 
-            text:"We'll send you a verification link by email"
-
-          },
           id: "email",
           name: "email",
           type: "email",
@@ -53,11 +49,7 @@
           label: {
             text: "Mobile number"
           },
-          hint:{
 
-            text:"We'll send you a security code by text message"
-
-          },
           id: "telephone-number",
           name: "telephone-number",
           type: "tel",

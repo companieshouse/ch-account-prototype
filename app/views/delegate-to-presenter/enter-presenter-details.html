@@ -15,11 +15,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Enter the authorised person's details</h1>
-
-
-        {{ govukInsetText({
-          text: "Tell us the details of the authorised person you want to give access to so that they can file for your company."
-        }) }}
+  <p class="govuk-body">Tell us the details of the authorised person you want to give access to so that they can file for this company.</p>
 
         {{ govukInput({
           label: {
@@ -38,7 +34,7 @@
           },
           hint:{
 
-            text:"We'll send an email to the authorised person which they will need to verify"
+            text:"We'll send the authorised person an email which they must verify"
 
           },
           id: "email",
@@ -54,7 +50,7 @@
           },
           hint:{
 
-            text:"We'll send a text message to the authorised person which they will need to verify"
+            text:"We'll send the authorised person a text message which they must verify"
 
           },
           id: "presenters-telephone-number",
