@@ -1,0 +1,29 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+
+<span class="govuk-caption-xl" >Home</span>
+<h1 class="govuk-heading-l">0 companies</h1>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukInsetText({
+        text: "You should link your account to any companies you are connected to, so that you can find and update company information and file for your company online."
+      }) }}
+
+    </div>
+  </div>
+  {{ govukButton({
+     text: "Link a company",
+     href:"../add-a-company"
+  }) }}
+
+{% endblock %}

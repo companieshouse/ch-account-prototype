@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-account-options.html" %}
 
 {% block pageTitle %}
   Add a company to your Companies House account
@@ -13,6 +13,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form action="" method="post">
 
       {{ govukRadios({
         idPrefix: "what-is-your-role",
@@ -35,22 +36,19 @@
           },
           {
             value: "presenter",
-            text: "Person authorised to file for the company"
+            text: "Accountant or agent",
+            hint:{
+
+            text: "Person who updates company information and files on behalf of a company"
+            }
           }
         ]
       }) }}
 
-
         {{ govukButton({
-          text: "Continue",
-          href:"link-director-to-account"
+          text: "Continue"
         }) }}
-
-
-
-
-
-
+      </form>
 
   </div>
   </div>

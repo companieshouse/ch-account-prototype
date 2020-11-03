@@ -37,3 +37,22 @@ router.post('/verify-choice', function (req, res) {
     }
   
 })
+
+
+// routing director to give the option for a presenter
+router.post('/company-role', function (req, res) {
+ 
+    if(req.session.data['what-is-your-role'] == "director"){
+
+      res.redirect('who-files-for-the-company')
+    }
+    else if(req.session.data['what-is-your-role'] == "psc"){
+
+      res.redirect('who-files-for-the-company')
+    }
+    else if(req.session.data['what-is-your-role'] == "presenter"){
+
+      res.redirect('user-account/home')
+    }
+  
+})
