@@ -15,7 +15,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">What are your contact details?</h1>
-        <p class="govuk-body">We will ask you to verify that you have access to the email address or mobile number you give us to make your account more secure.</p>
+        <p class="govuk-body">We will ask you to verify that you have access to the email address you give us to make your account more secure.</p>
 
         {{ govukInsetText({
           text: "For your security, we may ask you to verify your details again when you sign back in to your Companies House account."
@@ -42,18 +42,6 @@
           type: "email",
           autocomplete: "email",
           spellcheck: false
-        }) }}
-
-
-        {{ govukInput({
-          label: {
-            text: "Mobile number"
-          },
-
-          id: "telephone-number",
-          name: "telephone-number",
-          type: "tel",
-          autocomplete: "tel"
         }) }}
 
         {{ govukButton({
