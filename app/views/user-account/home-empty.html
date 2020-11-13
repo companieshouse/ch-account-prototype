@@ -8,22 +8,51 @@
 {% block content %}
 
 <span class="govuk-caption-xl" >Home</span>
-<h1 class="govuk-heading-l">0 companies</h1>
+<h1 class="govuk-heading-l" style="padding-bottom: 30px;">Hannah Salt</h1>
 
+
+
+<h1 class="govuk-heading-m">Your companies</h1>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      {{ govukInsetText({
-        text: "You should link your account to any companies you are connected to, so that you can find and update company information and file for your company online."
-      }) }}
-
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-m" style="padding-bottom: 30px">You have not linked a company to this account</h1>
+      <p class="govuk-body"> When you link a company to your account it will appear here </p>
     </div>
   </div>
-  {{ govukButton({
-     text: "Link a company",
-     href:"../add-a-company"
-  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+        <h2 class="govuk-heading-s">If you are a director of a company</h2>
+        <p class="govuk-body">You'll need to link the company(s) to your account, so that you can find and update company information and file for your company online. </p>
+        <p class="govuk-body">Once you have linked your company, you can authorise people to file for your company.</p>
+
+        {{ govukButton({
+          text: "Link a company",
+          href:"../add-a-company"
+        }) }}
+
+      </div>
+      <div class="govuk-grid-column-one-half">
+
+        <h2 class="govuk-heading-s">If you are Person of significant control (PSC) or an authorised person to file for a company </h2>
+
+        <p class="govuk-body">You'll need to link the company(s) to your account, so that you can find and update company information and file for the company online. </p>
+        <p class="govuk-body"> The directors will need to accept the request. Once the directors have accepted the request, you will be authorised to file for the company.</p>
+
+
+        {{ govukButton({
+          text: "Request to link a company"
+        }) }}
+
+    </div>
+    
+  </div>
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+ 
+</div>  
+
+
 
 {% endblock %}

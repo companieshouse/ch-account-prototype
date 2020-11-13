@@ -20,6 +20,31 @@
         text: "Your email address has been verified. We've sent you a confirmation email."
       }) }}
 
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <h3 class="govuk-heading-s">If you are a director of a company</h3>
+      <p class="govuk-body">You'll need to link the company(s) to your account, so that you can update company information online. </p>
+      <p class="govuk-body">Once you have linked your company, you can authorise people to file for your company.</p>
+
+      <h3 class="govuk-heading-s">If you are Person of significant control (PSC) or an Authorised person to file for a company </h3>
+
+      <p class="govuk-body">You'll need to link the company(s) to your account, so that you can update company information online. </p>
+      <p class="govuk-body"> The directors will need to accept the request. Once the directors have accepted the request, you will be authorised to file for the company.</p>
+
+      <h3 class="govuk-heading-s">To link a company to your account you'll need:</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the company number (or numbers) that you want to link your account to</li>
+        <li>your Companies House authentication code</li>
+      </ul>
+
+      {{ govukButton({
+        text: "View your account",
+        href:"user-account/home-empty"
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h1 class="govuk-heading-xl">Previous</h1>
 
       <h2 class="govuk-heading-m">What happens next</h2>
 
@@ -30,11 +55,6 @@
         <li>the company number (or numbers) that you want to link your account to</li>
         <li>your Companies House authentication code</li>
       </ul>
-
-      {{ govukButton({
-        text: "View your account",
-        href:"user-account/home-empty"
-      }) }}
 
     </div>
   </div>
