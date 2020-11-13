@@ -24,19 +24,27 @@ router.post('/who-files-for-the-company', function (req, res) {
 
 
 
-// routing verification choice email or text
-router.post('/verify-choice', function (req, res) {
+// if a director take to a-c-i-d otherwise a-c-i-p-a-p
+router.post('/create-your-password', function (req, res) {
  
-    if(req.session.data['verify-choice'] == "email"){
+    if(req.session.data['what-is-your-role'] == "director"){
 
-      res.redirect('check-your-email')
+      res.redirect('who-files-for-the-company')
     }
-    else if(req.session.data['verify-choice'] == "text-message"){
+    else if(req.session.data['what-is-your-role'] == "psc"){
 
-      res.redirect('check-your-phone')
+      res.redirect('who-files-for-the-company')
+    }
+    else if(req.session.data['what-is-your-role'] == "presenter"){
+
+      res.redirect('user-account/home')
     }
   
 })
+
+
+
+
 
 
 // routing director to give the option for a presenter
@@ -53,6 +61,29 @@ router.post('/company-role', function (req, res) {
     else if(req.session.data['what-is-your-role'] == "presenter"){
 
       res.redirect('user-account/home')
+    }
+  
+})
+
+
+
+
+
+
+
+///REMOVED-----------------------------------------
+
+
+// routing verification choice email or text
+router.post('/verify-choice', function (req, res) {
+ 
+    if(req.session.data['verify-choice'] == "email"){
+
+      res.redirect('check-your-email')
+    }
+    else if(req.session.data['verify-choice'] == "text-message"){
+
+      res.redirect('check-your-phone')
     }
   
 })

@@ -1,4 +1,4 @@
-{% extends "layout-account-options.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Add a company to your Companies House account
@@ -15,15 +15,18 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="" method="post">
 
-      {{ govukRadios({
+      {{ govukCheckboxes({
         idPrefix: "what-is-your-role",
         name: "what-is-your-role",
         fieldset: {
           legend: {
-            text: "What is your connection to FLOWERS LIMITED?",
+            text: "What is your role?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
+        },
+        hint: {
+          text: "Select all that apply."
         },
         items: [
           {
@@ -32,22 +35,23 @@
           },
           {
             value: "psc",
-            text: "Person of significant control (PSC)"
+            text: "Persons with significant control (PSC)"
           },
           {
             value: "presenter",
-            text: "Accountant or agent",
+            text: "Authorised person",
             hint:{
 
-            text: "Person who updates company information and files on behalf of a company"
+            text: "Person that is authorised to file for a company."
             }
           }
         ]
       }) }}
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+      {{ govukButton({
+        text: "Continue",
+        href:"enter-your-details"
+      }) }}
       </form>
 
   </div>
