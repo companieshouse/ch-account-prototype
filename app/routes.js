@@ -13,7 +13,7 @@ router.post('/who-files-for-the-company', function (req, res) {
  
     if(req.session.data['who-files'] == "no"){
 
-      res.redirect('director-page-before-account-no-presenter')
+      res.redirect('/user-account/home')
     }
     else if(req.session.data['who-files'] == "yes"){
 
