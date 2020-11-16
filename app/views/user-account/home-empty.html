@@ -8,7 +8,7 @@
 {% block content %}
 
 <span class="govuk-caption-xl" >Home</span>
-<h1 class="govuk-heading-l" style="padding-bottom: 30px;">Hannah Salt</h1>
+<h1 class="govuk-heading-l" style="padding-bottom: 30px;">Hannah Salt (director)</h1>
 
 
 
@@ -17,24 +17,26 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-m">You have not linked any companies to this account</h1>
-      <p class="govuk-body"> <p class="govuk-body">You should link your account to any companies you are connected to, so you can find and update company information and file for your company online. </p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Director</li>
-        <li>Person with Significant control</li>
-        <li>Authorised person to file for a company</li>
+      <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
+
+          <p class="govuk-body">To add a company to your account, you'll need:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the company number</li>
+            <li>the company <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code</a></li>
+          </ul>
+            <p class="govuk-body">Once you have added a company using the authentication code, you will no longer need it to file online.</p>
       </ul>
 
       {{ govukButton({
-          text: "Link a company",
+          text: "Add a company",
           href:"../add-a-company"
       }) }}
 
     </div>
   </div>
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
- 
-</div>  
+
+</div>
 
 
 

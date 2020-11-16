@@ -18,38 +18,57 @@
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        {{ govukCheckboxes({
-          idPrefix: "presenter-options",
-          name: "presenter-options",
-          fieldset: {
-            legend: {
-              text: "What do you want the authorised person to do for this company?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          hint: {
-           text: "Select all that apply"
-         },
-          items: [
-            {
-              value: "confirmation-statement",
-              text: "File company accounts"
-            },
-            {
-              value: "company-accounts",
-              text: "File confirmation statements"
-            },
-            {
-              value: "changes-to-company-details",
-              text: "Make changes to the company"
-            },
-            {
-              value: "close-a-company",
-              text: "Apply to close the company"
-            }
-          ]
-        }) }}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-xl">FLOWERS LIMITED</span>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  What do you want the authorised person to do for this company?
+                </h1>
+              </legend>
+              <div id="nationality-hint" class="govuk-hint">
+              Select all that apply.
+              </div>
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                    File company accounts
+                  </label>
+
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                    File confirmation statements
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                    Make changes to a company
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    For example, appoint a director or change an address
+                  </div>
+                </div>
+
+            </div>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                Apply to strike off a company
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  A company can only be struck off with director's consent
+                </div>
+
+            </fieldset>
+          </div>
 
 
         {{ govukButton({

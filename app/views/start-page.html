@@ -9,37 +9,37 @@
     <div class="govuk-grid-column-full">
 
 
-      <h1 class="govuk-heading-l">Companies House account</h1>
-
+      <h1 class="govuk-heading-xl">Companies House account</h1>
 
       <p class="govuk-body">A Companies House account allows you to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>find and update company information and file for your company online </li>
-              <li>link your account with any companies you are connected to</li>
         <li>authorise people who can update information and file documents for your company</li>
       </ul>
-      <p class="govuk-body">To create an account, you'll need to:</p>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-      <ul class="govuk-list govuk-list--bullet">
-      <li>provide your mobile number and email address</li>
-      <li>verify either your mobile number or email address</li>
-    </ul>
-      <p class="govuk-body"> Registering takes around 5 minutes.</p>
+    {{ govukInsetText({
+      text: "To create an account, you'll need to verify your email address."
+    }) }}
+
+  <p class="govuk-body">After creating your account, you'll need to enter your<a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code</a> so that you can update and file for your company online. Once you have done this, you will no longer need your authentication code to file online.</p>
+
+      <p class="govuk-body">Registering takes around 5 minutes.</p>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          
+
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-half">
 
               <h2 class="govuk-heading-s">I do not have a Companies House account</h2>
 
-              <p class="govuk-body"> To update company information and file for your company online you'll need to set up an online account. You can use your account to ... 
+              <p class="govuk-body">To file for your company online and update company information you'll need to set up an online account.</p>
 
 
               {{ govukButton({
-                text: "Create my account",
+                text: "Create an account",
                 href: "company-role",
                 classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
                 isStartButton: true
@@ -49,7 +49,7 @@
 
               <h2 class="govuk-heading-s">I already have a Companies House account</h2>
 
-              <p class="govuk-body">Continue to view and update your Companies House by signing into your existing account.</p>
+              <p class="govuk-body">View, update and file for a company online by signing in to your existing account.</p>
 
 
               {{ govukButton({
@@ -65,7 +65,7 @@
 
 
 
-      
+
 
     </div>
 
