@@ -15,9 +15,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">FLOWERS LIMITED</span>
-<h1 class="govuk-heading-xl">What are the authorised person's contact details?</h1>
+        <h1 class="govuk-heading-xl">What are the authorised person's contact details?</h1>
 
-  <p class="govuk-body">Tell us the details of the person you want to authorise to file for this company.</p>
+        {{ govukInsetText({
+          html: "<p class='govuk-body'>Tell us the details of the person you want to authorise to file for this company. You can change who is authorised to file at any time.</p>"
+        }) }}
+  
 
         {{ govukInput({
           label: {
@@ -45,9 +48,6 @@
           autocomplete: "email",
           spellcheck: false
         }) }}
-
-
-
 
         {{ govukButton({
                   text: "Continue",
