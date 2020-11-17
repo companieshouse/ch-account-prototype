@@ -1,0 +1,108 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back ",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<span class="govuk-caption-xl" >FLOWERS LIMITED</span>
+
+<h1 class="govuk-heading-l">People authorised to file for this company</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-s">Waiting for confirmation</h2>
+
+    {{ govukSummaryList({
+                rows: [
+                  {
+                    key: {
+                      text: "Name"
+                    },
+                    value: {
+                      text: "Jill Edwards"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "agents name"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Status"
+                    },
+                    value: {
+                      html: "*Pending*"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "agents email address"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Email address"
+                    },
+                    value: {
+                      text: "jill.edwards@example.com"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "agents email address"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "What can the authorised person do for the company?"
+                    },
+                    value: {
+                      html: "File company accounts<br>File confirmation statements<br>Make changes to the company"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "documents agent can file"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+
+
+
+            </div>
+
+
+
+</div>
+
+{% endblock %}

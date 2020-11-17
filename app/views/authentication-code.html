@@ -15,14 +15,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Enter the company authentication code for FLOWERS LIMITED</h1>
+        <span class="govuk-caption-xl">FLOWERS LIMITED</span>
+        <h1 class="govuk-heading-xl">Enter the company authentication code</h1>
+
+          {{ govukInsetText({
+            text: "You need the authentication code to add FLOWERS LIMITED to this account."
+          }) }}
 
         {{ govukInput({
           label: {
             text: ""
-          },
-          hint: {
-                text: "You need the authentication code to add FLOWERS LIMITED to this account."
           },
           classes: "govuk-input--width-10",
           id: "authentication-code",
