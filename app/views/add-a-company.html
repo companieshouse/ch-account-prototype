@@ -15,9 +15,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">What is the company number of the company you want to add to your Companies House account</h1>
+        <h1 class="govuk-heading-xl">What is the company number?</h1>
+  <p class="govuk-body">Enter the number of the company you would like to add to your Companies House account.</p>
+  {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-        
+  {{ govukInsetText({
+    text: "You can add more companies later."
+  }) }}
 
         {{ govukInput({
           label: {
