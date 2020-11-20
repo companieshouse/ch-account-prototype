@@ -13,22 +13,25 @@
 <h1 class="govuk-heading-m">Your companies</h1>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <div class="govuk-grid-row">
+<div style="background-color:#f3f2f1; padding: 1em;"> 
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-m">FLOWERS LIMITED</h1>
     </div>
-  </div>
-   <div class="govuk-grid-row">
+</div>
+
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      
       <p class="govuk-body govuk-!-font-weight-bold">
-          <span class="govuk-body ">Company number</span><br>
-     </span>18882777</p>
+        <span class="govuk-body">Company number</span><br>
+        </span>18882777</p>
+
         <p class="govuk-body govuk-!-font-weight-bold">
             <span class="govuk-body ">Correspondence address</span><br>
        </span> 2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -51,31 +54,26 @@
               <td class="govuk-table__cell">
               <a href="authorised-person-jill" class="govuk-link">Update</a>
               </td>
-
             </tr>
           </tbody>
         </table>
-        </div>
-      </div>
-
-
-
 
     </div>
+
     <div class="govuk-grid-column-one-third">
-        {{ govukButton({
+      {{ govukButton({
           text: "File for this company",
-          classes: "govuk-button--secondary",
+          classes: "govuk-button",
           href:""
         }) }}
         {{ govukButton({
           text: "Add an authorised person",
-          classes: "govuk-button--secondary"
+          classes: "govuk-button"
         }) }}
-
     </div>
+</div>
+</div>
 
-  </div>
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     {{ govukButton({
