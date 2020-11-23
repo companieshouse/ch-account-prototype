@@ -6,6 +6,35 @@ const router = express.Router()
 module.exports = router
 
 
+// routing director to give the option for a presenter
+router.post('/connection-to-company', function (req, res) {
+ 
+    if(req.session.data['what-is-your-role'] == "director"){
+
+      res.redirect('link-director-to-a-company')
+    }
+    else if(req.session.data['what-is-your-role'] == "psc"){
+
+      res.redirect('user-account/psc-auth-person/company-added')
+    }
+    else if(req.session.data['what-is-your-role'] == "authorised-person"){
+
+      res.redirect('user-account/psc-auth-person/company-added')
+    }
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 // routing for DIY filer directors to the end of the jounrey
 // routing directors that use agents to enter presenter details
