@@ -35,8 +35,36 @@
                 <span class="govuk-body ">Correspondence address</span><br>
            </span> 2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
 
-    <h3 class="govuk-heading-m">People authorised to file for this company</h3>
-      <p class="govuk-body"> No authorised people have been added.</p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header govuk-!-width-one-half" scope="col"> Authorised people</th>
+              <th class="govuk-table__header" scope="col"> Status </th>
+              <th class="govuk-table__header" scope="col"> Action </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p class="govuk-body"> Jill Edwards </p>
+              </td>
+              <td class="govuk-table__cell">
+                {{govukTag({
+                  text: "ADDED",
+                  classes: "govuk-tag--blue"
+                })}}
+              </td>
+              <td class="govuk-table__cell">
+              <a href="authorised-person-jill" class="govuk-link"></a>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
 
 
     </div>

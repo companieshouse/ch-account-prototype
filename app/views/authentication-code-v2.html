@@ -1,0 +1,71 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/authentication-code-v2" method="post">
+
+        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you have the authentication code?</h1>
+
+        {% set yes %}
+        {{ govukInput({
+          id: "auth-code-yes",
+          name: "auth-code-yes",
+          type: "text",
+          spellcheck: false,
+          classes: "govuk-!-width-one-third",
+          label: {
+            text: "Authentication code"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "auth-code",
+          name: "auth-code",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: yes
+              }
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukDetails({
+          summaryText: "Help with authentication code",
+          html: "Read the <a href='#' class='govuk-link'>guidance about how to request an authentication code (opens in a new tab)</a>."
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+    </div>
+  </form>
+  </div>
+{% endblock %}

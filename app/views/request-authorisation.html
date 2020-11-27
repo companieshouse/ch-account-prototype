@@ -1,0 +1,56 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/request-authorisation" method="post">
+
+        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request authorisation to file for FLOWERS LIMITED?</h>
+
+          {{ govukInsetText({
+            text: "An email will be sent to the person who has added the company to their account using the authenication code. They will need to open the email and accept your request to file for FLOWERS LIMITED."
+          }) }}
+
+        {{ govukRadios({
+          idPrefix: "request-authorisation",
+          name: "request-authorisation",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+              
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+    </div>
+  </form>
+  </div>
+{% endblock %}

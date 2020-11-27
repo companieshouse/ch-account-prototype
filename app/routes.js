@@ -27,15 +27,6 @@ router.post('/connection-to-company', function (req, res) {
 
 
 
-
-
-
-
-
-
-
-
-
 // routing for DIY filer directors to the end of the jounrey
 // routing directors that use agents to enter presenter details
 router.post('/who-files-for-the-company', function (req, res) {
@@ -94,6 +85,33 @@ router.post('/company-role', function (req, res) {
   
 })
 
+
+
+router.post('/authentication-code-v2', function (req, res) {
+ 
+    if(req.session.data['auth-code'] == "yes"){
+
+      res.redirect('user-account/director/company-added')
+    }
+    else if(req.session.data['auth-code'] == "no"){
+
+      res.redirect('request-authorisation')
+    }
+  
+})
+
+router.post('/request-authorisation', function (req, res) {
+ 
+    if(req.session.data['request-authorisation'] == "yes"){
+
+      res.redirect('company-added-authorisation-sent')
+    }
+    else if(req.session.data['request-authorisation'] == "no"){
+
+      res.redirect('user-account/home-no-companies')
+    }
+  
+})
 
 
 

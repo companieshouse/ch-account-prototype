@@ -30,6 +30,9 @@
           id: "authentication-code",
           name: "authentication-code"
         }) }}
+
+        <p class="govuk-body">YES (enter code) /NO - request authentication if someone has already added the auth code. If not, request the auth code.</p>
+
         {{ govukDetails({
           summaryText: "Help with authentication code",
           html: "Read the <a href='#' class='govuk-link'>guidance about how to request an authentication code (opens in a new tab)</a>. <br><br>If you do not have it, you can <a href='#' class='govuk-link'>request an authentication code (opens in a new tab)</a>."
@@ -39,7 +42,7 @@
 
         {{ govukButton({
           text: "Continue",
-          href:"connection-to-company"
+          href:"user-account/director/company-added"
         }) }}
     </div>
   </div>
