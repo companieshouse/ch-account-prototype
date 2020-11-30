@@ -18,17 +18,47 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">Scenario 1 - A director sets up a CH account and has their authentication code. They add their company to their account and then later add an authorised person to the company. </h1> 
+        <h1 class="govuk-heading-m">Scenario One </h1>
+
+        <p class="govuk-body"> A director sets up a CH account and has their authentication code. They add their company to their user account and then later add an authorised person to the company.</p>
+
+        <h1 class="govuk-heading-m">Scenario Two </h1>
+
+        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. A 'digital authorisation' request is sent to the linked user account to confirm they are a authorised person for the company. </p>
+
+        {{ govukButton({
+          text: "Scenario One and Two",
+          classes: "govuk-button--secondary"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h1 class="govuk-heading-m">Scenario Three </h1>
+
+        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. The company has not already been linked to a user account. The user will need to request the authentication code before they can add the company to the account. </p>
 
 
-        <h2 class="govuk-heading-m">Entry points</h2> 
+        {{ govukButton({
+          text: "Scenario Three",
+          classes: "govuk-button--secondary",
+          href: "request-an-authentication-code"
+        }) }}
 
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" href="start-page">Start page - Companies House account</a>
-          </li>
-          
-        </ul>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+         <h1 class="govuk-heading-m">Scenario Four - Request for an authorised person to file for a company</h1>
+
+        <p class="govuk-body">A 'director/PSC/Authorised person' has been added as an authorised person for a company. The request needs to be confirmed.</p>
+
+        {{ govukButton({
+          text: "Scenario Four",
+          classes: "govuk-button--secondary",
+          href: "/messages/email-confirm-you-are-the-presenter"
+        }) }}
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 
         <h2 class="govuk-heading-m">All users - Email</h2> 
 
@@ -37,41 +67,33 @@
             <a class="govuk-link" target="_blank"  href="/messages/verify-email">Companies House account: verify your email address (opens in a new tab)</a>
           </li>
           <li>
-            <a class="govuk-link" target="_blank" href="">Account created confirmation (opens in a new tab)</a>
+            <a class="govuk-link" target="_blank" href="">IN PROGRESS - Account created confirmation (opens in a new tab)</a>
           </li>
         </ul>
 
-        
-        <h2 class="govuk-heading-m">Email request sent to authorised person </h2> 
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h1 class="govuk-heading-m">Scenario Five - Post Companies House Account</h1>
+
+        <p class="govuk-body">New companies set up, post Companies House account, no authentication code required. An email will ask for the user to create an account, using the email address that was used for Incorporation, the company will automatically we added to their account.</p>
+
+        {{ govukButton({
+          text: "Scenario Five",
+          classes: "govuk-button--secondary",
+          href: "/messages/email-confirm-you-are-the-presenter"
+        }) }}
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Webfiling and CHS</h2> 
         <ul class="govuk-list">
           <li>
-            <a class="govuk-link" target="_blank" href="/messages/email-confirm-you-are-the-presenter">Request for an authorised person to file for a company (opens in a new tab)</a>
+            <a class="govuk-link" href="#">Webfiling</a>
           </li>
           <li>
-            <a class="govuk-link" target="_blank" href="/delegate-to-presenter/confirm-you-are-presenter"> Confirm you are the presenter </a>
-          </li>
-          
-        </ul>
-
-
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-        <h1 class="govuk-heading-m">Scenario 2 - A director has no authenication code. A 'digital authorisation' request is sent to the linked director to confirm they are a director of the company. </h1> 
-
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-        <h1 class="govuk-heading-m">Scenario 3 - A new company has been set up, post CH account with no authentication code. Through a link in an email, the company is linked to their account. </h1> 
-
-
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-        <h2 class="govuk-heading-m">Review entry points</h2> 
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" href="#">Webfiling - filing a document</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">CHS - filing a document</a>
+            <a class="govuk-link" href="#">CHS</a>
           </li>
         </ul>
 

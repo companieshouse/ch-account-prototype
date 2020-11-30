@@ -108,7 +108,7 @@ router.post('/request-authorisation', function (req, res) {
     }
     else if(req.session.data['request-authorisation'] == "no"){
 
-      res.redirect('user-account/home-no-companies')
+      res.redirect('user-account/company-added')
     }
   
 })

@@ -15,17 +15,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/request-authorisation" method="post">
+      <form action="/authentication-code-v2" method="post">
 
-        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request authorisation to file for FLOWERS LIMITED?</h>
+        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request an authentication code for FLOWERS LIMTIED?</h1>
 
-          {{ govukInsetText({
-            text: "An email will be sent to the person who has already added the company to their account using the authentication code."
-          }) }}
+        {{ govukInsetText({
+          text: "The authentication code is sent by post to your company’s registered office and can take up to 5 days to arrive."
+        }) }}
 
         {{ govukRadios({
-          idPrefix: "request-authorisation",
-          name: "request-authorisation",
+          idPrefix: "auth-code",
+          name: "auth-code",
           fieldset: {
             legend: {
               text: "",
@@ -36,8 +36,10 @@
           items: [
             {
               value: "yes",
-              text: "Yes"
-              
+              text: "Yes",
+              conditional: {
+                html: yes
+              }
             },
             {
               value: "no",
@@ -46,10 +48,8 @@
           ]
         }) }}
 
-
         {{ govukButton({
-          text: "Continue",
-          href:"company-added-authorisation-sent"
+          text: "Continue"
         }) }}
     </div>
   </form>
