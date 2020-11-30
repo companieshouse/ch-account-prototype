@@ -34,14 +34,14 @@
     <h3 class="govuk-heading-m">People authorised to file for this company</h3>
 
        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds">
         <table class="govuk-table">
           <thead class="govuk-table__head">
 
             <tr class="govuk-table__row">
               <th class="govuk-table__header" scope="col"> Authorised people</th>
               <th class="govuk-table__header" scope="col"> Status </th>
-              <th class="govuk-table__header" scope="col"> Action </th>
+      
             </tr>
 
 
@@ -49,12 +49,12 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body"> Hannah Salt </p>
+                <p class="govuk-body"> Hannah Salt (you)</p>
               </td>
               <td class="govuk-table__cell">
                 {{govukTag({
-                  text: "ADDED",
-                  classes: "govuk-tag--blue"
+                  text: "Confirmed",
+                  classes: "govuk-tag--green"
                 })}}
               </td>
               <td class="govuk-table__cell">
@@ -64,41 +64,14 @@
             
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <p class="govuk-body"> Jill Edwards </p>
+                <a href="authorised-person-jill" class="govuk-link">Jill Edwards</a>
               </td>
               <td class="govuk-table__cell">
                 {{govukTag({
-                  text: "Email sent",
-                  classes: "govuk-tag--blue"
+                  text: "PENDING",
+                  classes: "govuk-tag--yellow"
                 })}}
               </td>
-              <td class="govuk-table__cell">
-              <a href="authorised-person-jill" class="govuk-link">Resend email</a>
-              </td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <p class="govuk-body"> Henry Moore </p>
-              </td>
-              <td class="govuk-table__cell">
-                {{govukTag({
-                  html: "Requesting <br> authorisation",
-                  classes: "govuk-tag--blue"
-                })}}
-              </td>
-              <td class="govuk-table__cell">
-
-                <ul class="govuk-list">
-                  <li>
-                    <a class="govuk-link" href="#">Accept request</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="#">Reject request</a>
-                  </li>
-                </ul>
-              </td>
-
             </tr>
           </tbody>
         </table>

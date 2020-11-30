@@ -91,7 +91,7 @@ router.post('/authentication-code-v2', function (req, res) {
  
     if(req.session.data['auth-code'] == "yes"){
 
-      res.redirect('user-account/director/company-added')
+      res.redirect('user-account/company-added')
     }
     else if(req.session.data['auth-code'] == "no"){
 

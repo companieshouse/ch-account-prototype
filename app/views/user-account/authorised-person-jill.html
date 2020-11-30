@@ -60,27 +60,10 @@
                   },
                   {
                     key: {
-                      text: "What can the authorised person do for the company?"
-                    },
-                    value: {
-                      html: "File company accounts<br>File confirmation statements<br>Make changes to the company"
-                    },
-                    actions: {
-                      items: [
-                        {
-                          href: "#",
-                          text: "Change",
-                          visuallyHiddenText: "documents agent can file"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    key: {
                       text: "Status"
                     },
                     value: {
-                      html: "<strong class='govuk-tag govuk-tag--blue'> Pending </strong> <p class='govuk-body govuk-!-font-weight-bold'><br>We have sent an email to Jill Edwards. They need to open the email and select the verification link so that they can file for FLOWERS LIMITED.</p>"
+                      html: "<strong class='govuk-tag govuk-tag--yellow'> Pending </strong> <p class='govuk-body govuk-!-font-weight-bold'><br>We have sent an email to Jill Edwards. They need to open the email and select the verification link so that they can file for FLOWERS LIMITED.</p>"
                       },
                     actions: {
                       items: [
@@ -94,6 +77,14 @@
                   }
                 ]
               }) }}
+
+              {{ govukButton({
+                text: "Return to home",
+                classes: "govuk-button--secondary",
+                href:"../user-account/auth-person-added"
+              }) }}
+
+
 
 
 
