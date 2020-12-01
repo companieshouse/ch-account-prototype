@@ -17,7 +17,7 @@
 
       <form action="/authentication-code-v2" method="post">
 
-        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you have the authentication code?</h1>
+        <span class='govuk-caption-xl'>FLOWERS LIMITED</span>
 
         {% set yes %}
         {{ govukInput({
@@ -33,13 +33,14 @@
         {% endset -%}
 
         {{ govukRadios({
+          classes: "govuk-radios--inline",
           idPrefix: "auth-code",
           name: "auth-code",
           fieldset: {
             legend: {
-              text: "",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--l"
+              text: "Do you have the authentication code for FLOWERS LIMITED?",
+              isPageHeading: true,
+               classes: "govuk-fieldset__legend--xl"
             }
           },
           items: [

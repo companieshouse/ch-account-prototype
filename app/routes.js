@@ -1,9 +1,24 @@
 const express = require('express')
+const app = express()
 const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
 module.exports = router
+
+
+router.get('/start-page-s1-s2', function (req, res) {
+
+    app.set('scenario', 'one-two');
+    res.redirect('start-page')
+})
+
+router.get('/start-page-s3', function (req, res) {
+
+    app.set('scenario', 'three');
+    res.redirect('start-page')
+})
+
 
 
 // routing director to give the option for a presenter
@@ -23,6 +38,7 @@ router.post('/connection-to-company', function (req, res) {
     }
   
 })
+
 
 
 
@@ -95,7 +111,14 @@ router.post('/authentication-code-v2', function (req, res) {
     }
     else if(req.session.data['auth-code'] == "no"){
 
-      res.redirect('request-authorisation')
+      if(app.settings.scenario == 'one-two')
+      {
+        res.redirect('request-authorisation')
+      }
+      else if(app.settings.scenario == 'three')
+      {
+        res.redirect('request-an-authentication-code')
+      }
     }
   
 })
