@@ -38,7 +38,7 @@
           name: "auth-code",
           fieldset: {
             legend: {
-              text: "Do you have the authentication code for FLOWERS LIMITED?",
+              text: "Do you have the authentication code for this company?",
               isPageHeading: true,
                classes: "govuk-fieldset__legend--xl"
             }
@@ -57,6 +57,18 @@
             }
           ]
         }) }}
+        {% from "govuk/components/details/macro.njk" import govukDetails %}
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with authentication code
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            This is a 6 character code issued by us to each company. The code is currently used to authorise online filings. Once you have added a company to your account, you will no longer need the code to file online.<br><br>
+            Read the <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code guidance (opens in a new tab)</a>, which includes how to request one.
+          </div>
+        </details>
 
         {{ govukButton({
           text: "Continue"
