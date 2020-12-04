@@ -24,7 +24,8 @@
 
         <h1 class="govuk-heading-m">Scenario Two </h1>
 
-        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. A 'digital authorisation' request is sent to the linked user account to confirm they are a authorised person for the company. </p>
+        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. The company has not already been linked to a user account. The user will need to request the authentication code before they can add the company to the account. </p>
+
 
         {{ govukButton({
           text: "Scenario One and Two",
@@ -34,10 +35,12 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">Scenario Three </h1>
 
-        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. The company has not already been linked to a user account. The user will need to request the authentication code before they can add the company to the account. </p>
+        <h1 class="govuk-heading-m">Scenario Three - Auth code already added to the company</h1>
 
+        <p class="govuk-body">A 'director/PSC/Authorised person' has no authenication code. A 'digital authorisation' request is sent to the linked user account to confirm they are a authorised person for the company. </p>
+
+     
 
         {{ govukButton({
           text: "Scenario Three - Request an authentication code",

@@ -113,11 +113,11 @@ router.post('/authentication-code-v2', function (req, res) {
 
       if(app.settings.scenario == 'one-two')
       {
-        res.redirect('request-authorisation')
+        res.redirect('request-an-authentication-code') 
       }
       else if(app.settings.scenario == 'three')
       {
-        res.redirect('request-an-authentication-code')
+        res.redirect('request-authorisation')
       }
     }
   
