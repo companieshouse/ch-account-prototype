@@ -15,23 +15,18 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="/form-handler" method="post" novalidate>
-      {{ govukInput({
-        label: {
-          text: "Enter your mobile number",
-          isPageHeading: true,
-          classes: "govuk-label--xl"
-        },
-        hint:{
+      <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="event-name">
+      Enter your mobile number
+    </label>
+  </h1>
+  <p class="govuk-body">We'll send you a security code by text message.</p>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
 
-          text: "We'll send you a security code by text message. You'll need the security code to add your mobile number to the account."
-        },
-        classes: "govuk-input--width-10",
-        id: "mobile-number",
-        name: "mobile-number"
-      }) }}
 
       {{ govukButton({
-        text: "Continue",
+        text: "Send code",
         href:"../add-mobile/check-your-phone"
       }) }}
     </form>
