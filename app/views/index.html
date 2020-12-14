@@ -80,7 +80,11 @@
 
         <h2 class="govuk-heading-m">All users - Setting up mobile - 2-step sign in </h2> 
 
-        <a href="../add-mobile/manage-account" class="govuk-link">2-step sign in</a>
+        {{ govukButton({
+          text: "Add your mobile number",
+          classes: "govuk-button--secondary",
+          href: "../add-mobile/manage-account"
+        }) }}
 
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">

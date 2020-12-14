@@ -6,13 +6,23 @@
 
 
 {% block content %}
-<h2 class="govuk-heading-m" id = "notification-banner-title" style="margin-top: 1em; border:5px; border-style:solid; border-color:#1d70b8; padding: 1em;">You have successfully added your mobile number to your account. We'll send you a new code every time you sign in to keep your account secure.</h2>
+
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <span class="govuk-caption-xl" >Your details</span>
       <h1 class="govuk-heading-l">Manage your account</h1>
+
+
+      <h2 class="govuk-heading-m" id = "notification-banner-title" style="margin-top: 1em; border:5px; border-style:solid; border-color:#1d70b8; padding: 1em;">You have successfully added your mobile number to your account. We'll send you a new code every time you sign in to keep your account secure.</h2>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Account details</h2>
 
 
         {{ govukSummaryList({
@@ -70,9 +80,6 @@
             }
           ]
         }) }}
-
-
-
 
   </div>
 </div>
