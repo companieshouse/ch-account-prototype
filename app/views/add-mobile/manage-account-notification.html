@@ -1,0 +1,79 @@
+{% extends "layout-account-options.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+<h2 class="govuk-heading-m" id = "notification-banner-title" style="margin-top: 1em; border:5px; border-style:solid; border-color:#1d70b8; padding: 1em;">You have successfully set up two-step sign in. You'll be sent a new code every time you sign in.</h2>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl" >Your details</span>
+      <h1 class="govuk-heading-l">Manage your account</h1>
+
+
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Email"
+              },
+              value: {
+                text: "hannah.salt@example.com"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Password"
+              },
+              value: {
+                html: "******************"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "contact information"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Mobile number"
+              },
+              value: {
+                text: "********456"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "contact information"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+      
+
+
+  </div>
+</div>
+{% endblock %}
