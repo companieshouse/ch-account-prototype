@@ -7,6 +7,8 @@ const router = express.Router()
 module.exports = router
 
 
+// --- Routing for users scenarios ---
+
 router.get('/start-page-s1-s2', function (req, res) {
 
     app.set('scenario', 'one-two');
@@ -55,7 +57,7 @@ router.post('/enter-your-details', function(req, res) {
 })
 
 
-// Enter your details page
+// Enter your password page
 router.post('/create-your-password', function(req, res) {
 
     var errors = [];
@@ -83,6 +85,38 @@ router.post('/create-your-password', function(req, res) {
   {
     res.redirect('sign-in')
   }
+})
+
+
+// Sign in page
+router.post('/sign-in', function(req, res) {
+
+    var errors = [];
+    var emailHasError = false;
+    var passwordHasError = false;
+  
+    if(req.session.data['email'] == ""){
+      emailHasError = true;
+      errors.push({text: "Enter your email address", href: "#email-error"});
+    }
+    
+    if(req.session.data['password'] == ""){
+          passwordHasError = true;
+          errors.push({text: "Enter your password", href: "#password-error"});
+    }
+
+    if(emailHasError || passwordHasError){
+      res.render('sign-in', {
+            errorEmail: emailHasError,
+            errorPassword: passwordHasError,
+            errorList: errors
+          })
+  }
+  else
+  {
+      res.redirect('account-created')
+  }
+    
 })
 
 

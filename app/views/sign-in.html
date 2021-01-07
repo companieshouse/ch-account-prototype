@@ -14,15 +14,21 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Sign in to your Companies House account</h1>
-      <form action="/sign-in" method="post">
+      <form action="/sign-in" method="post" novalidate>
+
         {% if errorEmail == true or errorPassword == true %}
+
           {{ govukErrorSummary({
               titleText: "There is a problem",
               errorList: errorList
             }) }}
+
         {% endif %}
+
+      <h1 class="govuk-heading-xl">Sign in to your Companies House account</h1>
+
         {% if errorEmail == true %}
+          
           {{ govukInput({
             label: {
             text: "Email address"
@@ -35,7 +41,9 @@
             text: "Enter your email address"
           }
           }) }}
+
         {% else %}
+
           {{ govukInput({
             label: {
             text: "Email address"
@@ -45,38 +53,46 @@
           id: "email",
           name: "email"
           }) }}
+
         {% endif %}
+
         {% if errorPassword == true %}
+
           {{ govukInput({
           label: {
           text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password",
-        errorMessage: {
+          },
+          id: "password",
+          name: "password",
+          type: "password",
+          errorMessage: {
             text: "Enter your password"
           }
+
         }) }}
+
         {% else %}
+
           {{ govukInput({
           label: {
           text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password"
-        }) }}
-        {% endif %}
-        {{ govukButton({
-        text: "Sign in",
-        href:"account-created"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+          {% endif %}
+
+          {{ govukButton({
+          text: "Sign in"
+
         }) }}
 
-      </form>
+      
       <p>
         <a href="" class="govuk-link govuk-link--no-visited-state">I've forgotten my password</a>
       </p>
+      </form>
     </div>
   </div>
 {% endblock %}
