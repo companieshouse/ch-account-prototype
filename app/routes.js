@@ -119,6 +119,28 @@ router.post('/sign-in', function(req, res) {
     
 })
 
+// Enter the company number page
+router.post('/add-a-company', function(req, res) {
+
+  var errors = [];
+  var companyNumberHasError = false;
+  
+  if(req.session.data['company-number'] == ""){
+    companyNumberHasError = true;
+    errors.push({text: "Enter the company number", href: "#company-number-error"});
+  }
+
+  if(companyNumberHasError){
+    res.render('add-a-company', {
+          errorCompanyNumber: companyNumberHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+    res.redirect('check-company-details')
+  }
+})
 
 
 
