@@ -21,6 +21,78 @@ router.get('/start-page-s3', function (req, res) {
 
 
 
+// --- Error messages ---
+
+
+// Enter your details page
+router.post('/enter-your-details', function(req, res) {
+
+    var errors = [];
+    var fullNameHasError = false;
+    var emailHasError = false;
+  
+  if(req.session.data['full-name'] == ""){
+    fullNameHasError = true;
+    errors.push({text: "Enter your full name", href: "#full-name-error"});
+  }
+  
+  if(req.session.data['email'] == ""){
+        emailHasError = true;
+        errors.push({text: "Enter your email address", href: "#email-error"});
+  }
+
+  if(fullNameHasError || emailHasError){
+    res.render('enter-your-details', {
+          errorFullName: fullNameHasError,
+          errorEmail: emailHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+    res.redirect('check-your-email')
+  }
+})
+
+
+// Enter your details page
+router.post('/create-your-password', function(req, res) {
+
+    var errors = [];
+    var passwordHasError = false;
+    var confirmPasswordHasError = false;
+  
+  if(req.session.data['password'] == ""){
+    passwordHasError = true;
+    errors.push({text: "Enter your password", href: "#password-error"});
+  }
+  
+  if(req.session.data['confirm-password'] == ""){
+        confirmPasswordHasError = true;
+        errors.push({text: "Enter your password", href: "#confirm-password-error"});
+  }
+
+  if(passwordHasError || confirmPasswordHasError){
+    res.render('create-your-password', {
+          errorPassword: passwordHasError,
+          errorConfirmPassword: confirmPasswordHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+    res.redirect('sign-in')
+  }
+})
+
+
+
+
+
+
+
+
+
 // routing director to give the option for a presenter
 router.post('/connection-to-company', function (req, res) {
  
@@ -39,10 +111,6 @@ router.post('/connection-to-company', function (req, res) {
   
 })
 
-
-
-
-
 // routing for DIY filer directors to the end of the jounrey
 // routing directors that use agents to enter presenter details
 router.post('/who-files-for-the-company', function (req, res) {
@@ -57,29 +125,6 @@ router.post('/who-files-for-the-company', function (req, res) {
     }
   
 })
-
-
-
-// if a director take to a-c-i-d otherwise a-c-i-p-a-p
-router.post('/create-your-password', function (req, res) {
- 
-    if(req.session.data['what-is-your-role'] == "director"){
-
-      res.redirect('who-files-for-the-company')
-    }
-    else if(req.session.data['what-is-your-role'] == "psc"){
-
-      res.redirect('who-files-for-the-company')
-    }
-    else if(req.session.data['what-is-your-role'] == "presenter"){
-
-      res.redirect('user-account/home')
-    }
-  
-})
-
-
-
 
 
 
