@@ -52,7 +52,7 @@ router.post('/enter-your-details', function(req, res) {
   }
   else
   {
-    res.redirect('create-your-password')
+    res.redirect('enter-your-name')
   }
 })
 
@@ -62,28 +62,21 @@ router.post('/enter-your-name', function(req, res) {
 
     var errors = [];
     var fullNameHasError = false;
-    var emailHasError = false;
-  
+
   if(req.session.data['full-name'] == ""){
     fullNameHasError = true;
     errors.push({text: "Enter your full name", href: "#full-name-error"});
   }
   
-  if(req.session.data['email'] == ""){
-        emailHasError = true;
-        errors.push({text: "Enter your email address", href: "#email-error"});
-  }
-
-  if(fullNameHasError || emailHasError){
-    res.render('enter-your-details', {
+  if(fullNameHasError){
+    res.render('enter-your-name', {
           errorFullName: fullNameHasError,
-          errorEmail: emailHasError,
           errorList: errors
         })
   }
   else
   {
-    res.redirect('check-your-email')
+    res.redirect('create-your-password')
   }
 })
 

@@ -14,25 +14,18 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/enter-your-details" method="post" novalidate>
+      <form action="/enter-your-name" method="post" novalidate>
 
-        {% if errorFullName  == true or errorEmail == true %}
+        {% if errorFullName  == true %}
 
           {{ govukErrorSummary({
               titleText: "There is a problem",
               errorList: errorList
           }) }}
+
         {% endif %}
 
         <h1 class="govuk-heading-xl">What are your details?</h1>
-
-        <p class="govuk-body">We will send you an email that contains a verification link. This will verify that you have access to the email address you give us and will make your account more secure.</p>
-
-        {{ govukInsetText({
-          text: "For your security, we may ask you to verify your details again when you sign back in to your Companies House account."
-        }) }}
-
-        
 
         {% if errorFullName  == true %}
         {{ govukInput({
@@ -67,37 +60,9 @@
         }) }}
         {% endif %}
 
-        {% if errorEmail  == true %}
-        {{ govukInput({
-          label: {
-            text: "Email address"
-          },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          errorMessage: {
-            text: "Enter your email address"
-          },
-          spellcheck: false
-        }) }}
-        {% else %}
-
-        {{ govukInput({
-          label: {
-            text: "Email address"
-          },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false
-        }) }}
-        {% endif %}
-
 
         {{ govukButton({
-                  text: "Continue"
+            text: "Continue"
         }) }}
 
       </form>
