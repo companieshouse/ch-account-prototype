@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Enter your email address
+  What are your contact details
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/enter-your-details" method="post" novalidate>
 
-        {% if errorEmail == true %}
+        {% if errorFullName  == true or errorEmail == true %}
 
           {{ govukErrorSummary({
               titleText: "There is a problem",
@@ -31,6 +31,41 @@
         {{ govukInsetText({
           text: "For your security, we may ask you to verify your details again when you sign back in to your Companies House account."
         }) }}
+
+        
+
+        {% if errorFullName  == true %}
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          hint: {
+            text: "This is the name that will be displayed in your account."
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          errorMessage: {
+            text: "Enter your full name"
+          },
+          spellcheck: false
+        }) }}
+
+        {% else %}
+
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          hint: {
+            text: "This is the name that will be displayed in your account."
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+        {% endif %}
 
         {% if errorEmail  == true %}
         {{ govukInput({
@@ -62,7 +97,7 @@
 
 
         {{ govukButton({
-            text: "Continue"
+                  text: "Continue"
         }) }}
 
       </form>

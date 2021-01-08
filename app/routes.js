@@ -22,12 +22,43 @@ router.get('/start-page-s3', function (req, res) {
 })
 
 
+router.post('/start-page', function (req, res) {
+
+    res.redirect('enter-your-details')
+})
+
+
 
 // --- Error messages ---
 
 
 // Enter your details page
 router.post('/enter-your-details', function(req, res) {
+
+    var errors = [];
+    var emailHasError = false;
+  
+  
+  if(req.session.data['email'] == ""){
+        emailHasError = true;
+        errors.push({text: "Enter your email address", href: "#email-error"});
+  }
+
+  if(emailHasError){
+    res.render('enter-your-details', {
+          errorEmail: emailHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+    res.redirect('create-your-password')
+  }
+})
+
+
+// Enter your details page
+router.post('/enter-your-name', function(req, res) {
 
     var errors = [];
     var fullNameHasError = false;
@@ -57,6 +88,7 @@ router.post('/enter-your-details', function(req, res) {
 })
 
 
+
 // Enter your password page
 router.post('/create-your-password', function(req, res) {
 
@@ -83,7 +115,7 @@ router.post('/create-your-password', function(req, res) {
   }
   else
   {
-    res.redirect('sign-in')
+    res.redirect('check-your-email')
   }
 })
 
@@ -141,6 +173,43 @@ router.post('/add-a-company', function(req, res) {
     res.redirect('check-company-details')
   }
 })
+
+
+// View company information page
+router.post('/check-company-details', function(req, res) {
+
+    res.redirect('authentication-code-v2')
+})
+
+
+
+// authentication code page
+router.post('/authentication-code-v2', function (req, res) {
+ 
+    if(req.session.data['auth-code'] == "yes"){
+
+      res.redirect('user-account/company-added')
+    }
+    else if(req.session.data['auth-code'] == "no"){
+
+      if(app.settings.scenario == 'one-two')
+      {
+        res.redirect('request-an-authentication-code') 
+      }
+      else if(app.settings.scenario == 'three')
+      {
+        res.redirect('request-authorisation')
+      }
+    }
+  
+})
+
+
+
+
+
+
+
 
 
 
@@ -204,25 +273,7 @@ router.post('/company-role', function (req, res) {
 
 
 
-router.post('/authentication-code-v2', function (req, res) {
- 
-    if(req.session.data['auth-code'] == "yes"){
 
-      res.redirect('user-account/company-added')
-    }
-    else if(req.session.data['auth-code'] == "no"){
-
-      if(app.settings.scenario == 'one-two')
-      {
-        res.redirect('request-an-authentication-code') 
-      }
-      else if(app.settings.scenario == 'three')
-      {
-        res.redirect('request-authorisation')
-      }
-    }
-  
-})
 
 router.post('/request-authorisation', function (req, res) {
  
