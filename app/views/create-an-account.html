@@ -80,6 +80,9 @@
           label: {
             text: "Email address"
           },
+          hint: {
+            text: "You will need to verify the email address you provide."
+          },
           id: "email",
           name: "email",
           type: "email",
@@ -95,7 +98,7 @@
             text: "Password"
           },
           hint:{
-            text:"This must be at least 8 characters long"
+            text:"This must be at least 8 characters long."
           },
           suffix: {
             html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
@@ -115,8 +118,20 @@
             text: "Password"
           },
           hint:{
-            text:"This must be at least 8 characters long"
+            text:"This must be at least 8 characters long."
           },
+          suffix: {
+            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+          {{ govukInput({
+            label: {
+            text: "Re-enter password"
+          },
+      
           suffix: {
             html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
           },
