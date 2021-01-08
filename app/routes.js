@@ -24,12 +24,49 @@ router.get('/start-page-s3', function (req, res) {
 
 router.post('/start-page', function (req, res) {
 
-    res.redirect('enter-your-details')
+    res.redirect('create-an-account')
 })
 
 
 
 // --- Error messages ---
+
+// Enter your details page
+router.post('/create-an-account', function(req, res) {
+
+    var errors = [];
+    var fullNameHasError = false;
+    var emailHasError = false;
+    var passwordHasError = false;
+  
+    if(req.session.data['full-name'] == ""){
+      fullNameHasError = true;
+      errors.push({text: "Enter your full name", href: "#full-name-error"});
+    }
+    if(req.session.data['email'] == ""){
+      emailHasError = true;
+      errors.push({text: "Enter your email address", href: "#email-error"});
+    }
+    if(req.session.data['password'] == ""){
+      passwordHasError = true;
+      errors.push({text: "Enter your password", href: "#password-error"});
+    }
+
+    if(fullNameHasError || emailHasError || passwordHasError){
+      res.render('create-an-account', {
+
+        errorFullName: fullNameHasError,
+        errorEmail: emailHasError,
+        errorPassword: passwordHasError,
+        errorList: errors
+    })
+    }
+    else
+    {
+      res.redirect('check-your-email')
+    }
+})
+
 
 
 // Enter your details page
