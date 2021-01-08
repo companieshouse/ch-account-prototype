@@ -27,18 +27,12 @@
           text: "The email link will expire within XX days..."
         }) }} 
 
-        {{ govukButton({
-          text: "Go to your Companies House account",
-          classes: "govuk-button--secondary",
-          href:"../user-account/home-no-companies-email-not-confirmed"
-        }) }}
-
-
+        <p class="govuk-body govuk-!-font-weight-bold">This page will update automatically when you select the link.</p>
 
 
         {{ govukDetails({
           summaryText: "I have not received an email",
-          html: "The email may take a few minutes to arrive. Its subject line is 'Verify your email address - Companies House'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address you can <a href='create-your-password' class='govuk-link'>give us a different email address</a>."
+          html: "The email may take a few minutes to arrive. Its subject line is 'Verify your email address - Companies House'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address you can <a href='../user-account/home-no-companies' class='govuk-link'>give us a different email address</a>."
         }) }}
 
   </div>
