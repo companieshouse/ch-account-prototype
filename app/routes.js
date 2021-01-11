@@ -235,6 +235,12 @@ router.post('/authentication-code-v2', function (req, res) {
 })
 
 
+// View company information page
+router.post('/change-your-password', function(req, res) {
+
+    res.redirect('../forgotten-password/reset-password-check-email')
+})
+
 
 
 
