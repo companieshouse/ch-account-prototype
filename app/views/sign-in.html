@@ -26,11 +26,11 @@
         {% endif %}
 
       <h1 class="govuk-heading-xl">Sign in to your Companies House account</h1>
+  <p class="govuk-body govuk-hint">You cannot use your WebFiling details to sign in. You must sign in to or create a Companies House account.</p>
 
-      <p class="govuk-body">If you do not have an account, <a href="sign-in" class="govuk-link">you can create one now</a>.</p>
 
         {% if errorEmail == true %}
-          
+
           {{ govukInput({
             label: {
             text: "Email address"
@@ -90,9 +90,9 @@
 
         }) }}
 
-         
 
-      
+      <p class="govuk-body"><a href="sign-in" class="govuk-link">Create a Companies House account</a></p>
+
         <p><a href="../forgotten-password/change-your-password" class="govuk-link govuk-link--no-visited-state">I've forgotten my password</a>
 
       </p>

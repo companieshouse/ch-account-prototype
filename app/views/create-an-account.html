@@ -26,7 +26,11 @@
         {% endif %}
 
         <h1 class="govuk-heading-xl">What are your details?</h1>
-
+        {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+<p class="govuk-body">You will need to verify the email address you provide to make your account more secure.</p>
+        {{ govukInsetText({
+          text: "For your security, we may ask you to verify your email address again when you sign back in to your Companies House account."
+        }) }}
         {% if errorFullName  == true %}
         {{ govukInput({
           label: {
@@ -66,7 +70,7 @@
             text: "Email address"
           },
           hint: {
-            text: "You will need to verify the email address you provide."
+            text: "We will send a link to this email address to confirm it belongs to you."
           },
           id: "email",
           name: "email",
@@ -84,7 +88,7 @@
             text: "Email address"
           },
           hint: {
-            text: "You will need to verify the email address you provide."
+            text: "We'll send a link to this email address to verify that you have access to it."
           },
           id: "email",
           name: "email",
