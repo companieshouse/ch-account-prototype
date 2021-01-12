@@ -25,7 +25,7 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">Create a Companies House account</h1>
+        <h1 class="govuk-heading-xl">What are your details?</h1>
 
         {% if errorFullName  == true %}
         {{ govukInput({
@@ -65,6 +65,9 @@
           label: {
             text: "Email address"
           },
+          hint: {
+            text: "You will need to verify the email address you provide."
+          },
           id: "email",
           name: "email",
           type: "email",
@@ -90,57 +93,6 @@
           spellcheck: false
         }) }}
         {% endif %}
-
-        {% if errorPassword  == true %}
-
-          {{ govukInput({
-            label: {
-            text: "Password"
-          },
-          hint:{
-            text:"This must be at least 8 characters long."
-          },
-          suffix: {
-            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
-          },
-          errorMessage: {
-              text: "Enter your password"
-          },
-          id: "password",
-          name: "password",
-          type: "password"
-          }) }}
-
-        {% else %}
-
-          {{ govukInput({
-            label: {
-            text: "Password"
-          },
-          hint:{
-            text:"This must be at least 8 characters long."
-          },
-          suffix: {
-            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
-          },
-          id: "password",
-          name: "password",
-          type: "password"
-          }) }}
-          {{ govukInput({
-            label: {
-            text: "Re-enter password"
-          },
-          suffix: {
-            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
-          },
-          id: "password",
-          name: "password",
-          type: "password"
-          }) }}
-
-        {% endif %}
-
 
         {{ govukButton({
             text: "Continue"

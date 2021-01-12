@@ -63,7 +63,7 @@ router.post('/create-an-account', function(req, res) {
     }
     else
     {
-      res.redirect('check-your-email')
+      res.redirect('create-your-password')
     }
 })
 
