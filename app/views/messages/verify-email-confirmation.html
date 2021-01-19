@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
 {% block pageTitle %}
   Email address verified
 {% endblock %}
