@@ -17,4 +17,13 @@ $govuk-assets-path: '/govuk/assets/';
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+//Defining new account menu style
+@import "components/account-menu";
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+nav{
+	display: inline-block;
+	float: right;
+}

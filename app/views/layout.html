@@ -37,14 +37,23 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
+
+
   {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#1",
+      text: "Sign out"
+    }
+  ]
   }) }} 
     
 

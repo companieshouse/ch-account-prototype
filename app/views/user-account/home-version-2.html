@@ -1,4 +1,4 @@
-{% extends "layout-account-options-v2.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Companies House account
@@ -7,30 +7,56 @@
 
 {% block content %}
 
-<span class="govuk-caption-xl" >Home</span>
-<h1 class="govuk-heading-l">Hannah Salt</h1>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-<div style="background-color:#f3f2f1; padding: 1em;"> 
+<div class="govuk-width-container">
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-
-      0 companies
-
-      View your companies
-
-      Add a company      
     
+    <div class="govuk-grid-row govuk-main-wrapper">
 
-    </div>
+      <div class="govuk-grid-column-one-third">
+        <nav aria-label="Account management">
 
-    <div class="govuk-grid-column-one-third">
+          <ul class="account-menu">
+            <li class="account-menu-item account-menu__item--current">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your details</a>
+              <span class="account-menu-link-description"> Make changes to your account details </span>
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your account details </span>
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
+              <span class="account-menu-link-description"> View your companies and add companies to your account </span> 
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and manage the companies you follow </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       
-    </div>
-</div>
-</div>
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Your Companies House account</h1>
+
+          <p class="govuk-body">hannah.salt@example.com</p>
+
+
+
+           
+
+
+      
+          </div>
+
+
+        </div>
+        
+
+
+
 
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -54,8 +80,9 @@
     </div>
   </li>
 </ul>
-
+</div>
     
+</div>
 </div>
 
 {% endblock %}
