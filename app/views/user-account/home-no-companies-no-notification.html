@@ -9,20 +9,6 @@
 
 <div class="govuk-width-container">
 <div class="govuk-grid-row">
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-{% set html %}
-  <p class="govuk-notification-banner__heading">
-    You've successfully verified your email address and created your account.
-  </p>
-{% endset %}
-</div>
-
-{{ govukNotificationBanner({
-  html: html,
-  type: 'success'
-}) }}
-<div class="govuk-grid-row">
     
     <div class="govuk-grid-row govuk-main-wrapper">
 
@@ -30,15 +16,15 @@
         <nav aria-label="Account management">
 
           <ul class="account-menu">
-            <li class="account-menu-item account-menu__item--current">
+            <li class="account-menu-item">
               <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
               <span class="account-menu-link-description"> View your ... </span>
             </li>
-            <li class="account-menu-item account-menu__item">
+            <li class="account-menu-item ">
               <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
               <span class="account-menu-link-description"> Make changes to your details and account settings </span>
             </li>
-            <li class="account-menu-item">
+            <li class="account-menu-item account-menu__item--current">
               <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
               <span class="account-menu-link-description"> Manage your companies and  authorised people</span> 
             </li>
@@ -57,9 +43,7 @@
       
         <div class="govuk-grid-column-three-quarters">
 
-          <h1 class="govuk-heading-l">Your Companies House account</h1>
-
-          <p class="govuk-body">hannah.salt@example.com</p>
+          <h1 class="govuk-heading-l">Your companies</h1>
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -76,7 +60,10 @@
 
               <p class="govuk-body">Once you have added a company using the authentication code, you will no longer need it to file online.</p>
 
-              
+              {{ govukButton({
+                  text: "Add a company",
+                  href:"../add-a-company"
+              }) }}
             </div>
 
         </div>
@@ -89,3 +76,5 @@
 
 
 {% endblock %}
+
+
