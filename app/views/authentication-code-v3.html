@@ -1,28 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Your companies
+  Enter the company authentication code
 {% endblock %}
 
 
 {% block content %}
 
 <div class="govuk-width-container">
-  <div class="govuk-grid-row">
-
-    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-    {% set html %}
-      <p class="govuk-notification-banner__heading">
-        <a class="govuk-notification-banner__link" href="../add-mobile/enter-your-mobile-number">Add your mobile number</a> to increase the security of your account.
-      </p>
-    {% endset %}
-
-    {{ govukNotificationBanner({
-      html: html
-    }) }}
-
-  </div>
 
 <div class="govuk-grid-row">
     
@@ -36,7 +21,7 @@
               <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
               <span class="account-menu-link-description"> View your ... </span>
             </li>
-            <li class="account-menu-item ">
+            <li class="account-menu-item account-menu__item">
               <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
               <span class="account-menu-link-description"> Make changes to your details and account settings </span>
             </li>
@@ -56,20 +41,47 @@
         </nav>
       </div>
 
-      
-        <div class="govuk-grid-column-three-quarters">
+    
+          <div class="govuk-grid-column-three-quarters">
+            <form action="/authentication-code" method="post">
 
-          <span class="govuk-caption-xl" >Home</span>
-          <h1 class="govuk-heading-l">Hannah Salt</h1>
+              {{ govukBackLink({
+                text: "Back",
+                href:"check-company-details"
+              }) }}
 
+              {{ govukInput({
+                label: {
+                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company Authentication code</h1>",
+                  isPageHeading: true,
+                  classes: "govuk-label--xl"
+                },
+                classes: "govuk-input--width-10",
+                id: "authentication-code",
+                name: "authentication-code"
+              }) }}
 
-          
+              {{ govukDetails({
+                summaryText: "Help with authentication code",
+                html: 'This is a 6 character code issued by us to each company. The code is currently used to authorise online filings. Once you have added a company to your account, you will no longer need the code to file online.<br><br>
+                  Read the <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" target="_blank" class="govuk-link"> authentication code guidance (opens in a new tab)</a>, which includes how to request one.'
+              }) }}
+
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+
+              <p class="govuk-body"><a href="company-added-authorisation-sent" class="govuk-link">Request authorisation to file for this company</a></p>
+            </form>
+          </div>
+        </div>
+
     </div>
+</div>
         
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-</div> 
-</div>
 
 
 {% endblock %}
+

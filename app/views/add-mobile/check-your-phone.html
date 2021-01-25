@@ -1,46 +1,81 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Verify your mobile number
+  Your companies
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href:"verify-choice"
-  }) }}
-{% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Check your phone</h1>
-        <p class="govuk-body">We've sent a text message with a security code to <span class='govuk-body govuk-!-font-weight-bold'> 07769 321 456</span>.</p>
+<div class="govuk-width-container">
 
-        <p class="govuk-body"> It may take a few minutes to arrive.</p>
+<div class="govuk-grid-row">
+    
+    <div class="govuk-grid-row govuk-main-wrapper">
 
-        {{ govukInput({
-          label: {
-            text: "Enter security code"
-          },
-          classes: "govuk-input--width-10",
-          id: "width-10",
-          name: "width-10"
-        }) }}
+      <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
 
-        {{ govukButton({
-          text: "Continue",
-          href:"../add-mobile/manage-account-notification"
-        }) }}
+          <ul class="account-menu">
+            <li class="account-menu-item account-menu__item--current">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <span class="account-menu-link-description"> View your ... </span>
+            </li>
+            <li class="account-menu-item ">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your details and account settings </span>
+            </li>
+            <li class="account-menu-item">
+              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
+              <span class="account-menu-link-description"> Manage your companies and  authorised people</span> 
+            </li>
+             <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
+              <span class="account-menu-link-description"> View your recent company filings</span> 
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and update the companies you follow </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        {{ govukDetails({
-          summaryText: "I have not received a text message",
-          html: "The text message may take a few minutes to arrive.</br> </br> If it does not arrive, you can <a href='' class='govuk-link'>ask us to send you another text message</a>. </br></br> If you have given us the wrong number you can <a href='#' class='govuk-link'>give us a different mobile number</a>."
-        }) }}
+      
+        <div class="govuk-grid-column-three-quarters">
 
 
+          <h1 class="govuk-heading-xl">Check your phone</h1>
+          <p class="govuk-body">We've sent a text message with a security code to <span class='govuk-body govuk-!-font-weight-bold'> 07769 321 456</span>.</p>
 
-  </div>
-  </div>
+          <p class="govuk-body"> It may take a few minutes to arrive.</p>
+
+          {{ govukInput({
+            label: {
+              text: "Enter security code"
+            },
+            classes: "govuk-input--width-10",
+            id: "width-10",
+            name: "width-10"
+          }) }}
+
+          {{ govukButton({
+            text: "Continue",
+            href:"../add-mobile/manage-account-notification"
+          }) }}
+
+          {{ govukDetails({
+            summaryText: "I have not received a text message",
+            html: "The text message may take a few minutes to arrive.</br> </br> If it does not arrive, you can <a href='' class='govuk-link'>ask us to send you another text message</a>. </br></br> If you have given us the wrong number you can <a href='#' class='govuk-link'>give us a different mobile number</a>."
+          }) }}
+
+        </div>
+
+          
+    </div>
+        
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div> 
+</div>
 {% endblock %}

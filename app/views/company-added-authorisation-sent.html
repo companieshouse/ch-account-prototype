@@ -1,4 +1,4 @@
-{% extends "layout-account-options.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Companies House account
@@ -7,48 +7,101 @@
 
 {% block content %}
 
-<span class="govuk-caption-xl" >Home</span>
-<h1 class="govuk-heading-l">Hannah Salt</h1>
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
 
-<h2 class="govuk-heading-s" id = "notification-banner-title" style="margin-top: 1em; border:5px; border-style:solid; border-color:#00703c; padding: 1em;">A request has been sent to confirm you are an authorised person to file for FLOWERS LIMITED.</h2>
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-<h1 class="govuk-heading-m">Your companies</h1>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
 
-<div style="background-color:#f3f2f1; padding: 1em;"> 
+      <p class="govuk-notification-banner__heading">
+          Authorisation request sent
+        </p>
+        <p class="govuk-body">A request has been sent to confirm you are an authorised person to file for FLOWERS LIMITED.</p>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-     <h2 class="govuk-heading-m">FLOWERS LIMITED <strong class="govuk-tag govuk-tag--blue"> Pending - email sent </strong> </h2>
 
-    </div>
+      
+    </p>
+  {% endset %}
   </div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+  {{ govukNotificationBanner({
+    html: html,
+    type: 'success'
+  }) }}
+    
+    <div class="govuk-grid-row govuk-main-wrapper">
 
-          <p class="govuk-body govuk-!-font-weight-bold">
-              <span class="govuk-body ">Company number</span><br>
-         </span>18882777</p>
+      <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
+
+          <ul class="account-menu">
+            <li class="account-menu-item">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <span class="account-menu-link-description"> View your ... </span>
+            </li>
+            <li class="account-menu-item ">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your details and account settings </span>
+            </li>
+            <li class="account-menu-item account-menu__item--current">
+              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
+              <span class="account-menu-link-description"> Manage your companies and  authorised people</span> 
+            </li>
+             <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
+              <span class="account-menu-link-description"> View your recent company filings</span> 
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and update the companies you follow </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      
+        <div class="govuk-grid-column-three-quarters">
+
+
+          <h1 class="govuk-heading-l">Your companies</h1>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <div style="background-color:#f3f2f1; padding: 2em;">
+
+             <h2 class="govuk-heading-m">FLOWERS LIMITED <strong class="govuk-tag govuk-tag--blue"> AWAITING AUTHORISATION </strong> </h2>
 
             <p class="govuk-body govuk-!-font-weight-bold">
-                <span class="govuk-body ">Correspondence address</span><br>
-           </span> 2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
+                <span class="govuk-body ">Company number</span><br>
+           </span>18882777</p>
 
+              <p class="govuk-body govuk-!-font-weight-bold">
+                  <span class="govuk-body ">Correspondence address</span><br>
+             </span> 2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
+
+             </div>
+
+     
+             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            {{ govukButton({
+                  text: "Add a company",
+                  href:"../add-a-company"
+            }) }}
+          
+
+        </div>
     </div>
-    <div class="govuk-grid-column-one-third">
         
-
-    </div>
-  </div>
-</div>
-
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-    {{ govukButton({
-      text: "Add another company",
-      href:"../../add-a-company"
-    }) }}
+</div> 
 </div>
 
+
 {% endblock %}
+
+
+

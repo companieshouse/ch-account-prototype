@@ -9,17 +9,16 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">Scenario One</h1>
+        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user - has their authentication code</h1>
 
-        <p class="govuk-body"> An accountant wants to file a set of accounts, they go to 'webfiling'. They don't have a CH account, they are then asked to  director sets up a CH account and has their authentication code. They add their company to their user account and then later add an authorised person to the company.</p>
+        <p class="govuk-body"> The user can add 'FLOWERS LIMITED' to their account.</p>
+        
+        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user - does not have their authentication code</h1>
 
-        <h1 class="govuk-heading-m">Scenario Two </h1>
-
-        <p class="govuk-body">A 'director/PSC/Authorised person' has no authentication code. The company has not already been linked to a user account. The user will need to request the authentication code before they can add the company to the account. </p>
-
+        <p class="govuk-body"> Request that the authentiction code is sent to the registed office address.</p>
 
         {{ govukButton({
-          text: "Scenario One and Two",
+          text: "First account user for 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
           href:"start-page-s1-s2"
         }) }}
@@ -27,14 +26,13 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h1 class="govuk-heading-m">Scenario Three - Auth code already added to the company</h1>
+        <h1 class="govuk-heading-m">Second 'FLOWERS LIMITED' user - does not have the authentication code</h1>
 
-        <p class="govuk-body">A 'director/PSC/Authorised person' has no authentication code. A 'digital authorisation' request is sent to the linked user account to confirm they are a authorised person for the company. </p>
+        <p class="govuk-body">Requests authorisation</p>
 
      
-
         {{ govukButton({
-          text: "Scenario Three - Request an authentication code",
+          text: "Second account user for 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
           href: "start-page-s3"
         }) }}

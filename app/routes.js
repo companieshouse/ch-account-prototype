@@ -210,7 +210,17 @@ router.post('/add-a-company', function(req, res) {
 // View company information page
 router.post('/check-company-details', function(req, res) {
 
-    res.redirect('authentication-code')
+
+      if(app.settings.scenario == 'one-two')
+      {
+        res.redirect('authentication-code') 
+      }
+      else if(app.settings.scenario == 'three')
+      {
+        res.redirect('authentication-code-v3')
+      }
+
+
 })
 
 

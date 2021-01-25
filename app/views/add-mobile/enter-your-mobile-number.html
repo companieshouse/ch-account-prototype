@@ -1,38 +1,78 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Enter your mobile number
+  Your companies
 {% endblock %}
 
-
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back"
-  }) }}
-{% endblock %}
 
 {% block content %}
+
+<div class="govuk-width-container">
+
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <form action="/form-handler" method="post" novalidate>
-      <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="event-name">
-      Enter your mobile number
-    </label>
-  </h1>
+    
+    <div class="govuk-grid-row govuk-main-wrapper">
+
+      <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
+
+          <ul class="account-menu">
+            <li class="account-menu-item account-menu__item--current">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <span class="account-menu-link-description"> View your ... </span>
+            </li>
+            <li class="account-menu-item ">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your details and account settings </span>
+            </li>
+            <li class="account-menu-item">
+              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
+              <span class="account-menu-link-description"> Manage your companies and  authorised people</span> 
+            </li>
+             <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
+              <span class="account-menu-link-description"> View your recent company filings</span> 
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and update the companies you follow </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      
+        <div class="govuk-grid-column-three-quarters">
 
 
-  <p class="govuk-body">We'll send you a security code by text message.</p>
+          {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  <input class="govuk-input" id="event-name" name="event-name" type="text">
-</div>
+          {{ govukInput({
+            label: {
+              text: "Enter your mobile number",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            hint: {
+              text: "We'll send you a security code by text message."
+            },
+            id: "event-name",
+            name: "event-name"
+          }) }}
 
+          
+          {{ govukButton({
+            text: "Send code",
+            href:"../add-mobile/check-your-phone"
+          }) }}
 
-      {{ govukButton({
-        text: "Send code",
-        href:"../add-mobile/check-your-phone"
-      }) }}
-    </form>
-  </div>
+        </div>
+
+          
+    </div>
+        
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div> 
 </div>
 {% endblock %}
