@@ -9,30 +9,30 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user - has their authentication code</h1>
+        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user</h1>
 
-        <p class="govuk-body"> The user can add 'FLOWERS LIMITED' to their account.</p>
-        
-        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user - does not have their authentication code</h1>
-
-        <p class="govuk-body"> Request that the authentiction code is sent to the registed office address.</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>User has the authentication code. Company added.</li>
+          <li>User does not have their authentication code and requests code to their registered office address.</li>
+        </ul>
 
         {{ govukButton({
-          text: "First account user for 'FLOWERS LIMITED'",
+          text: "First user for 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
           href:"start-page-s1-s2"
         }) }}
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-
-        <h1 class="govuk-heading-m">Second 'FLOWERS LIMITED' user - does not have the authentication code</h1>
-
-        <p class="govuk-body">Requests authorisation</p>
+        <h1 class="govuk-heading-m">Second 'FLOWERS LIMITED' user </h1>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>User has their authentication code. Company added.</li>
+          <li>User does not have their authentication code. Requests authorisation.</li>
+        </ul>
 
      
         {{ govukButton({
-          text: "Second account user for 'FLOWERS LIMITED'",
+          text: "Second user for 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
           href: "start-page-s3"
         }) }}
