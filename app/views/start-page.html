@@ -20,11 +20,18 @@
         <li>authorise people to file documents for your company online</li>
             <li>access Companies House services</li>
       </ul>
-      <p class="govuk-body">To create an account, you'll need to:</p>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  text: "A Companies House account is different to a CHS or WebFiling account."
+}) }}
+      <p class="govuk-body">By creating a Companies House account, you will no longer need separate CHS or Webfiling accounts. You’ll be able to access CHS and WebFiling via this new account. You will not lose any data.</p>
+      <p class="govuk-body">To create an account, you'll need:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>provide an email address</li>
-        <li>verify that you have access to the email address</li>
+        <li>an email address</li>
+        <li>to verify that you have access to the email address</li>
+        <li>to create a password to make your account secure</li>
 
       </ul>
 

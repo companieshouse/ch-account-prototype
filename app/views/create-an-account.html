@@ -25,7 +25,7 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">What are your details?</h1>
+        <h1 class="govuk-heading-xl">Enter your email address and create a password</h1>
         {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 <p class="govuk-body">You will need to verify the email address you provide to make your account more secure.</p>
         {{ govukInsetText({
@@ -70,7 +70,7 @@
 
           {{ govukInput({
             label: {
-            text: "Enter password"
+            text: "Create a password"
           },
           hint:{
             text:"This must be at least 8 characters long"
@@ -79,7 +79,7 @@
             html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
           },
           errorMessage: {
-              text: "Enter your password"
+              text: "Create a password"
           },
           id: "password",
           name: "password",
@@ -90,7 +90,7 @@
 
           {{ govukInput({
             label: {
-            text: "Enter a password"
+            text: "Create a password"
           },
           hint:{
             text:"This must be at least 8 characters long and hard to guess."
