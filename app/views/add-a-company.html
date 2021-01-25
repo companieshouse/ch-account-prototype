@@ -12,7 +12,7 @@
     
     <div class="govuk-grid-row govuk-main-wrapper">
 
-      <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-one-quarter">
         <nav aria-label="Account management">
 
           <ul class="account-menu">
@@ -40,8 +40,13 @@
         </nav>
       </div>
 
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
       <form action="/add-a-company" method="post" novalidate>
+
+        {{ govukBackLink({
+          text: "Back",
+          href:"home-no-companies-no-notification"
+        }) }}
 
         {% if errorCompanyNumber == true %}
 

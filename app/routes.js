@@ -38,11 +38,8 @@ router.post('/create-an-account', function(req, res) {
     var fullNameHasError = false;
     var emailHasError = false;
     var passwordHasError = false;
+    var passwordConfirmHasError = false;
   
-    if(req.session.data['full-name'] == ""){
-      fullNameHasError = true;
-      errors.push({text: "Enter your full name", href: "#full-name-error"});
-    }
     if(req.session.data['email'] == ""){
       emailHasError = true;
       errors.push({text: "Enter your email address", href: "#email-error"});
@@ -51,19 +48,24 @@ router.post('/create-an-account', function(req, res) {
       passwordHasError = true;
       errors.push({text: "Enter your password", href: "#password-error"});
     }
+    if(req.session.data['confirm-password'] == ""){
+      passwordHasError = true;
+      errors.push({text: "Re-enter your password", href: "#confirm-password-error"});
+    }
 
-    if(fullNameHasError || emailHasError || passwordHasError){
+    if(emailHasError || passwordHasError || passwordConfirmHasError){
       res.render('create-an-account', {
 
         errorFullName: fullNameHasError,
         errorEmail: emailHasError,
         errorPassword: passwordHasError,
+        errorConfirmPassword: passwordConfirmHasError,
         errorList: errors
     })
     }
     else
     {
-      res.redirect('create-your-password')
+      res.redirect('enter-your-name')
     }
 })
 
@@ -113,7 +115,7 @@ router.post('/enter-your-name', function(req, res) {
   }
   else
   {
-    res.redirect('create-your-password')
+    res.redirect('check-your-email')
   }
 })
 
@@ -208,31 +210,12 @@ router.post('/add-a-company', function(req, res) {
 // View company information page
 router.post('/check-company-details', function(req, res) {
 
-    res.redirect('authentication-code-v2')
+    res.redirect('authentication-code')
 })
 
 
 
-// authentication code page
-router.post('/authentication-code-v2', function (req, res) {
- 
-    if(req.session.data['auth-code'] == "yes"){
 
-      res.redirect('user-account/company-added')
-    }
-    else if(req.session.data['auth-code'] == "no"){
-
-      if(app.settings.scenario == 'one-two')
-      {
-        res.redirect('request-an-authentication-code') 
-      }
-      else if(app.settings.scenario == 'three')
-      {
-        res.redirect('request-authorisation')
-      }
-    }
-  
-})
 
 
 // --- password journey ---
@@ -250,7 +233,12 @@ router.post('/reset-your-password', function(req, res) {
 })
 
 
+// authentication code page
+router.post('/authentication-code', function (req, res) {
 
+    res.redirect('../user-account/company-added')
+  
+})
 
 
 
@@ -346,6 +334,27 @@ router.post('/verify-choice', function (req, res) {
     else if(req.session.data['verify-choice'] == "text-message"){
 
       res.redirect('check-your-phone')
+    }
+  
+})
+
+// authentication code page
+router.post('/authentication-code-v2', function (req, res) {
+ 
+    if(req.session.data['auth-code'] == "yes"){
+
+      res.redirect('user-account/company-added')
+    }
+    else if(req.session.data['auth-code'] == "no"){
+
+      if(app.settings.scenario == 'one-two')
+      {
+        res.redirect('request-an-authentication-code') 
+      }
+      else if(app.settings.scenario == 'three')
+      {
+        res.redirect('request-authorisation')
+      }
     }
   
 })

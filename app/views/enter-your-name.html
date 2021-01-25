@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What are your contact details
+  Enter your full name
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">What are your details?</h1>
+        <h1 class="govuk-heading-xl">Enter your full name</h1>
 
         {% if errorFullName  == true %}
         {{ govukInput({

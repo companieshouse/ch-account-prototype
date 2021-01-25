@@ -16,7 +16,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/create-an-account" method="post" novalidate>
 
-        {% if errorFullName  == true or errorEmail == true or errorPassword == true %}
+        {% if errorEmail == true or errorPassword == true or errorConfirmPassword  == true %}
 
           {{ govukErrorSummary({
               titleText: "There is a problem",
@@ -31,38 +31,6 @@
         {{ govukInsetText({
           text: "For your security, we may ask you to verify your email address again when you sign back in to your Companies House account."
         }) }}
-        {% if errorFullName  == true %}
-        {{ govukInput({
-          label: {
-            text: "Full name"
-          },
-          hint: {
-            text: "This is the name that will be displayed in your account."
-          },
-          id: "full-name",
-          name: "full-name",
-          autocomplete: "name",
-          errorMessage: {
-            text: "Enter your full name"
-          },
-          spellcheck: false
-        }) }}
-
-        {% else %}
-
-        {{ govukInput({
-          label: {
-            text: "Full name"
-          },
-          hint: {
-            text: "This is the name that will be displayed in your account."
-          },
-          id: "full-name",
-          name: "full-name",
-          autocomplete: "name",
-          spellcheck: false
-        }) }}
-        {% endif %}
 
         {% if errorEmail  == true %}
         {{ govukInput({
@@ -88,7 +56,7 @@
             text: "Email address"
           },
           hint: {
-            text: "We'll send a link to this email address to verify that you have access to it."
+            text: "We will send a link to this email address to confirm it belongs to you."
           },
           id: "email",
           name: "email",
@@ -97,6 +65,92 @@
           spellcheck: false
         }) }}
         {% endif %}
+
+         {% if errorPassword  == true %}
+
+          {{ govukInput({
+            label: {
+            text: "Enter password"
+          },
+          hint:{
+            text:"This must be at least 8 characters long"
+          },
+          suffix: {
+            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          errorMessage: {
+              text: "Enter your password"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+
+        {% else %}
+
+          {{ govukInput({
+            label: {
+            text: "Enter a password"
+          },
+          hint:{
+            text:"This must be at least 8 characters long and hard to guess."
+          },
+          suffix: {
+            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+
+        {% endif %}
+
+        {% if errorConfirmPassword  == true %}
+
+          {{ govukInput({
+            label: {
+            text: "Re-enter password"
+          },
+          suffix: {
+            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          errorMessage: {
+              text: "Re-enter your password"
+          },
+          id: "confirm-password",
+          name: "confirm-password",
+          type: "password"
+          }) }}
+
+        {% else %}
+
+          {{ govukInput({
+            label: {
+            text: "Re-enter password"
+          },
+          suffix: {
+            html: "<a href='#' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "confirm-password",
+          name: "confirm-password",
+          type: "password"
+          }) }}
+
+        {% endif %}
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with creating your password
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can use numbers, symbols and spaces.
+            <br><br>
+          A good way to create a secure and memorable password is to use 3 random words.
+          </div>
+        </details>
+
 
         {{ govukButton({
             text: "Continue"
