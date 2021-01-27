@@ -10,7 +10,7 @@
 <div class="govuk-width-container">
 
 <div class="govuk-grid-row">
-    
+
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
@@ -41,7 +41,7 @@
         </nav>
       </div>
 
-    
+
           <div class="govuk-grid-column-three-quarters">
             <form action="/authentication-code" method="post">
 
@@ -52,7 +52,7 @@
 
               {{ govukInput({
                 label: {
-                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company Authentication code</h1>",
+                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>",
                   isPageHeading: true,
                   classes: "govuk-label--xl"
                 },
@@ -63,8 +63,7 @@
 
               {{ govukDetails({
                 summaryText: "Help with authentication code",
-                html: 'This is a 6 character code issued by us to each company. The code is currently used to authorise online filings. Once you have added a company to your account, you will no longer need the code to file online.<br><br>
-                  Read the <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" target="_blank" class="govuk-link"> authentication code guidance (opens in a new tab)</a>, which includes how to request one.'
+                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.'
               }) }}
 
               {{ govukButton({
@@ -78,10 +77,9 @@
 
     </div>
 </div>
-        
+
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
 
 {% endblock %}
-

@@ -14,7 +14,7 @@
 
     {% set html %}
       <p class="govuk-notification-banner__heading">
-        'FLOWERS LIMITED' has been added to your account.
+        'FLOWERS LIMITED' has been added to your account.<br><br>You will no longer need the authentication code for most online filings. Keep the code in a safe place because you may need it for certain filings in the future.
       </p>
     {% endset %}
 
@@ -26,7 +26,7 @@
 
 
 <div class="govuk-grid-row">
-    
+
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
@@ -57,14 +57,14 @@
         </nav>
       </div>
 
-      
+
         <div class="govuk-grid-column-three-quarters">
 
           <h1 class="govuk-heading-l">Your companies</h1>
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-            <div style="background-color:#f3f2f1; padding: 1em;"> 
+            <div style="background-color:#f3f2f1; padding: 1em;">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                  <h2 class="govuk-heading-m">FLOWERS LIMITED</h2>
@@ -79,7 +79,7 @@
 
                     <p class="govuk-body govuk-!-font-weight-bold">
                         <span class="govuk-body">Correspondence address</span><br>
-                   </span> 2nd Floor Red House,<br> 17 London Road, London,<br> SA73 8PH </p>
+                   </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
 
                    <div class="govuk-grid-row">
                     <div class="govuk-grid-column-three-quarters">
@@ -117,7 +117,7 @@
                       href:""
                     }) }}
                     {{ govukButton({
-                      text: "Add an authorised person",
+                      text: "Add person authorised to file for this company",
                       href:"../../delegate-to-presenter/enter-presenter-details"
                     }) }}
 
@@ -132,25 +132,11 @@
                 }) }}
             </div>
     </div>
-        
+
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-</div> 
+</div>
 </div>
 
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
