@@ -14,7 +14,7 @@
 
     {% set html %}
       <p class="govuk-notification-banner__heading">
-        'FLOWERS LIMITED' has been added to your account.<br>
+        You are now authorised to file for 'FLOWERS LIMITED'. <br> ... <br> 'FLOWERS LIMITED' has been added to your account.<br>
         <p class="govuk-body">You will no longer need the authentication code for most online filings. Keep the code in a safe place because you may need it for certain filings in the future.</p>
 {% endset %}
 
@@ -34,7 +34,7 @@
 
           <ul class="account-menu">
             <li class="account-menu-item ">
-              <a href="../user-account/home-version-2" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <a href="../user-account/home-no-companies" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
               <span class="account-menu-link-description"> Overview of your account.</span>
             </li>
             <li class="account-menu-item account-menu__item--current">
@@ -96,7 +96,18 @@
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">
-                            <p class="govuk-body"> Hannah Salt (you)</p>
+                            <p class="govuk-body"> Hannah Salt</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--turquoise"
+                            })}}
+                          </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Jill Edwards (you)</p>
                           </td>
                           <td class="govuk-table__cell">
                             {{govukTag({

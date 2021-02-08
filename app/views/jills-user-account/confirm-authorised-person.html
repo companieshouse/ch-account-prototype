@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+    
+    <div class="govuk-grid-row govuk-main-wrapper">
+
+      <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
+
+          <ul class="account-menu">
+            <li class="account-menu-item ">
+              <a href="../user-account/home-no-companies" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <span class="account-menu-link-description"> Overview of your account.</span>
+            </li>
+            <li class="account-menu-item account-menu__item--current">
+              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies (1)</a>
+              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of the companies on your account.</span> 
+            </li>
+             <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
+              <span class="account-menu-link-description"> Record of documents you have filed.</span> 
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and manage companies you follow.</span>
+            </li>
+            <li class="account-menu-item account-menu__item">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your details and account settings </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      
+        <div class="govuk-grid-column-three-quarters">
+
+          {{ govukBackLink({
+              text: "Back ",
+              href:""
+            }) }}
+
+          {{ govukRadios({
+          idPrefix: "where-do-you-live",
+          name: "where-do-you-live",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl' >FLOWERS LIMITED</span> Confirm you want to be authorised to file for this company",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "england",
+              text: "Yes, I confirm I want to be authorised to file for this company"
+            },
+            {
+              value: "northern-ireland",
+              text: "No, I do not want to be authorised to file for this company"
+            }
+          ]
+          }) }}
+
+
+
+        {{ govukButton({
+          text: "Continue",
+          classes: "govuk-!-margin-right-1",
+          href:"../jills-user-account/company-added"
+        }) }}
+            
+        </div>
+
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div>
+</div>
+
+
+{% endblock %}
+
+
+

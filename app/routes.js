@@ -184,11 +184,11 @@ router.post('/sign-in', function(req, res) {
   }
   if(app.settings.scenario == 'auth-person-request')
   {
-    res.redirect('user-account/home-no-companies') 
+    res.redirect('../jills-user-account/home-no-companies-no-notification') 
   }
   else
   {
-      res.redirect('account-created')
+      res.redirect('../user-account/home-no-companies')
   }
     
 })
@@ -222,6 +222,10 @@ router.post('/check-company-details', function(req, res) {
 
 
       if(app.settings.scenario == 'one-two')
+      {
+        res.redirect('authentication-code') 
+      }
+      if(app.settings.scenario == 'auth-person-request')
       {
         res.redirect('authentication-code') 
       }
