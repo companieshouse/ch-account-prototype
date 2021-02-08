@@ -1,4 +1,4 @@
-{% extends "layout-account-options.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Companies House account
@@ -6,50 +6,73 @@
 
 
 {% block content %}
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-{% set html %}
-  <p class="govuk-notification-banner__heading">
-    You've successfully verified your email address and created your account.
-  </p>
-{% endset %}
+<div class="govuk-width-container">
 
-{{ govukNotificationBanner({
-  html: html,
-  type: 'success'
-}) }}
 
-<span class="govuk-caption-xl" >Home</span>
-<h1 class="govuk-heading-l" style="padding-bottom: 30px;">Hannah Salt </h1>
+<div class="govuk-grid-row">
 
-<h1 class="govuk-heading-m">Your companies</h1>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div class="govuk-grid-row govuk-main-wrapper">
 
-<div style="background-color:#f3f2f1; padding: 1em;">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
+      <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
 
-          <p class="govuk-body">To file online for a company, you must add it to your account. <br><br>You'll need:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>the company number</li>
-            <li>the company <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code</a></li>
+          <ul class="account-menu">
+            <li class="account-menu-item account-menu__item--current">
+              <a href="../user-account/home-no-companies" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <span class="account-menu-link-description"> Overview of your account.</span>
+            </li>
+            <li class="account-menu-item">
+              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
+              <span class="account-menu-link-description"> View and manage companies and people authorised to file on your behalf.</span>
+            </li>
+             <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
+              <span class="account-menu-link-description"> Record of documents you have filed.</span>
+            </li>
+            <li class="account-menu-item">
+              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
+              <span class="account-menu-link-description"> View and manage companies you follow.</span>
+            </li>
+            <li class="account-menu-item account-menu__item">
+              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
+              <span class="account-menu-link-description"> Make changes to your details and account settings. </span>
+            </li>
           </ul>
-            <p class="govuk-body">Once you have added a company using the authentication code, you will no longer need it to file online.</p>
-      </ul>
+        </nav>
+      </div>
 
-      {{ govukButton({
-          text: "Add a company",
-          href:"../add-a-company"
-      }) }}
 
+        <div class="govuk-grid-column-three-quarters">
+
+          <span class="govuk-caption-xl" >Home</span>
+          <h1 class="govuk-heading-l">Hannah Salt</h1>
+
+         
+
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
+
+              <h1 class="govuk-heading-m">Account overview</h1>
+<p s class="govuk-body govuk-!-font-weight-bold">Companies you file for</p>
+
+
+  <p  class="govuk-body">If you want to file for a company, you’ll need to <a href="../add-a-company" class="govuk-link">add a company to your account</a>.</p>
+
+              <p class="govuk-body govuk-!-font-weight-bold">Companies you follow</p>
+
+
+              <p class="govuk-body">You do not currently follow any companies. <a href="../add-a-company" class="govuk-link">Follow a company</a>.</p>
+
+                </ul>
+            </div>
+
+        </div>
     </div>
-  </div>
-  </div>
+
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 </div>
-
+</div>
 
 
 {% endblock %}

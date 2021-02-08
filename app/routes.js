@@ -21,6 +21,12 @@ router.get('/start-page-s3', function (req, res) {
     res.redirect('start-page')
 })
 
+router.get('/sign-in-auth-person-request', function (req, res) {
+
+    app.set('scenario', 'auth-person-request');
+    res.redirect('sign-in')
+})
+
 
 router.post('/start-page', function (req, res) {
 
@@ -175,6 +181,10 @@ router.post('/sign-in', function(req, res) {
             errorPassword: passwordHasError,
             errorList: errors
           })
+  }
+  if(app.settings.scenario == 'auth-person-request')
+  {
+    res.redirect('user-account/home-no-companies') 
   }
   else
   {
