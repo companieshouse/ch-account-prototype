@@ -10,6 +10,15 @@
   }) }}
 {% endblock %}
 
+{% block header %}
+    {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }} 
+{% endblock %}
+
 
 {% block content %}
   <div class="govuk-grid-row">
