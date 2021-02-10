@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Companies House account
+  Tell us the company number
 {% endblock %}
 
 {% block content %}
@@ -57,19 +57,16 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">What is the company number?</h1>
-
-        <p class="govuk-body">Enter the number of the company you would like to add to your Companies House account.</p>
-
-        {{ govukInsetText({
-          text: "You can add more companies later."
-        }) }}
-
         {% if errorCompanyNumber == true %}
 
         {{ govukInput({
           label: {
-            text: "Company number"
+            text: "What is the company number?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
+          },
+          hint: {
+            html: "Enter the number of the company you would like to add to your Companies House account."
           },
           errorMessage: {
             text: "Enter the company number"
@@ -83,7 +80,12 @@
 
         {{ govukInput({
           label: {
-            text: "Company number"
+            text: "What is the company number?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
+          },
+          hint: {
+            html: "Enter the number of the company you would like to add to your Companies House account."
           },
           classes: "govuk-input--width-10",
           id: "company-number",

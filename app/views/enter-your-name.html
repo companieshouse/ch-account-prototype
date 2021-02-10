@@ -25,12 +25,13 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">What is your full name?</h1>
 
         {% if errorFullName  == true %}
         {{ govukInput({
           label: {
-            text: "Full name"
+            text: "What is your full name?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
           },
           hint: {
             text: "This is the name that will be displayed in your account."
@@ -48,7 +49,9 @@
 
         {{ govukInput({
           label: {
-            text: "Full name"
+            text: "What is your full name?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
           },
           hint: {
             text: "This is the name that will be displayed in your account."
