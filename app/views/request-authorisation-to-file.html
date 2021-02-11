@@ -48,12 +48,55 @@
 
         <form action="/request-authorisation-to-file" method="post">
 
+
             {{ govukBackLink({
               text: "Back",
               href:"check-company-details"
             }) }}
 
+            {% if errorRequestAuthorisation  == true %}
+
+            {{ govukErrorSummary({
+                titleText: "There is a problem",
+                errorList: errorList
+            }) }}
+
+            {% endif %}
+
+            {% if errorRequestAuthorisation  == true %}
+
             {{ govukRadios({
+            idPrefix: "request-authorisation",
+            name: "request-authorisation",
+            fieldset: {
+              legend: {
+                text: "Do you want to request authorisation to file for this company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            hint:{
+              text:"We will send an email request to the person who added this company to their account using the authentication code."
+            },
+            errorMessage: {
+              text: "Select yes to request authorisation to file for this company"
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+
+          {% else %}
+
+          {{ govukRadios({
             idPrefix: "request-authorisation",
             name: "request-authorisation",
             fieldset: {
@@ -78,10 +121,11 @@
               }
             ]
           }) }}
-          
+
+          {% endif %}
+
           {{ govukButton({
-            text: "Continue",
-            href:"../company-added-authorisation-sent"
+            text: "Continue"
           }) }}
 
         </form>

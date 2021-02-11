@@ -341,16 +341,35 @@ router.post('/company-role', function (req, res) {
 
 
 
-router.post('/request-authorisation', function (req, res) {
+router.post('/request-authorisation-to-file', function (req, res) {
  
+  var errors = [];
+  var requestAuthorisationHasError = false;
+  
+  if(typeof req.session.data['request-authorisation'] == 'undefined'){
+    requestAuthorisationHasError = true;
+    errors.push({text: "Select yes to request authorisation to file for this company", href: "#request-authorisation-error"});
+  }
+
+  if(requestAuthorisationHasError){
+    res.render('request-authorisation-to-file', {
+          errorRequestAuthorisation: requestAuthorisationHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+
     if(req.session.data['request-authorisation'] == "yes"){
 
       res.redirect('company-added-authorisation-sent')
     }
     else if(req.session.data['request-authorisation'] == "no"){
 
-      res.redirect('user-account/company-added')
+      res.redirect('user-account/home-no-companies-no-notification')
     }
+    
+  }  
   
 })
 
