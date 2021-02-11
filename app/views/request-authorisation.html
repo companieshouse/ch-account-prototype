@@ -17,7 +17,7 @@
 
       <form action="/request-authorisation" method="post">
 
-        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request authorisation to file for this company?</h>
+        <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'></h>
 
           {{ govukInsetText({
             text: "We will send an email request to the person who added this company to their account using the authentication code."
@@ -28,8 +28,8 @@
           name: "request-authorisation",
           fieldset: {
             legend: {
-              text: "",
-              isPageHeading: false,
+              text: "Do you want to request authorisation to file for this company?",
+              isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },

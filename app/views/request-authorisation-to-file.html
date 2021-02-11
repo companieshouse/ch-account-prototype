@@ -46,25 +46,44 @@
 
       <div class="govuk-grid-column-two-thirds">
 
-        <form action="/authentication-code-v2" method="post">
+        <form action="/request-authorisation-to-file" method="post">
 
-          {{ govukBackLink({
-            text: "Back",
-            href:"check-company-details"
+            {{ govukBackLink({
+              text: "Back",
+              href:"check-company-details"
+            }) }}
+
+            {{ govukRadios({
+            idPrefix: "request-authorisation",
+            name: "request-authorisation",
+            fieldset: {
+              legend: {
+                text: "Do you want to request authorisation to file for this company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            hint:{
+              text:"We will send an email request to the person who added this company to their account using the authentication code."
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
           }) }}
-
-          <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request authorisation to file for this company?</h1>
-
-          <p class="govuk-body">We will send an email request to the person who added this company to their account using the authentication code.</p>
-
+          
           {{ govukButton({
-            text: "Request authorisation",
-            href:"user-account/home-no-companies-auth-code-notification"
+            text: "Continue",
+            href:"../company-added-authorisation-sent"
           }) }}
-          {{ govukButton({
-            text: "Cancel",
-            classes: "govuk-button--secondary"
-          }) }}
+
         </form>
       </div>
     </div>
