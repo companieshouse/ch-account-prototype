@@ -47,8 +47,8 @@
 
           
     {{ govukBackLink({
-      text: "Back ",
-      href:"../user-account/home"
+      text: "Back to your companies",
+      href:""
     }) }}
       
             
@@ -59,7 +59,7 @@
 
     <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
 
-    <h1 class="govuk-heading-l">Update authorised person's details</h1>
+    <h1 class="govuk-heading-xl">Update authorised person's details</h1>
 
     {{ govukSummaryList({
                 rows: [
@@ -118,15 +118,17 @@
                 ]
               }) }}
 
+              {% from "govuk/components/button/macro.njk" import govukButton %}
+
+              {{ govukButton({
+                text: "Remove authorised person",
+                classes: "govuk-button--warning"
+              }) }}
+
         
             </div>
 
         </div>
-        {{ govukButton({
-                text: "Return to your companies",
-                classes: "govuk-button--secondary",
-                href:"#"
-              }) }}
 </div>
 
 </div>
