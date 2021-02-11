@@ -10,6 +10,19 @@
 <div class="govuk-width-container">
 <div class="govuk-grid-row">
 
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
+      You have a request to become an authorised person for FLOWERS LIMITED.
+      <a class="govuk-notification-banner__link" href="#">View request</a>.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}
+
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
