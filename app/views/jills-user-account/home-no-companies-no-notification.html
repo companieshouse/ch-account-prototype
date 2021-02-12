@@ -66,7 +66,7 @@
                  <h2 class="govuk-heading-m">
 
                   FLOWERS LIMITED {{govukTag({
-                    text: "PENDING",
+                    text: "PENDING ??",
                     classes: "govuk-tag--yellow"
                     })}}
                   </h2>
@@ -85,19 +85,34 @@
                    </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
                  </div>
 
-                 {% from "govuk/components/button/macro.njk" import govukButton %}
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-three-quarters">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
 
-                  <div class="govuk-button-group">
-                    {{ govukButton({
-                      text: "Confirm request ?",
-                      href:"../jills-user-account/company-added"
-                    }) }}
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> Pending requests</th>
+                          <th class="govuk-table__header" scope="col" class="govuk-table__header govuk-!-width-one-half">  </th>
+                        </tr>
 
-                    {{ govukButton({
-                      text: "Decline request ?",
-                      classes: "govuk-button--warning",
-                      href:"../jills-user-account/company-not-added"
-                    }) }}
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Request received to be added as an authorised person to file for FLOWERS LIMITED </p>
+                          </td>
+                          <td class="govuk-table__cell; govuk-table__header govuk-!-width-one-half">
+                            <p> <a href="../jills-user-account/company-added" class="govuk-link">Confirm request ?</a> </p>
+
+                            <p> <a href="../jills-user-account/company-added" class="govuk-link">Decline request ?</a> </p>
+
+                          </td>
+                        </tr>
+          
+                      </tbody>
+                    </table>
+                    </div>
                   </div>
 
               </div>
