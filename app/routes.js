@@ -377,7 +377,7 @@ router.post('/request-authorisation-to-file', function (req, res) {
     }
     else if(req.session.data['request-authorisation'] == "no"){
 
-      res.redirect('user-account/home-no-companies-no-notification')
+      res.redirect('request-an-authentication-code')
     }
     
   }  
