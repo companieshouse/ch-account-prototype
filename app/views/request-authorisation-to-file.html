@@ -11,7 +11,7 @@
 
 
 <div class="govuk-grid-row">
-    
+
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
@@ -25,11 +25,11 @@
             </li>
             <li class="account-menu-item account-menu__item--current">
               <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
-              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of the companies on your account.</span> 
+              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of the companies on your account.</span>
             </li>
              <li class="account-menu-item">
               <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
-              <span class="account-menu-link-description"> Record of documents you have filed.</span> 
+              <span class="account-menu-link-description"> Record of documents you have filed.</span>
             </li>
             <li class="account-menu-item">
               <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
@@ -116,7 +116,7 @@
                 value: "yes",
                 text: "Yes",
                 conditional: {
-                  html: "<p> We will send an email request to the person who added this company to their account using the authentication code.</p>"
+                  html: "<p> We'll send an email request to the person who added this company to their account using the authentication code. As soon as the request has been granted, you will be authorised to file for this company.</p>"
                 }
 
               },
@@ -124,7 +124,7 @@
                 value: "no",
                 text: "No",
                 conditional: {
-                  html: "<p> Send the authentication code sent to the regsitered office address which will take 5 days.</p>"
+                  html: "<p>We can send the authentication code to the registered office address by post. This usually takes up to 5 days.</p>"
                 }
               }
             ]
@@ -141,9 +141,7 @@
     </div>
   </div>
 </div>
-        
+
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 {% endblock %}
-
-

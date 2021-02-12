@@ -14,9 +14,8 @@
 
   {% set html %}
     <p class="govuk-notification-banner__heading">
-      The authentication code for 'FLOWERS LIMITED' will be posted to the registered office address within 5 days.
-    </p>
-    
+      The authentication code for FLOWERS LIMITED will be posted to the registered office address. <br><p class="govuk-body">It usually takes up to 5 days to arrive.</p>
+
   {% endset %}
 
   {{ govukNotificationBanner({
@@ -25,7 +24,7 @@
   }) }}
 
       </div>
-    
+
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
@@ -41,11 +40,11 @@
             </li>
             <li class="account-menu-item account-menu__item--current">
               <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
-              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of the companies on your account.</span> 
+              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of the companies on your account.</span>
             </li>
              <li class="account-menu-item">
               <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
-              <span class="account-menu-link-description"> Record of documents you have filed.</span> 
+              <span class="account-menu-link-description"> Record of documents you have filed.</span>
             </li>
             <li class="account-menu-item">
               <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
@@ -59,7 +58,7 @@
         </nav>
       </div>
 
-      
+
         <div class="govuk-grid-column-three-quarters">
 
           <h1 class="govuk-heading-l">Your companies</h1>
@@ -69,11 +68,7 @@
 
               <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
 
-              <p class="govuk-body">To file online for a company, you must <a href="../add-a-company" class="govuk-link">add it to your account </a>. <br><br>You'll need:</p>
-                
-              <ul class="govuk-list govuk-list--bullet">
-                <li>the company number</li>
-                <li>the company <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code</a></li>
+                <p  class="govuk-body">If you want to file for a company, you’ll need to add it to your account.</p>
               </ul>
 
               {{ govukButton({
@@ -84,13 +79,11 @@
 
         </div>
     </div>
-        
+
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-</div> 
+</div>
 </div>
 
 
 {% endblock %}
-
-

@@ -45,23 +45,23 @@
 
     <div class="govuk-grid-column-three-quarters">
 
-          
+
     {{ govukBackLink({
       text: "Back to your companies",
       href:""
     }) }}
-      
-            
-    
+
+
+
 
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
     <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
 
-    <h1 class="govuk-heading-xl">Update authorised person's details</h1>
+    <h1 class="govuk-heading-xl">Authorised person's details</h1>
 
-  
+
 
     {{ govukSummaryList({
                 rows: [
@@ -82,7 +82,7 @@
                       ]
                     }
                   },
-        
+
                   {
                     key: {
                       text: "Email address"
@@ -105,7 +105,7 @@
                       text: "Status"
                     },
                     value: {
-                      html: "<strong class='govuk-tag govuk-tag--yellow'> Pending ?? </strong> <p class='govuk-body govuk-!-font-weight-bold'><br>We have sent an email to Jill Edwards. They need to open the email and select the verification link so that they can file for FLOWERS LIMITED.</p>"
+                      html: "<strong class='govuk-tag govuk-tag--yellow'> Pending </strong> <p class='govuk-body govuk-!-font-weight-normal'><br>We have sent an email to Jill Edwards. They must open the email and select the verification link so that they can file for FLOWERS LIMITED.</p>"
                       },
                     actions: {
                       items: [
@@ -121,12 +121,12 @@
               }) }}
 
               {{ govukButton({
-                text: "Remove authorised person ??",
+                text: "Cancel request",
                 classes: "govuk-button--warning"
               }) }}
-                          
 
-        
+
+
             </div>
         </div>
 </div>
@@ -135,6 +135,3 @@
 
 
 {% endblock %}
-
-
-
