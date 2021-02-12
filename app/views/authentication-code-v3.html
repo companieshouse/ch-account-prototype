@@ -42,35 +42,45 @@
       </div>
 
 
-          <div class="govuk-grid-column-three-quarters">
+          <div class="govuk-grid-column-two-thirds">
             <form action="/authentication-code-v3" method="post">
 
               {{ govukBackLink({
                 text: "Back",
                 href:"check-company-details"
               }) }}
+              <span class='govuk-caption-xl'>FLOWERS LIMITED</span> 
+              <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>
+
+              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+              {{ govukInsetText({
+                text: "After you've entered the authentication code for this company, you will no longer need it for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
+              }) }}
+
 
               {{ govukInput({
                 label: {
-                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>",
-                  isPageHeading: true,
-                  classes: "govuk-label--xl"
+                  html: " Authentication code",
+                  isPageHeading: true
                 },
                 classes: "govuk-input--width-10",
                 id: "authentication-code",
                 name: "authentication-code"
               }) }}
 
-              {{ govukDetails({
-                summaryText: "Help with authentication code",
-                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.'
-              }) }}
+              
 
               {{ govukButton({
                 text: "Continue"
               }) }}
 
-              <p class="govuk-body"><a href="../request-authorisation-to-file" class="govuk-link">Request authorisation to file for this company</a></p>
+              {{ govukDetails({
+                summaryText: "Help with authentication code",
+                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings. <br><br> <p class="govuk-body"><a href="../request-authorisation-to-file" class="govuk-link">Request authorisation to file for this company</a></p>'
+              }) }}
+
+              
             </form>
           </div>
         </div>

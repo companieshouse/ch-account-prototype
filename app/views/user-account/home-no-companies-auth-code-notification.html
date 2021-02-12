@@ -1,26 +1,42 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Request an authentication code
+  Companies House account
 {% endblock %}
 
 
 {% block content %}
 
 <div class="govuk-width-container">
-
-
 <div class="govuk-grid-row">
+
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
+      The authentication code for 'FLOWERS LIMITED' will be posted to the registered office address within 5 days.
+    </p>
+    
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html,
+    type: 'success'
+  }) }}
+
+      </div>
     
     <div class="govuk-grid-row govuk-main-wrapper">
 
       <div class="govuk-grid-column-one-quarter">
 
+
+
         <nav aria-label="Account management">
 
           <ul class="account-menu">
             <li class="account-menu-item ">
-              <a href="../user-account/home-version-2" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
+              <a href="../user-account/home-no-companies" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
               <span class="account-menu-link-description"> Overview of your account.</span>
             </li>
             <li class="account-menu-item account-menu__item--current">
@@ -43,39 +59,37 @@
         </nav>
       </div>
 
+      
+        <div class="govuk-grid-column-three-quarters">
 
-      <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Your companies</h1>
 
-        <form action="/authentication-code-v2" method="post">
 
-          {{ govukBackLink({
-            text: "Back",
-            href:"check-company-details"
-          }) }}
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;"</div>
 
-          <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want to request an authentication code for this company?</h1>
+              <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
 
-          <p class="govuk-body">We will send the authentication code by post to the registered office address:</p>
+              <p class="govuk-body">To file online for a company, you must <a href="../add-a-company" class="govuk-link">add it to your account </a>. <br><br>You'll need:</p>
+                
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the company number</li>
+                <li>the company <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> authentication code</a></li>
+              </ul>
 
-          <p class='govuk-body govuk-!-font-weight-bold'>37 London Road<br> London <br> SE3 6GI</p>
-                  <p class="govuk-body">It can take up to 5 days to arrive.</p>
+              {{ govukButton({
+                  text: "Add a company",
+                  href:"../add-a-company"
+              }) }}
+            </div>
 
-          {{ govukButton({
-            text: "Request an authentication code",
-            href:"user-account/home-no-companies-auth-code-notification"
-          }) }}
-          
-          {{ govukButton({
-            text: "Cancel",
-            classes: "govuk-button--secondary"
-          }) }}
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
-</div>
         
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div> 
+</div>
+
 
 {% endblock %}
 

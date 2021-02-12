@@ -84,12 +84,17 @@
             items: [
               {
                 value: "yes",
-                text: "Yes"
-
+                text: "Yes",
+                conditional: {
+                  html: "<p> We will send an email request to the person who added this company to their account using the authentication code.</p>"
+                }
               },
               {
                 value: "no",
-                text: "No"
+                text: "No",
+                conditional: {
+                  html: "<p> Send the authentication code sent to the regsitered office address which will take 5 days.</p>"
+                }
               }
             ]
           }) }}
@@ -106,18 +111,21 @@
                 classes: "govuk-fieldset__legend--xl"
               }
             },
-            hint:{
-              text:"We will send an email request to the person who added this company to their account using the authentication code."
-            },
             items: [
               {
                 value: "yes",
-                text: "Yes"
+                text: "Yes",
+                conditional: {
+                  html: "<p> We will send an email request to the person who added this company to their account using the authentication code.</p>"
+                }
 
               },
               {
                 value: "no",
-                text: "No"
+                text: "No",
+                conditional: {
+                  html: "<p> Send the authentication code sent to the regsitered office address which will take 5 days.</p>"
+                }
               }
             ]
           }) }}
