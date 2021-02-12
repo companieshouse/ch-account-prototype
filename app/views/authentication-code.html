@@ -42,7 +42,7 @@
       </div>
 
 
-          <div class="govuk-grid-column-three-quarters">
+          <div class="govuk-grid-column-two-thirds">
             <form action="/authentication-code" method="post">
 
               {{ govukBackLink({
@@ -59,14 +59,26 @@
 
               {% endif %}
 
+              <span class='govuk-caption-xl'>FLOWERS LIMITED</span> 
+              <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>
+
+              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+              {{ govukInsetText({
+                text: "After you've entered the authentication code for this company, you will no longer need it for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
+              }) }}
+
+
+
+
               {% if errorAuthenticationCode == true %}
 
               {{ govukInput({
                 label: {
-                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>",
-                  isPageHeading: true,
-                  classes: "govuk-label--xl"
+                  html: "Authentication code",
+                  isPageHeading: false
                 },
+                
                 classes: "govuk-input--width-10",
                 id: "authentication-code",
                 name: "authentication-code"
@@ -76,10 +88,10 @@
 
                {{ govukInput({
                 label: {
-                  html: " <span class='govuk-caption-xl'>FLOWERS LIMITED</span>  <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>",
-                  isPageHeading: true,
-                  classes: "govuk-label--xl"
+                  html: "Authentication code",
+                  isPageHeading: false
                 },
+                
                 classes: "govuk-input--width-10",
                 id: "authentication-code",
                 name: "authentication-code"
@@ -89,25 +101,16 @@
 
 
 
-
-
-
-              {{ govukDetails({
-                summaryText: "Help with authentication code",
-                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.
-                  '
-              }) }}
-              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-              {{ govukInsetText({
-                text: "After you've entered the authentication code for this company, you will no longer need it for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
-              }) }}
-
               {{ govukButton({
                 text: "Continue"
               }) }}
 
-              <p class="govuk-body"><a href="request-an-authentication-code" class="govuk-link">Request an authentication code</a></p>
+              {{ govukDetails({
+                summaryText: "Help with authentication code",
+                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.<br><br> <p class="govuk-body"><a href="request-an-authentication-code" class="govuk-link">Request an authentication code</a></p>'
+              }) }}
+
+              
             </form>
           </div>
         </div>

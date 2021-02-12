@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create a Companies House account
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "sign-in",
+      text: "Sign in"
+    }
+  ]
+  }) }} 
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="service-start-page" method="post" novalidate>
+
+
+      <h1 class="govuk-heading-xl">Choose a service</h1>
+
+
+      {{ govukButton({
+        text: "Start now",
+        isStartButton: true,
+        href:"../sign-in"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

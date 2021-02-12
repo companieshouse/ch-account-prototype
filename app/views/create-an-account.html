@@ -26,11 +26,14 @@
         {% endif %}
 
         <h1 class="govuk-heading-xl">Enter your email address and create a password</h1>
+
         {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-<p class="govuk-body">You will need to verify the email address you provide to make your account more secure.</p>
+
         {{ govukInsetText({
-          text: "For your security, we may ask you to verify your email address again when you sign back in to your Companies House account."
+          text: "You will need to verify the email address you provide to make your account more secure."
         }) }}
+
+        
 
         {% if errorEmail  == true %}
         {{ govukInput({
