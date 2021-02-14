@@ -21,6 +21,35 @@
 
 
 {% block content %}
+
+<script>
+  function showPassword() {
+  var x = document.getElementById("password");
+  var y = document.getElementById("show-hide");
+  if (x.type === "password") {
+    x.type = "text";
+    y.text = 'Hide'
+  } else {
+    x.type = "password";
+    y.text = 'Show'
+  }
+}
+
+  function showConfirmPassword() {
+  var x = document.getElementById("confirm-password");
+  var y = document.getElementById("show-hide-confirm");
+  if (x.type === "password") {
+    x.type = "text";
+    y.text = 'Hide'
+  } else {
+    x.type = "password";
+    y.text = 'Show'
+  }
+}
+</script>
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="/sign-in" method="post" novalidate>
@@ -73,6 +102,9 @@
           label: {
           text: "Password"
           },
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
           id: "password",
           name: "password",
           type: "password",
@@ -87,6 +119,9 @@
           {{ govukInput({
           label: {
           text: "Password"
+          },
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
           },
           id: "password",
           name: "password",
