@@ -1,3 +1,5 @@
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -10,24 +12,23 @@
 
 <div class="govuk-width-container">
 <div class="govuk-grid-row">
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+<div class="govuk-grid-column-full">
 
 {% set html %}
   <p class="govuk-notification-banner__heading">
     You've successfully verified your email address and created your account.
   </p>
 {% endset %}
-</div>
+
 
 {{ govukNotificationBanner({
   html: html,
   type: 'success'
 }) }}
-
+</div>
+</div>
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-row govuk-main-wrapper">
-
       <div class="govuk-grid-column-one-quarter">
         <nav aria-label="Account management">
 
@@ -54,39 +55,31 @@
             </li>
           </ul>
         </nav>
-      </div>
+    </div>
 
-
-        <div class="govuk-grid-column-three-quarters">
-
-
-
+    <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl" >Home</span>
           <h1 class="govuk-heading-l">Hannah Salt</h1>
-
-
             <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
 
               <h1 class="govuk-heading-m">Account overview</h1>
-<p s class="govuk-body govuk-!-font-weight-bold">Companies you file for</p>
+              <p s class="govuk-body govuk-!-font-weight-bold">Companies you file for</p>
 
 
-  <p  class="govuk-body">If you want to file for a company, you’ll need to <a href="../add-a-company" class="govuk-link">add a company to your account</a>.</p>
+              <p  class="govuk-body">If you want to file for a company, you’ll need to <a href="../add-a-company" class="govuk-link">add a company to your account</a>.</p>
 
               <p class="govuk-body govuk-!-font-weight-bold">Companies you follow</p>
 
 
               <p class="govuk-body">You do not currently follow any companies. <a href="../add-a-company" class="govuk-link">Follow a company</a>.</p>
 
-                </ul>
             </div>
 
-        </div>
     </div>
+</div>
 
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-</div>
 </div>
 
 
