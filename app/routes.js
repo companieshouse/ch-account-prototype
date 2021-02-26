@@ -113,16 +113,22 @@ router.post('/enter-your-details', function(req, res) {
 router.post('/enter-your-name', function(req, res) {
 
     var errors = [];
-    var fullNameHasError = false;
+    var firstNameHasError = false;
+    var lastNameHasError = false;
 
-  if(req.session.data['full-name'] == ""){
-    fullNameHasError = true;
-    errors.push({text: "Enter your full name", href: "#full-name-error"});
+  if(req.session.data['first-name'] == ""){
+    firstNameHasError = true;
+    errors.push({text: "Enter your first name", href: "#first-name-error"});
+  }
+  if(req.session.data['last-name'] == ""){
+    lastNameHasError = true;
+    errors.push({text: "Enter your last name", href: "#last-name-error"});
   }
   
-  if(fullNameHasError){
+  if(firstNameHasError || lastNameHasError){
     res.render('enter-your-name', {
-          errorFullName: fullNameHasError,
+          errorFirstName: firstNameHasError,
+          errorLastName: lastNameHasError,
           errorList: errors
         })
   }
@@ -160,7 +166,7 @@ router.post('/create-your-password', function(req, res) {
   }
   else
   {
-    res.redirect('check-your-email')
+    res.redirect('user-account/home-version-2')
   }
 })
 
