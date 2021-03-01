@@ -33,6 +33,12 @@ router.get('/service-journey', function (req, res) {
     res.redirect('../service-journey/service-start-page')
 })
 
+router.get('/sign-in-new-device', function (req, res) {
+
+    app.set('scenario', 'new-device');
+    res.redirect('../sign-in')
+})
+
 
 router.get('/sign-in-password-mobile', function (req, res) {
 
@@ -209,12 +215,32 @@ router.post('/sign-in', function(req, res) {
   {
     res.redirect('../add-a-company') 
   }
+  else if(app.settings.scenario == 'new-device')
+  {
+    res.redirect('../new-device/choose-verify-option') 
+  }
   else
   {
       res.redirect('../user-account/home-no-companies')
   }
     
 })
+
+//new device sign in - verify option
+router.post('/new-device/choose-verify-option', function(req, res) {
+
+   if(req.session.data['verify-option'] == "email"){
+
+      res.redirect('../new-device/check-your-email')
+    }
+    else if(req.session.data['verify-option'] == "text-message"){
+
+      res.redirect('../new-device/check-your-phone')
+    }
+ 
+})
+
+
 
 // Enter the company number page
 router.post('/add-a-company', function(req, res) {
@@ -297,7 +323,14 @@ router.post('/choose-verify-option', function(req, res) {
 
 router.post('/check-your-phone', function(req, res) {
 
-  res.redirect('../forgotten-password/reset-your-password')
+  if(app.settings.scenario == 'new-device')
+  {
+    res.redirect('../new-device/home-mobile') 
+  }
+  else{
+    res.redirect('../forgotten-password/reset-your-password')
+  }
+  
 })
 
 
