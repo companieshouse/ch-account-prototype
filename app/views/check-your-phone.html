@@ -14,22 +14,26 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+    <form action="/check-your-phone" method="post" novalidate>
 
-    <h1 class="govuk-heading-xl">Verify your mobile number</h1>
-        <p class="govuk-body">We've sent a text message to 07769 321 456 that contains a security code.</p>
+
+    <h1 class="govuk-heading-xl">Check your phone</h1>
+    
+    <p class="govuk-body">We've sent a text message with a security code to <span class="govuk-body govuk-!-font-weight-bold"> XXXXX XXX456</span>.</p>
+
+    <p class="govuk-body"> It may take a few minutes to arrive </p>
 
         {{ govukInput({
           label: {
-            text: "Security code"
+            text: "Enter security code"
           },
           classes: "govuk-input--width-10",
-          id: "width-10",
-          name: "width-10"
+          id: "width-7",
+          name: "width-7"
         }) }}
 
         {{ govukButton({
-          text: "Continue",
-          href:"create-your-password"
+          text: "Continue"
         }) }}
 
         {{ govukDetails({
@@ -37,8 +41,7 @@
           html: "The text message may take a few minutes to arrive.</br> </br> If it does not arrive, you can <a href='' class='govuk-link'>ask us to send you another text message</a>. </br></br> If you have given us the wrong number you can <a href='#' class='govuk-link'>give us a different mobile number</a>."
         }) }}
 
-
-
-  </div>
-  </div>
+  </form>
+</div>
+</div>
 {% endblock %}

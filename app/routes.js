@@ -34,6 +34,13 @@ router.get('/service-journey', function (req, res) {
 })
 
 
+router.get('/sign-in-password-mobile', function (req, res) {
+
+    app.set('scenario', 'forgotten-password-mobile');
+    res.redirect('../sign-in')
+})
+
+
 
 router.post('/start-page', function (req, res) {
 
@@ -137,7 +144,6 @@ router.post('/enter-your-name', function(req, res) {
     res.redirect('check-your-email')
   }
 })
-
 
 
 // Enter your password page
@@ -264,8 +270,37 @@ router.post('/check-company-details', function(req, res) {
 // change your password 
 router.post('/change-your-password', function(req, res) {
 
+  if(app.settings.scenario == 'forgotten-password-mobile')
+  {
+    res.redirect('../forgotten-password/choose-verify-option') 
+  }
+  else{
+
     res.redirect('../forgotten-password/reset-password-check-email')
+
+  }
+ 
 })
+
+router.post('/choose-verify-option', function(req, res) {
+
+   if(req.session.data['verify-option'] == "email"){
+
+      res.redirect('forgotten-password/reset-password-check-email')
+    }
+    else if(req.session.data['verify-option'] == "text-message"){
+
+      res.redirect('check-your-phone')
+    }
+ 
+})
+
+router.post('/check-your-phone', function(req, res) {
+
+  res.redirect('../forgotten-password/reset-your-password')
+})
+
+
 
 // reset your password 
 router.post('/reset-your-password', function(req, res) {

@@ -83,12 +83,21 @@
 
       
         {{ govukButton({
-          text: "Create a new password",
+          text: "Create a new password - no mobile 2FA ",
           classes: "govuk-button--secondary",
           href: "sign-in"
         }) }}
 
+
+        {{ govukButton({
+          text: "Create a new password - with mobile 2FA",
+          classes: "govuk-button--secondary",
+          href: "sign-in-password-mobile"
+        }) }}
+
         <p> <a href="../forgotten-password/email-reset-password" class="govuk-link" target="blank">Email reset your password (opens in new tab)</a></p>
+
+        <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p>
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
