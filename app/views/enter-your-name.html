@@ -24,6 +24,15 @@
         {% from "govuk/components/input/macro.njk" import govukInput %}
         {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
 
+        {% if errorFirstName == true or errorLastName  == true %}
+
+          {{ govukErrorSummary({
+              titleText: "There is a problem",
+              errorList: errorList
+          }) }}
+
+        {% endif %}
+
 
         {% call govukFieldset({
           legend: {

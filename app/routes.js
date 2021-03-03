@@ -166,7 +166,7 @@ router.post('/create-your-password', function(req, res) {
   
   if(req.session.data['confirm-password'] == ""){
         confirmPasswordHasError = true;
-        errors.push({text: "Enter your password", href: "#confirm-password-error"});
+        errors.push({text: "Re-enter your password", href: "#confirm-password-error"});
   }
 
   if(passwordHasError || confirmPasswordHasError){
