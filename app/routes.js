@@ -50,7 +50,7 @@ router.get('/sign-in-password-mobile', function (req, res) {
 
 router.post('/start-page', function (req, res) {
 
-    res.redirect('create-an-account')
+    res.redirect('enter-your-name')
 })
 
 
@@ -91,7 +91,7 @@ router.post('/create-an-account', function(req, res) {
     }
     else
     {
-      res.redirect('enter-your-name')
+      res.redirect('check-your-email')
     }
 })
 
@@ -147,7 +147,7 @@ router.post('/enter-your-name', function(req, res) {
   }
   else
   {
-    res.redirect('check-your-email')
+    res.redirect('create-an-account')
   }
 })
 
