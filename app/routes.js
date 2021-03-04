@@ -33,6 +33,30 @@ router.get('/service-journey', function (req, res) {
     res.redirect('../service-journey/service-start-page')
 })
 
+
+//service journey 
+router.post('/service-journey/add-a-company', function (req, res) {
+
+    res.redirect('../service-journey/check-company-details')
+})
+
+router.post('/service-journey/check-company-details', function (req, res) {
+
+    res.redirect('../service-journey/auth-code')
+})
+
+router.post('/service-journey/auth-code', function (req, res) {
+
+    res.redirect('../service-journey/add-company-to-account')
+})
+
+router.post('/service-journey/add-company-to-account', function (req, res) {
+
+    res.redirect('../service-journey/add-company-to-account-notification')
+})
+
+
+
 router.get('/sign-in-new-device', function (req, res) {
 
     app.set('scenario', 'new-device');
@@ -213,7 +237,7 @@ router.post('/sign-in', function(req, res) {
   }
   else if(app.settings.scenario == 'service-journey')
   {
-    res.redirect('../add-a-company') 
+    res.redirect('../service-journey/add-a-company') 
   }
   else if(app.settings.scenario == 'new-device')
   {

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create a Companies House account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "sign-in",
+      text: "Sign in"
+    }
+  ]
+  }) }} 
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/service-journey/add-company-to-account" method="post" novalidate>
+
+        {{ govukRadios({
+          idPrefix: "add-to-account",
+          name: "add-to-account",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>  Do you want to add the company to your Companies House account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+            text: "You will no longer need the authentication code for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
