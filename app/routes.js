@@ -231,21 +231,21 @@ router.post('/sign-in', function(req, res) {
             errorList: errors
           })
   }
-  if(app.settings.scenario == 'auth-person-request')
+  else if(app.settings.scenario == 'auth-person-request')
   {
-    res.redirect('../jills-user-account/home-no-companies-no-notification') 
+    res.redirect('/jills-user-account/home-no-companies-no-notification') 
   }
   else if(app.settings.scenario == 'service-journey')
   {
-    res.redirect('../service-journey/add-a-company') 
+    res.redirect('/service-journey/add-a-company') 
   }
   else if(app.settings.scenario == 'new-device')
   {
-    res.redirect('../new-device/choose-verify-option') 
+    res.redirect('/new-device/choose-verify-option') 
   }
   else
   {
-      res.redirect('../user-account/home-no-companies')
+      res.redirect('/user-account/home-no-companies')
   }
     
 })

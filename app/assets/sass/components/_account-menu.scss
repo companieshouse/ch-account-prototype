@@ -21,9 +21,9 @@ ul {
 
 //current item in menu 
 .account-menu__item--current {
-    margin-left: -14px;
-    padding-left: 10px;
-    border-left: 4px solid #1d70b8;
+
+    padding-bottom: 18px;
+    border-bottom: 4px solid #1d70b8;
 }
 
 li {
@@ -37,10 +37,10 @@ li {
     font-family: "GDS Transport",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 700;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.25;
+    text-decoration: none;
+    margin-right: 3ex;
 }
 
 .accounts-menu__item {
