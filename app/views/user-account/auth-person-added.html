@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout/layout-account-signout-your-companies.html" %}
 
 {% block pageTitle %}
   Your companies
@@ -10,6 +10,7 @@
 
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
     {% set html %}
@@ -24,44 +25,18 @@
       type: 'success'
     }) }}
 
-
+</div>
   </div>
 
   <div class="govuk-grid-row">
 
+        <div class="govuk-grid-column-full">
 
-      <div class="govuk-grid-column-one-quarter">
-        <nav aria-label="Account management">
-
-          <ul class="account-menu">
-            <li class="account-menu-item ">
-              <a href="../user-account/home-version-2" class="account-menu-link govuk-link govuk-link--no-visited-state">Home</a>
-              <span class="account-menu-link-description"> Overview of your account.</span>
-            </li>
-            <li class="account-menu-item account-menu__item--current">
-              <a href="../user-account/home-no-companies-no-notification" class="account-menu-link govuk-link govuk-link--no-visited-state">Your companies</a>
-              <span class="account-menu-link-description"> View and manage companies and people authorised to file on behalf of a company.</span>
-            </li>
-             <li class="account-menu-item">
-              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Your filings</a>
-              <span class="account-menu-link-description"> Record of documents you have filed.</span>
-            </li>
-            <li class="account-menu-item">
-              <a href="#" class="account-menu-link govuk-link govuk-link--no-visited-state">Companies you follow</a>
-              <span class="account-menu-link-description"> View and manage companies you follow.</span>
-            </li>
-            <li class="account-menu-item account-menu__item">
-              <a href="../user-account/manage-account" class="account-menu-link govuk-link govuk-link--no-visited-state">Manage your account</a>
-              <span class="account-menu-link-description"> Make changes to your details and account settings. </span>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-
-        <div class="govuk-grid-column-three-quarters">
-
-          <h1 class="govuk-heading-l">Your companies</h1>
+          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage companies and people authorised to file on behalf of a company</span></h1>
+          {{ govukButton({
+              text: "Add a company",
+              href:"../../add-a-company"
+          }) }}
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -84,13 +59,14 @@
                 <h3 class="govuk-heading-m">People authorised to file for this company</h3>
 
                    <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-grid-column-full">
                     <table class="govuk-table">
                       <thead class="govuk-table__head">
 
                         <tr class="govuk-table__row">
                           <th class="govuk-table__header" scope="col"> Authorised people</th>
                           <th class="govuk-table__header" scope="col"> Status </th>
+                          <th class="govuk-table__header" scope="col"> Action </th>
                         </tr>
 
 
@@ -106,10 +82,13 @@
                               classes: "govuk-tag--blue"
                             })}}
                           </td>
+                          <td class="govuk-table__cell">
+                          <a href="authorised-person-jill" class="govuk-link">Update</a>
+                          </td>
                         </tr>
                         <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <a href="authorised-person-jill" class="govuk-link">Jill Edwards</a>
+                          <p>Jill Edwards</a>
                         </td>
                         <td class="govuk-table__cell">
                           {{govukTag({
@@ -117,9 +96,13 @@
                             classes: "govuk-tag--yellow"
                           })}}
                         </td>
+                        <td class="govuk-table__cell">
+                        <a href="authorised-person-jill" class="govuk-link">Update</a>
+                        </td>
                       </tr>
                       </tbody>
                     </table>
+                    <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a>
                     </div>
                   </div>
 
@@ -129,20 +112,13 @@
                       text: "File for this company",
                       href:""
                     }) }}
-                    {{ govukButton({
-                      text: "Add person authorised to file for this company",
-                      href:"../../delegate-to-presenter/enter-presenter-details"
-                    }) }}
 
                 </div>
               </div>
             </div>
                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-                {{ govukButton({
-                  text: "Add another company",
-                  href:"../../add-a-company"
-                }) }}
+        
             </div>
     </div>
 

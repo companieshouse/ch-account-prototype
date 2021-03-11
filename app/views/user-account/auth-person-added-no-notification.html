@@ -1,3 +1,4 @@
+
 {% extends "layout/layout-account-signout-your-companies.html" %}
 
 {% block pageTitle %}
@@ -8,32 +9,16 @@
 {% block content %}
 
 <div class="govuk-width-container">
+
   <div class="govuk-grid-row">
 
-     <div class="govuk-grid-column-full">
-
- {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-
-    {% set html %}
-      <p class="govuk-notification-banner__heading">
-        You are now authorised to file for FLOWERS LIMITED. <br>This company has been added to your account.<br>
-        <p class="govuk-body">You will no longer need the authentication code for most online filings. Keep the code in a safe place because you may need it for certain filings in the future.</p>
-{% endset %}
-
-    {{ govukNotificationBanner({
-      html: html,
-      type: 'success'
-    }) }}
-  
-       
+        <div class="govuk-grid-column-full">
 
           <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage companies and people authorised to file on behalf of a company</span></h1>
-
-           {{ govukButton({
-          text: "Add a company",
-          href:"../add-a-company"
-      }) }}
-
+          {{ govukButton({
+              text: "Add a company",
+              href:"../../add-a-company"
+          }) }}
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -51,8 +36,9 @@
                  </span>18882777</p>
 
                     <p class="govuk-body govuk-!-font-weight-bold">
-                        <span class="govuk-body">Correspondence address</span><br>
-                   </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
+                        <span class="govuk-body ">Correspondence address</span><br>
+                   </span> 2nd Floor Red House, 17 London Road, London, SA73 8PH </p>
+                <h3 class="govuk-heading-m">People authorised to file for this company</h3>
 
                    <div class="govuk-grid-row">
                     <div class="govuk-grid-column-full">
@@ -60,7 +46,7 @@
                       <thead class="govuk-table__head">
 
                         <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col"> People authorised to <br> file for this company</th>
+                          <th class="govuk-table__header" scope="col"> Authorised people</th>
                           <th class="govuk-table__header" scope="col"> Status </th>
                           <th class="govuk-table__header" scope="col"> Action </th>
                         </tr>
@@ -70,33 +56,35 @@
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">
-                            <p class="govuk-body"> Hannah Salt</p>
+                            <p class="govuk-body"> Hannah Salt (you)</p>
                           </td>
                           <td class="govuk-table__cell">
                             {{govukTag({
                               text: "CONFIRMED",
-                              classes: "govuk-tag--turquoise"
+                              classes: "govuk-tag--blue"
                             })}}
                           </td>
                           <td class="govuk-table__cell">
-                  <a href="authorised-person-jill" class="govuk-link">Update</a>
+                          <a href="authorised-person-jill" class="govuk-link">Update</a>
+                          </td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell">
-                            <p class="govuk-body"> Jill Edwards (you)</p>
-                          </td>
-                          <td class="govuk-table__cell">
-                            {{govukTag({
-                              text: "CONFIRMED",
-                              classes: "govuk-tag--turquoise"
-                            })}}
-                          </td>
-                          <td class="govuk-table__cell">
-                  <a href="authorised-person-jill" class="govuk-link">Update</a>
-                        </tr>
+                        <td class="govuk-table__cell">
+                          <p>Jill Edwards</a>
+                        </td>
+                        <td class="govuk-table__cell">
+                          {{govukTag({
+                            text: "PENDING",
+                            classes: "govuk-tag--yellow"
+                          })}}
+                        </td>
+                        <td class="govuk-table__cell">
+                        <a href="authorised-person-jill" class="govuk-link">Update</a>
+                        </td>
+                      </tr>
                       </tbody>
                     </table>
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a>
+                    <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a>
                     </div>
                   </div>
 
@@ -110,9 +98,12 @@
                 </div>
               </div>
             </div>
+               <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+        
+            </div>
+    </div>
 
-  
    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 </div>

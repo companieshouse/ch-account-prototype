@@ -1,12 +1,9 @@
-{% extends "layout-not-signed-in.html" %}
+{% extends "layout/layout-signin.html" %}
 
 {% block pageTitle %}
   Verify your email address
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({ serviceName: "Companies House account" }) }}
-{% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({

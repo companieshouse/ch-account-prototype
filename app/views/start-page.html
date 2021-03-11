@@ -1,22 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout/layout-signin.html" %}
 
 {% block pageTitle %}
   Companies House account
-{% endblock %}
-
-{% block header %}
-    {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container",
-    navigation: [
-    {
-      href: "sign-in",
-      text: "Sign in"
-    }
-  ]
-  }) }} 
 {% endblock %}
 
 {% block content %}
