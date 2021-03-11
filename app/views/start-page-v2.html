@@ -24,11 +24,14 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/start-page" method="post" novalidate>
 
-
-      <h1 class="govuk-heading-xl">Companies House account</h1>
-
       
-<p class="govuk-body-l">An updated and more secure way to view, access and submit Companies House information in one place.</p>
+      <h1 class="govuk-heading-xl">Companies House account</h1>
+      <p class="govuk-body-l">A more secure way to find and update company information.</p>
+
+         {{ govukInsetText({
+        text: "If you already have an existing account with Companies House, you'll need to create a new Companies House account. To keep your recent filing history and companies you follow you'll need to use the same email address."
+        }) }}
+
       <p class="govuk-body">You can use your Companies House account to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -37,21 +40,7 @@
         <li>authorise people to file documents for a company online</li>
             <li>access Companies House services</li>
       </ul>
-      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-      {{ govukInsetText({
-        text: "If you already have a CHS account, you can use your existing details to sign in. We may ask you for more information to make your Companies House account more secure."
-      }) }}
-
-      <p class="govuk-body">You will also be able to access WebFiling via your Companies House account. Once you have created your account, you will no longer need a separate account for WebFiling. You will not lose any data.</p>
-      <p class="govuk-body">To create an account, you'll need:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>an email address</li>
-        <li>to verify that you have access to the email address</li>
-        <li>to create a password</li>
-
-      </ul>
+    
 
       {{ govukButton({
         text: "Create an account",

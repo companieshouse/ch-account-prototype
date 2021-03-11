@@ -74,7 +74,7 @@ router.get('/sign-in-password-mobile', function (req, res) {
 
 router.post('/start-page', function (req, res) {
 
-    res.redirect('enter-your-name')
+    res.redirect('create-an-account')
 })
 
 
@@ -87,29 +87,21 @@ router.post('/create-an-account', function(req, res) {
     var errors = [];
     var fullNameHasError = false;
     var emailHasError = false;
-    var passwordHasError = false;
-    var passwordConfirmHasError = false;
-  
+
+
+    if(req.session.data['full-name'] == ""){
+      fullNamedHasError = true;
+      errors.push({text: "Enter your full name", href: "#full-name-error"});
+    }
     if(req.session.data['email'] == ""){
       emailHasError = true;
       errors.push({text: "Enter your email address", href: "#email-error"});
     }
-    if(req.session.data['password'] == ""){
-      passwordHasError = true;
-      errors.push({text: "Enter your password", href: "#password-error"});
-    }
-    if(req.session.data['confirm-password'] == ""){
-      passwordHasError = true;
-      errors.push({text: "Re-enter your password", href: "#confirm-password-error"});
-    }
-
-    if(emailHasError || passwordHasError || passwordConfirmHasError){
+    if(fullNameHasError || emailHasError){
       res.render('create-an-account', {
 
         errorFullName: fullNameHasError,
         errorEmail: emailHasError,
-        errorPassword: passwordHasError,
-        errorConfirmPassword: passwordConfirmHasError,
         errorList: errors
     })
     }
@@ -230,23 +222,23 @@ router.post('/sign-in', function(req, res) {
             errorPassword: passwordHasError,
             errorList: errors
           })
-  }
-  else if(app.settings.scenario == 'auth-person-request')
-  {
-    res.redirect('/jills-user-account/home-no-companies-no-notification') 
-  }
-  else if(app.settings.scenario == 'service-journey')
-  {
-    res.redirect('/service-journey/add-a-company') 
-  }
-  else if(app.settings.scenario == 'new-device')
-  {
-    res.redirect('/new-device/choose-verify-option') 
-  }
-  else
-  {
+    }
+    else if(app.settings.scenario == 'auth-person-request')
+    {
+      res.redirect('/jills-user-account/home-no-companies-no-notification') 
+    }
+    else if(app.settings.scenario == 'service-journey')
+    {
+      res.redirect('/service-journey/add-a-company') 
+    }
+    else if(app.settings.scenario == 'new-device')
+    {
+      res.redirect('/new-device/choose-verify-option') 
+    }
+    else
+    {
       res.redirect('/user-account/home-no-companies')
-  }
+    }
     
 })
 

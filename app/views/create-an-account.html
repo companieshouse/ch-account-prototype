@@ -7,7 +7,18 @@
 {% endblock %}
 
 {% block header %}
-    {{ govukHeader({ serviceName: "Companies House account" }) }}
+    {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "sign-in",
+      text: "Sign in"
+    }
+  ]
+  }) }} 
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +36,9 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/create-an-account" method="post" novalidate>
 
-        {% if errorEmail == true or errorFullName  == true %}
+        <h1 class="govuk-heading-xl">Create a Companies House account</h1>
+
+        {% if errorFullName == true or errorEmail == true %}
 
           {{ govukErrorSummary({
               titleText: "There is a problem",
@@ -34,14 +47,48 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">What is your email address?</h1>
 
+
+       {% if errorFullName  == true %}
+
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          hint: {
+              text:"This is the name that will be displayed in your account."
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          errorMessage: {
+            text: "Enter your full name"
+          },
+          spellcheck: false
+        }) }}
+        
+        {% else %}
+
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          hint: {
+              text:"This is the name that will be displayed in your account."
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {% endif %}
 
 
         {% if errorEmail  == true %}
         {{ govukInput({
           label: {
-            text: "Email address"
+            text: "What is your email address?"
           },
           hint: {
             text: "We'll send a link to this email address to verify it belongs to you and make your account more secure."

@@ -15,7 +15,7 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">First 'FLOWERS LIMITED' user</h1>
+        <h2 class="govuk-heading-m">First 'FLOWERS LIMITED' user</h2>
 
         <ul class="govuk-list govuk-list--bullet">
           <li>User has the authentication code. Company added.</li>
@@ -31,9 +31,10 @@
         <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
 
 
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h1 class="govuk-heading-m">Second 'FLOWERS LIMITED' user </h1>
+        <h2 class="govuk-heading-m">Second 'FLOWERS LIMITED' user </h2>
         <ul class="govuk-list govuk-list--bullet">
           <li>User has their authentication code. Company added.</li>
           <li>User does not have their authentication code. Requests authorisation.</li>
@@ -50,7 +51,10 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-         <h1 class="govuk-heading-m">Email request -  Confirm or decline authorised person request</h1>
+        <h2 class="govuk-heading-m">Email requests </h2>
+
+
+         <h3 class="govuk-heading-s"> Confirm or decline authorised person request</h3>
 
       
         {{ govukButton({
@@ -58,6 +62,17 @@
           classes: "govuk-button--secondary",
           href: "../messages/email-confirm-you-are-the-presenter"
         }) }}
+
+
+        <h3 class="govuk-heading-s">User has requested to be an authorised person </h3>
+
+      
+        {{ govukButton({
+          text: "Email request",
+          classes: "govuk-button--secondary",
+          href: "../messages/email-request-to-be-authorised-person"
+        }) }}
+
 
 
         
@@ -79,7 +94,7 @@
 
 
 
-        <h1 class="govuk-heading-m">I've forgotten my password</h1>
+        <h2 class="govuk-heading-m">I've forgotten my password</h2>
 
       
         {{ govukButton({
@@ -102,7 +117,7 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h1 class="govuk-heading-m">Log in from a new device</h1>
+        <h2 class="govuk-heading-m">Log in from a new device</h2>
 
         {{ govukButton({
           text: "Sign in ",
@@ -117,7 +132,7 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h1 class="govuk-heading-m">** CH account within a CHS service **</h1>
+        <h2 class="govuk-heading-m">** CH account within a CHS service **</h2>
 
       
         {{ govukButton({
@@ -146,7 +161,7 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h1 class="govuk-heading-m">** New incorporations **</h1>
+        <h2 class="govuk-heading-m">** New incorporations **</h2>
 
         <p class="govuk-body">New companies set up, post Companies House account, no authentication code required. An email will ask for the user to create an account, using the email address that was used for Incorporation, the company will automatically we added to their account.</p>
 
