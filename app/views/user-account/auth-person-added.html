@@ -15,9 +15,9 @@
 
     {% set html %}
       <p class="govuk-notification-banner__heading">
-        Email request sent
+        An email request has been sent to Jill Edwards to be authorised to file for FLOWERS LIMITED. <a class="govuk-notification-banner__link" href="../">View request</a>.
       </p>
-      <p class="govuk-body">An email request has been sent to Jill Edwards to be authorised to file for FLOWERS LIMITED. <a class="govuk-notification-banner__link" href="../">View details for Jill Edwards</a>.</p>
+
     {% endset %}
 
     {{ govukNotificationBanner({
@@ -32,7 +32,7 @@
 
         <div class="govuk-grid-column-full">
 
-          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage companies and people authorised to file on behalf of a company</span></h1>
+          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage the companies you have added to your account, and people authorised to file on behalf of a company.</span></h1>
           {{ govukButton({
               text: "Add a company",
               href:"../../add-a-company"
@@ -66,7 +66,7 @@
                         <tr class="govuk-table__row">
                           <th class="govuk-table__header" scope="col"> Authorised people</th>
                           <th class="govuk-table__header" scope="col"> Status </th>
-                          <th class="govuk-table__header" scope="col"> Action </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
                         </tr>
 
 
@@ -83,7 +83,7 @@
                             })}}
                           </td>
                           <td class="govuk-table__cell">
-                          <a href="authorised-person-jill" class="govuk-link">Update</a>
+                          <a href="authorised-person-jill" class="govuk-link">View details</a>
                           </td>
                         </tr>
                         <tr class="govuk-table__row">
@@ -97,7 +97,7 @@
                           })}}
                         </td>
                         <td class="govuk-table__cell">
-                        <a href="authorised-person-jill" class="govuk-link">Update</a>
+                        <a href="authorised-person-jill" class="govuk-link">View details</a>
                         </td>
                       </tr>
                       </tbody>
@@ -118,7 +118,7 @@
             </div>
                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-        
+
             </div>
     </div>
 
