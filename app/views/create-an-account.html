@@ -119,6 +119,20 @@
         }) }}
         {% endif %}
 
+        {{ govukInput({
+            label: {
+              text: "Mobile number"
+            },
+            hint: {
+              text: "We'll send you a security code by text message."
+            },
+            id: "telephone-number",
+            name: "telephone-number",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-input--width-20"
+          }) }}
+
 
         {{ govukButton({
             text: "Continue"
