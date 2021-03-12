@@ -46,28 +46,7 @@
           }) }}
 
         {% endif %}
-
-
-
-       {% if errorFullName  == true %}
-
-        {{ govukInput({
-          label: {
-            text: "Full name"
-          },
-          hint: {
-              text:"This is the name that will be displayed in your account."
-          },
-          id: "full-name",
-          name: "full-name",
-          autocomplete: "name",
-          errorMessage: {
-            text: "Enter your full name"
-          },
-          spellcheck: false
-        }) }}
-        
-        {% else %}
+       
 
         {{ govukInput({
           label: {
@@ -81,9 +60,6 @@
           autocomplete: "name",
           spellcheck: false
         }) }}
-
-        {% endif %}
-
 
         {% if errorEmail  == true %}
         {{ govukInput({

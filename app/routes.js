@@ -85,22 +85,16 @@ router.post('/start-page', function (req, res) {
 router.post('/create-an-account', function(req, res) {
 
     var errors = [];
-    var fullNameHasError = false;
     var emailHasError = false;
 
 
-    if(req.session.data['full-name'] == ""){
-      fullNamedHasError = true;
-      errors.push({text: "Enter your full name", href: "#full-name-error"});
-    }
     if(req.session.data['email'] == ""){
       emailHasError = true;
       errors.push({text: "Enter your email address", href: "#email-error"});
     }
-    if(fullNameHasError || emailHasError){
+    if(emailHasError){
       res.render('create-an-account', {
 
-        errorFullName: fullNameHasError,
         errorEmail: emailHasError,
         errorList: errors
     })
