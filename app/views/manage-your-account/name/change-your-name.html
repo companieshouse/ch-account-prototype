@@ -1,0 +1,69 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Change your password
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"./user-account/manage-account"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-l">Change your name</h1>
+
+
+        <p class="govuk-body">The name currently in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'> Hannah Salt</span>.</p>
+
+        {{ govukInput({
+            label: {
+            text: "Enter updated fullname"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+
+
+          {{ govukCheckboxes({
+            idPrefix: "waste",
+            name: "waste",
+            fieldset: {
+              legend: {
+                text: "Remove my name from the account"
+              }
+            },
+            items: [
+              {
+                value: "no-name",
+                text: "I do not want my name shown on my account"
+              }
+            ]
+          }) }}
+
+
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Update name",
+          preventDoubleClick: true,
+          href:"./manage-account-notification"
+        }) }}
+
+        <a class="govuk-link" href="#">cancel</a>
+        </div>
+
+
+    </div>
+  </div>
+{% endblock %}
