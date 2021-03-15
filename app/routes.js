@@ -27,6 +27,12 @@ router.get('/sign-in-auth-person-request', function (req, res) {
     res.redirect('sign-in')
 })
 
+router.get('/sign-in-add-auth-person', function (req, res) {
+
+    app.set('scenario', 'add-auth-person');
+    res.redirect('sign-in')
+})
+
 router.get('/service-journey', function (req, res) {
 
     app.set('scenario', 'service-journey');
@@ -235,6 +241,10 @@ router.post('/sign-in', function(req, res) {
     else if(app.settings.scenario == 'auth-person-request')
     {
       res.redirect('/jills-user-account/home-no-companies-no-notification') 
+    }
+    else if(app.settings.scenario == 'add-auth-person')
+    {
+      res.redirect('/jills-user-account/home-no-companies-auth-person-request') 
     }
     else if(app.settings.scenario == 'service-journey')
     {
