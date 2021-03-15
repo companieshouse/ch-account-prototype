@@ -1,0 +1,93 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Change your password
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"./user-account/manage-account"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <script>
+    function showPassword() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("show-hide");
+    if (x.type === "password") {
+      x.type = "text";
+      y.text = 'Hide'
+    } else {
+      x.type = "password";
+      y.text = 'Show'
+    }
+  }
+
+    function showConfirmPassword() {
+    var x = document.getElementById("confirm-password");
+    var y = document.getElementById("show-hide-confirm");
+    if (x.type === "password") {
+      x.type = "text";
+      y.text = 'Hide'
+    } else {
+      x.type = "password";
+      y.text = 'Show'
+    }
+  }
+  </script>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        
+        <h1 class="govuk-heading-l">Change your phone number</h1>
+
+
+        <p class="govuk-body">The phone number currently stored in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'>07969 666663</span>.</p>
+
+        {{ govukInput({
+            label: {
+            text: "Enter new mobile phone number"
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          spellcheck: false
+          }) }}
+
+          <p class="govuk-body">We'll send  a security code to this new number by text message. You’ll need this code to finish changing the phone number for your account.</p>
+
+          {{ govukInput({
+            label: {
+            text: "Enter your password"
+          },
+          hint:{
+            text:"Enter your password to make this change"
+          },
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Update name",
+          preventDoubleClick: true,
+          href:"./check-your-phone"
+        }) }}
+
+        <a class="govuk-link" href="#">cancel</a>
+        </div>
+
+
+    </div>
+  </div>
+{% endblock %}
