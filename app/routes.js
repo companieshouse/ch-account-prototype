@@ -87,21 +87,36 @@ router.post('/create-an-account', function(req, res) {
     var errors = [];
     var emailHasError = false;
 
+    var telephoneNumber = req.body.telephoneNumber
+
+
 
     if(req.session.data['email'] == ""){
       emailHasError = true;
       errors.push({text: "Enter your email address", href: "#email-error"});
     }
+
+
     if(emailHasError){
       res.render('create-an-account', {
 
         errorEmail: emailHasError,
         errorList: errors
-    })
-    }
+     }
+    )}
     else
     {
-      res.redirect('check-your-email')
+      if(telephoneNumber !== ''){
+
+        res.redirect('check-your-phone')
+
+      }
+      else{
+        
+        res.redirect('check-your-email')
+
+      }
+
     }
 })
 
@@ -333,14 +348,7 @@ router.post('/choose-verify-option', function(req, res) {
 
 router.post('/check-your-phone', function(req, res) {
 
-  if(app.settings.scenario == 'new-device')
-  {
-    res.redirect('../new-device/home-mobile') 
-  }
-  else{
-    res.redirect('../forgotten-password/reset-your-password')
-  }
-  
+    res.redirect('check-your-email')
 })
 
 
