@@ -36,8 +36,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/create-an-account" method="post" novalidate>
 
-        <h1 class="govuk-heading-xl">What are your details?</h1>
-
+        
         {% if errorFullName == true or errorEmail == true %}
 
           {{ govukErrorSummary({
@@ -46,6 +45,9 @@
           }) }}
 
         {% endif %}
+
+        <h1 class="govuk-heading-xl">What are your details?</h1>
+
 
 
         {{ govukInput({
