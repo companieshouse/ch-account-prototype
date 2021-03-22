@@ -36,7 +36,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/create-an-account" method="post" novalidate>
 
-        
+
         {% if errorFullName == true or errorEmail == true %}
 
           {{ govukErrorSummary({
@@ -55,7 +55,7 @@
             text: "Full name (optional)"
           },
           hint: {
-              text:"This is the name that will be displayed in your account. It is up to you how your name is displayed. For example, 'Dan' or 'Daniel'."
+              text:"This is the name that will be displayed in your account. It is up to you how your name is displayed, for example 'Dan Smith' or 'Daniel Smith'."
           },
           id: "full-name",
           name: "full-name",
@@ -69,7 +69,7 @@
             text: "Email address"
           },
           hint: {
-            text: "We'll send a link to this email address to verify it belongs to you and make your account more secure."
+            text: "We'll send a link to this email address to verify it belongs to you."
           },
           id: "email",
           name: "email",
@@ -87,7 +87,7 @@
             text: "Email address"
           },
           hint: {
-            text: "We'll send a link to this email address to verify it belongs to you and make your account more secure."
+            text: "We'll send a link to this email address to verify it belongs to you."
           },
           id: "email",
           name: "email",

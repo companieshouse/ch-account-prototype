@@ -18,14 +18,14 @@
 
 
     <h1 class="govuk-heading-xl">Check your phone</h1>
-    
-    <p class="govuk-body">We've sent a text message with a security code to <span class="govuk-body govuk-!-font-weight-bold"> XXXXX XXX456</span>.</p>
 
-    <p class="govuk-body"> It may take a few minutes to arrive </p>
+    <p class="govuk-body">We've sent a text message with a security code to <span class="govuk-body govuk-!-font-weight-bold"> XXXXXXX3456</span>.</p>
+
+    <p class="govuk-body"> It may take a few minutes to arrive.</p>
 
         {{ govukInput({
           label: {
-            text: "Enter security code"
+            text: "Security code"
           },
           classes: "govuk-input--width-10",
           id: "width-7",
@@ -38,10 +38,10 @@
           idPrefix: "remember-mobile",
           name: "remember mobile details",
           items: [
-           
+
             {
               value: "30-days",
-              html: "Notify -- Remember me for 30 days. <br> GOV.UK -- Skip this step any time you sign in on this device in the next 30 days. Do not do this if you're using a shared or public device."
+              html: "Remember this code for 30 days."
             }
           ]
         }) }}
