@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout/layout-account-signout-home.html" %}
 
 {% block pageTitle %}
   Create a Companies House account
@@ -12,14 +12,11 @@
 
 {% block header %}
     {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container",
+    
     navigation: [
     {
       href: "sign-in",
-      text: "Sign in"
+      text: "Sign out"
     }
   ]
   }) }} 

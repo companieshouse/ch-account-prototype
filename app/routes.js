@@ -61,6 +61,16 @@ router.post('/service-journey/add-company-to-account', function (req, res) {
     res.redirect('../service-journey/add-company-to-account-notification')
 })
 
+router.post('/service-journey/add-company-to-account-notification', function (req, res) {
+
+    res.redirect('../service-journey/confirmation-page')
+})
+
+router.post('/service-journey/confirmation-page', function (req, res) {
+
+    res.redirect('')
+})
+
 
 
 router.get('/sign-in-new-device', function (req, res) {

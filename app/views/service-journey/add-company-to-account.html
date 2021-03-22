@@ -12,14 +12,11 @@
 
 {% block header %}
     {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container",
+    
     navigation: [
     {
       href: "sign-in",
-      text: "Sign in"
+      text: "Sign out"
     }
   ]
   }) }} 
@@ -39,9 +36,6 @@
               isPageHeading: true,
               classes: "govuk-fieldset__legend--xl"
             }
-          },
-          hint: {
-            text: "You will no longer need the authentication code for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
           },
           items: [
             {
