@@ -32,22 +32,18 @@
 
               {% endif %}
 
-              <span class='govuk-caption-xl'>FLOWERS LIMITED</span>
-              <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>
-
+          
               {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-
-
 
               {% if errorAuthenticationCode == true %}
 
               {{ govukInput({
                 label: {
-                  html: "Authentication code",
-                  isPageHeading: false
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>
+               Enter the company authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
                 },
-
                 classes: "govuk-input--width-10",
                 id: "authentication-code",
                 name: "authentication-code"
@@ -57,8 +53,9 @@
 
                {{ govukInput({
                 label: {
-                  html: "Authentication code",
-                  isPageHeading: false
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span> Enter the company authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
                 },
 
                 classes: "govuk-input--width-10",
