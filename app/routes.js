@@ -33,6 +33,12 @@ router.get('/sign-in-add-auth-person', function (req, res) {
     res.redirect('sign-in')
 })
 
+router.get('/sign-in-with-mobile', function (req, res) {
+
+    app.set('scenario', 'sign-in-with-mobile');
+    res.redirect('sign-in')
+})
+
 router.get('/service-journey', function (req, res) {
 
     app.set('scenario', 'service-journey');
@@ -264,6 +270,14 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('/new-device/choose-verify-option') 
     }
+    else if(app.settings.scenario == 'sign-in-with-mobile')
+    {
+      res.redirect('check-your-phone-remember-code') 
+    }
+    else if(app.settings.scenario == 'sign-in')
+    {
+      res.redirect('/user-account/home-no-companies') 
+    }
     else
     {
       res.redirect('/user-account/home-no-companies')
@@ -369,6 +383,11 @@ router.post('/choose-verify-option', function(req, res) {
 router.post('/check-your-phone', function(req, res) {
 
     res.redirect('check-your-email')
+})
+
+router.post('/check-your-phone-remember-code', function(req, res) {
+
+    res.redirect('user-account/home-no-companies')
 })
 
 
