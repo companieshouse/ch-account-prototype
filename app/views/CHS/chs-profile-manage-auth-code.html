@@ -7,21 +7,29 @@
 
 {% block content %}
 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="/CHS/chs-profile-auth-code" method="post" novalidate>
 
-      <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-      <form action="CHS/chs-profile-page-new" method="post" novalidate>
+      {{ govukInput({
+        label: {
+          text: "Search for a company or officer"
+        },
+        id: "search-input",
+        name: "search"
+      }) }}
+
+
 
       <h1 class="govuk-heading-xl">FLOWERS LIMITED <p class="govuk-body">  
          Company number <span class="govuk-body govuk-!-font-weight-bold"> 00233462</span></p></h1>
-         
-          {{ govukButton({
-            text: "Follow this company"
-          }) }}
-          {{ govukButton({
-            text: "File for this company",
-            href:"../Sign-in"
-          }) }}
+
+         <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+          Follow this company
+          </button>
+          <a class="govuk-link" href="#">Manage company authentication</a>
+          </div>
         
 
 
@@ -32,7 +40,8 @@
             <div class="govuk-grid-column-full">
               <p class="govuk-body govuk-!-font-weight-bold">
                 <span class="govuk-body">Registered office address address</span><br>
-                2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
+                2nd Floor Red House, 17 London Road, London <br>SA73 8PH </br>
+                <a href="../CHS/change-of-ro-address" class="govuk-link govuk-body">Change address</a></p>
 
               <p class="govuk-body govuk-!-font-weight-bold">
                 <span class="govuk-body">Company status</span><br>
@@ -62,6 +71,9 @@
               <p class="govuk-body govuk-!-font-weight-bold">
                 <span class="govuk-body">Next accounts made up to</span> 
                 31 March 2020 <br> <span class="govuk-body"> due by </span>31 March 2021</p>
+                <button class="govuk-button" data-module="govuk-button">
+                  File accounts
+                  </button>
                 <p class="govuk-body govuk-!-font-weight-bold">
                 <span class="govuk-body">Last accounts made up to</span> 
                31 March 2019</p>

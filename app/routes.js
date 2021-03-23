@@ -72,10 +72,47 @@ router.post('/service-journey/add-company-to-account-notification', function (re
     res.redirect('../service-journey/confirmation-page')
 })
 
-router.post('/service-journey/confirmation-page', function (req, res) {
 
-    res.redirect('')
+//change a registered office address
+
+router.get('/change-address', function (req, res) {
+
+    app.set('scenario', 'change-address');
+    res.redirect('../CHS/chs-profile-page-new')
 })
+
+router.post('/CHS/chs-profile-auth-code', function (req, res) {
+
+    res.redirect('../CHS/add-company-to-account')
+})
+
+router.post('/CHS/add-company-to-account', function (req, res) {
+
+    if(req.session.data['add-to-account'] == "yes"){
+
+      res.redirect('../CHS/chs-profile-manage-auth-code')
+    }
+    else if(req.session.data['add-to-account'] == "no"){
+
+      res.redirect('../CHS/chs-profile-manage-auth-code')
+    }
+})
+
+router.post('/CHS/change-of-ro-address', function (req, res) {
+
+    res.redirect('../CHS/confirmation')
+})
+
+router.post('/CHS/change-of-ro-address-notification', function (req, res) {
+
+    res.redirect('../CHS/confirmation')
+})
+
+
+
+
+
+
 
 
 
@@ -223,6 +260,10 @@ router.post('/create-your-password', function(req, res) {
           errorList: errors
         })
   }
+  if(app.settings.scenario == 'change-address')
+  {
+      res.redirect('../CHS/chs-profile-auth-code') 
+  }
   else
   {
     res.redirect('user-account/home-version-2')
@@ -274,9 +315,9 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('check-your-phone-remember-code') 
     }
-    else if(app.settings.scenario == 'sign-in')
+    else if(app.settings.scenario == 'change-address')
     {
-      res.redirect('/user-account/home-no-companies') 
+      res.redirect('CHS/chs-profile-auth-code') 
     }
     else
     {

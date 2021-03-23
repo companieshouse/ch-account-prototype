@@ -8,7 +8,18 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/CHS/change-of-ro-address" method="post" novalidate>
+    <form action="/CHS/change-of-ro-address-notification" method="post" novalidate>
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          FLOWERS LIMITIED has been added to your account.
+        </h3>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
       <span class="govuk-caption-l">FLOWERS LIMITED</span>
       <h1 class="govuk-heading-l">Change of registered office address</h1>
 
