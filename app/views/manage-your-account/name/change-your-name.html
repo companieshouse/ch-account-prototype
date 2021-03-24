@@ -18,19 +18,17 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-        
+
         <h1 class="govuk-heading-l">Change your name</h1>
 
 
-        <p class="govuk-body">The name currently in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'> Hannah Salt</span>.</p>
+        <p class="govuk-body">The name currently shown in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'> Hannah Salt</span>.</p>
 
         {{ govukInput({
             label: {
             text: "Enter new full name"
           },
-          hint:{
-            text: "Leave blank if you do not want to add your name to the account."
-          },
+
           id: "full-name",
           name: "full-name",
           autocomplete: "name",
@@ -40,7 +38,7 @@
 
         <div class="govuk-button-group">
         {{ govukButton({
-          text: "Update name",
+          text: "Change name",
           preventDoubleClick: true,
           href:"./manage-account-notification"
         }) }}

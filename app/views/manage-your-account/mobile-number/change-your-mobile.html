@@ -44,15 +44,18 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-        
-        <h1 class="govuk-heading-l">Change your phone number</h1>
+
+        <h1 class="govuk-heading-l">Change your mobile number</h1>
 
 
-        <p class="govuk-body">The phone number currently stored in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'>07969 666663</span>.</p>
+        <p class="govuk-body">The mobile number currently stored in your Companies House account is <span class='govuk-body govuk-!-font-weight-bold'>07969 666 663</span>.</p>
 
         {{ govukInput({
             label: {
-            text: "Enter new mobile phone number"
+            text: "New mobile number"
+          },
+          hint:{
+            text:"We'll send  a security code to this number by text message."
           },
           id: "full-name",
           name: "full-name",
@@ -60,14 +63,14 @@
           spellcheck: false
           }) }}
 
-          <p class="govuk-body">We'll send  a security code to this new number by text message. You’ll need this code to finish changing the phone number for your account.</p>
+
 
           {{ govukInput({
             label: {
-            text: "Enter your password"
+            text: "Password"
           },
           hint:{
-            text:"Enter your password to make this change"
+            text:"Enter your Companies House account password."
           },
           suffix: {
             html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
@@ -79,7 +82,7 @@
 
         <div class="govuk-button-group">
         {{ govukButton({
-          text: "Update name",
+          text: "Continue",
           preventDoubleClick: true,
           href:"./check-your-phone"
         }) }}
