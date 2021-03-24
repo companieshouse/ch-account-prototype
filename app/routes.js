@@ -266,7 +266,7 @@ router.post('/create-your-password', function(req, res) {
   }
   else
   {
-    res.redirect('user-account/home-version-2')
+    res.redirect('user-account/home-no-companies')
   }
 })
 
