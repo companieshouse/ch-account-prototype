@@ -26,7 +26,7 @@
               </div>
 
               <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-grid-column-three-quarters">
                   <p class="govuk-body govuk-!-font-weight-bold">
                       <span class="govuk-body ">Company number</span><br>
                  </span>18882777</p>
@@ -36,13 +36,14 @@
                    </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
 
                    <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-three-quarters">
+                    <div class="govuk-grid-column-full">
                     <table class="govuk-table">
                       <thead class="govuk-table__head">
 
                         <tr class="govuk-table__row">
-                          <th class="govuk-table__header" scope="col"> People authorised to <br> file for this company</th>
+                          <th class="govuk-table__header" scope="col"> People authorised to file for this company</th>
                           <th class="govuk-table__header" scope="col"> Status </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
                         </tr>
 
 
@@ -55,10 +56,14 @@
                           <td class="govuk-table__cell">
                             {{govukTag({
                               text: "CONFIRMED",
-                              classes: "govuk-tag--turquoise"
+                              classes: "govuk-tag--green"
                             })}}
                           </td>
+                          <td class="govuk-table__cell">
+                          <a href="" class="govuk-link">View details</a>
+                          </td>
                         </tr>
+                       
                       </tbody>
                     </table>
                     <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a></p>
@@ -66,13 +71,7 @@
                   </div>
 
                 </div>
-                <div class="govuk-grid-column-one-third">
-                    {{ govukButton({
-                      text: "File for this company",
-                      href:""
-                    }) }}
-
-                </div>
+                
               </div>
             </div>
       
