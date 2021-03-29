@@ -450,16 +450,12 @@ router.post('/authentication-code', function (req, res) {
 // authorised person request page
 router.post('/authentication-code-v3', function (req, res) {
 
-    res.redirect('../company-added-authorisation-sent')
+    res.redirect('../user-account/company-added')
   
 })
 
 
-router.post('/authentication-code-v3', function (req, res) {
 
-    res.redirect('../company-added-authorisation-sent')
-  
-})
 
 
 
