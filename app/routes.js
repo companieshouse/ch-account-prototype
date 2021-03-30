@@ -260,10 +260,6 @@ router.post('/create-your-password', function(req, res) {
           errorList: errors
         })
   }
-  if(app.settings.scenario == 'change-address')
-  {
-      res.redirect('../CHS/chs-profile-auth-code') 
-  }
   else
   {
     res.redirect('user-account/home-no-companies')
