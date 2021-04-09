@@ -7,6 +7,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
+
 // Patterns that aren't in Frontend
 @import "patterns/step-by-step-header";
 @import "patterns/step-by-step-nav";
@@ -23,11 +24,14 @@ $govuk-assets-path: '/govuk/assets/';
 //Defining new cards style
 @import "components/cards";
 
+//Defining new language toggle style
+@import "components/govuk-language-select";
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
 nav{
+	
 	display: inline-block;
 	float: right;
 }
-
