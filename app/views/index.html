@@ -250,27 +250,24 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h2 class="govuk-heading-m">** New incorporations **</h2>
+        <h2 class="govuk-heading-m">SCRS</h2>
 
-        <p class="govuk-body">New companies set up, post Companies House account, no authentication code required. An email will ask for the user to create an account, using the email address that was used for Incorporation, the company will automatically we added to their account.</p>
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" href="#">A new page for the SCRS service</a>
+          </li>
+        </ul>
 
-        {{ govukButton({
-          text: "Scenario Five",
-          classes: "govuk-button--secondary",
-          href: "/messages/email-confirm-you-are-the-presenter"
-        }) }}
+        
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">Webfiling and CHS</h2> 
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" href="#">Webfiling</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">CHS</a>
-          </li>
-        </ul>
+        <h2 class="govuk-heading-m">Webfiling</h2> 
+        {{ govukButton({
+          text: "Start the webfiling journey",
+          classes: "govuk-button--secondary",
+          href: "sign-in-webfiling"
+        }) }}
 
 
 

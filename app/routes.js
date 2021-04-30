@@ -45,6 +45,13 @@ router.get('/service-journey', function (req, res) {
     res.redirect('../service-journey/service-start-page')
 })
 
+router.get('/sign-in-webfiling', function (req, res) {
+
+    app.set('scenario', 'webfiling-journey');
+    res.redirect('sign-in')
+})
+
+
 
 //service journey 
 router.post('/service-journey/add-a-company', function (req, res) {
@@ -311,9 +318,9 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('check-your-phone-remember-code') 
     }
-    else if(app.settings.scenario == 'change-address')
+    else if(app.settings.scenario == 'webfiling-journey')
     {
-      res.redirect('CHS/chs-profile-auth-code') 
+      res.redirect('webfiling/sign-in-to-company') 
     }
     else
     {
