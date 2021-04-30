@@ -1,0 +1,58 @@
+{% extends "layout/layout-signout.html" %}
+
+{% block pageTitle %}
+  Enter the authorised person details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"add-a-company"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="/authorised-person-details" method="post" novalidate>
+
+        {{ govukInput({
+          label: {
+            text: "Enter the email address of the person who is authorised to file for the company",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "......"
+          },
+          id: "event-name",
+          name: "event-name"
+        }) }}
+
+        <p class="govuk-body"> <a href="" class="govuk-link">Add another email address</a></p>
+
+
+
+      {{ govukButton({
+          text: "Confirm and continue",
+          href:"../webfiling/webfiling-profile"
+      }) }}
+
+      
+
+    </form>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+{% endblock %}
