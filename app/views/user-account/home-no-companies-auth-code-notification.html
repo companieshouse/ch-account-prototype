@@ -15,7 +15,7 @@
 
   {% set html %}
     <p class="govuk-notification-banner__heading">
-      The authentication code for FLOWERS LIMITED will be posted to the registered office address. <br><p class="govuk-body">It usually takes up to 5 days to arrive.</p>
+      The authentication code for FLOWERS LIMITED will be posted to the registered office address. <br><p class="govuk-body">It can take up to 5 days to arrive.</p>
 
   {% endset %}
 
@@ -24,7 +24,7 @@
     type: 'success'
   }) }}
 
-          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage companies and people authorised to file on behalf of a company</span></h1>
+          <h1 class="govuk-heading-l">Your companies </h1>
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -33,7 +33,14 @@
 
               <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
 
-                <p  class="govuk-body">If you want to file for a company, you’ll need to add it to your account.</p>
+
+                <p class="govuk-body">Add a company to your account so that you can:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>file for the company online</li>
+                  <li>authorise people to file for the company on your behalf</li>
+
+
+
               </ul>
 
               {{ govukButton({

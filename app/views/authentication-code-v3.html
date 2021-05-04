@@ -24,13 +24,6 @@
               <span class='govuk-caption-xl'>FLOWERS LIMITED</span>
               <h1 class='govuk-heading-xl'> Enter the company authentication code</h1>
 
-              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-              {{ govukInsetText({
-                text: "After you've entered the authentication code for this company, you will no longer need it for most online filings. Keep the code in a safe place because you may need it for certain filings in the future."
-              }) }}
-
-
               {{ govukInput({
                 label: {
                   html: " Authentication code",
@@ -42,7 +35,7 @@
               }) }}
 
 
-
+<br>
               {{ govukButton({
                 text: "Continue"
               }) }}
