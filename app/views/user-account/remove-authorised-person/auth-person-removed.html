@@ -1,5 +1,5 @@
 
-{% extends "layout/layout-account-signout-your-companies.html" %}
+{% extends "layout/layout-account-signout-your-companies-jill.html" %}
 
 {% block pageTitle %}
   Your companies
@@ -9,13 +9,14 @@
 {% block content %}
 
 <div class="govuk-width-container">
-  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
     {% set html %}
       <p class="govuk-notification-banner__heading">
-        An email request has been sent to Jill Edwards to be authorised to file online for FLOWERS LIMITED. <a class="govuk-notification-banner__link" href="../">View request</a>.
+        Hannah Salt has been removed as an authorised person for FLOWERS LIMITIED and has been notified by email. An email has been sent to all authorised people for FLOWERS LIMITED to confirm this. 
       </p>
 
     {% endset %}
@@ -68,28 +69,14 @@
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell">
-                            <p class="govuk-body"> Hannah Salt (you)</p>
-                          </td>
-                          <td class="govuk-table__cell">
-                            {{govukTag({
-                              text: "CONFIRMED",
-                              classes: "govuk-tag--green"
-                            })}}
-                          </td>
-                          <td class="govuk-table__cell">
-                          <a href="./authorised-person-hannah" class="govuk-link">View details</a>
-                          </td>
-                        </tr>
-                        <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <p>Jill Edwards</a>
+                          <p>Jill Edwards (you)</a>
                         </td>
                         <td class="govuk-table__cell">
                           {{govukTag({
-                            text: "PENDING",
-                            classes: "govuk-tag--yellow"
-                          })}}
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
                         </td>
                         <td class="govuk-table__cell">
                         <a href="authorised-person-jill" class="govuk-link">View details</a>
