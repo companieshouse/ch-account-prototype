@@ -20,7 +20,7 @@
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-      <form action="/add-a-company" method="post" novalidate>
+      <form action="/company-number" method="post" novalidate>
 
 
         {% if errorCompanyNumber == true %}
@@ -83,8 +83,7 @@
         </details>
 
         {{ govukButton({
-          text: "Continue",
-          href:"check-company-details"
+          text: "Continue"
         }) }}
       </form>
   </div>

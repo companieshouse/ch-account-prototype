@@ -50,6 +50,12 @@ router.get('/sign-in-webfiling', function (req, res) {
     app.set('scenario', 'webfiling-journey');
     res.redirect('sign-in')
 })
+router.get('/sign-in-webfiling-not-added', function (req, res) {
+
+    app.set('scenario', 'webfiling-not-added');
+    res.redirect('sign-in')
+})
+
 
 
 
@@ -318,9 +324,17 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('check-your-phone-remember-code') 
     }
+    else if(app.settings.scenario == 'change-address')
+    {
+      res.redirect('CHS/chs-profile-auth-code') 
+    }
     else if(app.settings.scenario == 'webfiling-journey')
     {
-      res.redirect('webfiling/sign-in-to-company') 
+      res.redirect('webfiling/company-number') 
+    }
+    else if(app.settings.scenario == 'webfiling-not-added')
+    {
+      res.redirect('webfiling/company-number') 
     }
     else
     {
@@ -519,6 +533,19 @@ router.post('/company-role', function (req, res) {
   
 })
 
+//webfiling journey
+
+router.post('/company-number', function(req, res) {
+
+    if(app.settings.scenario == 'webfiling-journey')
+    {
+      res.redirect('/check-company-details') 
+    }
+    else if(app.settings.scenario == 'webfiling-not-added')
+    {
+      res.redirect('./webfiling/authentication-code') 
+    }
+})
 
 
 

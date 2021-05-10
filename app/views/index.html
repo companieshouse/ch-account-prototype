@@ -117,10 +117,6 @@
 
 
 
-
-
-
-
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
@@ -267,10 +263,22 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">Webfiling</h2> 
+
+        <p class="govuk-body">The user would like to file for a company and the company already added to their account.</p>
+
+
         {{ govukButton({
           text: "Start the webfiling journey",
           classes: "govuk-button--secondary",
           href: "sign-in-webfiling"
+        }) }}
+
+        <p class="govuk-body">The user would like to file for a company but the company has NOT been added to their account.</p>
+
+        {{ govukButton({
+          text: "Start the webfiling journey",
+          classes: "govuk-button--secondary",
+          href: "sign-in-webfiling-not-added"
         }) }}
 
 
