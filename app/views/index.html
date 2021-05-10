@@ -94,7 +94,7 @@
 
         <ul class="govuk-list">
           <li>
-            <a class="govuk-link" target="_blank"  href="sign-in-with-mobile">Sign in with mobile (opens in a new tab)</a>
+            <a class="govuk-link" target="_blank"  href="sign-in-with-mobile">Sign in with mobile multi-factor including tick box (opens in a new tab)</a>
           </li>
         </ul> 
 
@@ -120,17 +120,31 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h2 class="govuk-heading-m">Email requests </h2>
+        <h2 class="govuk-heading-m">Confirm or decline authorised person email request </h2>
 
+         <p class="govuk-body">Hannah Salt has added Jill Edwards as an authorised person for FLOWERS LIMITED.</p>
 
-         <h3 class="govuk-heading-s"> Confirm or decline authorised person request</h3>
-
+         <ul class="govuk-list govuk-list--bullet">
+          <li>confirm request</li>
+          <li>decline request ** new **</li>
+        </ul>
       
         {{ govukButton({
           text: "Email request ",
           classes: "govuk-button--secondary",
           href: "../messages/email-confirm-you-are-the-presenter"
         }) }}
+
+         <p class="govuk-body">Email to tell all authorised people that a new authorised person has been added to the company. ** New **</p>
+
+         {{ govukButton({
+          text: "Email authorised person added to company ",
+          classes: "govuk-button--secondary",
+          href: "../messages/email-auth-person-added-to-company"
+        }) }}
+
+
+
 
         <!--- Emma and Sophie to do *****
 
@@ -141,6 +155,7 @@
         }) }} --> 
 
 
+        <!--- 
 
         <h3 class="govuk-heading-s">User has requested to be an authorised person</h3>
 
@@ -151,12 +166,14 @@
           href: "../messages/email-request-to-be-authorised-person"
         }) }}
 
+      -->
+
         <!--- Emma and Sophie to do *****
 
         {{ govukButton({
           text: "Email request second user ** In progress **",
           classes: "govuk-button--secondary",
-          href: ""
+          href: "../messages/email-request-to-be-authorised-person-second"
         }) }}-->
 
 
@@ -230,12 +247,18 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
-        <h2 class="govuk-heading-m">Remove an authorised person</h2> 
+        <h2 class="govuk-heading-m">Remove an authorised person ** new **</h2> 
+
+
+        <p class="govuk-body">Remove an authorised person from the company - Jill Edwards is removing Hannah Salt</p>
+
+        {{ govukButton({
+          text: "Remove an authorised person",
+          classes: "govuk-button--secondary",
+          href: "./user-account/remove-authorised-person/your-companies"
+        }) }}
 
         <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" target="_blank"  href="./user-account/remove-authorised-person/your-companies">Remove an authorised person from the company - Jill Edwards is removing Hannah Salt</a>
-          </li>
           <li>
             <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-authorised-person-removed">Email sent to all authorised people of the company, except the person being removed (opens in a new tab)</a>
           </li>
