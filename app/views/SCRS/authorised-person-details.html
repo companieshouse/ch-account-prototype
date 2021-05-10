@@ -22,25 +22,31 @@
 
         {{ govukInput({
           label: {
-            text: "Enter the email address of the person who is authorised to file for the company",
-            classes: "govuk-label--l",
+            text: "Enter the email address of the people authorised to file online for this company",
+            classes: "govuk-label--xl",
             isPageHeading: true
           },
           hint: {
-            text: "......"
+            text: " "
           },
           id: "event-name",
           name: "event-name"
         }) }}
+        <div>
 
-        <p class="govuk-body"> <a href="" class="govuk-link">Add another email address</a></p>
+          {{ govukButton({
+            text: "Add another email address",
+            classes: "govuk-button--secondary"
+          }) }}
 
+        </div>
+        <div>
 
-
-      {{ govukButton({
-          text: "Confirm and continue",
-          href:"../webfiling/webfiling-profile"
-      }) }}
+          {{ govukButton({
+              text: "Confirm and continue",
+              href:"../webfiling/webfiling-profile"
+          }) }}
+        </div>
 
       
 
