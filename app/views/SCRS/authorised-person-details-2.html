@@ -21,11 +21,34 @@
       <form action="/authorised-person-details" method="post" novalidate>
 
 
-        <span <h1 class="govuk-heading-l">What is the email address of the people authorised to file online for this company?</h1>
+         <h1 class="govuk-heading-l">What is the email address of the people authorised to file online for this company?</h1>
 
-        <p class="govuk-hint">We'll use this to set up their Companie House account, so that they can file online for the company.</p>  </span>
+        <p class="govuk-hint">We'll use this to set up their Companie House account, so that they can file online for the company.</p> 
 
-
+        {{ govukTable({
+          caption: "",
+          captionClasses: "govuk-table__caption--xs",
+          classes: "govuk-!-margin-top-5",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Authorised persons email adddress"
+            },
+            {
+              text: ""
+            }
+          ],
+          rows: [
+            [
+              {
+                html: '<p class="govuk-body govuk-!-font-weight-regular">hannah.salt@example.com</p>'
+              },
+              {
+                html: '<a href="#" class="govuk-link">Remove</a>'
+              }
+            ]
+          ]
+        }) }}
 
         {{ govukInput({
           label: {
@@ -38,8 +61,7 @@
           spellcheck: false
         }) }}
 
-
-         <p class="govuk-body"> <a href="authorised-person-details-2" class="govuk-link">Add another email address</a></p>
+         <p class="govuk-body"> <a href="#" class="govuk-link">Add another email address</a></p>
 
         <div>
 
