@@ -21,9 +21,9 @@
       <form action="/authorised-person-details" method="post" novalidate>
 
 
-         <h1 class="govuk-heading-l">What is the email address of the people authorised to file online for this company?</h1>
+         <h1 class="govuk-heading-l">Who do you want to authorise to file online for this company?</h1>
 
-        <p class="govuk-hint">We'll use this to set up their Companie House account, so that they can file online for the company.</p> 
+        <p class="govuk-hint">Tell us the authorised person's email address. We'll send them an email that contains a request link.</p>
 
         {{ govukTable({
           caption: "",
@@ -32,7 +32,7 @@
           firstCellIsHeader: true,
           head: [
             {
-              text: "Authorised persons email adddress"
+              text: ""
             },
             {
               text: ""
@@ -71,7 +71,7 @@
         }) }}
 
 
-         <p class="govuk-body"> <a href="authorised-person-details-3" class="govuk-link">Add another email address</a></p>
+         <p class="govuk-body"> <a href="authorised-person-details-3" class="govuk-link">Add another authorised person's email address</a></p>
 
         <div>
 
@@ -81,7 +81,7 @@
           }) }}
         </div>
 
-      
+
 
     </form>
   </div>
