@@ -41,27 +41,37 @@
           rows: [
             [
               {
-                html: '<p class="govuk-body govuk-!-font-weight-regular">hannah.salt@example.com</p>'
+                html: '<div class="govuk-form-group govuk-!-margin-top-3">
+                  <label class="govuk-label" for="email">
+                    Email address 1
+                  </label>
+                  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                </div>'
               },
               {
-                html: '<a href="#" class="govuk-link">Remove</a>'
+                text:''
+              }
+            ],
+            [
+              {
+                html: '<div class="govuk-form-group govuk-!-margin-top-3">
+                  <label class="govuk-label" for="email">
+                    Email address 2
+                  </label>
+                  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                </div>'
+              },
+              {
+                html:'<button class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/SCRS/authorised-person-details">
+                    Remove
+                  </button>'
               }
             ]
           ]
         }) }}
 
-        {{ govukInput({
-          label: {
-            text: "Authorised persons email address"
-          },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false
-        }) }}
 
-         <p class="govuk-body"> <a href="#" class="govuk-link">Add another email address</a></p>
+         <p class="govuk-body"> <a href="authorised-person-details-3" class="govuk-link">Add another email address</a></p>
 
         <div>
 
