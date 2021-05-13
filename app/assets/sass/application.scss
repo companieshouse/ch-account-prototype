@@ -35,3 +35,10 @@ nav{
 	display: inline-block;
 	float: right;
 }
+
+@media (min-width: 641px) {
+	.searchbutton{
+		margin-top: 77px;
+
+	}
+}

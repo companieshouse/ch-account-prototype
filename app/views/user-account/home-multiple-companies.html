@@ -11,36 +11,46 @@
 
 
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
-        <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage the companies you have added to your account, and people authorised to file on behalf of a company.</span></h1>
 
-          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage the companies you have added to your account, and people authorised to file on behalf of a company.</span></h1>
+      {{ govukButton({
+          text: "Add a company",
+          href:"../../add-a-company"
+      }) }}
 
-           {{ govukButton({
-                  text: "Add a company",
-                  href:"../../add-a-company"
-                }) }}
-
-
-          
-
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-          {{ govukInput({
-            label: {
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </div>
+</div>
+      
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+             
+      {{ govukInput({
+          label: {
               text: "Search for a company",
-              classes: "govuk-label--m",
-              isPageHeading: true
-            },
-            hint: {
+              classes: "govuk-label--m"
+          },
+          hint: {
               text: "Enter the company name or number"
-            },
-            classes: "govuk-!-width-three-quarters",
-            id: "event-name",
-            name: "event-name"
-          }) }}
+          },
+          id: "event-name",
+          name: "event-name"
+      }) }}
+  </div>
 
+  <div class ="govuk-grid-column-one-third">
 
+      {{ govukButton({
+          text: "Search",
+          href:"#",
+          classes: "searchbutton"
+      }) }}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
             <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
