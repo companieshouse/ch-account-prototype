@@ -13,7 +13,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;">View and manage the companies you have added to your account, and people authorised to file on behalf of a company.</span></h1>
+      <h1 class="govuk-heading-l">Your companies</h1>
 
       {{ govukButton({
           text: "Add a company",
@@ -21,6 +21,8 @@
       }) }}
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    
   </div>
 </div>
       
@@ -35,8 +37,8 @@
           hint: {
               text: "Enter the company name or number"
           },
-          id: "event-name",
-          name: "event-name"
+          id: "company-search",
+          name: "company-search"
       }) }}
   </div>
 
@@ -45,7 +47,7 @@
       {{ govukButton({
           text: "Search",
           href:"#",
-          classes: "searchbutton"
+          classes: "searchbutton govuk-button--secondary"
       }) }}
   </div>
 </div>
@@ -113,13 +115,151 @@
           </div>
 
 
+
     </div>
 
+    <div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-column-full">
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                 <h2 class="govuk-heading-m">FLOWERS LIMITED</h2>
+                </div>
+              </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                  <p class="govuk-body govuk-!-font-weight-bold">
+                      <span class="govuk-body ">Company number</span><br>
+                 </span>18882777</p>
+
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+                   </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
+
+                   <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> People authorised to file for this company</th>
+                          <th class="govuk-table__header" scope="col"> Status </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
+                        </tr>
 
 
-   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Hannah Salt (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                          <a href="" class="govuk-link">View details</a>
+                          </td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                    <p> <a href="#" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>
+                    <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a></p>
+                    </div>
+                  </div>
 
+                </div>
+                
+              </div>
+            </div>
       
+
+          </div>
+
+
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-column-full">
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                 <h2 class="govuk-heading-m">FLOWERS LIMITED</h2>
+                </div>
+              </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                  <p class="govuk-body govuk-!-font-weight-bold">
+                      <span class="govuk-body ">Company number</span><br>
+                 </span>18882777</p>
+
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+                   </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
+
+                   <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> People authorised to file for this company</th>
+                          <th class="govuk-table__header" scope="col"> Status </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
+                        </tr>
+
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Hannah Salt (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                          <a href="" class="govuk-link">View details</a>
+                          </td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                    <p> <a href="#" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>
+                    <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Add person authorised to file for this company</a></p>
+                    </div>
+                  </div>
+
+                </div>
+                
+              </div>
+            </div>
+      
+
+          </div>
+
+
+
+    </div>
+
+     <div class="pagination govuk-!-margin-top-3 govuk-!-margin-bottom-6">
+          <a class="govuk-link" href="#"><span class="govuk-!-font-weight-bold">1</span></a>
+          <a class="govuk-link" href="#">2</a>
+          <a class="govuk-link" href="#">3</a>
+          <a class="govuk-link" href="#">4</a>
+          <a class="govuk-link" href="#">Next</a>
+    </div>
+
 
 </div>
 </div>

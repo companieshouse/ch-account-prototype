@@ -34,6 +34,7 @@ nav{
 	
 	display: inline-block;
 	float: right;
+
 }
 
 @media (min-width: 641px) {
@@ -41,4 +42,11 @@ nav{
 		margin-top: 77px;
 
 	}
+}
+
+.pagination a {
+  float: left;
+  font-size: 19px;
+  padding: 8px 16px;
+  padding-bottom: govuk-spacing(6);
 }
