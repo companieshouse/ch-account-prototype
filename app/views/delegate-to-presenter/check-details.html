@@ -22,17 +22,26 @@
       <div class="govuk-grid-column-two-thirds">
       <form action="/check-company-details" method="post" novalidate>
 
-      <span class="govuk-caption-xl">FLOWERS LIMITED</span> <h1 class="govuk-heading-xl">Check the authorised person's details before email request is sent</h1> </span>
+      <span class="govuk-caption-xl">FLOWERS LIMITED</span> <h1 class="govuk-heading-xl">Check the authorised person's details before we send the email request</h1> </span>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
           {
             key: {
-              text: "Full name"
+              text: "Name"
             },
             value: {
               text: "Jill Edwards"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
             }
           },
           {
@@ -41,6 +50,15 @@
             },
             value: {
               text: "jill.edwards@example.com"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
             }
           }
         ]
@@ -53,8 +71,7 @@
           href:"../user-account/auth-person-added"
       }) }}
 
-      <p class="govuk-body"> <a href="add-a-company" class="govuk-link">Choose a different company</a></p>
-
+  
     </form>
   </div>
 

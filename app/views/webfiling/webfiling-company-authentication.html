@@ -3443,94 +3443,38 @@
 
         <div class="container-content signIn">
 
-                <h1 class="">Sign in to a company</h1>
+        <h1 class="">Company authentication</h1>
+
+        <h2 class="">Change company authentication code</h2>
 
 
-
-
-
-
-
-
-
-
-
-<!-- FILE_START::companySignInForm.tmpl -->
-        <fieldset class="selection-group">
-          <legend><div>Where was the company registered?</div></legend>
-          <ul style="padding-left:0;">
-            <li>
-              <input name="companySignInPage.companySignInForm.coType" id="companySignInPage.EW" value="EW" checked="checked" type="radio">
-              <label for="companySignInPage.EW">England / Wales</label>
-            </li>
-            <li>
-              <input name="companySignInPage.companySignInForm.coType" id="companySignInPage.SC" value="SC" type="radio">
-              <label for="companySignInPage.SC">Scotland</label>
-            </li>
-            <li>
-              <input name="companySignInPage.companySignInForm.coType" id="companySignInPage.NI" value="NI" type="radio">
-              <label for="companySignInPage.NI">Northern Ireland</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset>
-          <legend class="hidden">Company sign in information</legend>
           <div class="string">
             <label for="companySignInPage.coNum">
-              <span>Company number</span>
+              <span>Choose a new 6 character code</span>
               <input id="companySignInPage.coNum" name="companySignInPage.companySignInForm.coNum" maxlength="8" value="" class="medium" type="text">
 
             </label>
           </div>
           <div class="string">
             <label for="companySignInPage.authCode">
-              <span>Authentication code</span>
+              <span>Re-enter your new 6 character code</span>
               <input name="companySignInPage.companySignInForm.authCode" id="companySignInPage.authCode" maxlength="8" value="" class="medium" type="password">
+
+              <p> We'll post confirmation to your registered office address.</p>
+
+              <a href="webfiling-profile-live-fix" class="button positive regular">Change code</a>
 
             </label>
           </div>
 
 
-          <p><a href="javascript:void(0)">Request an authentication code</a></p>
+          <h2 class="">Cancel company authentication code</h2>
 
-        </fieldset>
+          <p> If you cancel the company authentication code you will not be able to electronically file for this company.</p>
 
-<!-- FILE_END::companySignInForm.tmpl -->
+          <p> TICK - I wish to cancel the company's authentication code.</p>
 
-<a href="webfiling-profile-live-fix" class="button positive regular"><strong>Sign in</strong></a>
-
-
+          <a href="webfiling-profile-live-fix" class="button positive regular">Change code</a>
 
 
-
-
-        </div><!--End of div class="grid_12 omega"-->
-    <div class="clear"></div>
-</div>
-
-<!-- FILE_START::footer.tmpl -->
-  <div id="footer">
-
-        <div class="container_16">
-            <span class="email">
-            <a href="javascript:void(0)">Email Companies House</a></span>
-            <span class="telephone">Telephone +44 (0)303 1234 500 <em>8:30am to 6pm (UK time) Monday to Friday</em></span>
-            <span class="help"><a href="javascript:void(0)">Help</a></span>
-            <!-- FILE_START::language.tmpl -->
-
-<a id="i18nLink" href="javascript:void(0)" class="language">Cymraeg</a>
-
-
-<!-- FILE_END::language.tmpl -->
-
-        </div>
-
-    </div><!--End of div id="footer"-->
-    <!-- FILE_START::tracker.tmpl -->
-<!-- Piwik -->
-
-
-
-</div>
 {% endblock %}
