@@ -1,0 +1,69 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Check your details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"add-a-company"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+      <form action="/check-company-details" method="post" novalidate>
+
+      <span class="govuk-caption-xl">FLOWERS LIMITED</span> <h1 class="govuk-heading-xl">Check the authorised person's details before email request is sent</h1> </span>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Full name"
+            },
+            value: {
+              text: "Jill Edwards"
+            }
+          },
+          {
+            key: {
+              text: "Email address"
+            },
+            value: {
+              text: "jill.edwards@example.com"
+            }
+          }
+        ]
+      }) }}
+
+
+
+      {{ govukButton({
+          text: "Confirm and send email request",
+          href:"../user-account/auth-person-added"
+      }) }}
+
+      <p class="govuk-body"> <a href="add-a-company" class="govuk-link">Choose a different company</a></p>
+
+    </form>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+{% endblock %}
