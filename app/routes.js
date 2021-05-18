@@ -403,22 +403,6 @@ router.post('/check-company-details', function(req, res) {
 })
 
 
-//keeping track of which users account 
-
-router.post('remove-authorised-person-hannah', function(req, res) {
-
-
-      if(app.settings.scenario == 'hannah')
-      {
-        res.redirect('auth-person-removed') 
-      }
-      else if(app.settings.scenario == 'jill')
-      {
-        res.redirect('') 
-      }
-
-
-})
 
 
 
