@@ -10,8 +10,7 @@ module.exports = router
 // --- Routing for users scenarios ---
 
 router.get('/start-page-s1-s2', function (req, res) {
-
-    app.set('scenario', 'one-two');
+    app.set('scenario', 'hannah');
     res.redirect('start-page')
 })
 
@@ -387,7 +386,7 @@ router.post('/add-a-company', function(req, res) {
 router.post('/check-company-details', function(req, res) {
 
 
-      if(app.settings.scenario == 'one-two')
+      if(app.settings.scenario == 'hannah')
       {
         res.redirect('authentication-code') 
       }
@@ -403,6 +402,23 @@ router.post('/check-company-details', function(req, res) {
 
 })
 
+
+//keeping track of which users account 
+
+router.post('remove-authorised-person-hannah', function(req, res) {
+
+
+      if(app.settings.scenario == 'hannah')
+      {
+        res.redirect('auth-person-removed') 
+      }
+      else if(app.settings.scenario == 'jill')
+      {
+        res.redirect('') 
+      }
+
+
+})
 
 
 
@@ -547,7 +563,7 @@ router.post('/company-number', function(req, res) {
     }
 })
 
-router.post('check-company-details', function(req, res) {
+router.post('/webfiling/check-company-details', function(req, res) {
 
     if(app.settings.scenario == 'webfiling-journey')
     {
