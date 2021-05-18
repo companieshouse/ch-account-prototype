@@ -15,7 +15,7 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">First 'FLOWERS LIMITED' user</h2>
+        <h2 class="govuk-heading-m">'FLOWERS LIMITED' user</h2>
 
         <ul class="govuk-list govuk-list--bullet">
           <li>User has the authentication code. Company added.</li>
@@ -23,7 +23,7 @@
         </ul>
 
         {{ govukButton({
-          text: "First user for 'FLOWERS LIMITED'",
+          text: "Start 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
           href:"start-page-s1-s2"
         }) }}
@@ -37,7 +37,7 @@
 
 
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+       <!--- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">Second 'FLOWERS LIMITED' user </h2>
         <ul class="govuk-list govuk-list--bullet">
@@ -57,7 +57,7 @@
 
         <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        --->
 
 
         <!-- <h2 class="govuk-heading-m">Log in from a new device **Remove**</h2>
@@ -75,18 +75,7 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
 
 
-        <h2 class="govuk-heading-m">Change Registered office address within CHS </h2>
-
-      
-        {{ govukButton({
-          text: "Start service",
-          classes: "govuk-button--secondary",
-          href: "change-address"
-        }) }}
-
-
-          <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
-
+        
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -142,39 +131,6 @@
           classes: "govuk-button--secondary",
           href: "../messages/email-auth-person-added-to-company"
         }) }}
-
-
-
-
-        <!--- Emma and Sophie to do *****
-
-        {{ govukButton({
-          text: "Email request second user ** In progress **",
-          classes: "govuk-button--secondary",
-          href: "../messages/email-confirm-you-are-the-presenter"
-        }) }} --> 
-
-
-        <!--- 
-
-        <h3 class="govuk-heading-s">User has requested to be an authorised person</h3>
-
-      
-        {{ govukButton({
-          text: "Email request",
-          classes: "govuk-button--secondary",
-          href: "../messages/email-request-to-be-authorised-person"
-        }) }}
-
-      -->
-
-        <!--- Emma and Sophie to do *****
-
-        {{ govukButton({
-          text: "Email request second user ** In progress **",
-          classes: "govuk-button--secondary",
-          href: "../messages/email-request-to-be-authorised-person-second"
-        }) }}-->
 
 
         
@@ -287,7 +243,7 @@
 
         <h2 class="govuk-heading-m">Webfiling</h2> 
 
-        <p class="govuk-body">The user would like to file for a company and the company already added to their account.</p>
+        <p class="govuk-body">Company is already added to their account.</p>
 
 
         {{ govukButton({
@@ -296,13 +252,28 @@
           href: "sign-in-webfiling"
         }) }}
 
-        <p class="govuk-body">The user would like to file for a company but the company has NOT been added to their account.</p>
+        <p class="govuk-body">Company not added to their account.</p>
 
         {{ govukButton({
           text: "Start the webfiling journey",
           classes: "govuk-button--secondary",
           href: "sign-in-webfiling-not-added"
         }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h2 class="govuk-heading-m">Change Registered office address within CHS </h2>
+
+      
+        {{ govukButton({
+          text: "Start service",
+          classes: "govuk-button--secondary",
+          href: "change-address"
+        }) }}
+
+
+          <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
 
 
 

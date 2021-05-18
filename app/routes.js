@@ -539,13 +539,27 @@ router.post('/company-number', function(req, res) {
 
     if(app.settings.scenario == 'webfiling-journey')
     {
-      res.redirect('/check-company-details') 
+      res.redirect('webfiling/check-company-details') 
     }
     else if(app.settings.scenario == 'webfiling-not-added')
     {
-      res.redirect('./webfiling/authentication-code') 
+      res.redirect('webfiling/check-company-details') 
     }
 })
+
+router.post('check-company-details', function(req, res) {
+
+    if(app.settings.scenario == 'webfiling-journey')
+    {
+      res.redirect('./webfiling-profile') 
+    }
+    else if(app.settings.scenario == 'webfiling-not-added')
+    {
+      res.redirect('/authentication-code') 
+    }
+})
+
+
 
 
 
