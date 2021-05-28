@@ -333,7 +333,7 @@ router.post('/sign-in', function(req, res) {
     }
     else if(app.settings.scenario == 'webfiling-not-added')
     {
-      res.redirect('webfiling/company-number') 
+      res.redirect('webfiling/information-page') 
     }
     else
     {
@@ -557,6 +557,27 @@ router.post('/webfiling/check-company-details', function(req, res) {
     {
       res.redirect('/authentication-code') 
     }
+})
+
+
+// --- Error messages ---
+
+// Enter your details page
+router.post('/what-are-your-details', function(req, res) {
+
+
+    var telephoneNumber = req.body.telephoneNumber
+
+    if(telephoneNumber !== ''){
+
+      res.redirect('webfiling/check-your-phone')
+
+    }
+    else{
+        
+      res.redirect('check-your-email')
+
+    }  
 })
 
 

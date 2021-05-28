@@ -1,5 +1,9 @@
 {% extends "layout/layout-signout.html" %}
 
+{% block pageTitle %}
+  More secure webfiling account
+{% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back"
@@ -11,38 +15,14 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/form-handler" method="post" novalidate>
 
-        {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
-          fieldset: {
-            legend: {
-              text: "Where do you live?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          items: [
-            {
-              value: "england",
-              text: "England"
-            },
-            {
-              value: "scotland",
-              text: "Scotland"
-            },
-            {
-              value: "wales",
-              text: "Wales"
-            },
-            {
-              value: "northern-ireland",
-              text: "Northern Ireland"
-            }
-          ]
-        }) }}
+        <h1 class="govuk-heading-l">We're making webfiling accounts more secure</h1>
+
+        <p class="govuk-body"> We'll send a link to hannah.salt@example.com to verify you have access to it. </p>
+
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"what-are-your-details"
         }) }}
       </form>
     </div>

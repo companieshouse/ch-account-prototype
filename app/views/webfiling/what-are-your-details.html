@@ -34,17 +34,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/create-an-account" method="post" novalidate>
-
-
-        {% if errorFullName == true or errorEmail == true %}
-
-          {{ govukErrorSummary({
-              titleText: "There is a problem",
-              errorList: errorList
-          }) }}
-
-        {% endif %}
+      <form action="/what-are-your-details" method="post" novalidate>
 
         <h1 class="govuk-heading-xl">What are your details?</h1>
 
@@ -63,40 +53,6 @@
           spellcheck: false
         }) }}
 
-        {% if errorEmail  == true %}
-        {{ govukInput({
-          label: {
-            text: "Email address"
-          },
-          hint: {
-            text: "We'll send a link to this email address to verify it belongs to you."
-          },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          errorMessage: {
-            text: "Enter your email address"
-          },
-          spellcheck: false
-        }) }}
-        {% else %}
-
-        {{ govukInput({
-          label: {
-            text: "Email address"
-          },
-          hint: {
-            text: "We'll send a link to this email address to verify you have access to it."
-          },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false
-        }) }}
-        {% endif %}
-
         {{ govukInput({
             label: {
               text: "Mobile number (optional)"
@@ -104,8 +60,8 @@
             hint: {
               text: "Add your mobile number to make your account more secure. We'll send  a security code to this number by text message."
             },
-            id: "telephoneNumber",
-            name: "telephoneNumber",
+            id: "telephoneNumberWeb",
+            name: "telephoneNumberWeb",
             type: "tel",
             autocomplete: "tel",
             classes: "govuk-input--width-20"
