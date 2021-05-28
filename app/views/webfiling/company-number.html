@@ -6,12 +6,6 @@
   Tell us the company number
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href:"home-no-companies-no-notification"
-  }) }}
-{% endblock %}
 
 {% block content %}
 
@@ -32,38 +26,59 @@
 
         {% endif %}
 
-        {% if errorCompanyNumber == true %}
+        <h1 class="govuk-heading-l">Enter the details of the company you want to access in WebFiling</h1>
 
+        {{ govukRadios({
+          idPrefix: "where-was-the-company-registered",
+          name: "where-was-the-company-registered",
+          fieldset: {
+            legend: {
+              text: "Where was the company registered?"
+            }
+          },
+          items: [
+            {
+              value: "england",
+              text: "England / Wales"
+            },
+            {
+              value: "scotland",
+              text: "Scotland"
+            },
+            {
+              value: "northern-ireland",
+              text: "Northern Ireland"
+            }
+          ]
+        }) }}
+
+
+
+      {% if errorCompanyNumber == true %}
 
         {{ govukInput({
           label: {
-            text: "What is the company number?",
-            isPageHeading: true,
-            classes: "govuk-label--xl"
+            text: "What is the company number?"
           },
-          errorMessage: {
+            errorMessage: {
             text: "Enter the company number"
           },
-          classes: "govuk-input--width-10",
           id: "company-number",
-          name: "company-number"
+          name: "company-number",
+          classes: "govuk-input--width-10"
         }) }}
 
         {% else %}
 
-        {{ govukInput({
+          {{ govukInput({
           label: {
-            text: "What is the company number?",
-            isPageHeading: true,
-            classes: "govuk-label--xl"
+            text: "Company number"
           },
-          hint: {
-    text: "Enter the registration number of the company you want to access in WebFiling."
-  },
-          classes: "govuk-input--width-10",
           id: "company-number",
-          name: "company-number"
+          name: "company-number",
+          classes: "govuk-input--width-10"
         }) }}
+
 
         {% endif %}
 
@@ -89,8 +104,6 @@
 
 
 
-
-   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 </div>
 </div>

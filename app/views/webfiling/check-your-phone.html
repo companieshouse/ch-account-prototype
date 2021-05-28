@@ -14,7 +14,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <form action="/check-your-phone" method="post" novalidate>
+    <form action="webfiling/check-your-phone" method="post" novalidate>
 
 
     <h1 class="govuk-heading-xl">Check your phone</h1>
@@ -33,7 +33,8 @@
         }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"company-number"
         }) }}
 
         {{ govukDetails({
