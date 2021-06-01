@@ -22,7 +22,9 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/what-are-your-details" method="post" novalidate>
 
-        <h1 class="govuk-heading-xl">What are your details?</h1>
+        <span class="govuk-caption-xl">Increase the security of your account  </span>
+
+        <h1 class="govuk-heading-xl"> Add your name and mobile number to your account</h1>
 
 
 
@@ -54,10 +56,19 @@
           }) }}
 
 
-        {{ govukButton({
-            text: "Continue"
-        }) }}
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+          {{ govukButton({
+            text: "Skip",
+            href:"company-number",
+            classes: "govuk-button--secondary"
+          }) }}
+        </div>
       </form>
   </div>
   </div>

@@ -333,7 +333,7 @@ router.post('/sign-in', function(req, res) {
     }
     else if(app.settings.scenario == 'webfiling-not-added')
     {
-      res.redirect('webfiling/information-page') 
+      res.redirect('webfiling/what-are-your-details') 
     }
     else
     {

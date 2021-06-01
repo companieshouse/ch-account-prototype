@@ -1,6 +1,6 @@
 {% extends "layout/layout-signout.html" %}
 
-{% extends "layout/layout-account-signout-your-companies.html" %}
+
 
 {% block pageTitle %}
   Tell us the company number
@@ -26,7 +26,7 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-l">Enter the details of the company you want to access in WebFiling</h1>
+        <h1 class="govuk-heading-xl">Enter the details of the company you want to access in WebFiling</h1>
 
         {{ govukRadios({
           idPrefix: "where-was-the-company-registered",
@@ -98,6 +98,8 @@
           text: "Continue",
           href:'./check-company-details'
         }) }}
+
+        
       </form>
   </div>
 </div>
