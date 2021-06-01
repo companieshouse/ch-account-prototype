@@ -1,16 +1,14 @@
-
-
-{% extends "layout/layout-signin.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  Create a Companies House account
+  What are your details
 {% endblock %}
 
 
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href:"start-page"
+    href:"sign-in"
   }) }}
 {% endblock %}
 
@@ -22,10 +20,14 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/what-are-your-details" method="post" novalidate>
 
-        <span class="govuk-caption-xl">Increase the security of your account  </span>
+       
 
         <h1 class="govuk-heading-xl"> Add your name and mobile number to your account</h1>
 
+
+        {{ govukInsetText({
+          text: "To improve the security of your account add your mobile number.  "
+        }) }}
 
 
         {{ govukInput({

@@ -1,7 +1,14 @@
-{% extends "layout/layout-signout.html" %}
+{% extends "layout/layout-account-signout-file-for-company.html" %}
 
 {% block pageTitle %}
-  Create a Companies House account
+  Enter the company authentication code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"add-a-company"
+  }) }}
 {% endblock %}
 
 
