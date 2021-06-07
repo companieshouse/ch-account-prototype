@@ -21,12 +21,7 @@
       <form action="/authorised-person-details" method="post" novalidate>
 
 
-         <h1 class="govuk-heading-l">Who do you want to authorise to file online for this company?</h1>
-
-
-         {{ govukInsetText({
-            text: "You can add more authorised person's email addresses on the next page"
-          }) }}
+         <h1 class="govuk-heading-l">What is the email address for Hannah Salt? Who do you want to authorise to file online for this company?</h1>
 
 
           {{ govukInput({
@@ -43,13 +38,8 @@
             spellcheck: false
           }) }}
 
-        <p class="govuk-hint"></p>
-
-
-
           {{ govukButton({
-              text: "Save and continue",
-              href:"../SCRS/authorise-to-file-list"
+              text: "Save and continue"
           }) }}
 
 
