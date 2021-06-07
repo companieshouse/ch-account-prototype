@@ -1,0 +1,93 @@
+{% extends "layout/layout-signout.html" %}
+
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+            <form action="/presenter-authentication-code" method="post">
+
+              {% if errorAuthenticationCode == true %}
+
+                {{ govukErrorSummary({
+                    titleText: "There is a problem",
+                    errorList: errorList
+                  }) }}
+
+              {% endif %}
+
+          
+              {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+              {% if errorAuthenticationCode == true %}
+
+              {{ govukInput({
+                label: {
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>
+               Enter the company authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
+                },
+                classes: "govuk-input--width-10",
+                id: "authentication-code",
+                name: "authentication-code"
+              }) }}
+
+               {% else %}
+
+               {{ govukInput({
+                label: {
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span> Enter the presenter authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
+                },
+
+                classes: "govuk-input--width-10",
+                id: "authentication-code",
+                name: "authentication-code"
+              }) }}
+
+              {% endif %}
+
+
+
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "Help with presenter authentication code",
+                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.</p>'
+              }) }}
+
+
+
+
+            </form>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+{% endblock %}

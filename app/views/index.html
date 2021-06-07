@@ -117,6 +117,8 @@
           <li>confirm request</li>
           <li>decline request ** new **</li>
         </ul>
+
+
       
         {{ govukButton({
           text: "Email request ",
@@ -124,6 +126,18 @@
           href: "../messages/email-confirm-you-are-the-presenter"
         }) }}
 
+        <p> User has already confirmed or declined the request - user clicks on email link</p>
+
+        {{ govukButton({
+          text: "Email link has already been actioned by user",
+          classes: "govuk-button--secondary",
+          href: "../messages/email-auth-person-request-already-accepted-declined"
+        }) }}
+
+
+
+
+         
          <p class="govuk-body">Email to tell all authorised people that a new authorised person has been added to the company. ** New **</p>
 
          {{ govukButton({
@@ -265,6 +279,8 @@
         }) }}
 
         <p> <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a></p>
+
+        <p> <a href="../webfiling/presenter-authentication" class="govuk-link" target="blank">Presenter authentication code - Lenders ** New ** (opens in new tab)</a></p>
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
