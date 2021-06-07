@@ -26,7 +26,46 @@
 
         {% endif %}
 
-        <h1 class="govuk-heading-xl">Enter the details of the company you want to access in WebFiling</h1>
+        <h1 class="govuk-heading-xl">Enter the details of the company you want to access</h1>
+        {% if errorCompanyNumber == true %}
+
+          {{ govukInput({
+            label: {
+              text: "What is the company number?"
+            },
+              errorMessage: {
+              text: "Enter the company number"
+            },
+            id: "company-number",
+            name: "company-number",
+            classes: "govuk-input--width-10"
+          }) }}
+
+          {% else %}
+
+            {{ govukInput({
+            label: {
+              text: "What is the company number?"
+            },
+            id: "company-number",
+            name: "company-number",
+            classes: "govuk-input--width-10"
+          }) }}
+
+
+          {% endif %}
+
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with company number
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              You can find this by searching for the company on the <a href="https://beta.companieshouse.gov.uk/" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House register (opens in new tab)</a>.
+            </div>
+          </details>
 
         {{ govukRadios({
           idPrefix: "where-was-the-company-registered",
@@ -39,7 +78,7 @@
           items: [
             {
               value: "england",
-              text: "England / Wales"
+              text: "England or Wales"
             },
             {
               value: "scotland",
@@ -54,52 +93,13 @@
 
 
 
-      {% if errorCompanyNumber == true %}
-
-        {{ govukInput({
-          label: {
-            text: "What is the company number?"
-          },
-            errorMessage: {
-            text: "Enter the company number"
-          },
-          id: "company-number",
-          name: "company-number",
-          classes: "govuk-input--width-10"
-        }) }}
-
-        {% else %}
-
-          {{ govukInput({
-          label: {
-            text: "Company number"
-          },
-          id: "company-number",
-          name: "company-number",
-          classes: "govuk-input--width-10"
-        }) }}
-
-
-        {% endif %}
-
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Help with company number
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            You can find this by searching for the company on the <a href="https://beta.companieshouse.gov.uk/" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House register (opens in new tab)</a>.
-          </div>
-        </details>
 
         {{ govukButton({
           text: "Continue",
           href:'./check-company-details'
         }) }}
 
-        
+
       </form>
   </div>
 </div>
