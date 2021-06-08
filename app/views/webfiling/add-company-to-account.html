@@ -17,10 +17,10 @@
       <form action="/CHS/add-company-to-account" method="post" novalidate>
 
         <span class="govuk-caption-xl">FLOWERS LIMITED</span>
-          <h1 class="govuk-heading-xl">Do you want us to store these company details for future online filings?</h1>
+          <h1 class="govuk-heading-xl">Store company details for future online filings</h1>
+    <p class="govuk-body ">We can securely store the company details you entered to make online filing quicker and easier in the future.</p>
 
-
-          <p class="govuk-body ">If you select 'yes', this means you:</p>
+          <p class="govuk-body ">This means you:</p>
             <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
               <li>will not need to re-enter the company's authentication code for most online filings</li>
               <li>can authorise other people to file on your behalf</li>
@@ -31,7 +31,7 @@
           name: "add-to-account",
           fieldset: {
             legend: {
-              html: "Do you want us to store FLOWERS LIMTITED company details for future online filings?",
+              html: "Do you want us to store the company details for FLOWERS LIMITED?",
 
               classes: "govuk-fieldset__legend--s"
             }
@@ -49,7 +49,7 @@
           ]
         }) }}
 
-        
+
 
         {{ govukButton({
           text: "Continue",
