@@ -16,14 +16,24 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/CHS/add-company-to-account" method="post" novalidate>
 
+        <span class="govuk-caption-xl">FLOWERS LIMITED</span>
+          <h1 class="govuk-heading-xl">Do you want us to store these company details for future online filings?</h1>
+
+
+          <p class="govuk-body ">If you select 'yes', this means you:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
+              <li>will not need to re-enter the company's authentication code for most online filings</li>
+              <li>can authorise other people to file on your behalf</li>
+            </ul>
+
         {{ govukRadios({
           idPrefix: "add-to-account",
           name: "add-to-account",
           fieldset: {
             legend: {
-              html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span> Do you want us to store these company details for future online filings?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--xl"
+              html: "Do you want us to store FLOWERS LIMTITED company details for future online filings?",
+
+              classes: "govuk-fieldset__legend--s"
             }
           },
 
@@ -39,20 +49,7 @@
           ]
         }) }}
 
-        <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Benefits of saving this company's details in your WebFiling account
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-body">By saving this company's details, you:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>will not need to re-enter the company's authentication code for most online filings</li>
-  <li>can authorise other people to file on your behalf</li>
-</ul>
-  </div>
-</details>
+        
 
         {{ govukButton({
           text: "Continue",
