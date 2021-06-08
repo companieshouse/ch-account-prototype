@@ -20,19 +20,15 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/what-are-your-details" method="post" novalidate>
 
-       
-
-        <h1 class="govuk-heading-xl"> We're updating webfiling accounts</h1>
 
 
-        {{ govukInsetText({
-          text: "To improve the security of your account add your mobile number.  "
-        }) }}
+        <h1 class="govuk-heading-xl"> Update your personal details</h1>
+
 
 
         {{ govukInput({
           label: {
-            text: "Full name (optional)"
+            text: "What is your full name? (optional)"
           },
           hint: {
               text:"This is the name that will be displayed in your account. It is up to you how your name is displayed, for example 'Dan Smith' or 'Daniel Smith'."
@@ -45,7 +41,7 @@
 
         {{ govukInput({
             label: {
-              text: "Mobile number (optional)"
+              text: "What is your mobile number? (optional)"
             },
             hint: {
               text: "Add your mobile number to make your account more secure. We'll send  a security code to this number by text message."
