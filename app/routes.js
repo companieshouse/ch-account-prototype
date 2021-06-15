@@ -440,7 +440,17 @@ router.post('/choose-verify-option', function(req, res) {
 
 router.post('/check-your-phone', function(req, res) {
 
+  if(req.session.data['verify-option'] == "text-message"){
+
+      res.redirect('forgotten-password/reset-your-password')
+    }
+    else{
+
     res.redirect('check-your-email')
+
+    }
+
+
 })
 
 router.post('/check-your-phone-remember-code', function(req, res) {

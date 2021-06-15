@@ -194,23 +194,26 @@
 
         <h2 class="govuk-heading-m">I've forgotten my password</h2>
 
-      
+        <h3 class="govuk-heading-s"> Verify by email </h3>
+        
+
         {{ govukButton({
           text: "Create a new password",
           classes: "govuk-button--secondary",
           href: "sign-in"
         }) }}
 
+        <h3 class="govuk-heading-s"> Verify by email or mobile </h3>
 
-       <!-- {{ govukButton({
+       {{ govukButton({
           text: "Create a new password - with mobile 2FA",
           classes: "govuk-button--secondary",
           href: "sign-in-password-mobile"
-        }) }} -->
+        }) }}
 
         <p> <a href="../forgotten-password/email-reset-password" class="govuk-link" target="blank">Email reset your password (opens in new tab)</a></p>
 
-        <!-- <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p> -->
+         <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p>
 
 
 
