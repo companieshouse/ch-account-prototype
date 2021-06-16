@@ -13,8 +13,22 @@
 <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-two-thirds">
+        {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-        <h1 class="govuk-heading-l">Manage account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings</span></h1>
+        {% set html %}
+          <p class="govuk-notification-banner__heading">
+            You've successfully changed your email address. 
+          </p>
+
+          <p class="govuk-body">If you have changed your email address you'll need to update your eReminder email address.</p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: 'success'
+        }) }}
+
+        <h1 class="govuk-heading-l">Manage account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings.</span></h1>
 
         {{ govukSummaryList({
           rows: [
@@ -28,7 +42,7 @@
               actions: {
                 items: [
                   {
-                    href: "./name/change-your-name",
+                    href: "../name/change-your-name",
                     text: "Change",
                     visuallyHiddenText: "name"
                   }
@@ -62,7 +76,7 @@
               actions: {
                 items: [
                   {
-                    href: "../manage-your-account/password/change-your-password",
+                    href: "../password/change-your-password",
                     text: "Change",
                     visuallyHiddenText: "contact information"
                   }
@@ -74,13 +88,13 @@
                 text: "Mobile number"
               },
               value: {
-                html: '07969666663'
+                html: ''
               },
               actions: {
                 items: [
                   {
-                    href: "../manage-your-account/mobile-number/change-your-mobile",
-                    text: "Change",
+                    href: "../mobile-number/change-your-mobile",
+                    text: "Add",
                     visuallyHiddenText: "contact information"
                   }
                 ]
