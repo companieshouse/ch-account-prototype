@@ -1,7 +1,7 @@
 {% extends "layout/layout-signin.html" %}
 
 {% block pageTitle %}
-  What is your email address
+  Check your phone
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,7 +14,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <form action="/check-your-phone" method="post" novalidate>
+    <form action="/forgotten-password/check-your-phone" method="post" novalidate>
 
 
     <h1 class="govuk-heading-xl">Check your phone</h1>
@@ -32,16 +32,19 @@
           name: "width-7"
         }) }}
 
-        
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
         {{ govukDetails({
           summaryText: "I have not received a text message",
           html: "If the text message does not arrive after a few minutes, you can <a href='' class='govuk-link'>ask us to send you another text message</a>."
         }) }}
+
+        {{ govukButton({
+          text: "Continue",
+          href:"reset-your-password"
+        }) }}
+
+        <p class="govuk-body"> <a href="reset-password-check-email" class="govuk-link">Send email with a link to reset my password instead</a></p>
+
+        
 
         
 

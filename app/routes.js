@@ -415,7 +415,7 @@ router.post('/change-your-password', function(req, res) {
 
   if(app.settings.scenario == 'forgotten-password-mobile')
   {
-    res.redirect('../forgotten-password/choose-verify-option') 
+    res.redirect('../forgotten-password/check-your-phone') 
   }
   else{
 
