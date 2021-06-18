@@ -32,14 +32,18 @@
           name: "width-7"
         }) }}
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
         {{ govukDetails({
           summaryText: "I have not received a text message",
           html: "If the text message does not arrive after a few minutes, you can <a href='' class='govuk-link'>ask us to send you another text message</a>."
         }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        <p> <a href="forgotten-password/reset-password-check-email" class="govuk-link">Send email with a link to reset my password instead</a></p>
+
+        
 
   </form>
 </div>
