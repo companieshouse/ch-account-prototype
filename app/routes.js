@@ -47,12 +47,7 @@ router.get('/service-journey', function (req, res) {
 router.get('/sign-in-webfiling', function (req, res) {
 
     app.set('scenario', 'webfiling-journey');
-    res.redirect('sign-in')
-})
-router.get('/sign-in-webfiling-not-added', function (req, res) {
-
-    app.set('scenario', 'webfiling-not-added');
-    res.redirect('sign-in')
+    res.redirect('sign-in-summary')
 })
 
 
@@ -329,7 +324,7 @@ router.post('/sign-in', function(req, res) {
     }
     else if(app.settings.scenario == 'webfiling-journey')
     {
-      res.redirect('webfiling/company-number') 
+      res.redirect('user-account/home-no-companies') 
     }
     else if(app.settings.scenario == 'webfiling-not-added')
     {
@@ -444,6 +439,11 @@ router.post('/check-your-phone', function(req, res) {
 
       res.redirect('forgotten-password/reset-your-password')
     }
+    if(app.settings.scenario == 'webfiling'){
+
+      res.redirect('home-no-companies')
+    }
+
     else{
 
     res.redirect('check-your-email')
@@ -544,6 +544,8 @@ router.post('/company-role', function (req, res) {
 })
 
 //webfiling journey
+
+
 
 router.post('/company-number', function(req, res) {
 
