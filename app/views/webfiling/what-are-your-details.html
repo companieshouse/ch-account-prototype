@@ -21,14 +21,19 @@
       <form action="/what-are-your-details" method="post" novalidate>
 
 
-
-        <h1 class="govuk-heading-xl"> Update your personal details</h1>
-
-
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="event-name">
+              Update your personal details
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+          This is optional. You can update your details at any time.
+          </div>
+<br>
 
         {{ govukInput({
           label: {
-            text: "What is your full name? (optional)"
+            text: "What is your full name? "
           },
           hint: {
               text:"This is the name that will be displayed in your account. It is up to you how your name is displayed, for example 'Dan Smith' or 'Daniel Smith'."
@@ -41,7 +46,7 @@
 
         {{ govukInput({
             label: {
-              text: "What is your mobile number? (optional)"
+              text: "What is your mobile number?"
             },
             hint: {
               text: "Add your mobile number to make your account more secure. We'll send  a security code to this number by text message."
