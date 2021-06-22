@@ -439,9 +439,9 @@ router.post('/check-your-phone', function(req, res) {
 
       res.redirect('forgotten-password/reset-your-password')
     }
-    if(app.settings.scenario == 'webfiling'){
+    if(app.settings.scenario == 'webfiling-journey'){
 
-      res.redirect('home-no-companies')
+      res.redirect('user-account/home-no-companies')
     }
 
     else{
@@ -545,7 +545,25 @@ router.post('/company-role', function (req, res) {
 
 //webfiling journey
 
+router.post('/webfiling/what-are-your-details', function(req, res) {
 
+  
+
+    var telephoneNumberWeb = req.body.telephoneNumberWeb
+
+    if(telephoneNumberWeb !== ''){
+
+        res.redirect('/check-your-phone')
+
+      }
+      else{
+        
+        res.redirect('../user-account/home-no-companies')
+
+      }
+
+  
+})
 
 router.post('/company-number', function(req, res) {
 
