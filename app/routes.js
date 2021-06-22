@@ -324,7 +324,7 @@ router.post('/sign-in', function(req, res) {
     }
     else if(app.settings.scenario == 'webfiling-journey')
     {
-      res.redirect('user-account/home-no-companies') 
+      res.redirect('webfiling/what-are-your-details') 
     }
     else if(app.settings.scenario == 'webfiling-not-added')
     {
