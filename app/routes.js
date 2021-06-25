@@ -482,6 +482,12 @@ router.post('/authentication-code-v3', function (req, res) {
 })
 
 
+//remove an authorised person
+router.post('/remove-authorised-person-hannah', function (req, res) {
+
+    res.redirect('./auth-person-removed')
+  
+})
 
 
 
@@ -588,6 +594,17 @@ router.post('/webfiling/check-company-details', function(req, res) {
       res.redirect('/authentication-code') 
     }
 })
+
+//add company to account 
+
+// router.post('/webfiling/add-company-to-account', function(req, res) {
+
+
+// })
+
+
+
+
 
 
 // --- Error messages ---

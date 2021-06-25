@@ -1,4 +1,4 @@
-{% extends "layout/layout-signout.html" %}
+{% extends "layout/layout-account-signout-your-companies.html" %}
 
 {% block pageTitle %}
   Store company details for future online filings
@@ -14,7 +14,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/CHS/add-company-to-account" method="post" novalidate>
+      <form action="/webfiling/add-company-to-account" method="post" novalidate>
 
         <span class="govuk-caption-xl">FLOWERS LIMITED</span>
           <h1 class="govuk-heading-xl">Store company details for future online filings</h1>
@@ -27,8 +27,8 @@
             </ul>
 
         {{ govukRadios({
-          idPrefix: "add-to-account",
-          name: "add-to-account",
+          idPrefix: "add-company-to-account",
+          name: "add-company-to-account",
           fieldset: {
             legend: {
               html: "Do you want us to store the company details for FLOWERS LIMITED?",
