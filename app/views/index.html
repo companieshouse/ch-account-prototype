@@ -99,6 +99,17 @@
           </li>
         </ul> 
 
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Recieve emails and privacy settings</h2>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href=""> Do you want to recieve emails about ...?(opens in a new tab)</a>
+          </li>
+        </ul> 
+
 <!--
 
 
@@ -131,12 +142,23 @@
         </ul>
 
 
-      
         {{ govukButton({
           text: "Email request ",
           classes: "govuk-button--secondary",
           href: "../messages/email-confirm-you-are-the-presenter"
         }) }}
+
+
+        <p> User doesn't have an account and user clicks on email link</p>
+
+        {{ govukButton({
+          text: "Email link selected by a user who doesn't have an account ** new **",
+          classes: "govuk-button--secondary",
+          href: ""
+        }) }}
+
+
+
 
         <p> User has already confirmed or declined the request - user clicks on email link</p>
 
