@@ -1,7 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout/layout-account-signout-your-companies.html" %}
 
 {% block pageTitle %}
-  Request an authentication code
+  You need the authentication code to add a company to your account
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,30 +23,30 @@
 
         <form action="/authentication-code-v2" method="post">
 
-          <span class='govuk-caption-xl'>FLOWERS LIMITED</span><h1 class='govuk-heading-xl'>Do you want us to send the authentication code to the registered office address?</h1>
+          <h1 class='govuk-heading-xl'>You need the authentication code to add FLOWERS LIMITED to your account</h1>
 
-          <p class="govuk-body">We'll send the authentication code by post to:</p>
 
-          <p class='govuk-body govuk-!-font-weight-bold'>37 London Road<br> London <br> SE3 6GI</p>
-                  <p class="govuk-body">It can take up to 5 days to arrive.</p>
+          <p class="govuk-body">You can ask us to <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link" target="blank">send the authentication code to the registered office address (opens in a new tab)</a>. </p>
+
+          <p class="govuk-body">Alternatively, you can ask us to <a href="https://find-and-update.company-information.service.gov.uk/auth-code-requests/start" class="govuk-link" target="blank">send the authentication code to a home address (opens in a new tab)</a>.</p>
+
+
+
+          <p class="govuk-body">Authentication codes are sent in the post and can take up to 5 working days to arrive.</p>
+
+          
 
           {{ govukButton({
-            text: "Send the authentication code",
-            href:"user-account/home-no-companies-auth-code-notification"
+            text: "Return to home page",
+            href:"user-account/home-no-companies"
           }) }}
 
-          {{ govukButton({
-            text: "Cancel",
-            classes: "govuk-button--secondary"
-          }) }}
 
         </form>
       </div>
     </div>
   </div>
-<p><a href="https://find-and-update.company-information.service.gov.uk/auth-code-requests/start" class="govuk-link" rel="noreferrer noopener" target="_blank">Request authentication code to be sent to a home address (opens in new tab)</a><p>
-   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-</div>
+
 
 
 {% endblock %}
