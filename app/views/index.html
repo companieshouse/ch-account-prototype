@@ -28,7 +28,6 @@
           href:"start-page-s1-s2"
         }) }}
 
-
         <p> <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a></p>
 
         <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
@@ -87,8 +86,6 @@
         <p> <a href="../webfiling/presenter-authentication" class="govuk-link" target="blank">Presenter authentication code - Lenders (opens in new tab)</a></p>
 
 
-        
-
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">Sign in</h2>
@@ -106,12 +103,11 @@
 
         <ul class="govuk-list">
           <li>
-            <a class="govuk-link" target="_blank"  href=""> Do you want to recieve emails about ...?(opens in a new tab)</a>
+            <a class="govuk-link" target="_blank"  href=""> Do you want to recieve emails from Companies House? (opens in a new tab)</a>
           </li>
         </ul> 
 
 <!--
-
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -145,31 +141,26 @@
         {{ govukButton({
           text: "Email request ",
           classes: "govuk-button--secondary",
-          href: "../messages/email-confirm-you-are-the-presenter"
+          href: "/confirm-presenter-email"
         }) }}
 
 
-        <p> User doesn't have an account and user clicks on email link</p>
+        <p> User who doesn't have an account</p>
 
         {{ govukButton({
-          text: "Email link selected by a user who doesn't have an account ** new **",
+          text: "User who doesn't have an account ** new **",
           classes: "govuk-button--secondary",
-          href: ""
+          href: "/no-account-confirm-presenter-email"
         }) }}
 
 
-
-
-        <p> User has already confirmed or declined the request - user clicks on email link</p>
+        <p> User has already confirmed or declined the request</p>
 
         {{ govukButton({
           text: "Email link has already been actioned by user",
           classes: "govuk-button--secondary",
           href: "../messages/email-auth-person-request-already-accepted-declined"
         }) }}
-
-
-
 
          
          <p class="govuk-body">Email to tell all authorised people that a new authorised person has been added to the company. </p>

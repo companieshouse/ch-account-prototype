@@ -20,11 +20,10 @@ router.get('/start-page-s3', function (req, res) {
     res.redirect('start-page')
 })
 
-router.get('/sign-in-auth-person-request', function (req, res) {
 
-    app.set('scenario', 'auth-person-request');
-    res.redirect('sign-in')
-})
+
+
+
 
 router.get('/sign-in-add-auth-person', function (req, res) {
 
@@ -298,7 +297,7 @@ router.post('/sign-in', function(req, res) {
             errorList: errors
           })
     }
-    else if(app.settings.scenario == 'auth-person-request')
+    else if(app.settings.scenario == 'user-with-account')
     {
       res.redirect('/jills-user-account/home-no-companies-no-notification') 
     }
@@ -351,6 +350,38 @@ router.post('/new-device/choose-verify-option', function(req, res) {
  
 })
 
+//accept or decline authorised person request -  user with account
+router.get('/confirm-presenter-email', function(req, res) {
+
+   app.set('scenario', 'user-with-account');
+  res.redirect('messages/email-confirm-you-are-the-presenter')
+ 
+})
+
+
+// accept or decline authorised person request - user with no account
+router.get('/no-account-confirm-presenter-email', function(req, res) {
+
+   app.set('scenario', 'user-has-no-account');
+    res.redirect('messages/email-confirm-you-are-the-presenter')
+ 
+})
+
+router.get('/sign-in-auth-person-request', function (req, res) {
+
+    if(app.settings.scenario == 'user-with-account')
+      {
+        res.redirect('sign-in')
+      }
+      else if(app.settings.scenario == 'user-has-no-account')
+      {
+        res.redirect('user-account/unregistered-user/create-your-password')
+      }
+
+}) 
+
+
+
 
 
 // Enter the company number page
@@ -396,10 +427,6 @@ router.post('/check-company-details', function(req, res) {
 
 
 })
-
-
-
-
 
 
 
@@ -488,10 +515,6 @@ router.post('/remove-authorised-person-hannah', function (req, res) {
     res.redirect('./auth-person-removed')
   
 })
-
-
-
-
 
 
 
