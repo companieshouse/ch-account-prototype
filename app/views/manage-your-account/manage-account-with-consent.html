@@ -16,6 +16,8 @@
 
         <h1 class="govuk-heading-l">Manage account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings.</span></h1>
 
+        <h2 class="govuk-heading-m">Account details</h2>
+
         {{ govukSummaryList({
           rows: [
             {
@@ -89,7 +91,51 @@
           ]
         }) }}
 
-      
+        <h2 class="govuk-heading-m">Privacy settings</h2>
+
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Companies House can send you emails relating to your company",
+                classes: 'govuk-!-width-two-thirds'
+              },
+              value: {
+                text: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "./name/change-your-name",
+                    text: "Update",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Companies House can send you emails about Companies House activities"  ,
+                classes: 'govuk-!-width-two-thirds'
+              },
+              
+              value: {
+                text: "No"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/webfiling/webfiling-change-email-address",
+                    text: "Update",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+      </div>
+
     </div>
 </div>
 

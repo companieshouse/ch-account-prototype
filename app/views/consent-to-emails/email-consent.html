@@ -12,8 +12,6 @@
       <form action="/consent-to-emails/email-consent" method="post" novalidate>
 
 
-      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
       {{ govukCheckboxes({
         idPrefix: "waste",
         name: "waste",
