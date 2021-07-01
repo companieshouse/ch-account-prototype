@@ -1,4 +1,4 @@
-{% extends "layout/layout-account-signout-your-companies.html" %}
+{% extends "layout/layout-account-signout-your-companies-jill.html" %}
 
 {% block pageTitle %}
   Your companies
@@ -21,26 +21,26 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-       <form action="/remove-authorised-person-hannah" method="post" novalidate>
+    <form action="/remove-authorised-person-hannah" method="post" novalidate>
 
 
     <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
 
-    <h1 class="govuk-heading-xl">Do you want to remove Hannah Salt's authorisation to file online for this company?</h1>
+    <h1 class="govuk-heading-xl">Remove Hannah Salt's authorisation to file online for this company</h1>
 
     <p class="govuk-body">
-    If you remove Hannah Salt's authorisation, they will no longer be able to access FLOWERS LIMITED in their Companies House account.</p>
+    If you remove Hannah Salt's authorisation, this means they will no longer be able to file online for FLOWERS LIMITED without a current authentication code.</p>
     <div class="govuk-warning-text">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-warning-text__assistive">Warning</span>
-        Hannah Salt will still be able to file online for this company if they have access to the current authentication code.<br><br> You should change the authentication code for this company as soon as possible after you have removed Hannah Salt's authorisation.
+        Hannah Salt will still be able to file online for this company if they have access to the current authentication code.<br><br> You may wish to change the authentication code for this company as soon as possible after you have removed Hannah Salt's authorisation.
       </strong>
     </div>
 
 
   <p class="govuk-body">
-  We'll email Hannah Salt to let them know they are no longer authorised to file online for this company. We'll also email anyone else who is authorised to file for this company that Hannah Salt's authorisation has been removed. We will not tell Hannah Salt who removed their authorisation.</p>
+  We'll email Hannah Salt to let them know. We'll also email anyone else who is authorised to file for this company that Hannah Salt's authorisation has been removed.</p>
 
 
   <p class="govuk-body">
@@ -60,7 +60,7 @@ If Hannah Salt is appointed as an officer of the company, such as a director or 
     items: [
 
       {
-        value: "confirmation-checkbox",
+        value: "mines",
         text: "I confirm that I have read and understood this information."
       }
     ]
