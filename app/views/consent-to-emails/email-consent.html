@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Sign in to Webfiling
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/consent-to-emails/email-consent" method="post" novalidate>
+
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+      {{ govukCheckboxes({
+        idPrefix: "waste",
+        name: "waste",
+        fieldset: {
+          legend: {
+            text: "What type of email correspondance can we send you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "Select all options that are relevant to you."
+        },
+        items: [
+          {
+            value: "emails-relating-to-company",
+            text: "Emails relating to your company",
+            hint: {
+              text: "such as when a document is filed online or someone new is authorised to file for your company"
+            }
+          },
+          {
+            value: "companies-house-emails",
+            text: "Emails about Companies House activities",
+            hint: {
+              text: "such as marketing, communications campaigns, or user research activities"
+            }
+          }
+        ]
+      }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
