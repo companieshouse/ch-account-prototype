@@ -49,6 +49,16 @@ router.get('/sign-in-webfiling', function (req, res) {
     res.redirect('sign-in-summary')
 })
 
+//Webfiling sign in with MFA choice
+router.get('/sign-in-MFA-webfiling', function (req, res) {
+
+    app.set('scenario', 'sign-in-with-MFA');
+    res.redirect('sign-in-summary')
+})
+
+
+
+
 
 
 
@@ -309,9 +319,9 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('/service-journey/add-a-company') 
     }
-    else if(app.settings.scenario == 'new-device')
+    else if(app.settings.scenario == 'sign-in-with-MFA')
     {
-      res.redirect('/new-device/choose-verify-option') 
+      res.redirect('/mfa/choose-verify-option') 
     }
     else if(app.settings.scenario == 'sign-in-with-mobile')
     {
@@ -337,15 +347,15 @@ router.post('/sign-in', function(req, res) {
 })
 
 //new device sign in - verify option
-router.post('/new-device/choose-verify-option', function(req, res) {
+router.post('/mfa/choose-verify-option', function(req, res) {
 
-   if(req.session.data['verify-option'] == "email"){
+   if(req.session.data['verify-option'] == "mfa-email"){
 
-      res.redirect('../new-device/check-your-email')
+      res.redirect('../mfa/check-your-email')
     }
-    else if(req.session.data['verify-option'] == "text-message"){
+    else if(req.session.data['verify-option'] == "mfa-text-message"){
 
-      res.redirect('../new-device/check-your-phone')
+      res.redirect('../mfa/check-your-phone')
     }
  
 })

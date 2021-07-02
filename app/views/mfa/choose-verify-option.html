@@ -17,33 +17,36 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/new-device/choose-verify-option" method="post" novalidate>
+      <form action="/mfa/choose-verify-option" method="post" novalidate>
 
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        classes: "govuk-radios--inline",
-        idPrefix: "verify-option",
+        classes: "govuk-radios",
+        idPrefix: "verify-option-mfa",
         name: "verify-option",
         fieldset: {
           legend: {
-            text: "How do you want to confirm it's you?",
+            text: "How do you want to get an access code?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
-        hint: {
-          text: "We've noticed you are logging in from a new device, we need to confirm it's you. This helps us keep your account secure."
-        },
         items: [
           {
-            value: "email",
-            text: "Email"
+            value: "mfa-text-message",
+            text: "Text message",
+            hint: {
+              text: "********456"
+            }
           },
           {
-            value: "text-message",
-            text: "Text message"
+            value: "mfa-email",
+            text: "Email",
+            hint: {
+              text: "h*********@example.com"
+            }
           }
         ]
       }) }}

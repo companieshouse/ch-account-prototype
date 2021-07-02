@@ -76,7 +76,7 @@
 
 
         {{ govukButton({
-          text: "Start the webfiling journey",
+          text: "Start the webfiling journey (first time signing in)",
           classes: "govuk-button--secondary",
           href: "sign-in-webfiling"
         }) }}
@@ -86,13 +86,20 @@
         <p> <a href="../webfiling/presenter-authentication" class="govuk-link" target="blank">Presenter authentication code - Lenders (opens in new tab)</a></p>
 
 
+        {{ govukButton({
+          text: "Sign in to WebFiling - choice of MFA",
+          classes: "govuk-button--secondary",
+          href: "sign-in-MFA-webfiling"
+        }) }}
+
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">Sign in</h2>
 
         <ul class="govuk-list">
           <li>
-            <a class="govuk-link" target="_blank"  href="sign-in-with-mobile">Sign in with mobile multi-factor including tick box (opens in a new tab)</a>
+            <a class="govuk-link" target="_blank"  href="sign-in-with-mobile">CHS sign in with mobile multi-factor including tick box (opens in a new tab)</a>
           </li>
         </ul> 
 

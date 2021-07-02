@@ -14,14 +14,14 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <form action="/check-your-phone" method="post" novalidate>
+    <form action="/mfa/check-your-phone" method="post" novalidate>
 
 
     <h1 class="govuk-heading-xl">Check your phone</h1>
     
     <p class="govuk-body">We've sent a text message with a security code to <span class="govuk-body govuk-!-font-weight-bold"> XXXXX XXX456</span>.</p>
 
-    <p class="govuk-body"> It may take a few minutes to arrive </p>
+    <p class="govuk-body"> It may take a few minutes to arrive.</p>
 
         {{ govukInput({
           label: {
@@ -33,7 +33,8 @@
         }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"../user-account/home-no-companies"
         }) }}
 
         {{ govukDetails({
