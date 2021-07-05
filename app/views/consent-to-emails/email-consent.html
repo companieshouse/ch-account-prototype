@@ -17,18 +17,18 @@
         name: "waste",
         fieldset: {
           legend: {
-            text: "What type of email correspondance can we send you?",
+            text: "What type of email communication can we send you?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
         hint: {
-          text: "Select all options that are relevant to you."
+          text: "Select all options that are relevant to you. You can update your preferences at any time."
         },
         items: [
           {
             value: "emails-relating-to-company",
-            text: "Emails relating to your company",
+            text: "Emails relating to activity on your WebFiling account",
             hint: {
               text: "such as when a document is filed online or someone new is authorised to file for your company"
             }
@@ -46,4 +46,7 @@
       </form>
     </div>
   </div>
+  {{ govukButton({
+  text: "Save and continue"
+}) }}
 {% endblock %}
