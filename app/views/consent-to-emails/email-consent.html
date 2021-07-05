@@ -11,41 +11,51 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/consent-to-emails/email-consent" method="post" novalidate>
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                What type of additional email communication can we send you?
+              </h1>
+            </legend>
+            <div id="nationality-hint" class="govuk-hint">
+            Select all options that are relevant to you. You can update your preferences at any time.
+            </div>
 
-      {{ govukCheckboxes({
-        idPrefix: "waste",
-        name: "waste",
-        fieldset: {
-          legend: {
-            text: "What type of email communication can we send you?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-        hint: {
-          text: "Select all options that are relevant to you. You can update your preferences at any time."
-        },
-        items: [
-          {
-            value: "emails-relating-to-company",
-            text: "Emails relating to activity on your WebFiling account",
-            hint: {
-              text: "such as when a document is filed online or someone new is authorised to file for your company"
-            }
-          },
-          {
-            value: "companies-house-emails",
-            text: "Emails about Companies House activities",
-            hint: {
-              text: "such as marketing, communications campaigns, or user research activities"
-            }
-          }
-        ]
-      }) }}
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="emails-relating-to-company" aria-describedby="nationality-item-hint">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                  Emails to tell you about a new message in your account
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  In the future, we'd like to send you emails to let you know you've received a new message in your WebFiling account
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="companies-house-emails">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                  Emails about Companies House activities
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  For example, marketing, communications campaigns, or user research activities
+                </div>
+              </div>
 
-      </form>
-    </div>
-  </div>
+
+              </div>
+              <div class="govuk-inset-text">
+                <h3 class="govuk-heading-s">Essential emails</h3>
+              <p class="govuk-body">Some types of email are essential to manage your account. We need to send you essential emails from time to time.</p>
+              </div>
+            </div>
+
+
+
+
+
+
+
   {{ govukButton({
   text: "Save and continue"
 }) }}
