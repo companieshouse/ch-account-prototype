@@ -28,24 +28,27 @@
         name: "verify-option",
         fieldset: {
           legend: {
-            text: "How do you want to get an access code?",
+            text: "How do you want to get a security code?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
+        hint: {
+    text: "You need a security code to access your account."
+  },
         items: [
           {
             value: "mfa-text-message",
             text: "Text message",
             hint: {
-              text: "********456"
+              text: "*******3456"
             }
           },
           {
             value: "mfa-email",
             text: "Email",
             hint: {
-              text: "h*********@example.com"
+              text: "h**********@example.com"
             }
           }
         ]
