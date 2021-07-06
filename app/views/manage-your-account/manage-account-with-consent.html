@@ -49,7 +49,7 @@
                   {
                     href: "/webfiling/webfiling-change-email-address",
                     text: "Update",
-                    visuallyHiddenText: "name"
+                    visuallyHiddenText: "email address"
                   }
                 ]
               }
@@ -66,7 +66,7 @@
                   {
                     href: "../manage-your-account/password/change-your-password",
                     text: "Update",
-                    visuallyHiddenText: "contact information"
+                    visuallyHiddenText: "password"
                   }
                 ]
               }
@@ -93,12 +93,15 @@
 
         <h2 class="govuk-heading-m">Privacy settings</h2>
 
+
+        
+
         {{ govukSummaryList({
           rows: [
             {
               key: {
-                text: "Companies House can send you emails relating to your company",
-                classes: 'govuk-!-width-two-thirds'
+                html: "Emails to tell you about a new message in your account<span class='govuk-body govuk-hint'>In the future, we'd like to send you emails to let you know you've received a new message in your account</span>",
+                classes: 'govuk-!-width-three-quarters'
               },
               value: {
                 text: "Yes"
@@ -106,17 +109,17 @@
               actions: {
                 items: [
                   {
-                    href: "./name/change-your-name",
+                    href: "./consent/update-account-emails",
                     text: "Update",
-                    visuallyHiddenText: "name"
+                    visuallyHiddenText: "email consent"
                   }
                 ]
               }
             },
             {
               key: {
-                text: "Companies House can send you emails about Companies House activities"  ,
-                classes: 'govuk-!-width-two-thirds'
+                html: "Emails about Companies House activities <span class='govuk-body govuk-hint'>For example, marketing, communications campaigns, or user research activities</span>",
+                classes: 'govuk-!-width-three-quarters'
               },
               
               value: {
@@ -125,9 +128,9 @@
               actions: {
                 items: [
                   {
-                    href: "/webfiling/webfiling-change-email-address",
+                    href: "/consent/update-activity-emails",
                     text: "Update",
-                    visuallyHiddenText: "name"
+                    visuallyHiddenText: "activity emails"
                   }
                 ]
               }
