@@ -25,8 +25,6 @@
       type: 'success'
     }) }}
 
-
-
           <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;"></span></h1>
 
            {{ govukButton({
@@ -45,24 +43,24 @@
               </div>
 
               <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-grid-column-full">
                   <p class="govuk-body govuk-!-font-weight-bold">
                       <span class="govuk-body ">Company number</span><br>
                  </span>18882777</p>
 
                     <p class="govuk-body govuk-!-font-weight-bold">
                         <span class="govuk-body">Correspondence address</span><br>
-                   </span> 2nd Floor Red House, 17 London Road, London <br>SA73 8PH </p>
+                   </span> 2nd Floor Red House, 17 London Road, London SA73 8PH </p>
 
                    <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-column-two-thirds">
                     <table class="govuk-table">
                       <thead class="govuk-table__head">
 
                         <tr class="govuk-table__row">
                           <th class="govuk-table__header" scope="col"> People authorised to file<br> online for this company</th>
-                          <th class="govuk-table__header" scope="col"> Status </th>
-                          <th class="govuk-table__header" scope="col"> Action </th>
+                          <th class="govuk-table__header" scope="col"> Authorisation status </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
                         </tr>
 
 
@@ -79,7 +77,7 @@
                             })}}
                           </td>
                           <td class="govuk-table__cell">
-                  <a href="authorised-person-jill" class="govuk-link">Update</a>
+                  <a href="../user-account/authorised-person-hannah" class="govuk-link">View details</a>
                         </tr>
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">
@@ -92,22 +90,17 @@
                             })}}
                           </td>
                           <td class="govuk-table__cell">
-                  <a href="authorised-person-jill" class="govuk-link">Update</a>
+                  <a href="" class="govuk-link">View details</a>
                         </tr>
                       </tbody>
                     </table>
-                    <a href="#" class="govuk-link govuk-link--no-visited-state">Add person authorised to file online for this company</a>
+                    <p> <a href="../webfiling/webfiling-profile" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>
+                    <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Authorise a person to file online for this company</a></p>
                     </div>
                   </div>
 
                 </div>
-                <div class="govuk-grid-column-one-third">
-                    {{ govukButton({
-                      text: "File for this company",
-                      href:""
-                    }) }}
-
-                </div>
+                
               </div>
             </div>
 
