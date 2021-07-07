@@ -379,6 +379,24 @@ router.post('/mfa/check-your-phone', function(req, res) {
  
 })
 
+//routing for email mfa sign in or forgotten password
+router.post('/mfa/check-your-email', function(req, res) {
+
+   if(app.settings.scenario == 'sign-in-with-MFA'){
+
+      res.redirect('../user-account/home-no-companies')
+    }
+    else if(app.settings.scenario == 'forgotten-password-mobile'){
+
+      res.redirect('../forgotten-password/reset-your-password')
+    }
+    else{
+
+      res.redirect('../user-account/home-no-companies')
+    }
+ 
+})
+
 
 
 
