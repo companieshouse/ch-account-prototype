@@ -360,6 +360,29 @@ router.post('/mfa/choose-verify-option', function(req, res) {
  
 })
 
+
+//routing for text message mfa sign in or forgotten password
+router.post('/mfa/check-your-phone', function(req, res) {
+
+   if(app.settings.scenario == 'sign-in-with-MFA'){
+
+      res.redirect('../user-account/home-no-companies')
+    }
+    else if(app.settings.scenario == 'forgotten-password-mobile'){
+
+      res.redirect('../forgotten-password/reset-your-password')
+    }
+    else{
+
+      res.redirect('../user-account/home-no-companies')
+    }
+ 
+})
+
+
+
+
+
 //accept or decline authorised person request -  user with account
 router.get('/confirm-presenter-email', function(req, res) {
 
@@ -445,16 +468,7 @@ router.post('/check-company-details', function(req, res) {
 // change your password 
 router.post('/change-your-password', function(req, res) {
 
-  if(app.settings.scenario == 'forgotten-password-mobile')
-  {
-    res.redirect('../forgotten-password/check-your-phone') 
-  }
-  else{
-
-    res.redirect('../forgotten-password/reset-password-check-email')
-
-  }
- 
+    res.redirect('../mfa/choose-verify-option') 
 })
 
 router.post('/choose-verify-option', function(req, res) {
