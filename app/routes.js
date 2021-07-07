@@ -597,7 +597,7 @@ router.post('/webfiling/what-are-your-details', function(req, res) {
       }
       else{
         
-        res.redirect('../user-account/home-no-companies')
+        res.redirect('../consent-to-emails/email-consent')
 
       }
 
