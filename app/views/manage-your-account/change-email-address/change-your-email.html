@@ -1,0 +1,128 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Change your email address - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"./user-account/manage-account"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<script>
+  function showPassword() {
+  var x = document.getElementById("password");
+  var y = document.getElementById("show-hide");
+  if (x.type === "password") {
+    x.type = "text";
+    y.text = 'Hide'
+  } else {
+    x.type = "password";
+    y.text = 'Show'
+  }
+}
+
+  function showConfirmPassword() {
+  var x = document.getElementById("confirm-password");
+  var y = document.getElementById("show-hide-confirm");
+  if (x.type === "password") {
+    x.type = "text";
+    y.text = 'Hide'
+  } else {
+    x.type = "password";
+    y.text = 'Show'
+  }
+}
+</script>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if errorPassword  == true or errorPassword == true %}
+
+          {{ govukErrorSummary({
+              titleText: "There is a problem",
+              errorList: errorList
+          }) }}
+
+        {% endif %}
+
+
+        <h1 class="govuk-heading-l">Update your email address</h1>
+
+        {{ govukInput({
+            label: {
+            text: "Enter your current password"
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false
+          }) }}
+
+        {% if errorPassword  == true %}
+
+          {{ govukInput({
+            label: {
+            text: "Enter your new email apassword"
+          },
+          hint:{
+            text:"This must be at least 8 characters long and hard to guess."
+          },
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          errorMessage: {
+              text: "Enter your new email address"
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          spellcheck: false
+          }) }}
+
+        {% else %}
+
+          {{ govukInput({
+            label: {
+            text: "Enter your new email address"
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          spellcheck: false
+          }) }}
+
+          {{ govukInput({
+            label: {
+            text: "Re-enter your new email address"
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          spellcheck: false
+          }) }}
+
+          {% endif %}
+          
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Update email address",
+          preventDoubleClick: true,
+          href:"./manage-account-notification"
+        }) }}
+
+        <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+
+    </div>
+  </div>
+{% endblock %}
