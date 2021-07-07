@@ -478,7 +478,7 @@ router.post('/check-your-phone', function(req, res) {
     }
     if(app.settings.scenario == 'webfiling-journey'){
 
-      res.redirect('user-account/home-no-companies')
+      res.redirect('consent-to-emails/email-consent')
     }
 
     else{
