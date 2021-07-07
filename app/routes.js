@@ -258,6 +258,9 @@ router.post('/create-your-password', function(req, res) {
     var errors = [];
     var passwordHasError = false;
     var confirmPasswordHasError = false;
+
+
+
   
   if(req.session.data['password'] == ""){
     passwordHasError = true;
@@ -278,7 +281,8 @@ router.post('/create-your-password', function(req, res) {
   }
   else
   {
-    res.redirect('user-account/home-no-companies')
+    app.set('scenario', 'create-a-password');
+    res.redirect('./consent-to-emails/email-consent')
   }
 })
 
