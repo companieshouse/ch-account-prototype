@@ -21,10 +21,6 @@ router.get('/start-page-s3', function (req, res) {
 })
 
 
-
-
-
-
 router.get('/sign-in-add-auth-person', function (req, res) {
 
     app.set('scenario', 'add-auth-person');
@@ -375,6 +371,10 @@ router.post('/mfa/check-your-phone', function(req, res) {
     else if(app.settings.scenario == 'forgotten-password-mobile'){
 
       res.redirect('../forgotten-password/reset-your-password')
+    }
+    else if(app.settings.scenario == 'user-has-no-account'){
+
+      res.redirect('../../jills-user-account/home-no-companies-no-notification')
     }
     else{
 
