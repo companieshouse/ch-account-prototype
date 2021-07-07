@@ -59,10 +59,13 @@
             label: {
             text: "Enter your current password"
           },
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "password",
+          name: "password",
+          type: "password",
+          autocomplete: "password",
           spellcheck: false
           }) }}
 
