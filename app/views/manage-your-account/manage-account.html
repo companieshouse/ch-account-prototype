@@ -18,6 +18,7 @@
 
 
         <h2 class="govuk-heading-m govuk-!-padding-top-3">Account details</h2>
+        
 
         {{ govukSummaryList({
           rows: [
@@ -92,58 +93,58 @@
           ]
         }) }}
 
+
         <h2 class="govuk-heading-m govuk-!-padding-top-3">Email preferences</h2>
         <div id="email-hint" class="govuk-hint">
           Some types of email are essential to manage your account. We need to send you essential emails from time to time.
           </div>
 
 
-        {{ govukSummaryList({
-          rows: [
-            {
-              key: {
-                html: "Can we send you emails to tell you about a new message in your account?<span class='govuk-body govuk-hint'>In the future, we'd like to send you emails to let you know you've received a new message in your account</span>"
+          {{ govukSummaryList ({
+            rows: [
+              {
+                key: {
+                  html: "Can we send you emails to tell you about a new message in your account?<span class='govuk-body govuk-hint'>In the future, we'd like to send you emails to let you know you've received a new message in your account</span>"
+                },
+                value: {
+                  text: "Yes"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "./consent/update-account-emails",
+                      text: "Change",
+                      visuallyHiddenText: "email consent"
+                    }
+                  ]
+                }
               },
-              value: {
-                text: "Yes"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "./consent/update-account-emails",
-                    text: "Change",
-                    visuallyHiddenText: "email consent"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                html: "Can we send you emails about Companies House activities? <span class='govuk-body govuk-hint'>For example, marketing, communications campaigns, or user research activities</span>"
-              },
+              {
+                key: {
+                  html: "Can we send you emails about Companies House activities? <span class='govuk-body govuk-hint'>For example, marketing, communications campaigns, or user research activities</span>"
+                },
 
-              value: {
-                text: "No"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "./consent/update-activity-emails",
-                    text: "Change",
-                    visuallyHiddenText: "activity emails"
-                  }
-                ]
+                value: {
+                  text: "No"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "./consent/update-activity-emails",
+                      text: "Change",
+                      visuallyHiddenText: "activity emails"
+                    }
+                  ]
+                }
               }
-            }
-          ]
-        }) }}
+            ]
+          }) }}
+
       </div>
 
       
     </div>
 </div>
-
-   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
 
