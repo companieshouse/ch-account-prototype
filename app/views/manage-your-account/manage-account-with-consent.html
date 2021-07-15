@@ -106,10 +106,11 @@
             {
               key: {
                 html: "Can we send you emails to tell you about a new message in your account?<span class='govuk-body govuk-hint'>In the future, we'd like to send you emails to let you know you've received a new message in your account</span>",
-                classes: 'govuk-!-width-three-quarters'
+                classes: "ch-account-summary-list__key"
               },
               value: {
-                text: "Yes"
+                text: "Yes",
+                classes: "ch-account-summary-list__value"
               },
               actions: {
                 items: [
@@ -118,17 +119,19 @@
                     text: "Change",
                     visuallyHiddenText: "email consent"
                   }
-                ]
+                ],
+                classes: "ch-account-summary-list__action"
               }
             },
             {
               key: {
                 html: "Can we send you emails about Companies House activities? <span class='govuk-body govuk-hint'>For example, marketing, communications campaigns, or user research activities</span>",
-                classes: 'govuk-!-width-three-quarters'
+                classes: "ch-account-summary-list__key"
               },
 
               value: {
-                text: "No"
+                text: "No",
+                classes: "ch-account-summary-list__value"
               },
               actions: {
                 items: [
@@ -137,7 +140,8 @@
                     text: "Change",
                     visuallyHiddenText: "activity emails"
                   }
-                ]
+                ],
+                classes: "ch-account-summary-list__action"
               }
             }
           ]

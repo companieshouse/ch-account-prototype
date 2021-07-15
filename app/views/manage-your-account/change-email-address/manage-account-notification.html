@@ -102,9 +102,7 @@
             }
           ]
         }) }}
-      </div>
-
-      <h1 class="govuk-heading-l">Manage account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings.</span></h1>
+      
 
       {{ govukSummaryList({
           rows: [
@@ -114,7 +112,8 @@
                 classes: 'govuk-!-width-three-quarters'
               },
               value: {
-                text: "Yes"
+                text: "Yes",
+                classes: "ch-account-summary-list__value"
               },
               actions: {
                 items: [
@@ -123,17 +122,19 @@
                     text: "Change",
                     visuallyHiddenText: "email consent"
                   }
-                ]
+                ],
+                classes: "ch-account-summary-list__action"
               }
             },
             {
               key: {
                 html: "Can we send you emails about Companies House activities? <span class='govuk-body govuk-hint'>For example, marketing, communications campaigns, or user research activities</span>",
-                classes: 'govuk-!-width-three-quarters'
+                classes: "ch-account-summary-list__key"
               },
 
               value: {
-                text: "No"
+                text: "No",
+                classes: "ch-account-summary-list__value"
               },
               actions: {
                 items: [
@@ -142,7 +143,8 @@
                     text: "Change",
                     visuallyHiddenText: "activity emails"
                   }
-                ]
+                ],
+                classes: "ch-account-summary-action"
               }
             }
           ]

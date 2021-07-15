@@ -50,14 +50,15 @@ nav{
   padding: 8px 16px;
 }
 
-.my-summary-list__value {
+.ch-account-summary-list__value {
+    width: 20%;
+    padding-left:30px;
+}
+
+.ch-account-summary-list__action {
     width: 20%;
 }
 
-.my-summary-list__action {
-    width: 20%;
-}
-
-.my-summary-list__key {
+.ch-account-summary-list__key {
     width: 60%;
 }
