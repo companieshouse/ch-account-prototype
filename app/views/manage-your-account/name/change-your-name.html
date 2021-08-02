@@ -34,7 +34,24 @@
           autocomplete: "name",
           spellcheck: false
           }) }}
-
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Where your name will be shown
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">If you provide your name, this will be shown:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>in your account</li>
+          <li>in emails</li>
+          <li>in emails and in the account of people who are authorised to file online for the same companies as you</li>
+          </ul>
+          <p class="govuk-body">It is up to you how your name is shown. For example, ‘Jen Smith’ or ‘Jennifer Smith’.</p>
+          <p class="govuk-body">If you do not provide your name, your email address will be displayed instead. It will be partially hidden, for example jen*****@example.com.
+          </p>
+            </div>
+          </details>
 
         <div class="govuk-button-group">
         {{ govukButton({
