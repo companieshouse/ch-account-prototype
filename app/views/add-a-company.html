@@ -1,7 +1,7 @@
 {% extends "layout/layout-account-signout-your-companies.html" %}
 
 {% block pageTitle %}
-  Your companies - What is the company number? - Companies House WebFiling account - GOV.UK
+  Your companies - Enter the details of the company you want to add to your account - Companies House WebFiling account - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,7 +29,7 @@
             }) }}
 
         {% endif %}
-
+    <h1 class="govuk-heading-xl">Enter the details of the company you want to add to your account</h1>
         {% if errorCompanyNumber == true %}
 
 
@@ -40,7 +40,7 @@
             classes: "govuk-label--xl"
           },
           hint: {
-            html: "Enter the number of the company you want to add to your Companies House account."
+            html: "Enter the details of the company you want to add to your account"
           },
           errorMessage: {
             text: "Enter the company number"
@@ -52,19 +52,16 @@
 
         {% else %}
 
+
+
         {{ govukInput({
-          label: {
-            text: "What is the company number?",
-            isPageHeading: true,
-            classes: "govuk-label--xl"
-          },
-          hint: {
-            html: "Enter the number of the company you want to add to your Companies House WebFiling account."
-          },
-          classes: "govuk-input--width-10",
-          id: "company-number",
-          name: "company-number"
-        }) }}
+        label: {
+          text: "What is the company number?"
+        },
+        id: "company-number",
+        name: "company-number",
+        classes: "govuk-input--width-10"
+      }) }}
 
         {% endif %}
 
@@ -80,14 +77,12 @@
           </div>
         </details>
 
-
         {{ govukRadios({
           idPrefix: "where-was-the-company-registered",
           name: "where-was-the-company-registered",
           fieldset: {
             legend: {
-              text: "Where was the company registered?",
-              classes: "govuk-fieldset__legend--s"
+              text: "Where was the company registered?"
             }
           },
           items: [
@@ -105,6 +100,7 @@
             }
           ]
         }) }}
+
 
 
         {{ govukButton({
