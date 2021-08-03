@@ -80,6 +80,32 @@
           </div>
         </details>
 
+
+        {{ govukRadios({
+          idPrefix: "where-was-the-company-registered",
+          name: "where-was-the-company-registered",
+          fieldset: {
+            legend: {
+              text: "Where was the company registered?"
+            }
+          },
+          items: [
+            {
+              value: "england",
+              text: "England or Wales"
+            },
+            {
+              value: "scotland",
+              text: "Scotland"
+            },
+            {
+              value: "northern-ireland",
+              text: "Northern Ireland"
+            }
+          ]
+        }) }}
+
+
         {{ govukButton({
           text: "Continue"
         }) }}
