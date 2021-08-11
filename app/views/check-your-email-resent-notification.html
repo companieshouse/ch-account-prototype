@@ -15,6 +15,19 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+        {% set html %}
+          <p class="govuk-notification-banner__heading">
+            Another email has been sent.
+          </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html
+        }) }}
+        
     <h1 class="govuk-heading-xl">Verify your email address</h1>
 
         <p class='govuk-body'>We've sent an email to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span> which contains a verification link.</p>
@@ -28,9 +41,11 @@
           text: "The link will expire in 24 hours."
         }) }}
 
+
+
         {{ govukDetails({
           summaryText: "I have not received an email",
-          html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='check-your-email-resent-notification' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address, you can <a href='create-an-account' class='govuk-link'>give us a different email address</a>."
+          html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address, you can <a href='create-an-account' class='govuk-link'>give us a different email address</a>."
         }) }}
 
   </div>

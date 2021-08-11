@@ -1,0 +1,64 @@
+{% extends "layout/layout-signin.html" %}
+
+{% block pageTitle %}
+  Check your phone - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"verify-choice"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="/check-your-phone" method="post" novalidate>
+
+
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+        {% set html %}
+          <p class="govuk-notification-banner__heading">
+            Another text message has been sent.
+          </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html
+        }) }}
+
+
+        <h1 class="govuk-heading-xl">Check your phone</h1>
+
+        <p class="govuk-body">We've sent a text message with a security code to <span class="govuk-body govuk-!-font-weight-bold"> XXXXXXX3456</span>.</p>
+
+        <p class="govuk-body"> It may take a few minutes to arrive.</p>
+
+            {{ govukInput({
+              label: {
+                text: "Security code"
+              },
+              classes: "govuk-input--width-10",
+              id: "width-7",
+              name: "width-7"
+            }) }}
+
+
+
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+
+            {{ govukDetails({
+              summaryText: "I have not received a text message",
+              html: "If the text message does not arrive after a few minutes, you can <a href='' class='govuk-link'>ask us to send you another text message</a>."
+            }) }}
+
+
+
+  </form>
+</div>
+</div>
+{% endblock %}
