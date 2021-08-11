@@ -44,11 +44,6 @@ nav{
 	}
 }
 
-.pagination a {
-  float: left;
-  font-size: 19px;
-  padding: 8px 16px;
-}
 
 .ch-account-summary-list__value {
     width: 20%;
@@ -61,4 +56,71 @@ nav{
 
 .ch-account-summary-list__key {
     width: 60%;
+}
+
+//pagination
+
+
+//Pagination
+
+.ch-pagination-container {
+  margin-top: 30px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.ch-pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.ch-pagination__link {
+  text-decoration: none;
+  padding: 5px;
+  min-width: 25px;
+}
+
+.ch-pagination__item--active {
+  color: govuk-colour("black");
+  font-weight: bold;
+  cursor: default;
+}
+
+.ch-pagination__item--active span {
+  padding: 5px;
+  min-width: 25px;
+}
+
+.ch-pagination-next:after,
+.ch-pagination-previous:before {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-style: solid;
+  color: govuk-colour("black");
+  background: transparent;
+  transform: rotate(-45deg);
+  content: '';
+}
+
+.ch-pagination-next:after {
+  border-width: 0 3px 3px 0;
+  margin-left: 5px;
+}
+
+.ch-pagination-previous:before {
+  border-width: 3px 0 0 3px;
+  margin-right: 5px;
+}
+
+.ch-pagination__summary {
+
+  @media (min-width: 642px) {
+    float: right;
+  }
 }
