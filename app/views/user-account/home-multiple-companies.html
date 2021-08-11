@@ -27,7 +27,7 @@
 </div>
       
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-right-0">
              
       {{ govukInput({
           label: {
@@ -42,17 +42,21 @@
       }) }}
   </div>
 
-  <div class ="govuk-grid-column-one-third">
+  <div class ="govuk-grid-column-one-third govuk-!-padding-left-1">
 
       {{ govukButton({
           text: "Search",
-          href:"#",
+          href:"home-multiple-companies-page-2",
           classes: "searchbutton govuk-button--secondary"
       }) }}
+
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
             <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
@@ -290,12 +294,10 @@
             <span class="govuk-visually-hidden">
               next page</span></a>
         </li>
-      
     </ul>
 
-    <p class="ch-pagination__summary">Showing <b>10</b> to <b>20</b> of <b>30</b> results</p>
+  <p class="ch-pagination__summary">Showing <b>10</b> to <b>20</b> of <b>30</b> results</p>  
     
-  
 </nav>
 </div>
 
