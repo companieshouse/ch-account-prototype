@@ -12,13 +12,15 @@
         {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
         {% set html %}
-          <p class="govuk-notification-banner__heading">
-            Another email has been sent.
-          </p>
+          <h3 class="govuk-notification-banner__heading">
+            Email resent
+          </h3>
+          <p class="govuk-body">Email containing security code has been resent to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span>.</p>
         {% endset %}
 
         {{ govukNotificationBanner({
-          html: html
+          html: html,
+          type: 'success'
         }) }}
 
         <h1 class="govuk-heading-xl">Check your emails</h1>

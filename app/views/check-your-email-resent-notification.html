@@ -18,16 +18,18 @@
 
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-        {% set html %}
-          <p class="govuk-notification-banner__heading">
-            Another email has been sent.
-          </p>
-        {% endset %}
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Email resent
+        </h3>
+        <p class="govuk-body">Email has been resent to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span>.</p>
+      {% endset %}
 
-        {{ govukNotificationBanner({
-          html: html
-        }) }}
-        
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
     <h1 class="govuk-heading-xl">Verify your email address</h1>
 
         <p class='govuk-body'>We've sent an email to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span> which contains a verification link.</p>
