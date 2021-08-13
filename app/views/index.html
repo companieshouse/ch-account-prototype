@@ -162,7 +162,7 @@
         <p> User who doesn't have an account</p>
 
         {{ govukButton({
-          text: "User who doesn't have an account ** new **",
+          text: "User who doesn't have an account",
           classes: "govuk-button--secondary",
           href: "/no-account-confirm-presenter-email"
         }) }}
@@ -174,6 +174,24 @@
           text: "Email link has already been actioned by user",
           classes: "govuk-button--secondary",
           href: "../messages/email-auth-person-request-already-accepted-declined"
+        }) }}
+
+
+        <p> User is already associated with this company ** new **</p>
+
+        {{ govukButton({
+          text: "User already associated with company",
+          classes: "govuk-button--secondary",
+          href: "../messages/email-auth-person-request-already-associated"
+        }) }}
+
+
+        <p> Request has been withdrawn or expired ** new **</p>
+
+        {{ govukButton({
+          text: "Request withdrawn or expired",
+          classes: "govuk-button--secondary",
+          href: "../messages/email-auth-person-request-withdrawn-expired"
         }) }}
 
          
