@@ -21,6 +21,22 @@
 
     <div class="govuk-grid-column-two-thirds">
 
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+    {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        Email sent
+      </h3>
+      <p class="govuk-body">We've sent another email to <span class='govuk-body govuk-!-font-weight-bold'> jill.edwards@example.com</span>. ....</p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+
+
     <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
 
     <h1 class="govuk-heading-xl">Authorised person's details</h1>
@@ -54,7 +70,7 @@
                     actions: {
                       items: [
                         {
-                          href: "authorised-person-jill-resend-email",
+                          href: "#",
                           text: "Resend email",
                           visuallyHiddenText: "agents email address"
                         }

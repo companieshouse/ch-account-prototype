@@ -63,8 +63,9 @@ nav{
 .ch-pagination-container {
   margin-top: 30px;
   margin-bottom: 0;
-  display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ch-pagination__list {
@@ -116,8 +117,7 @@ nav{
 }
 
 .ch-pagination__summary {
+    width: 27%;
+    padding-top: 17px;
 
-  @media (min-width: 642px) {
-    float: right;
-  }
 }
