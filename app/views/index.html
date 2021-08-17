@@ -158,8 +158,10 @@
           href: "/confirm-presenter-email"
         }) }}
 
+        <h3 class="govuk-heading-s">Mini journeys</h3>
 
-        <p> User who doesn't have an account</p>
+
+        <p> If a user doesn't have an account they will need to create an account before they can accept or decline the request.</p>
 
         {{ govukButton({
           text: "User who doesn't have an account",
@@ -167,8 +169,10 @@
           href: "/no-account-confirm-presenter-email"
         }) }}
 
+        <h3 class="govuk-heading-s">Email received, user signs in and notification shown within the account</h3>
 
-        <p> User has already confirmed or declined the request</p>
+
+        <p> The user has already confirmed or declined the request.</p>
 
         {{ govukButton({
           text: "Email link has already been actioned by user",
@@ -177,7 +181,7 @@
         }) }}
 
 
-        <p> User is already associated with this company ** new **</p>
+        <p>The user is already associated with this company ** new **</p>
 
         {{ govukButton({
           text: "User already associated with company",
@@ -186,7 +190,7 @@
         }) }}
 
 
-        <p> Request has been withdrawn or expired ** new **</p>
+        <p> The request has been withdrawn or is expired ** new **</p>
 
         {{ govukButton({
           text: "Request withdrawn or expired",
@@ -194,14 +198,51 @@
           href: "../messages/email-auth-person-request-withdrawn-expired"
         }) }}
 
-         
-         <p class="govuk-body">Email to tell all authorised people that a new authorised person has been added to the company. </p>
+        <h3 class="govuk-heading-s">Emails to notify all existing authorised people when:</h3>
 
-         {{ govukButton({
-          text: "Email authorised person added to company ",
+        <ul class="govuk-list">
+          <li>
+            <a href="../messages/email-auth-person-invited" class="govuk-link" target="_blank">An authorised person has been invited (IDAM-620)</a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-added-to-company" class="govuk-link" target="_blank">An authorised person has been added (by another authorised person) (IDAM-621)</a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-added" class="govuk-link" target="_blank">A user has added the company using the authentication code (IDAM-622)</a>
+          </li>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+        <h2 class="govuk-heading-m">Removing an authorised person</h2> 
+
+
+        <p class="govuk-body">Jill Edwards is removing Hannah Salt</p>
+
+        {{ govukButton({
+          text: "Remove an authorised person",
           classes: "govuk-button--secondary",
-          href: "../messages/email-auth-person-added-to-company"
+          href: "./user-account/remove-authorised-person/your-companies"
         }) }}
+
+        <h3 class="govuk-heading-s">Emails to notify:</h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-authorised-person-removed">All authorised people (except the person being removed) that an authorised person has been removed (IDAM-624)</a>
+          </li>
+
+          <li>
+            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-you-are-no-longer-an-authorised-person">The authorised person that they have been removed</a>
+          </li>
+        </ul>
+
+
+
+
 
 
         
@@ -292,29 +333,7 @@
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> 
 
 
-        <h2 class="govuk-heading-m">Remove an authorised person</h2> 
-
-
-        <p class="govuk-body">Remove an authorised person from the company - Jill Edwards is removing Hannah Salt</p>
-
-        {{ govukButton({
-          text: "Remove an authorised person",
-          classes: "govuk-button--secondary",
-          href: "./user-account/remove-authorised-person/your-companies"
-        }) }}
-
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-authorised-person-removed">Email sent to all authorised people of the company, except the person being removed (opens in a new tab)</a>
-          </li>
-
-          <li>
-            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-you-are-no-longer-an-authorised-person">Email sent to the person being removed from the company (opens in a new tab)</a>
-          </li>
-        </ul>
-
-
-
+        
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
