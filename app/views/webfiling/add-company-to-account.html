@@ -18,7 +18,8 @@
 
         <span class="govuk-caption-xl">FLOWERS LIMITED</span>
           <h1 class="govuk-heading-xl">Store company details for future online filings</h1>
-    <p class="govuk-body ">We can securely store the company details you entered to make online filing quicker and easier in the future.</p>
+        
+          <p class="govuk-body ">We can securely store the company details you entered to make online filing quicker and easier in the future.</p>
 
           <p class="govuk-body ">This means you:</p>
             <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
@@ -26,28 +27,28 @@
               <li>can authorise other people to file online for the company</li>
             </ul>
 
-        {{ govukRadios({
-          idPrefix: "add-company-to-account",
-          name: "add-company-to-account",
-          fieldset: {
-            legend: {
-              html: "Do you want us to store the company details for FLOWERS LIMITED?",
+            {{ govukRadios({
+              idPrefix: "add-company-to-account",
+              name: "add-company-to-account",
+              fieldset: {
+                legend: {
+                  html: "Do you want us to store the company details for FLOWERS LIMITED?",
 
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
 
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
-            },
-            {
-              value: "no",
-              text: "No"
-            }
-          ]
-        }) }}
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ]
+            }) }}
 
 
 

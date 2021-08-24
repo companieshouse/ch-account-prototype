@@ -18,25 +18,33 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/authorised-person-details" method="post" novalidate>
-
-        {{ govukInput({
-          label: {
-            text: "What is Hannah Salt's email address?",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          hint: {
-            text: "We'll send them an email with a link so that they can file online and manage who can file online for the company."
-          },
-          id: "director-email",
-          name: "director-email"
-        }) }}
+      <form action="/directors-email-address" method="post" novalidate>
 
 
-        {{ govukButton({
-            text: "Save and continue"
-        }) }}
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+                What is Hannah Salt's email address?
+              </label>
+            </h1>
+
+            <div class="govuk-inset-text">
+              The email address will not appear on the Companies House online register.
+            </div>
+
+            <p class="govuk-body ">We'll send them an email with a link so that they can:</p>
+              <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
+                <li>file online for the company </li>
+                <li> authorise other people to file online for the company</li>
+              </ul>
+
+            <p class="govuk-body"></p>
+
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </div>
+
+          {{ govukButton({
+              text: "Save and continue"
+          }) }}
 
     </form>
   </div>
