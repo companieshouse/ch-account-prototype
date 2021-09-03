@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Company incorporation email
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Congratulations, your company FLOWERS LIMITED is now registered.</h1>
+        <p class="govuk-body">
+          HMRC will contact you separately about your Corporation Tax application.
+        </p>
+
+        <div class="govuk-inset-text">
+          <p class="govuk-body"> Company name: <br> <span class="govuk-body govuk-!-font-weight-bold">FLOWERS LIMITED</span></p>
+
+        </div>
+
+        <p class="govuk-body">Attached to this email is the:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>certificate of incorporation</li>
+            <li>memorandum of association</li>
+          </ul>
+
+        <h2 class="govuk-heading-m">Check what you need to do next</h2>
+        <p class="govuk-body"> There are other things you may need to do to set up your business. <a href="#" class="govuk-link">Find out what the next steps are for FLOWERS LIMITED</a></p>
+
+        <h3 class="govuk-heading-s">Filing online with Companies House</h3>
+        <p class="govuk-body"> You can use Companies House WebFiling service to file many documents online. You'll need to <a href="/../sign-in-summary" class="govuk-link">Sign in using this email address or create a WebFiling account</a> to file for the company and manage who is authorised to file for the company.</p>
+
+        
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}

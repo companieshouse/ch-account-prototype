@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Company authentication - GOV.UK 
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/consent-to-emails/email-consent" method="post" novalidate>
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+              Company authentication </h1>
+            </label>
+
+            <p class="govuk-body">To file company information you will need an authentication code</p>
+
+            <p class="govuk-body">Authenticating for <br> <span class="govuk-body govuk-!-font-weight-bold">FLOWERS LIMITED (1234466) </span></p>
+
+          
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+
+      
+
+      {{ govukButton({
+        text: "Continue",
+        href:"consent"
+      }) }}
+{% endblock %}
