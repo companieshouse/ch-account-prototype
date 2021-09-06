@@ -9,38 +9,21 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/consent-to-emails/email-consent" method="post" novalidate>
+      <form action="/api-filing/consent" method="post" novalidate>
 
+        <h1 class="govuk-heading-l">Authorise application</h1>
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        <p class="govuk-body">You are about to give <span class="govuk-body govuk-!-font-weight-bold">Registered office address changes by *SAGE Software* </span>access</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>This will allow it to view your email address.</li>
+            <li>This will allow it to update *FLOWERS LIMITED* registered office address.</li>
+          </ul>
 
-        {{ govukRadios({
-          idPrefix: "sign-in",
-          name: "sign-in",
-          fieldset: {
-            legend: {
-              text: "Do you give consent for a third-party to file on your behalf?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--xl"
-            }
-          },
-          hint: {
-            text: ""
-          },
-          items: [
-            {
-              value: "consent-yes",
-              text: "Yes"
-            },
-            {
-              value: "consent-no",
-              text: "No"
-            }
-          ]
-        }) }}
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Allow access
+          </button>
 
-      {{ govukButton({
-        text: "Continue",
-        href:""
-      }) }}
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
 {% endblock %}
