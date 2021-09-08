@@ -11,12 +11,14 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/api-filing/consent" method="post" novalidate>
 
-        <h1 class="govuk-heading-l">Authorise application</h1>
+        <h1 class="govuk-heading-l">You are about to give FLOWERS LIMITED access</h1>
 
-        <p class="govuk-body">You are about to give <span class="govuk-body govuk-!-font-weight-bold">Registered office address changes by *SAGE Software* </span>access</p>
+        <p class="govuk-body-l">Software provided by <span class="govuk-body govuk-!-font-weight-bold">*SAGE Software* </span></p>
+
+        <p class="govuk-body">This will allow them to:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>This will allow it to view your email address.</li>
-            <li>This will allow it to update *FLOWERS LIMITED* registered office address.</li>
+            <li>view your email address</li>
+            <li>file for FLOWERS LIMITED</li>
           </ul>
 
         <div class="govuk-button-group">
@@ -24,6 +26,8 @@
             Allow access
           </button>
 
-          <a class="govuk-link" href="#">Cancel</a>
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Cancel
+          </button>
         </div>
 {% endblock %}
