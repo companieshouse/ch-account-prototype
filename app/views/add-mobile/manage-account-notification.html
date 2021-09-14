@@ -18,7 +18,7 @@
         <p class="govuk-notification-banner__heading">
           Mobile number added
         </p>
-        <p class="govuk-body">You have successfully added your mobile number to your account. We'll send you a new code when necessary to keep your account secure. <br><a class="govuk-notification-banner__link" href="../user-account/manage-account">View your account details</a>.</p>
+        <p class="govuk-body">You have successfully added your mobile number to your account. We'll send you a new code when necessary to keep your account secure.</p>
       {% endset %}
 
       {{ govukNotificationBanner({
@@ -27,82 +27,11 @@
       }) }}
     </div>
 
-      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
        
-      <h1 class="govuk-heading-l">Manage your account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings.</span></h1>
+    <h1 class="govuk-heading-l">Manage your account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings.</span></h1>
 
-        {{ govukSummaryList({
-          rows: [
-            {
-              key: {
-                text: "Full name"
-              },
-              value: {
-                text: "Hannah Salt"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "name"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Email"
-              },
-              value: {
-                text: "hannah.salt@example.com"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "name"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Password"
-              },
-              value: {
-                html: "******************"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "contact information"
-                  }
-                ]
-              }
-            },
-            {
-              key: {
-                text: "Mobile number"
-              },
-              value: {
-                html: '********663'
-              },
-              actions: {
-                items: [
-                  {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "contact information"
-                  }
-                ]
-              }
-            }
-          ]
-        }) }}
+  
 
     </div>
 

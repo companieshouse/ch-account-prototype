@@ -187,14 +187,11 @@
             <a href="../messages/email-auth-person-request-withdrawn-expired" class="govuk-link" target="blank">The request has been withdrawn or is expired (opens in new tab)</a>
           </li>
 
-
-        
-
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
 
-        <h2 class="govuk-heading-m">Removing an authorised person</h2> 
+        <h2 class="govuk-heading-m">Removing an authorised person * done *</h2> 
 
 
         <p class="govuk-body">Scenario: Jill Edwards is removing Hannah Salt as an authorised person.</p>
@@ -230,49 +227,23 @@
         
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m"> Manage your account </h2> 
+        <h2 class="govuk-heading-m"> Manage account * done *</h2> 
 
-        <h3 class="govuk-heading-s"> Change or add full name on the account</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Update your name</li>
+            <li>Update your email address - MFA should be included (code will be sent to the new email address for validation)</li>
+            <li>Update your password</li>
+            <li> Update your mobile number</li>
+          </ul>
 
-
-
-        {{ govukButton({
-          text: "Change or add full name",
-          classes: "govuk-button--secondary",
-          href: "manage-your-account/manage-account"
-        }) }}
-
-        <h3 class="govuk-heading-s"> Change email address on the account (from within the account)</h3>
-
-        <p> MFA should be included (code will be sent to the new email address for validation)</p>
-
-        {{ govukButton({
-          text: "Change email address",
-          classes: "govuk-button--secondary",
-          href: "manage-your-account/change-email-address/change-your-email"
-        }) }}
+          {{ govukButton({
+            text: "Update account information",
+            classes: "govuk-button--secondary",
+            href: "manage-your-account/manage-account"
+          }) }}
 
 
-        
-
-        <h3 class="govuk-heading-s"> Change password on the account</h3>
-
-        {{ govukButton({
-          text: "Change password",
-          classes: "govuk-button--secondary",
-          href: "manage-your-account/manage-account"
-        }) }}
-
-        <h3 class="govuk-heading-s"> Change mobile number </h3>
-
-        {{ govukButton({
-          text: "Change mobile number",
-          classes: "govuk-button--secondary",
-          href: "../manage-your-account/manage-account"
-        }) }}
-
-
-        <h3 class="govuk-heading-s"> Adding mobile number to your account later, using a notification as a prompt</h3> 
+        <p> Adding mobile number to your account later, using a notification as a prompt - * Future *</p> 
 
         {{ govukButton({
           text: "Add your mobile number",
@@ -280,14 +251,12 @@
           href: "../add-mobile/manage-account"
         }) }}
 
-        <p> <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a></p>
-
         
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
 
-       <h2 class="govuk-heading-m">I've forgotten my password</h2>
+        <h2 class="govuk-heading-m">I've forgotten my password</h2>
 
         <h3 class="govuk-heading-s"> Verify by email </h3>
         
@@ -300,15 +269,15 @@
 
         <h3 class="govuk-heading-s"> Verify by email or mobile </h3>
 
-       {{ govukButton({
-          text: "Create a new password - verify choice given",
-          classes: "govuk-button--secondary",
-          href: "sign-in-password-mobile"
-        }) }}
+         {{ govukButton({
+            text: "Create a new password - verify choice given",
+            classes: "govuk-button--secondary",
+            href: "sign-in-password-mobile"
+          }) }}
 
         <p> <a href="../forgotten-password/email-reset-password" class="govuk-link" target="blank">Email reset your password (opens in new tab)</a></p>
 
-         <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p>
+        <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p>
 
 
 
@@ -316,6 +285,9 @@
 
 
         <h2 class="govuk-heading-m">SCRS</h2>
+
+        <p> <a href="https://set-up-a-company-prototype-v1.herokuapp.com/director-details/secure" class="govuk-link" target="blank">Directors journey - Set up a limited company and register for Corporation Tax (opens in new tab)</a></p>
+ 
 
         <p> New page within the SCRS journey</p>
         
