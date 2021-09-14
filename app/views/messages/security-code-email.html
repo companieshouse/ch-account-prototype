@@ -7,7 +7,7 @@
 
 
 {% block pageTitle %}
-  Verify your email address
+  Security code
 {% endblock %}
 
 {% block content %}
@@ -19,12 +19,13 @@
 
       <p class="govuk-body">Your security code is 963067.</p>
 
-  <p class="govuk-body">Enter the code to access your Companies House WebFiling account.</p>
-  {{ govukInsetText({
-  text: "This code expires in 30 minutes. If you run out of time, return to your account and sign in again to request another code."
-}) }}
+      <p class="govuk-body">Enter the code to access your Companies House WebFiling account.</p>
+      
+      {{ govukInsetText({
+        text: "This code expires in 30 minutes. If you run out of time, return to your account and sign in again to request another code."
+      }) }}
 
 
-  </div>
-  </div>
+    </div>
+ </div>
 {% endblock %}

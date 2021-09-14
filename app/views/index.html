@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Sign in to Companies House
+  Shortcuts for Companies House account
 {% endblock %}
 
 
@@ -15,7 +15,7 @@
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">Hannah Salt - 'FLOWERS LIMITED'</h2>
+        <h2 class="govuk-heading-m">Hannah Salt - 'FLOWERS LIMITED' </h2>
 
         <ul class="govuk-list govuk-list--bullet">
           <li>User has the authentication code. Company added.</li>
@@ -74,27 +74,37 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">Webfiling</h2> 
+        <h2 class="govuk-heading-m">WebFiling account</h2>
+
+        <p class="govuk-body">Journeys:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Create an account</li>
+            <li>First time a WebFiling user is sigining in to their account</li>
+          </ul>
 
 
         {{ govukButton({
-          text: "Start the webfiling journey (first time signing in)",
+          text: "Start the webfiling journey",
           classes: "govuk-button--secondary",
           href: "sign-in-webfiling"
         }) }}
 
         <p> <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a></p>
 
-                <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
+        <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
 
-                <!--<p> <a href="../webfiling/presenter-authentication" class="govuk-link" target="blank">Presenter authentication code - Lenders (opens in new tab)</a></p> -->
-
+        <p class="govuk-body">Journey:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Sign in to WebFiling with multi-factor authentication</li>
+          </ul>
 
         {{ govukButton({
-          text: "Sign in to WebFiling - choice of MFA",
+          text: "Sign in to WebFiling",
           classes: "govuk-button--secondary",
           href: "sign-in-MFA-webfiling"
         }) }}
+
+        <p> <a href="../messages/security-code-email" class="govuk-link" target="blank">Email security code (opens in new tab)</a></p>
 
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
