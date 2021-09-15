@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
 {% block pageTitle %}
   Which email address does Sarah Philips want to use to receive filing reminders?
 {% endblock %}
@@ -14,7 +19,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Which email address does Sarah Philips want to use to receive filing reminders?</h1>
+      <h1 class="govuk-heading-l">Which email address does Hannah Salt want to use to receive filing reminders?</h1>
       <form class="form" action="check-and-confirm" method="get">
         <p>We'll send an email to this address, so you can agree to the terms and conditions of the filing reminder service.
 
@@ -32,11 +37,11 @@
   items: [
     {
       value: "existing-email",
-      text: "Sarah-Philips@gmail.com"
+      text: "hannah.salt@example.com"
     },
     {
       value: "different-email",
-      text: "NA different email address"
+      text: "A different email address"
     }
   ]
 }) }}
