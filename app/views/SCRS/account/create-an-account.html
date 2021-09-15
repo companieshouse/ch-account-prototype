@@ -24,7 +24,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href:"start-page"
+    href:""
   }) }}
 {% endblock %}
 
@@ -97,13 +97,13 @@
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Continue",
-            href:"/../user-account/home-no-companies"
+            href:"./email-consent"
           }) }}
 
           {{ govukButton({
             text: "Skip",
             classes: "govuk-button--secondary",
-            href:"/../user-account/home-no-companies"
+            href:"./email-consent"
           }) }}
         </div>
 
