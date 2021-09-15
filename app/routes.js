@@ -20,7 +20,6 @@ router.get('/start-page-s3', function (req, res) {
     res.redirect('start-page')
 })
 
-
 router.get('/sign-in-add-auth-person', function (req, res) {
 
     app.set('scenario', 'add-auth-person');
@@ -53,9 +52,17 @@ router.get('/sign-in-MFA-webfiling', function (req, res) {
 })
 
 
+router.get('/scrs-existing-user', function (req, res) {
 
+    app.set('scenario', 'scrs-existing-user');
+    res.redirect('/SCRS/emails/ch-account-existing-user')
+})
 
+router.get('/scrs-new-user', function (req, res) {
 
+    app.set('scenario', 'scrs-new-user');
+    res.redirect('/SCRS/account/create-your-password')
+})
 
 
 //service journey 
@@ -133,24 +140,6 @@ router.get('/sign-in-password-mobile', function (req, res) {
     app.set('scenario', 'forgotten-password-mobile');
     res.redirect('../sign-in')
 })
-
-
-//SCRS journey routing
-router.get('/SCRS-existing-user', function (req, res) {
-
-    app.set('scenario', 'SCRS-existing-user');
-    res.redirect('SCRS/emails/ch-account-existing-user')
-})
-
-
-
-
-
-
-
-
-
-
 
 
 router.post('/start-page', function (req, res) {
@@ -349,12 +338,17 @@ router.post('/sign-in', function(req, res) {
     {
       res.redirect('webfiling/what-are-your-details') 
     }
+    else if(app.settings.scenario == 'scrs-existing-user')
+    {
+      res.redirect('/mfa/choose-verify-option') 
+    }
     else
     {
       res.redirect('/user-account/home-no-companies')
     }
     
 })
+
 
 
 
@@ -368,6 +362,39 @@ router.post('/mfa/choose-verify-option', function(req, res) {
     else if(req.session.data['verify-option'] == "mfa-text-message"){
 
       res.redirect('../mfa/check-your-phone')
+    }
+ 
+})
+
+//consent emails
+router.post('/consent-to-emails/email-consent', function(req, res) {
+
+   if(app.settings.scenario == 'scrs-new-user'){
+
+      res.redirect('/SCRS/account/home-one-company-new-user')
+    }
+    else{
+
+      res.redirect('../user-account/home-no-companies')
+    }
+ 
+})
+
+router.post('/SCRS/account/create-your-password', function (req, res) {
+    res.redirect('/user-account/unregistered-user/create-an-account')
+})
+
+
+//consent emails
+router.post('/user-account/unregistered-user/create-an-account', function(req, res) {
+
+   if(req.session.data['telephoneNumberWeb'] == ""){
+
+      res.redirect('/consent-to-emails/email-consent')
+    }
+    else{
+
+      res.redirect('/mfa/check-your-phone')
     }
  
 })
@@ -388,6 +415,14 @@ router.post('/mfa/check-your-phone', function(req, res) {
 
       res.redirect('../../jills-user-account/home-no-companies-no-notification')
     }
+    else if(app.settings.scenario == 'scrs-new-user'){
+
+      res.redirect('/consent-to-emails/email-consent')
+    }
+    else if(app.settings.scenario == 'scrs-existing-user'){
+
+      res.redirect('/SCRS/account/home-one-company-existing-user')
+    }
     else{
 
       res.redirect('../user-account/home-no-companies')
@@ -405,6 +440,10 @@ router.post('/mfa/check-your-email', function(req, res) {
     else if(app.settings.scenario == 'forgotten-password-mobile'){
 
       res.redirect('../forgotten-password/reset-your-password')
+    }
+    else if(app.settings.scenario == 'scrs-existing-user'){
+
+      res.redirect('/SCRS/account/home-one-company-existing-user')
     }
     else{
 

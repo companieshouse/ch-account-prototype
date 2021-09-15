@@ -34,7 +34,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/unregistered-user/create-an-account" method="post" novalidate>
+      <form action="SCRS/account/create-an-account" method="post" novalidate>
 
 
         <div class="govuk-form-group">
@@ -45,9 +45,6 @@
           <div id="event-name-hint" class="govuk-hint govuk-!-margin-bottom-7">
           This is optional. You can update your details at any time.
           </div>
-
-
-
 
         {{ govukInput({
           label: {
@@ -85,8 +82,8 @@
             hint: {
               text: "Add your mobile number to make your account more secure. We'll send  a security code to this number by text message."
             },
-            id: "telephoneNumberWeb",
-            name: "telephoneNumberWeb",
+            id: "telephoneNumberSCRS",
+            name: "telephoneNumberSCRS",
             type: "tel",
             autocomplete: "tel",
             classes: "govuk-input--width-20"
@@ -96,8 +93,7 @@
 
         <div class="govuk-button-group">
           {{ govukButton({
-            text: "Continue",
-            href:"./email-consent"
+            text: "Continue"
           }) }}
 
           {{ govukButton({
