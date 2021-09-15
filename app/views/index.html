@@ -304,7 +304,16 @@
 
         <p>CH account follow up emails</h3>
 
+  
+
           <p> <a href="SCRS/emails/ch-account-new-user" class="govuk-link" target="blank">1. Follow-up email with details about online filing for a new user (opens in new tab)</a></p>
+
+
+          {{ govukButton({
+            text: "Email to existing WebFiling user",
+            classes: "govuk-button--secondary",
+            href: "SCRS-existing-user"
+          }) }}
 
           <p> <a href="SCRS/emails/ch-account-existing-user" class="govuk-link" target="blank">2. Email to existing WebFiling user (opens in new tab)</a></p>
 

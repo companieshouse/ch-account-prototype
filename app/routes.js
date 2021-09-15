@@ -121,13 +121,6 @@ router.post('/CHS/change-of-ro-address-notification', function (req, res) {
 })
 
 
-
-
-
-
-
-
-
 router.get('/sign-in-new-device', function (req, res) {
 
     app.set('scenario', 'new-device');
@@ -140,6 +133,23 @@ router.get('/sign-in-password-mobile', function (req, res) {
     app.set('scenario', 'forgotten-password-mobile');
     res.redirect('../sign-in')
 })
+
+
+//SCRS journey routing
+router.get('/SCRS-existing-user', function (req, res) {
+
+    app.set('scenario', 'SCRS-existing-user');
+    res.redirect('SCRS/emails/ch-account-existing-user')
+})
+
+
+
+
+
+
+
+
+
 
 
 
@@ -345,6 +355,8 @@ router.post('/sign-in', function(req, res) {
     }
     
 })
+
+
 
 //new device sign in - verify option
 router.post('/mfa/choose-verify-option', function(req, res) {
