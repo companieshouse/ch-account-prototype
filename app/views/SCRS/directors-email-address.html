@@ -15,7 +15,6 @@
 
 <div class="govuk-width-container">
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
       <form action="/directors-email-address" method="post" novalidate>
@@ -28,51 +27,45 @@
             </legend>
 
 
-            <div class="govuk-inset-text">
-              The email address will not appear on the Companies House online register.
+            <div class="govuk-hint">
+              This is optional. The email address provided will not appear on the Companies House online register.
             </div>
 
-            <p class="govuk-body ">We'll send them an email with a link so that they can:</p>
+            <p class="govuk-body">We'll send them an email with a link so that they can:</p>
               <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
                 <li>file online for the company </li>
                 <li> authorise other people to file online for the company</li>
               </ul>
 
-            <div class="govuk-radios govuk-radios--conditional" style="padding-bottom: 30px;" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="directors-email" name="directors-email" type="radio" value="email" data-aria-controls="conditional-contact">
-                <label class="govuk-label govuk-radios__label" for="directors-email">
-                  hannah.salt@example.com
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="event-name">
+                  Email address
                 </label>
+                <input class="govuk-input" id="event-name" name="event-name" type="text">
               </div>
-             
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="directors-email-2" name="directors-email-2" type="radio" value="email" data-aria-controls="conditional-directors-email-2">
-                <label class="govuk-label govuk-radios__label" for="directors-email-2">
-                  A different email address
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-directors-email-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="directors-email-2">
-                    Email address
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="directors-email-2" name="directors-email-2" type="email" autocomplete="email"></div>
 
-              </div>
-          </div>
+                
+              </fieldset>
+            </div>
 
-          {{ govukButton({
-              text: "Save and continue"
-          }) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue",
+                href:"director-details/filing-reminders"
+              }) }}
+
+              {{ govukButton({
+                text: "Skip",
+                href:"director-details/filing-reminders",
+                classes: "govuk-button--secondary"
+              }) }}
+            </div>
 
     </form>
 
   </div>
-  </div>
 </div>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+</div>
 
 
 

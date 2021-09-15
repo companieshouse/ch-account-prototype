@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Director's details
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Directors details</h1>
+
+      <form class="form" action="correspondence-address" method="get">
+
+        {{ govukInsetText({
+        text: "Director's details will appear on the public record except for the full date of birth."
+      }) }}
+
+        {{ govukInput({
+        label: {
+          text: "Title (optional)"
+        },
+        hint: {
+          text: "For example, Mr, Mrs, Miss, Ms, Dr."
+        },
+         classes: "govuk-!-width-two-thirds",id: "title",
+        name: "title",
+        attributes: {
+          spellcheck: "false"
+        }
+      }) }}
+
+        {{ govukInput({
+      label: {
+        text: "First name"
+      },
+      hint: {
+        text: "Enter first name in full, not just initials."
+      },
+       classes: "govuk-!-width-two-thirds",id: "firstName",
+      name: "firstName",
+      attributes: {
+        spellcheck: "false"
+      }
+    }) }}
+
+        {{ govukInput({
+    label: {
+      text: "Middle name(s)"
+    },
+    hint: {
+      text: "Enter middle name(s) in full, not just initials."
+    },
+     classes: "govuk-!-width-two-thirds",id: "middleName",
+    name: "middleName",
+    attributes: {
+      spellcheck: "false"
+    }
+  }) }}
+
+        {{ govukInput({
+  label: {
+    text: "Last name(s)"
+  },
+   classes: "govuk-!-width-two-thirds",id: "lastName",
+  name: "lastName",
+  attributes: {
+    spellcheck: "false"
+  }
+}) }}
+
+        {{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Has the director used a different name for business purposes in the last 20 years?",
+      isPageHeading: false
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+        {{ govukInput({
+label: {
+text: "Enter the country the director lives in"
+},
+ classes: "govuk-!-width-two-thirds",id: "country",
+name: "country",
+attributes: {
+spellcheck: "false"
+}
+}) }}
+
+        {{ govukInput({
+label: {
+text: "Nationality"
+},
+ classes: "govuk-!-width-two-thirds",id: "nationality",
+name: "nationality",
+attributes: {
+spellcheck: "false"
+}
+}) }}
+        <p>
+          <a href="">Add another nationality</a>
+        </p>
+
+        {{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "Date of birth",
+      isPageHeading: false
+    }
+  },
+  hint: {
+    html: "The director must be at least 16 years of age.<br> For example, 31 3 1980."
+  }
+}) }}
+
+        {{ govukInput({
+label: {
+text: "Job title"
+},
+hint: {
+text: "Enter what the person works as. For example, carpenter."
+},
+classes: "govuk-!-width-two-thirds",
+id: "jobTitle",
+name: "jobTitle",
+attributes: {
+spellcheck: "false"
+}
+}) }}
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

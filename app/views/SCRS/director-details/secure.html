@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Give us one or more ways to contact MA LIMITED
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Has anyone on this application ever sent a Secure Register form to ask Companies House for protection?</h1>
+      <p class="govuk-body">This includes any:</p>
+      <ul class="govuk-list gov-uk-list--bullet">
+        <li>company directors</li>
+        <li>'persons of signifucant control' (PSC's) - that is, people who have significant influence over the way that company is run</li>
+      </ul>
+      <form class="form" action="director-details" method="get">
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "secure",
+          name: "secure",
+          fieldset: {
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

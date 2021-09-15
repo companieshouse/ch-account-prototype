@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check and confirm director details
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <style >
+    .govuk-summary-list__key {
+      width: 50%;
+      !important;
+    }
+  </style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Check and confirm director details</h1>
+
+      {{ govukInsetText({
+        text: "Details about the directors of a company will appear on the public record except for the full date of birth and home address."
+      }) }}
+
+      <form class="form" action="/shareholder-details/company-shareholder-intro" method="get">
+
+        <h2 class="govuk-heading-m">Sarah Philips</h2>
+        <p>
+          <a href="Remove director">Remove director</a>
+        </p>
+
+        {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
+                {
+                  key: {
+                    text: "Name"
+                  },
+                  value: {
+                    text: "Sarah Philips"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "name"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Date of birth"
+                  },
+                  value: {
+                    text: "5 January 1978"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "date of birth"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Country the director lives in"
+                  },
+                  value: {
+                    text: "United Kingdom"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "address"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Nationality"
+                  },
+                  value: {
+                    text: 'British'
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Job title"
+                  },
+                  value: {
+                    text: 'Director'
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "What is the correspondence address for Sarah Philips"
+                  },
+                  value: {
+                    text: "The correspondence address is the same as the company's registered office"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "What is the home address for Sarah Philips"
+                  },
+                  value: {
+                    html: "70 Wentloog Road<br>Rumney<br>Cardiff<br>Wales<br>CF3 3EA"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "What is Hannah Salts email address?"
+                  },
+                  value: {
+                    text: "hannah.salt@example.com"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Which email address does Sarah Philips want to use to receive filing reminders?"
+                  },
+                  value: {
+                    text: "contact@gmail.com"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
+
+        <p>
+          <a href="Add director">Add a director or secretary</a>
+        </p>
+
+        {{ govukCheckboxes({
+        idPrefix: "confirm",
+        name: "confirm",
+        fieldset: {
+          legend: {
+            text: "Confirm where director lives",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+        items: [
+          {
+            value: "confirm",
+            text: "I confirm that Sarah Philips lives at 70 Wentloog Road, Rumney, Cardiff, Wales, CF3 3EA"
+          }
+        ]
+      }) }}
+
+        {{ govukCheckboxes({
+        idPrefix: "agree",
+        name: "agree",
+        fieldset: {
+          legend: {
+            text: "Agree to become a director",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+        items: [
+          {
+            value: "agree",
+            text: "I confirm that the person named here agrees to become a director of the company"
+          }
+        ]
+      }) }}
+
+        {{ govukDetails({
+  summaryText: "What legal details will appear on this company application?",
+  text: "'The subscribers confirm that the person named has consented to act as a director.''"
+}) }}
+
+        {{ govukButton({
+        text: "Save and continue"
+      }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

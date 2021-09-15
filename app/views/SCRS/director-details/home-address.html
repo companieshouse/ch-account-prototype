@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is the home address for Sarah Philips
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">What is the home address for Sarah Philips</h1>
+      <p>Tell us where the person lives. Only give a busiess address if they also live there.</p>
+      <form class="form" action="../directors-email-address" method="get">
+        {{ govukDetails({
+  summaryText: "Will this address be publicly available?",
+  html: "<p>This address won't be publicly available on Companies House online register, unless it's also used for the company's registered office address or the person's correspondence address.</p><p>Learn more about <a href=''>how your personal informationis used</a> on the Companies House onloine public register and <a href=''>how to protect your home address</a></p>"
+}) }}
+
+        {{ govukRadios({
+  idPrefix: "home-address",
+  name: "home-address",
+  fieldset: {
+    legend: {
+      text: " ",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "70Cardiff",
+      text: "70, Wentloog Road, Rumney, Cardiff, Wales, CF3 3EA"
+    },
+    {
+      value: "different",
+      text: "A different address"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
