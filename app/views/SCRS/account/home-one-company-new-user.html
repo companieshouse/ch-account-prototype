@@ -12,20 +12,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+          You've set up your WebFiling account
+          </h3>
+          <p class="govuk-body">You can now file documents online and authorise other people to file online for FLOWERS LIMITED. <a href="./company-added-no-notification" class="govuk-link">View the company details</a>.</p>
+        </div>
+      </div>
 
-      {% set html %}
-      <h3 class="govuk-notification-banner__heading">
-        You can file documents online and authorise other people to file online for FLOWERS LIMITED.
 
-      <a class="govuk-notification-banner__link" href="./company-added-no-notification">View company details</a>
-      </h3>
-      {% endset %}
-
-      {{ govukNotificationBanner({
-        html: html,
-        type: 'success'
-      }) }}
 
       <h1 class="govuk-heading-l">Home
       <span class="govuk-caption-xl" >hannah.salt@example.com</span> </h1>
