@@ -19,7 +19,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Directors details</h1>
+      <h1 class="govuk-heading-l">Enter the director's details</h1>
 
       <form class="form" action="correspondence-address" method="get">
 
@@ -57,10 +57,10 @@
 
         {{ govukInput({
     label: {
-      text: "Middle name(s)"
+      text: "Middle name or names"
     },
     hint: {
-      text: "Enter middle name(s) in full, not just initials."
+      text: "Enter middle names in full, not just initials."
     },
      classes: "govuk-!-width-two-thirds",id: "middleName",
     name: "middleName",
@@ -71,7 +71,7 @@
 
         {{ govukInput({
   label: {
-    text: "Last name(s)"
+    text: "Last name"
   },
    classes: "govuk-!-width-two-thirds",id: "lastName",
   name: "lastName",
@@ -104,7 +104,7 @@
 
         {{ govukInput({
 label: {
-text: "Enter the country the director lives in"
+text: "Country the director lives in"
 },
  classes: "govuk-!-width-two-thirds",id: "country",
 name: "country",
