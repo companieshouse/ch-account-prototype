@@ -19,9 +19,13 @@
         </p>
 
         <p class="govuk-body">
-          We will send you a new link...
-        </p>
-
+          We've sent an email with a new link to <strong>hannah.salt@example.com</strong>.</p>
+          <p class="govuk-body">
+            It may take a few minutes to arrive.</p>
+          {{ govukDetails({
+              summaryText: "I have not received an email",
+              html: "Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-code' class='govuk-link'>ask us to send you another email</a>."
+            }) }}
 
       </div>
     </div>
