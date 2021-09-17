@@ -61,7 +61,7 @@ router.get('/scrs-existing-user', function (req, res) {
 router.get('/scrs-new-user', function (req, res) {
 
     app.set('scenario', 'scrs-new-user');
-    res.redirect('/SCRS/account/create-your-password')
+    res.redirect('/SCRS/emails/ch-account-new-user')
 })
 
 
