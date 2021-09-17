@@ -21,33 +21,47 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">What is the home address for Hannah Salt?</h1>
       <p>Tell us where this person lives. Only give a business address if they also live there.</p>
-      <form class="form" action="../directors-email-address" method="get">
+      <form class="form" action="../email-address-option" method="get">
         {{ govukDetails({
-  summaryText: "Will this address be publicly available?",
-  html: "<p>This address will not be publicly available on the Companies House online register, unless it's also used as the company's registered office address or the person's correspondence address.</p><p>Learn more about <a href=''>how your personal information is used</a> on the Companies House online public register and <a href=''>how to protect your home address</a>.</p>"
-}) }}
+          summaryText: "Will this address be publicly available?",
+          html: "<p>This address will not be publicly available on the Companies House online register, unless it's also used as the company's registered office address or the person's correspondence address.</p><p>Learn more about <a href=''>how your personal information is used</a> on the Companies House online public register and <a href=''>how to protect your home address</a>.</p>"
+        }) }}
+        
+        {% set addressHtml %}
+        {{ govukInput({
+          id: "home-address",
+          name: "home-address",
+          type: "address",
+          autocomplete: "street-address",
+          spellcheck: false,
+          classes: "govuk-!-width-one-third",
+          label: {
+            text: "Address"
+          }
+        }) }}
+        {% endset -%}
 
         {{ govukRadios({
-  idPrefix: "home-address",
-  name: "home-address",
-  fieldset: {
-    legend: {
-      text: " ",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "70Cardiff",
-      text: "70 Wentloog Road, Rumney, Cardiff, Wales, CF3 3EA"
-    },
-    {
-      value: "different",
-      text: "A different address"
-    }
-  ]
-}) }}
+          idPrefix: "home-address",
+          name: "home-address",
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "70Cardiff",
+              text: "70 Wentloog Road, Rumney, Cardiff, Wales, CF3 3EA"
+            },
+            {
+              value: "different",
+              text: "A different address"
+            }
+          ]
+        }) }}
 
         {{ govukButton({
           text: "Save and continue"
