@@ -134,6 +134,12 @@ router.get('/sign-in-new-device', function (req, res) {
     res.redirect('../sign-in')
 })
 
+router.get('/sign-in-password-email-only', function (req, res) {
+
+    app.set('scenario', 'forgotten-password-email-only');
+    res.redirect('../sign-in')
+})
+
 
 router.get('/sign-in-password-mobile', function (req, res) {
 
@@ -430,6 +436,8 @@ router.post('/mfa/check-your-phone', function(req, res) {
  
 })
 
+
+
 //routing for email mfa sign in or forgotten password
 router.post('/mfa/check-your-email', function(req, res) {
 
@@ -541,8 +549,20 @@ router.post('/check-company-details', function(req, res) {
 // change your password 
 router.post('/change-your-password', function(req, res) {
 
+  if(app.settings.scenario == 'forgotten-password-email-only')
+  {
+    res.redirect('/forgotten-password/reset-password-check-email') 
+  }
+  else{
+
     res.redirect('../mfa/choose-verify-option') 
+
+  }
+    
 })
+
+
+
 
 router.post('/choose-verify-option', function(req, res) {
 
