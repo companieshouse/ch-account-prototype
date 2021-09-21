@@ -75,23 +75,6 @@
                 },
                 {
                   key: {
-                    text: "Country the director lives in"
-                  },
-                  value: {
-                    text: "United Kingdom"
-                  },
-                  actions: {
-                    items: [
-                      {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "address"
-                      }
-                    ]
-                  }
-                },
-                {
-                  key: {
                     text: "Nationality"
                   },
                   value: {
@@ -126,7 +109,7 @@
                 },
                 {
                   key: {
-                    text: "Correspondence address"
+                    text: "What is the correspondence address for Hannah Salt?"
                   },
                   value: {
                     html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
@@ -143,7 +126,7 @@
                 },
                 {
                   key: {
-                    text: "Home address"
+                    text: "What is the home address for Hannah Salt?"
                   },
                   value: {
                     html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
@@ -160,7 +143,24 @@
                 },
                 {
                   key: {
-                    text: "Email address to be authorised to file online"
+                    text: "Country the director lives in"
+                  },
+                  value: {
+                    html: "England"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Which email address does Hannah Salt want to use to be authorised to file online?"
                   },
                   value: {
                     text: "hannah.salt@example.com"
@@ -177,7 +177,7 @@
                 },
                 {
                   key: {
-                    text: "Email address to receive filing reminders"
+                    text: "Which email address does Hannah Salt want to use to receive filing reminders?"
                   },
                   value: {
                     text: "hannah.salt@example.com"
@@ -212,7 +212,7 @@
         items: [
           {
             value: "confirm",
-            text: "I confirm that Hannah Salt lives at 2nd Floor Red House, 17 London Road, London, SA73 8PH"
+            text: "I confirm that Hannah Salt lives at 2nd Floor Red House, 17 London Road, London SA73 8PH"
           }
         ]
       }) }}
@@ -230,13 +230,13 @@
         items: [
           {
             value: "agree",
-            text: "I confirm that the person named here agrees to become a director of the company"
+            text: "I confirm that the person named here agrees to become a director of the company."
           }
         ]
       }) }}
 
         {{ govukDetails({
-  summaryText: "What legal details will appear on this company application?",
+  summaryText: "What legal statement will appear on this company application?",
   text: "'The subscribers confirm that the person named has consented to act as a director.'"
 }) }}
 

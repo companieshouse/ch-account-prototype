@@ -23,7 +23,8 @@
       <form class="form" action="filing-reminders-email" method="get">
         {{ govukDetails({
   summaryText: "What are filing reminders?",
-  html: "<p>We will remind you when your company's confirmation statement and accounts are due for filing.</p>"
+  html: "<p>We will remind you when your company's confirmation statement and accounts are due for filing.</p>
+  <p>If you select 'No', you will not receive any filing reminders.</p>"
 }) }}
 
         {{ govukRadios({
