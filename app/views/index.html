@@ -2,57 +2,151 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Create a Companies House account
+  Shortcuts for Companies House account
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Create a Companies House account</span>
-        <h1 class="govuk-heading-xl">Alpha prototypes & Research</h1>
+        <h1 class="govuk-heading-xl">Companies House account</h1>
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-l">Version 1</h2>
 
-        <p class="govuk-body">Outline of the users, in particluar a company directors journey based on <a href="https://companieshouse.atlassian.net/l/c/84aJBzX2" class="govuk-link"> the user journey workshop.</a></p>
+        <h3 class="govuk-heading-m">Prototype overview</h3>
 
-        
-
-        <h3 class="govuk-heading-m">Prototype</h3>
-
+        <p> The user is guided on a linear journey through the following. <p> 
         <ul class="govuk-list govuk-list--bullet">
-          <li>Director journey (not an existing user)</li>
-          <li>A director can link one company to their account and has the option to a presenter</li>
-          <li>The director can then explore their user account and options.</li>
+          <li>A user can create an account.</li>
+          <li>Their email (and mobile for multi-factor authentication) are verified.</li>
+          <li>Once the user has created their account they can link one company to their account.</li> 
+          <li>Their name has been linked to a director on the Companies House register for that company.</li>
+          <li>They can add authorised people to the company.</li>
+          <li>They can then view their user account.</li>
         </ul>
 
-        <p class="govuk-body"> <a href="https://ch-account-prototype-dev.herokuapp.com/start-page" class="govuk-link"> Prototype version 1</a> </p>
+      <h2 class="govuk-heading-m">Create an account</h2>
 
-        <p class="govuk-body"> <a href="https://ch-account-prototype-dev.herokuapp.com/shortcuts" class="govuk-link"> All service shortcuts</a> </p>
+      <ul class="govuk-list">
 
-        <h3 class="govuk-heading-m">Email and text messages (In progress)</h3>
+        <li> <a href="https://ch-account-prototype-dev.herokuapp.com/start-page" class="govuk-link">Create a Companies House account</a></li>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="messages/verify-email" class="govuk-link">Email verification link</a></li>
-          <li><a href="messages/verify-text-message" class="govuk-link">Mobile verification code</a></li>
-          <li><a href="" class="govuk-link">Confirmation your account has been created</a></li>
-          <li><a href="messages/email-confirm-you-are-the-presenter" class="govuk-link">Email - confirm you are the presenter</a></li>
-        </ul>
+        <li>  <a href="https://ch-account-prototype-dev.herokuapp.com/enter-your-details" class="govuk-link">What are your contact details?</a></li>
 
-        <h3 class="govuk-heading-m">Feedback</h3>
-
-        <p class="govuk-body"> <a href="https://companieshouse.atlassian.net/l/c/cHJETQt0" class="govuk-link"> Internal team review feedback session</a> </p>
+        <li>  <a href="https://ch-account-prototype-dev.herokuapp.com/enter-your-details" class="govuk-link">How do you want to verify your account?</a></li>
 
 
+        <li>  <a href="https://ch-account-prototype-dev.herokuapp.com/check-your-email" class="govuk-link">Verify your email address</a> </li>
+      </ul>
 
 
-        <h3 class="govuk-heading-m">User research findings</h3>
+      <p> The user opens the email (below) in another tab or on another device then returns to the service. The <b> Verify your email address </b> page automatically updates to the <b>Verify your mobile number </b> page (as the user has enterered their mobile number). </br></br> Hint to continue journey: Select the 'give us a different email address' link in the reveal component.</p>
+
+      <ul class="govuk-list">
+
+        <li> <a href="https://ch-account-prototype-dev.herokuapp.com/messages/verify-email" class="govuk-link">* Email * Verify the users email address - Companies House account registration </a> </li>
+
+        <li>  <a href="https://ch-account-prototype-dev.herokuapp.com/check-your-phone" class="govuk-link">Verify your mobile number</a> </li>
+
+        <li> <a href="https://ch-account-prototype-dev.herokuapp.com/messages/verify-text-message" class="govuk-link">* Text message * Security code in text message </a> </li>
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/create-your-password" class="govuk-link">Create a password for your Companies House account</a> </li>
+
+      </ul>
+
+      <h2 class="govuk-heading-m">Account created, sign in to your Companies House account</h2>
+
+      <ul class="govuk-list">
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/sign-in" class="govuk-link">Sign in to your Companies House account</a> </li>
 
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-        
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/account-created-interruption-page" class="govuk-link">You have created a Companies House account</a> </li>
+
+      </ul>
+
+      <p> Information page (interruption page) - You should link your account to any companies you are connected to, so that you can find and update company information and file for your company online. You can also authorise people to file for your company.</p>
+
+
+     <h2 class="govuk-heading-m">Link a company to your account</h2>
+      <ul class="govuk-list govuk-list">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/add-a-company" class="govuk-link">Link a company to your Companies House account</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/check-company-details" class="govuk-link">Confirm this is the correct company</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/authentication-code" class="govuk-link">Enter the company authentication code</a></li>
+
+
+      </ul>
+
+      <h2 class="govuk-heading-m">Identifying and matching users</h2>
+
+      <p> The name on your Companies House account matches this director on the Companies House register.</p>
+     
+      <ul class="govuk-list govuk-list">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/link-director-to-a-company" class="govuk-link">Confirm your director details</a></li>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">Adding another authorised person</h2>
+
+      <ul class="govuk-list govuk-list">
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/who-files-for-the-company" class="govuk-link">Do you want to authorise another person to file for this company?</a></li>
+
+      </ul>
+
+      <h3 class="govuk-heading-s"> Yes - The user wants to authorise another person to file for the company:  </h3>
+
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/enter-presenter-details" class="govuk-link">Enter the authorised person's details</a></li>
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/presenter-settings" class="govuk-link">What do you want the authorised person to do for this company?</a></li>
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/delegate-to-presenter/presenter-request-sent" class="govuk-link">Check the authorised person's details</a></li>
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/director-page-before-account" class="govuk-link">Your Companies House account has been updated</a></li>
+
+      </ul>
+      <p>Your Companies House account has been updated - An email has been sent to JILL EDWARDS. When JILL EDWARDS has verified their email address, they can file for this company. You can make changes to who is authorised to file for this company in your account.</p>
+
+      <h3 class="govuk-heading-s"> No - The user does not want to authorise another person to file for the company:  </h3>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/director-page-before-account-no-presenter" class="govuk-link">Your Companies House account has been updated</a></li>  
+      </ul>
+
+      <h2 class="govuk-heading-m">View your account</h2>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/home" class="govuk-link">Account - Home</a></li>
+      </ul>
+
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">User account </h2>
+      <p> Key pages within the account:</p>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/home" class="govuk-link">Home</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/your-details" class="govuk-link">Your details</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/messages" class="govuk-link">Messages</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/account-settings" class="govuk-link">Manage account</a></li>
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/manage-presenters" class="govuk-link">Manage presenters</a></li>
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account//add-presenter" class="govuk-link">Add an authorised person - Enter the authorised person's details</a></li>
+
+
+        <li><a href="https://ch-account-prototype-dev.herokuapp.com/user-account/add-presenter" class="govuk-link">Add another company</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+       <p> Note: Need to outline the journey for an authorised person receiving a request. </p>
+
+
     </div>
   </div>
 
