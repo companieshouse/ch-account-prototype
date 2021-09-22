@@ -50,7 +50,7 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-         <h3 class="govuk-heading-m">Scenario Four - Request for an authorised person to file for a company</h3>
+         <h3 class="govuk-heading-m">Scenario Four - Email - Request to add you as an authorised person for FLOWERS LIMITED</h3>
 
         <p class="govuk-body">A 'director/PSC/Authorised person' has been added as an authorised person for a company. The request needs to be confirmed.</p>
 
@@ -89,20 +89,165 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+        <h3 class="govuk-heading-m">Prototype overview</h3>
+ 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>A user can create an account.</li>
+          <li>Their email address is verified.</li>
+          <li> The verify email page automatically updates when the user selects link in email. </li>
 
-        <h3 class="govuk-heading-m">Scenario Five - Post Companies House Account</h3>
+          <li>The user can create their password and their account is created. </li>
+          <li>The user does not need to sign in (as in Version 1) they can now view their account directly after creating their account.</li>
 
-        <p class="govuk-body">New companies set up, post Companies House account, no authentication code required. An email will ask for the user to create an account, using the email address that was used for Incorporation, the company will automatically we added to their account.</p>
+          <li>Once in the account they can manage their companies and add authorised people within the account (roles have been removed).</li>
 
-        {{ govukButton({
-          text: "Scenario Five",
-          classes: "govuk-button--secondary",
-          href: "/messages/email-confirm-you-are-the-presenter"
-        }) }}
+          </ul> 
+
+          <p> <b> Adding a company - Explored three scenarios for authentication code:</b></p>
+          <ul class="govuk-list govuk-list--bullet">
+
+            <li> (1) Yes – The user has the authentication code </li>
+            <li> (2) No – The user does not have the authentication code and there are no authorised people for the company (online)</li>
+            <li> (3) No - User does not have the authentication but can request to be authorised to file for the company</li>
 
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+          <li> Once a company is added to the account. They can then file for this company. </li>
+        </ul>
+
+          <p> <b> Email journey - Request to add you as an authorised person for FLOWERS LIMITED</b></p>
+
+          <ul class="govuk-list govuk-list--bullet">
+
+            <li> Email request to become an authorised person</li>
+            <li> Confirm or deny request</li>
+
+        </ul>
+
+         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h1 class="govuk-heading-xl">Shortcuts</h1> 
+
+
+        <h2 class="govuk-heading-m">Create an account</h2>
+
+        <ul class="govuk-list">
+
+          <li> <a href="start-page" class="govuk-link">Companies House account (create an account or sign in)</a></li>
+
+          <li>  <a href="enter-your-details" class="govuk-link">What are your details?</a></li>
+
+
+          <li>  <a href="check-your-email" class="govuk-link">Verify your email address</a> </li>
+        </ul>
+
+
+      <p> The user opens the email (below) in another tab or on another device then returns to the service. The <b> Verify your email address </b> page automatically updates to the <b>Create a password for your Companies House account </b> page (as the user has enterered their mobile number). </br></br> Hint to continue journey: Select the 'give us a different email address' link in the reveal component.</p>
+
+      <ul class="govuk-list">
+
+        <li> <a href="messages/verify-email" class="govuk-link">* Email * Verify the users email address - Companies House account registration </a> </li>
+
+       
+        <li><a href="create-your-password" class="govuk-link">Create a password for your Companies House account</a> </li>
+
+      </ul>
+
+      <h2 class="govuk-heading-m">Account created, sign in to your Companies House account</h2>
+
+      <ul class="govuk-list">
+
+        <li><a href="sign-in" class="govuk-link">Sign in to your Companies House account</a> </li>
+
+
+        <li><a href="account-created-director" class="govuk-link">You have created a Companies House account</a> </li>
+
+      </ul>
+
+      <p> Information page (interruption page) - Now you've created an account, you should add companies you want to update or file for online. You can also authorise people to file for a company.</p>
+
+
+      <h2 class="govuk-heading-m">View your account</h2>
+
+      <p> No companies have been added to their account.</p>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="user-account/home-no-companies" class="govuk-link">Home - You have not added any companies to this account </a></li>
+      </ul>
+
+
+     <h2 class="govuk-heading-m">Add a company to your account</h2>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="add-a-company" class="govuk-link">What is the company number?</a></li>
+        <li><a href="check-company-details" class="govuk-link">View company information</a></li>
+        <li><a href="authentication-code-v2" class="govuk-link">Do you have the authentication code for this company?</a></li>
+      </ul>
+
+      <p> Scenario 1 (Yes) - The user has the authentication code</p>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="user-account/company-added" class="govuk-link">'FLOWERS LIMITED' has been added to your account.</a></li>
+      </ul>
+
+      <p> Scenario 2 (No) - The user does not have the authentication code and there are no authorised people for the company</p>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="request-an-authentication-code" class="govuk-link">Do you want to request an authentication code for this company?</a></li>
+        <li><a href="user-account/home-no-companies-auth-code-notification" class="govuk-link">The authentication code for 'FLOWERS LIMITED' will be posted to the registered office address within 5 days.</a></li>
+      </ul>
+
+      <p> Scenario 3 (No) - The user does not have the authentication but can request to be authorised to file for the company</p>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="request-authorisation" class="govuk-link">Do you want to request authorisation to file for this company?</a></li>
+        <li><a href="company-added-authorisation-sent" class="govuk-link">A request has been sent to confirm you are an authorised person to file for FLOWERS LIMITED.</a></li>
+      </ul>
+
+
+
+
+      <h2 class="govuk-heading-m">Add an authorised person</h2>
+
+      <p> Add an authorised person within the account. *Roles have been removed*.</p>
+
+      <ul class="govuk-list govuk-list">
+
+        <li><a href="delegate-to-presenter/enter-presenter-details" class="govuk-link">What are the authorised person's contact details?</a></li>
+
+        <li><a href="user-account/director/auth-person-added" class="govuk-link">An email request has been sent to 'Jill Edwards' to be an authorised person for 'FLOWERS LIMITED'.</li>
+
+        <li><a href="user-account/director/authorised-person-jill" class="govuk-link">Update authorised person's details</a></li>
+
+      </ul>
+
+      <h2 class="govuk-heading-m">Email - Request to add you as an authorised person for FLOWERS LIMITED</h2>
+
+      <ul class="govuk-list govuk-list">
+
+        <li><a href="messages/email-confirm-you-are-the-presenter" class="govuk-link">Request to add you as an authorised person for FLOWERS LIMITED</a></li>
+
+        <li><a href="delegate-to-presenter/confirm-authorised-person" class="govuk-link">Confirm you want to be authorised to file for this company</a></li>
+
+        <li><a href="delegate-to-presenter/auth-person-request-added" class="govuk-link">You are now authorised to file for 'FLOWERS LIMITED'.</a></li>
+
+      </ul>
+
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">User account </h2>
+      <p> Key pages within the account:</p>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="" class="govuk-link">Home</a></li>
+        <li><a href="user-account/your-details" class="govuk-link">Your details</a></li>
+        <li><a href="user-account/messages" class="govuk-link">Messages</a></li>
+        <li><a href="user-account/account-settings" class="govuk-link">Manage account</a></li>
+        <li><a href="" class="govuk-link">Companies you follow</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
 
@@ -111,3 +256,4 @@
   </div>
 
 {% endblock %}
+
