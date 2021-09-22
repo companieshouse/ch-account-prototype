@@ -38,10 +38,7 @@
 
         <ul class="govuk-list">
           <li>
-            <a class="govuk-link" target="_blank"  href="/messages/verify-email">Companies House account: verify your email address (opens in a new tab)</a>
-          </li>
-          <li>
-            <a class="govuk-link" target="_blank" href="">Account created confirmation (opens in a new tab)</a>
+            <a class="govuk-link" target="_blank" href="/messages/verify-email">Companies House account: verify your email address (opens in a new tab)</a>
           </li>
         </ul>
 
@@ -60,21 +57,138 @@
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">Scenario 2</h2> 
+        <h2 class="govuk-heading-m">Scenario 2 *Future*</h2> 
 
         <p>A director has no authenication code. A 'digital authorisation' request is sent to the linked director to confirm they are a director of the company. </p> 
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m">Scenario 3</h2> 
+        <h2 class="govuk-heading-m">Scenario 3 *Future*</h2> 
 
         <p> A new company has been set up, post CH account with no authentication code. Through a link in an email, the company is linked to their account. </p> 
 
 
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+        <h3 class="govuk-heading-m">Prototype overview</h3>
+
+        <p> The user is guided on a linear journey through the following. <p> 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>A user can create an account.</li>
+          <li>Their email address is verified.</li>
+          <li> The verify email page automatically updates when the user selects link in email. </li>
+
+          <li>The user can create their password and their account is created. </li>
+          <li>The user does not need to sign in (as in Version 1) they can now view their account directly after creating their account.</li>
+
+          <li>Once in the account they can manage their companies and add authorised people within the account.</li> 
+
+          <li> Once a company is added to the account. They can then file for this company. </li>
+
+        </ul>
+
+      <h2 class="govuk-heading-m">Create an account</h2>
+
+      <ul class="govuk-list">
+
+        <li> <a href="start-page" class="govuk-link">Companies House account (create an account or sign in)</a></li>
+
+        <li>  <a href="enter-your-details" class="govuk-link">What are your contact details?</a></li>
 
 
+        <li>  <a href="check-your-email" class="govuk-link">Verify your email address</a> </li>
+      </ul>
+
+
+      <p> The user opens the email (below) in another tab or on another device then returns to the service. The <b> Verify your email address </b> page automatically updates to the <b>Create a password for your Companies House account </b> page (as the user has enterered their mobile number). </br></br> Hint to continue journey: Select the 'give us a different email address' link in the reveal component.</p>
+
+      <ul class="govuk-list">
+
+        <li> <a href="messages/verify-email" class="govuk-link">* Email * Verify the users email address - Companies House account registration </a> </li>
+
+       
+        <li><a href="create-your-password" class="govuk-link">Create a password for your Companies House account</a> </li>
+
+      </ul>
+
+      <h2 class="govuk-heading-m">Account created, sign in to your Companies House account</h2>
+
+      <ul class="govuk-list">
+
+        <li><a href="sign-in" class="govuk-link">Sign in to your Companies House account</a> </li>
+
+
+        <li><a href="account-created-director" class="govuk-link">You have created a Companies House account</a> </li>
+
+      </ul>
+
+      <p> Information page (interruption page) - Now you've created an account, you should add companies you want to update or file for online. You can also authorise people to file for a company.</p>
+
+
+      <h2 class="govuk-heading-m">View your account</h2>
+
+      <p> No companies have been added to their account.</p>
+
+      <ul class="govuk-list govuk-list">
+        <li><a href="user-account/home-no-companies" class="govuk-link">Home - You have not added any companies to this account </a></li>
+      </ul>
+
+
+     <h2 class="govuk-heading-m">Add a company to your account</h2>
+
+    <p> Add a company from within the account.</p>
+      <ul class="govuk-list govuk-list">
+        <li><a href="add-a-company" class="govuk-link">What is the company number?</a></li>
+        <li><a href="check-company-details" class="govuk-link">Confirm this is the correct company</a></li>
+        <li><a href="authentication-code" class="govuk-link">Enter the company authentication code</a></li>
+        <li><a href="connection-to-company" class="govuk-link">What is your role?</a></li>
+
+        <li><a href="link-director-to-a-company" class="govuk-link">Confirm your details</a></li>
+
+        <li><a href="user-account/director/company-added" class="govuk-link">'FLOWERS LIMITED' has been added to your account.</a></li>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">Adding an authorised person</h2>
+
+      <p> Add an authorised person within the account.</p>
+
+      <ul class="govuk-list govuk-list">
+
+        <li><a href="delegate-to-presenter/enter-presenter-details" class="govuk-link">What are the authorised person's contact details?</a></li>
+
+
+        <li><a href="delegate-to-presenter/presenter-settings" class="govuk-link">What do you want the authorised person to do for this company?</a></li>
+
+        <li><a href="delegate-to-presenter/delegate-responsibility" class="govuk-link">Can Jill Edwards authorise other people to file for this company?</a></li>
+
+        <li><a href="delegate-to-presenter/presenter-request-sent" class="govuk-link">Check the authorised person's details</a></li>
+
+        <li><a href="user-account/director/auth-person-added" class="govuk-link">An email request has been sent to 'Jill Edwards' to be an authorised person for 'FLOWERS LIMITED'.</li>
+
+
+        <li><a href="user-account/director/authorised-person-jill" class="govuk-link">Update authorised person's details</li>
+
+      </ul>
+
+
+
+      
+
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">User account </h2>
+      <p> Key pages within the account:</p>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="" class="govuk-link">Home</a></li>
+        <li><a href="user-account/your-details" class="govuk-link">Your details</a></li>
+        <li><a href="user-account/messages" class="govuk-link">Messages</a></li>
+        <li><a href="user-account/account-settings" class="govuk-link">Manage account</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
 
