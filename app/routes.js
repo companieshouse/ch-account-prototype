@@ -534,9 +534,9 @@ router.post('/check-company-details', function(req, res) {
       {
         res.redirect('authentication-code') 
       }
-      else if(app.settings.scenario == 'three')
+      else
       {
-        res.redirect('authentication-code-v3')
+        res.redirect('authentication-code')
       }
 
 
