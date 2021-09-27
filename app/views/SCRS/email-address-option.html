@@ -17,35 +17,38 @@
 {% block content %}
   <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
 
+
+
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Does Hannah Salt want to be authorised to file online for this company?</h1>
+      <h1 class="govuk-heading-l">How does Hannah Salt want to access online filing for this company?</h1>
       <form class="form" action="email-address" method="get">
-        <p>They'll also be able to authorise other people to file online for this company.</p>
 
-        {{ govukRadios({
-  classes: "govuk-radios--inline",
-  idPrefix: "filing-reminders",
-  name: "filing-reminders",
-  fieldset: {
-    legend: {
-      text: " ",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ]
-}) }}
 
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+            <label class="govuk-label govuk-radios__label" for="sign-in">
+              WebFiling account
+            </label>
+            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          They’ll be able to file online as soon as they sign in to their account. If they do not have an existing account, we’ll create one for them. They’ll also be able to authorise other people to file online for the company.
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+            <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            Authentication code
+            </label>
+            <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+              A code will be sent to the registered office address in the post. It can take up to 5 working days to arrive.
+            </div>
+          </div>
+        </div>
+<br>
         {{ govukButton({
           text: "Save and continue"
         }) }}
