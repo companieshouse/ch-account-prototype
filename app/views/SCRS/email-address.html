@@ -22,7 +22,7 @@
       <h1 class="govuk-heading-l">Does Hannah Salt have an existing WebFiling account?</h1>
       <form class="form" action="existing-wf-email" method="get">
         <div id="email-hint" class="govuk-hint">
-      Why we need to know this...
+      If they already have an account, we'll add the company to it once it's incorporated. If they do not have an existing account, we'll create one for them.
           </div>
 
 
@@ -50,8 +50,8 @@
           {% from "govuk/components/details/macro.njk" import govukDetails %}
 
           {{ govukDetails({
-            summaryText: "What's WebFiling?",
-            text: "This is a service that enables you to submit Companies House information online."
+            summaryText: "What's a WebFiling account?",
+            text: "It's used to access the WebFiling service, where you can submit Companies House information online."
           }) }}
 
           {{ govukButton({

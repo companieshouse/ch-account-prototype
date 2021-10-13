@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Check and confirm director details
+  Check and save your answers before you continue - Companies House WebFiling account
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,11 +23,9 @@
   </style>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Check and confirm director details</h1>
+      <h1 class="govuk-heading-l">Check and save your answers before you continue</h1>
 
-      {{ govukInsetText({
-        text: "Details about the directors of a company will appear on the public record except for the full date of birth and home address."
-      }) }}
+
 
       <form class="form" action="" method="get">
 
@@ -39,7 +37,7 @@
               rows: [
                 {
                   key: {
-                    text: "Method of authorisation"
+                    text: "Authorisation type"
                   },
                   value: {
                     text: "Digital"
@@ -56,7 +54,7 @@
                 },
                 {
                   key: {
-                    text: "Which email address does Hannah Salt use or want to use to sign in to their WebFiling account?"
+                    text: "Which email address does Hannah Salt use or want to use for their WebFiling account?"
                   },
                   value: {
                     text: "hannah.salt@example.com"
@@ -66,7 +64,7 @@
                       {
                         href: "#",
                         text: "Change",
-                        visuallyHiddenText: "Which email address does Hannah Salt use or want to use to sign in to their WebFiling account"
+                        visuallyHiddenText: "Which email address does Hannah Salt use or want to use for their WebFiling account"
                       }
                     ]
                   }
