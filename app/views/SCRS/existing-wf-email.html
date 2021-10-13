@@ -22,32 +22,52 @@
       <h1 class="govuk-heading-l">What email address does Hannah Salt use to sign in to WebFiling?</h1>
       <form class="form" action="director-details/filing-reminders" method="get">
 
-          {{ govukRadios({
-
-  idPrefix: "filing-reminders",
-  name: "filing-reminders",
-  fieldset: {
-    legend: {
-      text: " ",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "existing-email",
-      text: "hannah.salt@example.com"
-    },
-    {
-      value: "different-email",
-      text: "A different email address"
-    }
-  ]
-}) }}
-
-          {{ govukButton({
-          text: "Save and continue"
+        {% set emailHtml %}
+        {{ govukInput({
+          id: "contact-by-email",
+          name: "contact-by-email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false,
+          label: {
+            text: "Email address"
+          }
         }) }}
+        {% endset -%}
+
+
+
+                  {{ govukRadios({
+
+          idPrefix: "filing-reminders",
+          name: "filing-reminders",
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "existing-email",
+              text: "hannah.salt@example.com"
+            },
+            {
+              value: "different-email",
+              text: "A different email address",
+              conditional: {
+                html: emailHtml
+              }
+            }
+          ]
+        }) }}
+
+                  {{ govukButton({
+                  text: "Save and continue"
+                }) }}
+
+
 
         </form>
 

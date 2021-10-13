@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
+{% block pageTitle %}
+  What is Hannah Salt's email address?
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">What is Hannah Salt's email address?</h1>
+      <form class="form" action="director-details/filing-reminders" method="get">
+
+        <p>
+Enter an email address that only Hannah Salt can access. We’ll create a WebFiling account and add this company to it.</p>
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  label: {
+    text: "Email address"
+  }
+}) }}
+{% endset -%}
+
+
+
+          {{ govukRadios({
+
+  idPrefix: "filing-reminders",
+  name: "filing-reminders",
+  fieldset: {
+    legend: {
+      text: " ",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "existing-email",
+      text: "hannah.salt@example.com"
+    },
+    {
+      value: "different-email",
+      text: "A different email address",
+      conditional: {
+        html: emailHtml
+      }
+    }
+  ]
+}) }}
+
+          {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+        </form>
+
+      </div>
+    </div>
+
+  {% endblock %}
