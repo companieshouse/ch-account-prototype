@@ -11,9 +11,11 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">(Prototype V8)</span>
+      
       <h1 class="govuk-heading-l">Companies House account</h1>
 
-      
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
         <h2 class="govuk-heading-m">WebFiling account</h2>
@@ -50,7 +52,7 @@
             <a href="../messages/security-code-email" class="govuk-link" target="blank">Email security code (opens in new tab)</a>
           </li>
 
-        
+
 
 <!--
 
@@ -125,7 +127,7 @@
 
 
 
-        <h2 class="govuk-heading-m">Removing an authorised person</h2> 
+        <h2 class="govuk-heading-m">Removing an authorised person</h2>
 
 
         <p class="govuk-body">Scenario: Jill Edwards is removing Hannah Salt as an authorised person.</p>
@@ -156,12 +158,12 @@
           <li>
             <a class="govuk-link" target="_blank"  href="user-account/home-multiple-companies">Search for a company within your account</a>
           </li>
-        </ul> 
+        </ul>
 
-        
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m"> Manage account</h2> 
+        <h2 class="govuk-heading-m"> Manage account</h2>
 
           <ul class="govuk-list govuk-list--bullet">
             <li>Update your name</li>
@@ -177,7 +179,7 @@
           }) }}
 
 
-        <p> Adding mobile number to your account later, using a notification as a prompt - * Future *</p> 
+        <p> Adding mobile number to your account later, using a notification as a prompt - * Future *</p>
 
         {{ govukButton({
           text: "Add your mobile number",
@@ -185,7 +187,7 @@
           href: "../add-mobile/manage-account"
         }) }}
 
-        
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
@@ -193,7 +195,7 @@
         <h2 class="govuk-heading-m">I've forgotten my password</h2>
 
         <h3 class="govuk-heading-s"> Verify by email </h3>
-        
+
 
         {{ govukButton({
           text: "Create a new password",
@@ -215,7 +217,7 @@
 
 
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> 
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
         <h2 class="govuk-heading-m">SCRS</h2>
@@ -226,7 +228,7 @@
 
 
 
-    
+
 
         <p> SCRS confirmation email</p>
 
@@ -234,7 +236,7 @@
 
         <p>CH account follow up emails</h3>
 
-  
+
 
         <p> <a href="/scrs-new-user" class="govuk-link" target="blank">1. Follow-up email with details about online filing for a new user (opens in new tab)</a></p>
 
@@ -242,19 +244,19 @@
         <p> <a href="/scrs-existing-user" class="govuk-link" target="blank">2. Email to existing WebFiling user (opens in new tab)</a></p>
 
 
-        <p> Emails expired </p> 
+        <p> Emails expired </p>
 
         <p> <a href="SCRS/emails/expired/ch-account-new-user" class="govuk-link" target="blank">Email has expired (opens in new tab)</a></p>
 
         <p> <a href="/scrs-new-user" class="govuk-link" target="blank">3. Same email as (1 - above) sent to user (opens in new tab)</a></p>
 
-        
+
         <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 
         <h2 class="govuk-heading-m">API filing sign in and consent </h2>
 
-      
+
         {{ govukButton({
           text: "Sign in to API filing",
           classes: "govuk-button--secondary",
@@ -304,7 +306,7 @@
           <li>User does not have their authentication code. Requests authorisation.</li>
         </ul>
 
-     
+
         {{ govukButton({
           text: "Second user for 'FLOWERS LIMITED'",
           classes: "govuk-button--secondary",
@@ -340,7 +342,7 @@
 
         <h2 class="govuk-heading-m">Change Registered office address within CHS </h2>
 
-      
+
         {{ govukButton({
           text: "Start service",
           classes: "govuk-button--secondary",

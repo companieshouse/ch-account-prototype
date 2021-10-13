@@ -31,7 +31,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 
 nav{
-	
+
 	display: inline-block;
 	float: right;
 
@@ -120,4 +120,25 @@ nav{
     width: 27%;
     padding-top: 17px;
 
+}
+
+/// interruption card ///
+
+
+.interruption-card {
+  padding: 2em 3em;
+	background-color: govuk-colour("blue");
+	color: govuk-colour("white") !important;
+
+	.govuk-heading-l, p, li,	details,span, summary, a {
+		color: govuk-colour("white") !important;
+	}
+
+	.govuk-button {
+		background-color: govuk-colour("white");
+		color: govuk-colour("black");
+		&:hover {
+			background-color: govuk-colour("mid-grey");
+		}
+	}
 }
