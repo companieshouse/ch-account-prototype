@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Which email address does Sarah Philips want to use to receive filing reminders?
+  Does Hannah Salt have an existing WebFiling account? - Companies House WebFiling account - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,6 +21,9 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Does Hannah Salt have an existing WebFiling account?</h1>
       <form class="form" action="existing-wf-email" method="get">
+        <div id="email-hint" class="govuk-hint">
+      Why we need to know this...
+          </div>
 
 
 
@@ -44,10 +47,15 @@
 
 <br>
 
+{% from "govuk/components/details/macro.njk" import govukDetails %}
 
+{{ govukDetails({
+  summaryText: "What's WebFiling?",
+  text: "This is a service that enables you to submit Companies House information online."
+}) }}
 
           {{ govukButton({
-              text: "Save and continue"
+              text: "Continue"
             }) }}
 
         </form>
