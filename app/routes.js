@@ -564,6 +564,12 @@ router.post('/authentication-code-v2', function (req, res) {
 })
 
 // / Added October 2021
+
+// Which directors do you want to authorise to file digitally?
+router.post('/SCRS/digital-choose-director', function (req, res) {
+    res.redirect('email-address')
+})
+
 // Does Hannah Salt have an existing WebFiling account?
 router.post('/SCRS/email-address', function (req, res) {
   if (req.session.data['existingWFaccount'] === 'no') {
@@ -573,10 +579,19 @@ router.post('/SCRS/email-address', function (req, res) {
   }
 })
 
+// Does Bob Pepper have an existing WebFiling account?
+router.post('/SCRS/email-address-2', function (req, res) {
+  if (req.session.data['existingWFaccountBob'] === 'no') {
+    res.redirect('no-existing-wf-email-2')
+  } else {
+    res.redirect('existing-wf-email-2')
+  }
+})
+
 //Does Hannah Salt want to receive filing reminders by email?
 router.post('/SCRS/director-details/filing-reminders-email', function (req, res) {
   if (req.session.data['filing-reminders'] === 'no') {
-    res.redirect('../authorisation-check-and-confirm')
+    res.redirect('check-and-confirm')
   } else {
     res.redirect('filing-reminders-email')
   }

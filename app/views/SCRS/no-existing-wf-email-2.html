@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Which email address does Sarah Philips want to use to receive filing reminders?
+  What is Bob Pepper's email address?
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,9 +19,26 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Which email address does Hannah Salt want to use to receive filing reminders?</h1>
-      <form class="form" action="check-and-confirm" method="get">
-        <p>We'll send an email to this address, so you can agree to the terms and conditions of the filing reminder service.
+      <h1 class="govuk-heading-l">Which email address does Bob Pepper want to use to create their WebFiling account?</h1>
+      <form class="form" action="authorisation-check-and-confirm-2" method="get">
+
+        <p>
+This should be an email address that only Hannah Salt can access.</p>
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  label: {
+    text: "Email address"
+  }
+}) }}
+{% endset -%}
+
+
 
           {{ govukRadios({
 
@@ -37,11 +54,14 @@
   items: [
     {
       value: "existing-email",
-      text: "hannah.salt@example.com"
+      text: "bob-pepper@example.com"
     },
     {
       value: "different-email",
-      text: "A different email address"
+      text: "A different email address",
+      conditional: {
+        html: emailHtml
+      }
     }
   ]
 }) }}

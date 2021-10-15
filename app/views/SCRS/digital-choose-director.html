@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Does Hannah Salt have an existing WebFiling account? - Companies House WebFiling account - GOV.UK
+  Which directors do you want to authorise to file digitally?
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,35 +16,36 @@
   <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/SCRS/email-address" method="post">
-        {{ govukRadios({
-          idPrefix: "existingWFaccount",
-          name: "existingWFaccount",
+      <form class="form" action="digital-choose-director" method="post">
+        {{ govukCheckboxes({
+          idPrefix: "digitalChooseDirectors",
+          name: "digitalChooseDirectors",
           fieldset: {
             legend: {
-              text: "Does Hannah Salt have an existing WebFiling account?",
+              text: "Which directors do you want to authorise to file digitally?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           hint: {
-            text: "If they already have an account, we'll add the company to it once it's incorporated. If they do not have an existing account, we'll create one for them."
+            text: "You must select at least one director"
           },
           items: [
             {
-              value: "yes",
-              text: "Yes"
+              value: "hannah",
+              text: "Hannah Salt"
             },
             {
-              value: "no",
-              text: "No"
+              value: "bob",
+              text: "Bob Pepper"
+            },
+            {
+              value: "lisa",
+              text: "Lisa Vinegar"
             }
            ]
         }) }}
-        {{ govukDetails({
-            summaryText: "What's a WebFiling account?",
-            text: "It's used to access the WebFiling service, where you can submit Companies House information online."
-          }) }}
+
         {{ govukButton({
           text: "Continue"
         }) }}
