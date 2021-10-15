@@ -851,10 +851,13 @@ router.post('/authentication-code-v2', function (req, res) {
 
 /// Added October 2021
 
-router.get( 'existing-wf-email', function ( req, res ) {
-  var existingWFaccount = req.query.existingWFaccount;
-  if ( existingWFaccount == 'no' ) {
-    res.redirect( 'no-existing-wf-email' );
+
+
+
+router.post( '/existing-wf-email', function ( req, res ) {
+var existingWFaccount = req.session.data['existingWFaccount'];
+if ( typeof existingWFaccount == 'no' ) {
+      res.redirect( 'no-existing-wf-email' );
   } else {
     res.render( 'existing-wf-email' );
   }
