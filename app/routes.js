@@ -6,859 +6,569 @@ const router = express.Router()
 
 module.exports = router
 
-
 // --- Routing for users scenarios ---
 
 router.get('/start-page-s1-s2', function (req, res) {
-    app.set('scenario', 'hannah');
-    res.redirect('start-page')
+  app.set('scenario', 'hannah')
+  res.redirect('start-page')
 })
 
 router.get('/start-page-s3', function (req, res) {
-
-    app.set('scenario', 'three');
-    res.redirect('start-page')
+  app.set('scenario', 'three')
+  res.redirect('start-page')
 })
 
 router.get('/sign-in-add-auth-person', function (req, res) {
-
-    app.set('scenario', 'add-auth-person');
-    res.redirect('sign-in')
+  app.set('scenario', 'add-auth-person')
+  res.redirect('sign-in')
 })
 
 router.get('/sign-in-with-mobile', function (req, res) {
-
-    app.set('scenario', 'sign-in-with-mobile');
-    res.redirect('sign-in')
+  app.set('scenario', 'sign-in-with-mobile')
+  res.redirect('sign-in')
 })
 
 router.get('/service-journey', function (req, res) {
-
-    app.set('scenario', 'service-journey');
-    res.redirect('../service-journey/service-start-page')
+  app.set('scenario', 'service-journey')
+  res.redirect('../service-journey/service-start-page')
 })
 
 router.get('/sign-in-webfiling', function (req, res) {
-
-    app.set('scenario', 'webfiling-journey');
-    res.redirect('sign-in-summary')
+  app.set('scenario', 'webfiling-journey')
+  res.redirect('sign-in-summary')
 })
 
-//Webfiling sign in with MFA choice
+// Webfiling sign in with MFA choice
 router.get('/sign-in-MFA-webfiling', function (req, res) {
-
-    app.set('scenario', 'sign-in-with-MFA');
-    res.redirect('sign-in-summary')
+  app.set('scenario', 'sign-in-with-MFA')
+  res.redirect('sign-in-summary')
 })
-
 
 router.get('/scrs-existing-user', function (req, res) {
-
-    app.set('scenario', 'scrs-existing-user');
-    res.redirect('/SCRS/emails/ch-account-existing-user')
+  app.set('scenario', 'scrs-existing-user')
+  res.redirect('/SCRS/emails/ch-account-existing-user')
 })
 
 router.get('/scrs-new-user', function (req, res) {
-
-    app.set('scenario', 'scrs-new-user');
-    res.redirect('/SCRS/emails/ch-account-new-user')
+  app.set('scenario', 'scrs-new-user')
+  res.redirect('/SCRS/emails/ch-account-new-user')
 })
 
-
-//service journey
+// service journey
 router.post('/service-journey/add-a-company', function (req, res) {
-
-    res.redirect('../service-journey/check-company-details')
+  res.redirect('../service-journey/check-company-details')
 })
 
 router.post('/service-journey/check-company-details', function (req, res) {
-
-    res.redirect('../service-journey/auth-code')
+  res.redirect('../service-journey/auth-code')
 })
 
 router.post('/service-journey/auth-code', function (req, res) {
-
-    res.redirect('../service-journey/add-company-to-account')
+  res.redirect('../service-journey/add-company-to-account')
 })
 
 router.post('/service-journey/add-company-to-account', function (req, res) {
-
-    res.redirect('../service-journey/add-company-to-account-notification')
+  res.redirect('../service-journey/add-company-to-account-notification')
 })
 
 router.post('/service-journey/add-company-to-account-notification', function (req, res) {
-
-    res.redirect('../service-journey/confirmation-page')
+  res.redirect('../service-journey/confirmation-page')
 })
 
-
-//change a registered office address
+// change a registered office address
 
 router.get('/change-address', function (req, res) {
-
-    app.set('scenario', 'change-address');
-    res.redirect('../CHS/chs-profile-page-new')
+  app.set('scenario', 'change-address')
+  res.redirect('../CHS/chs-profile-page-new')
 })
 
 router.post('/CHS/chs-profile-auth-code', function (req, res) {
-
-    res.redirect('../CHS/add-company-to-account')
+  res.redirect('../CHS/add-company-to-account')
 })
 
 router.post('/CHS/add-company-to-account', function (req, res) {
-
-    if(req.session.data['add-to-account'] == "yes"){
-
-      res.redirect('../CHS/chs-profile-manage-auth-code')
-    }
-    else if(req.session.data['add-to-account'] == "no"){
-
-      res.redirect('../CHS/chs-profile-manage-auth-code')
-    }
+  if (req.session.data['add-to-account'] == 'yes') {
+    res.redirect('../CHS/chs-profile-manage-auth-code')
+  } else if (req.session.data['add-to-account'] == 'no') {
+    res.redirect('../CHS/chs-profile-manage-auth-code')
+  }
 })
 
 router.post('/CHS/change-of-ro-address', function (req, res) {
-
-    res.redirect('../CHS/confirmation')
+  res.redirect('../CHS/confirmation')
 })
 
 router.post('/CHS/change-of-ro-address-notification', function (req, res) {
-
-    res.redirect('../CHS/confirmation')
+  res.redirect('../CHS/confirmation')
 })
 
-
 router.get('/sign-in-new-device', function (req, res) {
-
-    app.set('scenario', 'new-device');
-    res.redirect('../sign-in')
+  app.set('scenario', 'new-device')
+  res.redirect('../sign-in')
 })
 
 router.get('/sign-in-password-email-only', function (req, res) {
-
-    app.set('scenario', 'forgotten-password-email-only');
-    res.redirect('../sign-in')
+  app.set('scenario', 'forgotten-password-email-only')
+  res.redirect('../sign-in')
 })
-
 
 router.get('/sign-in-password-mobile', function (req, res) {
-
-    app.set('scenario', 'forgotten-password-mobile');
-    res.redirect('../sign-in')
+  app.set('scenario', 'forgotten-password-mobile')
+  res.redirect('../sign-in')
 })
-
 
 router.post('/start-page', function (req, res) {
-
-    res.redirect('create-an-account')
+  res.redirect('create-an-account')
 })
-
-
 
 // --- Error messages ---
 
 // Enter your details page
-router.post('/create-an-account', function(req, res) {
+router.post('/create-an-account', function (req, res) {
+  var errors = []
+  var emailHasError = false
 
-    var errors = [];
-    var emailHasError = false;
+  var telephoneNumber = req.body.telephoneNumber
 
-    var telephoneNumber = req.body.telephoneNumber
+  if (req.session.data['email'] == '') {
+    emailHasError = true
+    errors.push({text: 'Enter your email address', href: '#email-error'})
+  }
 
+  if (emailHasError) {
+    res.render('create-an-account', {
 
-
-    if(req.session.data['email'] == ""){
-      emailHasError = true;
-      errors.push({text: "Enter your email address", href: "#email-error"});
+      errorEmail: emailHasError,
+      errorList: errors
     }
-
-
-    if(emailHasError){
-      res.render('create-an-account', {
-
-        errorEmail: emailHasError,
-        errorList: errors
-     }
-    )}
-    else
-    {
-      if(telephoneNumber !== ''){
-
-        res.redirect('check-your-phone')
-
-      }
-      else{
-
-        res.redirect('check-your-email')
-
-      }
-
+    )
+  } else {
+    if (telephoneNumber !== '') {
+      res.redirect('check-your-phone')
+    } else {
+      res.redirect('check-your-email')
     }
+  }
 })
 
-
-
 // Enter your details page
-router.post('/enter-your-details', function(req, res) {
+router.post('/enter-your-details', function (req, res) {
+  var errors = []
+  var emailHasError = false
 
-    var errors = [];
-    var emailHasError = false;
-
-
-  if(req.session.data['email'] == ""){
-        emailHasError = true;
-        errors.push({text: "Enter your email address", href: "#email-error"});
+  if (req.session.data['email'] == '') {
+    emailHasError = true
+    errors.push({text: 'Enter your email address', href: '#email-error'})
   }
 
-  if(emailHasError){
+  if (emailHasError) {
     res.render('enter-your-details', {
-          errorEmail: emailHasError,
-          errorList: errors
-        })
-  }
-  else
-  {
+      errorEmail: emailHasError,
+      errorList: errors
+    })
+  } else {
     res.redirect('enter-your-name')
   }
 })
 
-
 // Enter your details page
-router.post('/enter-your-name', function(req, res) {
+router.post('/enter-your-name', function (req, res) {
+  var errors = []
+  var firstNameHasError = false
+  var lastNameHasError = false
 
-    var errors = [];
-    var firstNameHasError = false;
-    var lastNameHasError = false;
-
-  if(req.session.data['first-name'] == ""){
-    firstNameHasError = true;
-    errors.push({text: "Enter your first name", href: "#first-name-error"});
+  if (req.session.data['first-name'] == '') {
+    firstNameHasError = true
+    errors.push({text: 'Enter your first name', href: '#first-name-error'})
   }
-  if(req.session.data['last-name'] == ""){
-    lastNameHasError = true;
-    errors.push({text: "Enter your last name", href: "#last-name-error"});
+  if (req.session.data['last-name'] == '') {
+    lastNameHasError = true
+    errors.push({text: 'Enter your last name', href: '#last-name-error'})
   }
 
-  if(firstNameHasError || lastNameHasError){
+  if (firstNameHasError || lastNameHasError) {
     res.render('enter-your-name', {
-          errorFirstName: firstNameHasError,
-          errorLastName: lastNameHasError,
-          errorList: errors
-        })
-  }
-  else
-  {
+      errorFirstName: firstNameHasError,
+      errorLastName: lastNameHasError,
+      errorList: errors
+    })
+  } else {
     res.redirect('create-an-account')
   }
 })
 
-
 // Enter your password page
-router.post('/create-your-password', function(req, res) {
+router.post('/create-your-password', function (req, res) {
+  var errors = []
+  var passwordHasError = false
+  var confirmPasswordHasError = false
 
-    var errors = [];
-    var passwordHasError = false;
-    var confirmPasswordHasError = false;
-
-
-
-
-  if(req.session.data['password'] == ""){
-    passwordHasError = true;
-    errors.push({text: "Enter your password", href: "#password-error"});
+  if (req.session.data['password'] == '') {
+    passwordHasError = true
+    errors.push({text: 'Enter your password', href: '#password-error'})
   }
 
-  if(req.session.data['confirm-password'] == ""){
-        confirmPasswordHasError = true;
-        errors.push({text: "Re-enter your password", href: "#confirm-password-error"});
+  if (req.session.data['confirm-password'] == '') {
+    confirmPasswordHasError = true
+    errors.push({text: 'Re-enter your password', href: '#confirm-password-error'})
   }
 
-  if(passwordHasError || confirmPasswordHasError){
+  if (passwordHasError || confirmPasswordHasError) {
     res.render('create-your-password', {
-          errorPassword: passwordHasError,
-          errorConfirmPassword: confirmPasswordHasError,
-          errorList: errors
-        })
-  }
-  else
-  {
-    app.set('scenario', 'create-a-password');
+      errorPassword: passwordHasError,
+      errorConfirmPassword: confirmPasswordHasError,
+      errorList: errors
+    })
+  } else {
+    app.set('scenario', 'create-a-password')
     res.redirect('./consent-to-emails/email-consent')
   }
 })
 
-
 // Sign in page
-router.post('/sign-in', function(req, res) {
+router.post('/sign-in', function (req, res) {
+  var errors = []
+  var emailHasError = false
+  var passwordHasError = false
 
-    var errors = [];
-    var emailHasError = false;
-    var passwordHasError = false;
+  if (req.session.data['email'] == '') {
+    emailHasError = true
+    errors.push({text: 'Enter your email address', href: '#email-error'})
+  }
 
-    if(req.session.data['email'] == ""){
-      emailHasError = true;
-      errors.push({text: "Enter your email address", href: "#email-error"});
-    }
+  if (req.session.data['password'] == '') {
+    passwordHasError = true
+    errors.push({text: 'Enter your password', href: '#password-error'})
+  }
 
-    if(req.session.data['password'] == ""){
-          passwordHasError = true;
-          errors.push({text: "Enter your password", href: "#password-error"});
-    }
-
-    if(emailHasError || passwordHasError){
-      res.render('sign-in', {
-            errorEmail: emailHasError,
-            errorPassword: passwordHasError,
-            errorList: errors
-          })
-    }
-    else if(app.settings.scenario == 'user-with-account')
-    {
-      res.redirect('/jills-user-account/home-no-companies-no-notification')
-    }
-    else if(app.settings.scenario == 'add-auth-person')
-    {
-      res.redirect('/jills-user-account/home-no-companies-auth-person-request')
-    }
-    else if(app.settings.scenario == 'service-journey')
-    {
-      res.redirect('/service-journey/add-a-company')
-    }
-    else if(app.settings.scenario == 'sign-in-with-MFA')
-    {
-      res.redirect('/mfa/choose-verify-option')
-    }
-    else if(app.settings.scenario == 'sign-in-with-mobile')
-    {
-      res.redirect('check-your-phone-remember-code')
-    }
-    else if(app.settings.scenario == 'change-address')
-    {
-      res.redirect('CHS/chs-profile-auth-code')
-    }
-    else if(app.settings.scenario == 'webfiling-journey')
-    {
-      res.redirect('webfiling/what-are-your-details')
-    }
-    else if(app.settings.scenario == 'webfiling-not-added')
-    {
-      res.redirect('webfiling/what-are-your-details')
-    }
-    else if(app.settings.scenario == 'scrs-existing-user')
-    {
-      res.redirect('/mfa/choose-verify-option')
-    }
-    else
-    {
-      res.redirect('/user-account/home-no-companies')
-    }
-
+  if (emailHasError || passwordHasError) {
+    res.render('sign-in', {
+      errorEmail: emailHasError,
+      errorPassword: passwordHasError,
+      errorList: errors
+    })
+  } else if (app.settings.scenario == 'user-with-account') {
+    res.redirect('/jills-user-account/home-no-companies-no-notification')
+  } else if (app.settings.scenario == 'add-auth-person') {
+    res.redirect('/jills-user-account/home-no-companies-auth-person-request')
+  } else if (app.settings.scenario == 'service-journey') {
+    res.redirect('/service-journey/add-a-company')
+  } else if (app.settings.scenario == 'sign-in-with-MFA') {
+    res.redirect('/mfa/choose-verify-option')
+  } else if (app.settings.scenario == 'sign-in-with-mobile') {
+    res.redirect('check-your-phone-remember-code')
+  } else if (app.settings.scenario == 'change-address') {
+    res.redirect('CHS/chs-profile-auth-code')
+  } else if (app.settings.scenario == 'webfiling-journey') {
+    res.redirect('webfiling/what-are-your-details')
+  } else if (app.settings.scenario == 'webfiling-not-added') {
+    res.redirect('webfiling/what-are-your-details')
+  } else if (app.settings.scenario == 'scrs-existing-user') {
+    res.redirect('/mfa/choose-verify-option')
+  } else {
+    res.redirect('/user-account/home-no-companies')
+  }
 })
 
-
-
-
-//new device sign in - verify option
-router.post('/mfa/choose-verify-option', function(req, res) {
-
-   if(req.session.data['verify-option'] == "mfa-email"){
-
-      res.redirect('../mfa/check-your-email')
-    }
-    else if(req.session.data['verify-option'] == "mfa-text-message"){
-
-      res.redirect('../mfa/check-your-phone')
-    }
-
+// new device sign in - verify option
+router.post('/mfa/choose-verify-option', function (req, res) {
+  if (req.session.data['verify-option'] == 'mfa-email') {
+    res.redirect('../mfa/check-your-email')
+  } else if (req.session.data['verify-option'] == 'mfa-text-message') {
+    res.redirect('../mfa/check-your-phone')
+  }
 })
 
-//consent emails
-router.post('/consent-to-emails/email-consent', function(req, res) {
-
-   if(app.settings.scenario == 'scrs-new-user'){
-
-      res.redirect('/SCRS/account/home-one-company-new-user')
-    }
-    else{
-
-      res.redirect('../user-account/home-no-companies')
-    }
-
+// consent emails
+router.post('/consent-to-emails/email-consent', function (req, res) {
+  if (app.settings.scenario == 'scrs-new-user') {
+    res.redirect('/SCRS/account/home-one-company-new-user')
+  } else {
+    res.redirect('../user-account/home-no-companies')
+  }
 })
 
 router.post('/SCRS/account/create-your-password', function (req, res) {
-    res.redirect('/user-account/unregistered-user/create-an-account')
+  res.redirect('/user-account/unregistered-user/create-an-account')
 })
 
-
-//consent emails
-router.post('/user-account/unregistered-user/create-an-account', function(req, res) {
-
-   if(req.session.data['telephoneNumberWeb'] == ""){
-
-      res.redirect('/consent-to-emails/email-consent')
-    }
-    else{
-
-      res.redirect('/mfa/check-your-phone')
-    }
-
+// consent emails
+router.post('/user-account/unregistered-user/create-an-account', function (req, res) {
+  if (req.session.data['telephoneNumberWeb'] == '') {
+    res.redirect('/consent-to-emails/email-consent')
+  } else {
+    res.redirect('/mfa/check-your-phone')
+  }
 })
 
-
-//routing for text message mfa sign in or forgotten password
-router.post('/mfa/check-your-phone', function(req, res) {
-
-   if(app.settings.scenario == 'sign-in-with-MFA'){
-
-      res.redirect('../user-account/home-no-companies')
-    }
-    else if(app.settings.scenario == 'forgotten-password-mobile'){
-
-      res.redirect('../forgotten-password/reset-your-password')
-    }
-    else if(app.settings.scenario == 'user-has-no-account'){
-
-      res.redirect('../../jills-user-account/home-no-companies-no-notification')
-    }
-    else if(app.settings.scenario == 'scrs-new-user'){
-
-      res.redirect('/consent-to-emails/email-consent')
-    }
-    else if(app.settings.scenario == 'scrs-existing-user'){
-
-      res.redirect('/SCRS/account/home-one-company-existing-user')
-    }
-    else{
-
-      res.redirect('../user-account/home-no-companies')
-    }
-
+// routing for text message mfa sign in or forgotten password
+router.post('/mfa/check-your-phone', function (req, res) {
+  if (app.settings.scenario == 'sign-in-with-MFA') {
+    res.redirect('../user-account/home-no-companies')
+  } else if (app.settings.scenario == 'forgotten-password-mobile') {
+    res.redirect('../forgotten-password/reset-your-password')
+  } else if (app.settings.scenario == 'user-has-no-account') {
+    res.redirect('../../jills-user-account/home-no-companies-no-notification')
+  } else if (app.settings.scenario == 'scrs-new-user') {
+    res.redirect('/consent-to-emails/email-consent')
+  } else if (app.settings.scenario == 'scrs-existing-user') {
+    res.redirect('/SCRS/account/home-one-company-existing-user')
+  } else {
+    res.redirect('../user-account/home-no-companies')
+  }
 })
 
-
-
-//routing for email mfa sign in or forgotten password
-router.post('/mfa/check-your-email', function(req, res) {
-
-   if(app.settings.scenario == 'sign-in-with-MFA'){
-
-      res.redirect('../user-account/home-no-companies')
-    }
-    else if(app.settings.scenario == 'forgotten-password-mobile'){
-
-      res.redirect('../forgotten-password/reset-your-password')
-    }
-    else if(app.settings.scenario == 'scrs-existing-user'){
-
-      res.redirect('/SCRS/account/home-one-company-existing-user')
-    }
-    else{
-
-      res.redirect('../user-account/home-no-companies')
-    }
-
+// routing for email mfa sign in or forgotten password
+router.post('/mfa/check-your-email', function (req, res) {
+  if (app.settings.scenario == 'sign-in-with-MFA') {
+    res.redirect('../user-account/home-no-companies')
+  } else if (app.settings.scenario == 'forgotten-password-mobile') {
+    res.redirect('../forgotten-password/reset-your-password')
+  } else if (app.settings.scenario == 'scrs-existing-user') {
+    res.redirect('/SCRS/account/home-one-company-existing-user')
+  } else {
+    res.redirect('../user-account/home-no-companies')
+  }
 })
 
-
-
-
-
-//accept or decline authorised person request -  user with account
-router.get('/confirm-presenter-email', function(req, res) {
-
-   app.set('scenario', 'user-with-account');
+// accept or decline authorised person request -  user with account
+router.get('/confirm-presenter-email', function (req, res) {
+  app.set('scenario', 'user-with-account')
   res.redirect('messages/email-confirm-you-are-the-presenter')
-
 })
-
 
 // accept or decline authorised person request - user with no account
-router.get('/no-account-confirm-presenter-email', function(req, res) {
-
-   app.set('scenario', 'user-has-no-account');
-    res.redirect('messages/email-confirm-you-are-the-presenter')
-
+router.get('/no-account-confirm-presenter-email', function (req, res) {
+  app.set('scenario', 'user-has-no-account')
+  res.redirect('messages/email-confirm-you-are-the-presenter')
 })
 
 router.get('/sign-in-auth-person-request', function (req, res) {
-
-    if(app.settings.scenario == 'user-with-account')
-      {
-        res.redirect('sign-in')
-      }
-      else if(app.settings.scenario == 'user-has-no-account')
-      {
-        res.redirect('user-account/unregistered-user/create-your-password')
-      }
-
+  if (app.settings.scenario == 'user-with-account') {
+    res.redirect('sign-in')
+  } else if (app.settings.scenario == 'user-has-no-account') {
+    res.redirect('user-account/unregistered-user/create-your-password')
+  }
 })
 
-
-
-
-
 // Enter the company number page
-router.post('/add-a-company', function(req, res) {
+router.post('/add-a-company', function (req, res) {
+  var errors = []
+  var companyNumberHasError = false
 
-  var errors = [];
-  var companyNumberHasError = false;
-
-  if(req.session.data['company-number'] == ""){
-    companyNumberHasError = true;
-    errors.push({text: "Enter the company number", href: "#company-number-error"});
+  if (req.session.data['company-number'] == '') {
+    companyNumberHasError = true
+    errors.push({text: 'Enter the company number', href: '#company-number-error'})
   }
 
-  if(companyNumberHasError){
+  if (companyNumberHasError) {
     res.render('add-a-company', {
-          errorCompanyNumber: companyNumberHasError,
-          errorList: errors
-        })
-  }
-  else
-  {
+      errorCompanyNumber: companyNumberHasError,
+      errorList: errors
+    })
+  } else {
     res.redirect('check-company-details')
   }
 })
 
-
 // View company information page
-router.post('/check-company-details', function(req, res) {
-
-
-      if(app.settings.scenario == 'hannah')
-      {
-        res.redirect('authentication-code')
-      }
-      if(app.settings.scenario == 'auth-person-request')
-      {
-        res.redirect('authentication-code')
-      }
-      else
-      {
-        res.redirect('authentication-code')
-      }
-
-
+router.post('/check-company-details', function (req, res) {
+  if (app.settings.scenario == 'hannah') {
+    res.redirect('authentication-code')
+  }
+  if (app.settings.scenario == 'auth-person-request') {
+    res.redirect('authentication-code')
+  } else {
+    res.redirect('authentication-code')
+  }
 })
-
-
 
 // --- password journey ---
 
 // change your password
-router.post('/change-your-password', function(req, res) {
-
-  if(app.settings.scenario == 'forgotten-password-email-only')
-  {
+router.post('/change-your-password', function (req, res) {
+  if (app.settings.scenario == 'forgotten-password-email-only') {
     res.redirect('/forgotten-password/reset-password-check-email')
-  }
-  else{
-
+  } else {
     res.redirect('../mfa/choose-verify-option')
-
   }
-
 })
 
-
-
-
-router.post('/choose-verify-option', function(req, res) {
-
-   if(req.session.data['verify-option'] == "email"){
-
-      res.redirect('forgotten-password/reset-password-check-email')
-    }
-    else if(req.session.data['verify-option'] == "text-message"){
-
-      res.redirect('check-your-phone')
-    }
-
+router.post('/choose-verify-option', function (req, res) {
+  if (req.session.data['verify-option'] == 'email') {
+    res.redirect('forgotten-password/reset-password-check-email')
+  } else if (req.session.data['verify-option'] == 'text-message') {
+    res.redirect('check-your-phone')
+  }
 })
 
-router.post('/check-your-phone', function(req, res) {
-
-  if(req.session.data['verify-option'] == "text-message"){
-
-      res.redirect('forgotten-password/reset-your-password')
-    }
-    if(app.settings.scenario == 'webfiling-journey'){
-
-      res.redirect('consent-to-emails/email-consent')
-    }
-
-    else{
-
+router.post('/check-your-phone', function (req, res) {
+  if (req.session.data['verify-option'] == 'text-message') {
+    res.redirect('forgotten-password/reset-your-password')
+  }
+  if (app.settings.scenario == 'webfiling-journey') {
+    res.redirect('consent-to-emails/email-consent')
+  } else {
     res.redirect('check-your-email')
-
-    }
-
-
+  }
 })
 
-router.post('/check-your-phone-remember-code', function(req, res) {
-
-    res.redirect('user-account/home-no-companies')
+router.post('/check-your-phone-remember-code', function (req, res) {
+  res.redirect('user-account/home-no-companies')
 })
-
-
 
 // reset your password
-router.post('/reset-your-password', function(req, res) {
-
-    res.redirect('../forgotten-password/sign-in-password-reset')
+router.post('/reset-your-password', function (req, res) {
+  res.redirect('../forgotten-password/sign-in-password-reset')
 })
-
 
 // authentication code page
 router.post('/authentication-code', function (req, res) {
-
-    res.redirect('../user-account/company-added')
-
+  res.redirect('../user-account/company-added')
 })
 
 // authorised person request page
 router.post('/authentication-code-v3', function (req, res) {
-
-    res.redirect('../user-account/company-added')
-
+  res.redirect('../user-account/company-added')
 })
 
-
-//remove an authorised person
+// remove an authorised person
 router.post('/remove-authorised-person-hannah', function (req, res) {
-
-    res.redirect('./auth-person-removed')
-
+  res.redirect('./auth-person-removed')
 })
-
-
-
 
 // routing director to give the option for a presenter
 router.post('/connection-to-company', function (req, res) {
-
-    if(req.session.data['what-is-your-role'] == "director"){
-
-      res.redirect('link-director-to-a-company')
-    }
-    else if(req.session.data['what-is-your-role'] == "psc"){
-
-      res.redirect('user-account/psc-auth-person/company-added')
-    }
-    else if(req.session.data['what-is-your-role'] == "authorised-person"){
-
-      res.redirect('user-account/psc-auth-person/company-added')
-    }
-
+  if (req.session.data['what-is-your-role'] == 'director') {
+    res.redirect('link-director-to-a-company')
+  } else if (req.session.data['what-is-your-role'] == 'psc') {
+    res.redirect('user-account/psc-auth-person/company-added')
+  } else if (req.session.data['what-is-your-role'] == 'authorised-person') {
+    res.redirect('user-account/psc-auth-person/company-added')
+  }
 })
 
 // routing for DIY filer directors to the end of the jounrey
 // routing directors that use agents to enter presenter details
 router.post('/who-files-for-the-company', function (req, res) {
-
-    if(req.session.data['who-files'] == "no"){
-
-      res.redirect('/user-account/home')
-    }
-    else if(req.session.data['who-files'] == "yes"){
-
-      res.redirect('/delegate-to-presenter/enter-presenter-details')
-    }
-
+  if (req.session.data['who-files'] == 'no') {
+    res.redirect('/user-account/home')
+  } else if (req.session.data['who-files'] == 'yes') {
+    res.redirect('/delegate-to-presenter/enter-presenter-details')
+  }
 })
-
-
 
 // routing director to give the option for a presenter
 router.post('/company-role', function (req, res) {
-
-    if(req.session.data['what-is-your-role'] == "director"){
-
-      res.redirect('who-files-for-the-company')
-    }
-    else if(req.session.data['what-is-your-role'] == "psc"){
-
-      res.redirect('who-files-for-the-company')
-    }
-    else if(req.session.data['what-is-your-role'] == "presenter"){
-
-      res.redirect('user-account/home')
-    }
-
+  if (req.session.data['what-is-your-role'] == 'director') {
+    res.redirect('who-files-for-the-company')
+  } else if (req.session.data['what-is-your-role'] == 'psc') {
+    res.redirect('who-files-for-the-company')
+  } else if (req.session.data['what-is-your-role'] == 'presenter') {
+    res.redirect('user-account/home')
+  }
 })
 
-//webfiling journey
+// webfiling journey
 
-router.post('/webfiling/what-are-your-details', function(req, res) {
+router.post('/webfiling/what-are-your-details', function (req, res) {
+  var telephoneNumberWeb = req.body.telephoneNumberWeb
 
-
-
-    var telephoneNumberWeb = req.body.telephoneNumberWeb
-
-    if(telephoneNumberWeb !== ''){
-
-        res.redirect('/check-your-phone')
-
-      }
-      else{
-
-        res.redirect('../consent-to-emails/email-consent')
-
-      }
-
-
+  if (telephoneNumberWeb !== '') {
+    res.redirect('/check-your-phone')
+  } else {
+    res.redirect('../consent-to-emails/email-consent')
+  }
 })
 
-router.post('/company-number', function(req, res) {
-
-    if(app.settings.scenario == 'webfiling-journey')
-    {
-      res.redirect('webfiling/check-company-details')
-    }
-    else if(app.settings.scenario == 'webfiling-not-added')
-    {
-      res.redirect('webfiling/check-company-details')
-    }
+router.post('/company-number', function (req, res) {
+  if (app.settings.scenario == 'webfiling-journey') {
+    res.redirect('webfiling/check-company-details')
+  } else if (app.settings.scenario == 'webfiling-not-added') {
+    res.redirect('webfiling/check-company-details')
+  }
 })
 
-router.post('/webfiling/check-company-details', function(req, res) {
-
-    if(app.settings.scenario == 'webfiling-journey')
-    {
-      res.redirect('./webfiling-profile')
-    }
-    else if(app.settings.scenario == 'webfiling-not-added')
-    {
-      res.redirect('/authentication-code')
-    }
+router.post('/webfiling/check-company-details', function (req, res) {
+  if (app.settings.scenario == 'webfiling-journey') {
+    res.redirect('./webfiling-profile')
+  } else if (app.settings.scenario == 'webfiling-not-added') {
+    res.redirect('/authentication-code')
+  }
 })
 
-//add company to account
+// add company to account
 
 // router.post('/webfiling/add-company-to-account', function(req, res) {
 
-
 // })
-
-
-
-
-
 
 // --- Error messages ---
 
 // Enter your details page
-router.post('/what-are-your-details', function(req, res) {
+router.post('/what-are-your-details', function (req, res) {
+  var telephoneNumber = req.body.telephoneNumber
 
-
-    var telephoneNumber = req.body.telephoneNumber
-
-    if(telephoneNumber !== ''){
-
-      res.redirect('webfiling/check-your-phone')
-
-    }
-    else{
-
-      res.redirect('check-your-email')
-
-    }
+  if (telephoneNumber !== '') {
+    res.redirect('webfiling/check-your-phone')
+  } else {
+    res.redirect('check-your-email')
+  }
 })
-
-
-
-
-
 
 router.post('/request-authorisation-to-file', function (req, res) {
+  var errors = []
+  var requestAuthorisationHasError = false
 
-  var errors = [];
-  var requestAuthorisationHasError = false;
-
-  if(typeof req.session.data['request-authorisation'] == 'undefined'){
-    requestAuthorisationHasError = true;
-    errors.push({text: "Select yes to request authorisation to file for this company", href: "#request-authorisation-error"});
+  if (typeof req.session.data['request-authorisation'] === 'undefined') {
+    requestAuthorisationHasError = true
+    errors.push({text: 'Select yes to request authorisation to file for this company', href: '#request-authorisation-error'})
   }
 
-  if(requestAuthorisationHasError){
+  if (requestAuthorisationHasError) {
     res.render('request-authorisation-to-file', {
-          errorRequestAuthorisation: requestAuthorisationHasError,
-          errorList: errors
-        })
-  }
-  else
-  {
-
-    if(req.session.data['request-authorisation'] == "yes"){
-
+      errorRequestAuthorisation: requestAuthorisationHasError,
+      errorList: errors
+    })
+  } else {
+    if (req.session.data['request-authorisation'] == 'yes') {
       res.redirect('company-added-authorisation-sent')
-    }
-    else if(req.session.data['request-authorisation'] == "no"){
-
+    } else if (req.session.data['request-authorisation'] == 'no') {
       res.redirect('request-an-authentication-code')
     }
-
   }
-
 })
 
-
-
-
-
-
-///REMOVED-----------------------------------------
-
+// /REMOVED-----------------------------------------
 
 // routing verification choice email or text
 router.post('/verify-choice', function (req, res) {
-
-    if(req.session.data['verify-choice'] == "email"){
-
-      res.redirect('check-your-email')
-    }
-    else if(req.session.data['verify-choice'] == "text-message"){
-
-      res.redirect('check-your-phone')
-    }
-
+  if (req.session.data['verify-choice'] == 'email') {
+    res.redirect('check-your-email')
+  } else if (req.session.data['verify-choice'] == 'text-message') {
+    res.redirect('check-your-phone')
+  }
 })
 
 // authentication code page
 router.post('/authentication-code-v2', function (req, res) {
-
-    if(req.session.data['auth-code'] == "yes"){
-
-      res.redirect('user-account/company-added')
+  if (req.session.data['auth-code'] == 'yes') {
+    res.redirect('user-account/company-added')
+  } else if (req.session.data['auth-code'] == 'no') {
+    if (app.settings.scenario == 'one-two') {
+      res.redirect('request-an-authentication-code')
+    } else if (app.settings.scenario == 'three') {
+      res.redirect('request-authorisation')
     }
-    else if(req.session.data['auth-code'] == "no"){
-
-      if(app.settings.scenario == 'one-two')
-      {
-        res.redirect('request-an-authentication-code')
-      }
-      else if(app.settings.scenario == 'three')
-      {
-        res.redirect('request-authorisation')
-      }
-    }
-
+  }
 })
 
+// / Added October 2021
 
-
-/// Added October 2021
-
-
-
-
-router.post( '/existing-wf-email', function ( req, res ) {
-var existingWFaccount = req.session.data['existingWFaccount'];
-if ( typeof existingWFaccount == 'no' ) {
-      res.redirect( 'no-existing-wf-email' );
+router.post('/SCRS/email-address', function (req, res) {
+  if (req.session.data['existingWFaccount'] === 'no') {
+    res.redirect('no-existing-wf-email')
   } else {
-    res.render( 'existing-wf-email' );
+    res.redirect('existing-wf-email')
   }
-} );
+})

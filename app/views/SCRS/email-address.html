@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
-
 {% block header %}
-    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+  {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
 {% endblock %}
 
 {% block pageTitle %}
@@ -10,57 +9,46 @@
 {% endblock %}
 
 {% block beforeContent %}
-
   <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
   <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Does Hannah Salt have an existing WebFiling account?</h1>
-      <form class="form" action="existing-wf-email" method="post">
-        <div id="email-hint" class="govuk-hint">
-      If they already have an account, we'll add the company to it once it's incorporated. If they do not have an existing account, we'll create one for them.
-          </div>
-
-
-
-
-
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="existingWFaccountY" name="existingWFaccount" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="existingWFaccountY">
-                    Yes
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="existingWFaccountN" name="existingWFaccount" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="existingWFaccountN">
-                    No
-                  </label>
-                </div>
-                </div>
-
-            <br>
-
-          {% from "govuk/components/details/macro.njk" import govukDetails %}
-
-          {{ govukDetails({
+      <form class="form" action="/SCRS/email-address" method="post">
+        {{ govukRadios({
+          idPrefix: "existingWFaccount",
+          name: "existingWFaccount",
+          fieldset: {
+            legend: {
+              text: "Does Hannah Salt have an existing WebFiling account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "If they already have an account, we'll add the company to it once it's incorporated. If they do not have an existing account, we'll create one for them."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+           ]
+        }) }}
+        {{ govukDetails({
             summaryText: "What's a WebFiling account?",
             text: "It's used to access the WebFiling service, where you can submit Companies House information online."
           }) }}
-
-          {{ govukButton({
-              text: "Continue"
-            }) }}
-
-        </form>
-
-      </div>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
     </div>
-
-  {% endblock %}
+  </div>
+{% endblock %}
