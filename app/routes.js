@@ -564,11 +564,20 @@ router.post('/authentication-code-v2', function (req, res) {
 })
 
 // / Added October 2021
-
+// Does Hannah Salt have an existing WebFiling account?
 router.post('/SCRS/email-address', function (req, res) {
   if (req.session.data['existingWFaccount'] === 'no') {
     res.redirect('no-existing-wf-email')
   } else {
     res.redirect('existing-wf-email')
+  }
+})
+
+//Does Hannah Salt want to receive filing reminders by email?
+router.post('/SCRS/director-details/filing-reminders-email', function (req, res) {
+  if (req.session.data['filing-reminders'] === 'no') {
+    res.redirect('../authorisation-check-and-confirm')
+  } else {
+    res.redirect('filing-reminders-email')
   }
 })
