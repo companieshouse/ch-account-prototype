@@ -23,6 +23,21 @@
       <form class="form" action="check-and-confirm" method="get">
         <p>We'll send an email to this address, so you can agree to the terms and conditions of the filing reminder service.
 
+          {% set emailHtml %}
+          {{ govukInput({
+            id: "contact-by-email",
+            name: "contact-by-email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            label: {
+              text: "Email address"
+            }
+          }) }}
+          {% endset -%}
+
+
+
           {{ govukRadios({
 
   idPrefix: "filing-reminders",
@@ -41,7 +56,10 @@
     },
     {
       value: "different-email",
-      text: "A different email address"
+      text: "A different email address",
+      conditional: {
+        html: emailHtml
+      }
     }
   ]
 }) }}
