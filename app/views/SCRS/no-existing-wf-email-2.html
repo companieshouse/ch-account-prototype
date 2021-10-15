@@ -22,8 +22,9 @@
       <h1 class="govuk-heading-l">Which email address does Bob Pepper want to use to create their WebFiling account?</h1>
       <form class="form" action="authorisation-check-and-confirm-2" method="get">
 
-        <p>
-This should be an email address that only Hannah Salt can access.</p>
+        <div id="contact-hint" class="govuk-hint">
+          This should be an email address that only Bob Pepper can access.
+        </div>
 
 {% set emailHtml %}
 {{ govukInput({
