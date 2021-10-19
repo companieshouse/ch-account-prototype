@@ -565,6 +565,16 @@ router.post('/authentication-code-v2', function (req, res) {
 
 // / Added October 2021
 
+
+// How do you want to authorise the directors?
+router.post('/SCRS/choose-authorisation-type', function (req, res) {
+  if (req.session.data['choose-type'] === 'digital') {
+    res.redirect('digital-choose-director')
+  } else {
+    res.redirect('auth-code-in-post')
+  }
+})
+
 // Which directors do you want to authorise to file digitally?
 router.post('/SCRS/digital-choose-director', function (req, res) {
     res.redirect('email-address')

@@ -29,15 +29,89 @@
 
       <form class="form" action="" method="get">
 
-        <h2 class="govuk-heading-m">Bob Thompson</h2>
+
+        {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
+
+              {
+                key: {
+                  text: "How do you want to authorise the directors?"
+                },
+                value: {
+                  text: "Digitally"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "/SCRS/choose-authorisation-type",
+                      text: "Change",
+                      visuallyHiddenText: "How do you want to authorise the directors?"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+
+
+          {{ govukSummaryList({
+                classes: 'govuk-!-margin-bottom-9',
+                rows: [
+
+                {
+                  key: {
+                    text: "Which directors do you want to digitally authorise to file online?"
+                  },
+                  value: {
+                    html: "Hannah Salt<br>Bob Thompson"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "/SCRS/digital-choose-director",
+                        text: "Change",
+                        visuallyHiddenText: "Which directors do you want to digitally authorise to file online?"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
+
+        <h2 class="govuk-heading-m">Hannah Salt</h2>
 
 
         {{ govukSummaryList({
               classes: 'govuk-!-margin-bottom-9',
               rows: [
 
+              {
+                key: {
+                  text: "Which email address does Hannah Salt use or want to use for their WebFiling account?"
+                },
+                value: {
+                  text: "hannah.salt@example.com"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "/SCRS/email-address",
+                      text: "Change",
+                      visuallyHiddenText: "Which email address does Hannah Salt use or want to use for their WebFiling account"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
 
-                {
+              <h2 class="govuk-heading-m">Bob Thompson</h2>
+              {{ govukSummaryList({
+                    classes: 'govuk-!-margin-bottom-9',
+                    rows: [
+
+                    {
                   key: {
                     text: "Which email address does Bob Thompson use or want to use for their WebFiling account?"
                   },
@@ -47,7 +121,7 @@
                   actions: {
                     items: [
                       {
-                        href: "#",
+                        href: "/SCRS/email-address-2",
                         text: "Change",
                         visuallyHiddenText: "Which email address does Hannah Salt use or want to use for their WebFiling account"
                       }

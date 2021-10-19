@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
+{% block pageTitle %}
+  This service is changing
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <form class="form" action="../choose-authorisation-type" method="get">
+        <h1 class="govuk-heading-l">Digital authorisation</h1>
+
+          <p class="govuk-body-l">You can now digitally authorise directors to file information online when you incorporate a company, instead of receiving a code in the post. </p>
+
+          <p class="govuk-body">This means directors can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>instantly file online as soon as the company is incorporated</li>
+            <li>file most information online without an authentication code </li>
+          <li>digitally authorise other people to file online for the company</li>
+          </ul>
+
+          <p class="govuk-body govuk-!-font-weight-bold">Digital authorisation is quicker, paperless and more secure. </p>
+
+
+          <p class="govuk-body">If you do not want to digitally authorise directors, you can choose to receive an authentication code in the post instead. It will be sent to the registered office address once the company is incorporated. It takes up to 5 working days to arrive. </p>
+
+
+          {{ govukButton({
+                 text: "Continue"
+               }) }}
+</form>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
