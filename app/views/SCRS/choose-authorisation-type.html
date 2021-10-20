@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-How do you want to authorise the directors?
+How do you want to authorise the directors to file online for the company?
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@ How do you want to authorise the directors?
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">How do you want to authorise the directors?</h1>
+      <h1 class="govuk-heading-l">How do you want the directors to be authorised to file online for the company?</h1>
       <form class="form" action="choose-authorisation-type" method="post">
 
 
@@ -40,11 +40,17 @@ How do you want to authorise the directors?
           items: [
             {
               value: "digital",
-              text: "Digitally"
+              text: "Digital authorisation",
+              hint: {
+        text: "Directors will be authorised to file online for the company as soon as it's incorporated."
+      }
             },
             {
               value: "paper",
-              text: "Via an authentication code sent in the post"
+              text: "Authentication code",
+              hint: {
+        text: "We'll send the code to the registered office address once the company is incorporated. It takes up to 5 working days to arrive."
+      }
             }
           ]
         }) }}
