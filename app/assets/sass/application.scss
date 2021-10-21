@@ -130,10 +130,13 @@ nav{
 	background-color: govuk-colour("blue");
 	color: govuk-colour("white") !important;
 
-	.govuk-heading-l, p, li,	details,span, summary, a {
+	.govuk-heading-l, p, li,	details,span, summary, a, .govuk-inset-text {
 		color: govuk-colour("white") !important;
 	}
 
+	.govuk-inset-text  {
+		border-color: govuk-colour("white") !important; 
+	}
 	.govuk-button {
 		background-color: govuk-colour("white");
 		color: govuk-colour("black");
