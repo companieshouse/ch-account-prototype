@@ -24,7 +24,7 @@
           <form class="form" action="../choose-authorisation-type" method="get">
             <h1 class="govuk-heading-l">Digital authorisation</h1>
 
-              <p class="govuk-body-l">You can now digitally authorise directors to file information with Companies House online when you incorporate a company, instead of receiving a code in the post.</p>
+              <p class="govuk-body-l">You can now digitally authorise directors to file information online with Companies House when you incorporate a company, instead of receiving a code in the post.</p>
 
               <p class="govuk-body">This means directors can:</p>
               <ul class="govuk-list govuk-list--bullet">
@@ -38,6 +38,12 @@
               {{ govukInsetText({
                 text: "If you do not want to digitally authorise directors, you can choose to receive an authentication code in the post instead. It will be sent to the registered office address once the company is incorporated. It takes up to 5 working days to arrive. "
               }) }}
+
+
+                        {{ govukButton({
+                               text: "Continue"
+                             }) }}
+
 </form>
 
       </div>
