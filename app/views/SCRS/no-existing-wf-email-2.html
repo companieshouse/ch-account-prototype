@@ -19,53 +19,20 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Which email address does Bob Thompson want to use to create their WebFiling account?</h1>
       <form class="form" action="authorisation-check-and-confirm-2" method="get">
 
-        <div id="contact-hint" class="govuk-hint">
-          This should be an email address that only Bob Thompson can access.
-        </div>
-
-{% set emailHtml %}
-{{ govukInput({
-  id: "contact-by-email",
-  name: "contact-by-email",
-  type: "email",
-  autocomplete: "email",
-  spellcheck: false,
-  label: {
-    text: "Email address"
-  }
-}) }}
-{% endset -%}
-
-
-
-          {{ govukRadios({
-
-  idPrefix: "filing-reminders",
-  name: "filing-reminders",
-  fieldset: {
-    legend: {
-      text: " ",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "existing-email",
-      text: "hannah.salt@example.com"
-    },
-    {
-      value: "different-email",
-      text: "A different email address",
-      conditional: {
-        html: emailHtml
-      }
-    }
-  ]
-}) }}
+    
+        {{ govukInput({
+          label: {
+            text: "What is Bob Thompson's email address?",
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: "  This should be an email address that only Bob Thompson can access."
+          },
+          id: "BobEmail",
+          name: "BobEmail"
+        }) }}
 
           {{ govukButton({
           text: "Save and continue"

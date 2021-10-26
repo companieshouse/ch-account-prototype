@@ -21,9 +21,31 @@ Confirm you want to receive an authentication code in the post
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Confirm you want to receive an authentication code in the post</h1>
       <form class="form" action="" method="get">
+        {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
 
-      <p>We'll send the code to the registered office address once the company is incorporated.</p>
-      <p>It takes up to 5 working days to arrive.</p>
+                {
+                  key: {
+                    text: "How do you want the directors to be authorised to file online for the company?"
+                  },
+                  value: {
+                    html: "<p>We'll send the code to the registered office address once the company is incorporated.</p><p> It takes up to 5 working days to arrive.</p>"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "How do you want the directors to be authorised to file online for the company?"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
+
+
           {{ govukButton({
               text: "Confirm and continue"
             }) }}

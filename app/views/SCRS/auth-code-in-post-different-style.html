@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Which email address does Bob Thompson use to sign in to WebFiling?
+Confirm you want to receive an authentication code in the post
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,26 +19,14 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/SCRS/authorisation-check-and-confirm-2" method="get">
+      <h1 class="govuk-heading-l">Confirm you want to receive an authentication code in the post</h1>
+      <form class="form" action="" method="get">
 
-
-        {{ govukInput({
-          label: {
-            text: "Which email address does Bob Thompson use to sign in to WebFiling?",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          id: "BobEmail",
-          name: "BobEmail"
-        }) }}
-
-
-
-                  {{ govukButton({
-                  text: "Save and continue"
-                }) }}
-
-
+      <p>We'll send the code to the registered office address once the company is incorporated.</p>
+      <p>It takes up to 5 working days to arrive.</p>
+          {{ govukButton({
+              text: "Confirm and continue"
+            }) }}
 
         </form>
 
