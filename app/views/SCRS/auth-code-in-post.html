@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-Confirm you want to receive an authentication code in the post
+Check and confirm your answers before you continue - Set up a limited company and register for Corporation Tax - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,7 +19,7 @@ Confirm you want to receive an authentication code in the post
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Confirm you want to receive an authentication code in the post</h1>
+      <h1 class="govuk-heading-l">Check and confirm your answers before you continue</h1>
       <form class="form" action="" method="get">
         {{ govukSummaryList({
               classes: 'govuk-!-margin-bottom-9',
@@ -30,7 +30,7 @@ Confirm you want to receive an authentication code in the post
                     text: "How do you want the directors to be authorised to file online for the company?"
                   },
                   value: {
-                    html: "<p>We'll send the code to the registered office address once the company is incorporated.</p><p> It takes up to 5 working days to arrive.</p>"
+                    html: "<p>Authentication code in the post. Takes up to 5 working days to arrive.</p>"
                   },
                   actions: {
                     items: [
@@ -47,7 +47,7 @@ Confirm you want to receive an authentication code in the post
 
 
           {{ govukButton({
-              text: "Confirm and continue"
+              text: "Save and continue"
             }) }}
 
         </form>
