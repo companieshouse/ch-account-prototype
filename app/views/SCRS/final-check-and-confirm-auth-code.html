@@ -1,0 +1,400 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
+{% block pageTitle %}
+Check and confirm your answers
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <style >
+    .govuk-summary-list__key {
+      width: 50%;
+      !important;
+    }
+  </style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Check and confirm your answers</h1>
+
+      <span class="govuk-caption-l">Page 2 of 2</span>
+
+
+      <form class="form" action="" method="get">
+
+
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-7">Company business activity</h2>
+
+
+        {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
+
+              {
+                key: {
+                  text: "What are the company's business activities?"
+                },
+                value: {
+                  text: "Dormant Company"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "/SCRS/choose-authorisation-type",
+                      text: "Change",
+                      visuallyHiddenText: "What are the company's business activities?"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+
+
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-7">Directors</h2>
+          <h3 class="govuk-heading-m govuk-!-margin-top-2">Hannah Salt</h3>
+
+
+
+
+                  {{ govukSummaryList({
+                        classes: 'govuk-!-margin-bottom-9',
+                        rows: [
+                          {
+                            key: {
+                              text: "What is the director’s name?"
+                            },
+                            value: {
+                              text: "Hannah Salt"
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s name?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                              text: "What is the director’s date of birth?"
+                            },
+                            value: {
+                              text: "5 January 1978"
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s date of birth?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                              text: "What is the director’s nationality?"
+                            },
+                            value: {
+                              text: 'British'
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s nationality?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                              text: "What is the director’s job title?"
+                            },
+                            value: {
+                              text: 'Director'
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s job title?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                              text: "What is the director’s correspondence address?"
+                            },
+                            value: {
+                              html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s correspondence address?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                              text: "What is the director’s home address?"
+                            },
+                            value: {
+                              html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
+                            },
+                            actions: {
+                              items: [
+                                {
+                                  href: "#",
+                                  text: "Change",
+                                  visuallyHiddenText: "What is the director’s home address?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            key: {
+                                    text: "What is the director’s country of residence?"
+                                  },
+                                  value: {
+                                    html: "United Kingdom"
+                                  },
+                                  actions: {
+                                    items: [
+                                      {
+                                        href: "#",
+                                        text: "Change",
+                                        visuallyHiddenText: "What is the director’s country of residence?"
+                                      }
+                                    ]
+                                  }
+                                },
+
+
+                                {
+                                  key: {
+                                    text: "Which email address does Hannah Salt want to use to receive filing reminders?"
+                                  },
+                                  value: {
+                                    text: "hannah.salt@example.com"
+                                  },
+                                  actions: {
+                                    items: [
+                                      {
+                                        href: "#",
+                                        text: "Change",
+                                        visuallyHiddenText: "Which email address does Hannah Salt want to use to receive filing reminders?"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }) }}
+
+
+
+
+
+                            <h3 class="govuk-heading-m govuk-!-margin-top-2">Bob Thompson</h3>
+
+
+
+
+                                    {{ govukSummaryList({
+                                          classes: 'govuk-!-margin-bottom-9',
+                                          rows: [
+                                            {
+                                              key: {
+                                                text: "What is the director’s name?"
+                                              },
+                                              value: {
+                                                text: "Bob Thompson"
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s name?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                text: "What is the director’s date of birth?"
+                                              },
+                                              value: {
+                                                text: "15 June 1985"
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s date of birth?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                text: "What is the director’s nationality?"
+                                              },
+                                              value: {
+                                                text: 'British'
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s nationality?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                text: "What is the director’s job title?"
+                                              },
+                                              value: {
+                                                text: 'Director'
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s job title?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                text: "What is the director’s correspondence address?"
+                                              },
+                                              value: {
+                                                html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s correspondence address?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                text: "What is the director’s home address?"
+                                              },
+                                              value: {
+                                                html: "2nd Floor Red House<br> 17 London Road<br> London <br> SA73 8PH"
+                                              },
+                                              actions: {
+                                                items: [
+                                                  {
+                                                    href: "#",
+                                                    text: "Change",
+                                                    visuallyHiddenText: "What is the director’s home address?"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              key: {
+                                                      text: "What is the director’s country of residence?"
+                                                    },
+                                                    value: {
+                                                      html: "United Kingdom"
+                                                    },
+                                                    actions: {
+                                                      items: [
+                                                        {
+                                                          href: "#",
+                                                          text: "Change",
+                                                          visuallyHiddenText: "What is the director’s country of residence?"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+
+
+
+                                                ]
+                                              }) }}
+
+
+
+
+
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-7">Online filing authorisation</h2>
+
+
+        {{ govukSummaryList({
+              rows: [
+
+              {
+                key: {
+                  text: "How do you want the directors to be authorised to file online for the company?"
+                },
+                value: {
+                  text: "Authentication code in the post. Takes up to 5 working days to arrive."
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "/SCRS/choose-authorisation-type",
+                      text: "Change",
+                      visuallyHiddenText: "How do you want to authorise the directors?"
+                    }
+                  ]
+                }
+              }
+              ]
+            }) }}
+
+
+
+
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-7">Shareholder and shares</h2>
+
+<p class="govuk-body">Remaining content for this page as on live<p class="govuk-body">
+
+
+        {{ govukButton({
+        text: "Save and continue"
+      }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
