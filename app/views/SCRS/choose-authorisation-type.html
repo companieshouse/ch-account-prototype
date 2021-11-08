@@ -1,12 +1,10 @@
 {% extends "layout.html" %}
-
-
 {% block header %}
-    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+  {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
 {% endblock %}
 
 {% block pageTitle %}
-How do you want the directors to be authorised to file online for the company? - Set up a limited company and register for Corporation Tax - GOV.UK
+  How do you want the directors to be authorised to file online for the company? - Set up a limited company and register for Corporation Tax - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,25 +19,23 @@ How do you want the directors to be authorised to file online for the company? -
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/SCRS/choose-authorisation-type" method="post">
 
+        {% if errorChooseType == true %}
 
-      {% if errorChooseType == true %}
-
-        {{ govukErrorSummary({
+          {{ govukErrorSummary({
             titleText: "There is a problem",
-            errorList: errorList
+            errorList: [
+              {
+                text: "Enter your email address",
+                href: "#choose-type"
+              }
+              ]
           }) }}
 
-      {% endif %}
+        {% endif %}
 
+        {% if errorChooseType == true %}
 
-
-      <h1 class="govuk-heading-l">How do you want the directors to be authorised to file online for the company?</h1>
-
-  {% if errorChooseType == true %}
-
-
-
-  {{ govukRadios({
+          {{ govukRadios({
 
     idPrefix: "choose-type",
     name: "choose-type",
@@ -48,8 +44,8 @@ How do you want the directors to be authorised to file online for the company? -
     },
     fieldset: {
       legend: {
-        text: " ",
-        isPageHeading: false,
+        text: "How do you want the directors to be authorised to file online for the company?",
+        isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
@@ -71,20 +67,16 @@ How do you want the directors to be authorised to file online for the company? -
     ]
   }) }}
 
+        {% else %}
 
-
-
-  {% else %}
-
-
-        {{ govukRadios({
+          {{ govukRadios({
 
           idPrefix: "choose-type",
           name: "choose-type",
           fieldset: {
             legend: {
-              text: " ",
-              isPageHeading: false,
+              text: "How do you want the directors to be authorised to file online for the company?",
+              isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
@@ -107,17 +99,13 @@ How do you want the directors to be authorised to file online for the company? -
         }) }}
         {% endif %}
 
-
-
-                  {{ govukButton({
+        {{ govukButton({
                   text: "Save and continue"
                 }) }}
 
+      </form>
 
-
-        </form>
-
-      </div>
     </div>
+  </div>
 
-  {% endblock %}
+{% endblock %}

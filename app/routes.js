@@ -273,30 +273,17 @@ router.post('/sign-in', function (req, res) {
 // How do you want the directors to be authorised to file online for the company?
 
 router.post('/SCRS/choose-authorisation-type', function (req, res) {
-  var errors = []
-  var errorChooseType = false
-
   if (typeof req.session.data['choose-type'] === 'undefined') {
-    console.log('hello')
-    errorChooseType = true
-    errors.push({text: 'Enter your email address', href: '#choose-type'})
-    res.render('/SCRS/choose-authorisation-type', {
-      errorEmail: errorChooseType,
-      errorList: errors
+    res.render('SCRS/choose-authorisation-type', {
+      errorChooseType: true
     })
+    return
+  } if (req.session.data['choose-type'] === 'digital') {
+    res.redirect('digital-choose-director')
+  } else {
+    res.redirect('auth-code-in-post')
   }
-
-  if (req.session.data['choose-type'] === 'digital') {
-      res.redirect('digital-choose-director')
-    } else {
-      res.redirect('auth-code-in-post')
-    }
 })
-
-
-
-
-
 
 // new device sign in - verify option
 router.post('/mfa/choose-verify-option', function (req, res) {
@@ -593,12 +580,9 @@ router.post('/authentication-code-v2', function (req, res) {
 
 // / Added October 2021
 
-
-
-
 // Which directors do you want to authorise to file digitally?
 router.post('/SCRS/digital-choose-director', function (req, res) {
-    res.redirect('email-address')
+  res.redirect('email-address')
 })
 
 // Does Hannah Salt have an existing WebFiling account?
@@ -619,7 +603,7 @@ router.post('/SCRS/email-address-2', function (req, res) {
   }
 })
 
-//Does Hannah Salt want to receive filing reminders by email?
+// Does Hannah Salt want to receive filing reminders by email?
 router.post('/SCRS/director-details/filing-reminders-email', function (req, res) {
   if (req.session.data['filing-reminders'] === 'no') {
     res.redirect('check-and-confirm')
