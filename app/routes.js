@@ -270,6 +270,34 @@ router.post('/sign-in', function (req, res) {
   }
 })
 
+// How do you want the directors to be authorised to file online for the company?
+
+router.post('/SCRS/choose-authorisation-type', function (req, res) {
+  var errors = []
+  var errorChooseType = false
+
+  if (typeof req.session.data['choose-type'] === 'undefined') {
+    console.log('hello')
+    errorChooseType = true
+    errors.push({text: 'Enter your email address', href: '#choose-type'})
+    res.render('/SCRS/choose-authorisation-type', {
+      errorEmail: errorChooseType,
+      errorList: errors
+    })
+  }
+
+  if (req.session.data['choose-type'] === 'digital') {
+      res.redirect('digital-choose-director')
+    } else {
+      res.redirect('auth-code-in-post')
+    }
+})
+
+
+
+
+
+
 // new device sign in - verify option
 router.post('/mfa/choose-verify-option', function (req, res) {
   if (req.session.data['verify-option'] == 'mfa-email') {
@@ -566,14 +594,7 @@ router.post('/authentication-code-v2', function (req, res) {
 // / Added October 2021
 
 
-// How do you want to authorise the directors?
-router.post('/SCRS/choose-authorisation-type', function (req, res) {
-  if (req.session.data['choose-type'] === 'digital') {
-    res.redirect('digital-choose-director')
-  } else {
-    res.redirect('auth-code-in-post')
-  }
-})
+
 
 // Which directors do you want to authorise to file digitally?
 router.post('/SCRS/digital-choose-director', function (req, res) {

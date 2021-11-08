@@ -19,14 +19,65 @@ How do you want the directors to be authorised to file online for the company? -
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/SCRS/choose-authorisation-type" method="post">
+
+
+      {% if errorChooseType == true %}
+
+        {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+
+      {% endif %}
+
+
+
       <h1 class="govuk-heading-l">How do you want the directors to be authorised to file online for the company?</h1>
-      <form class="form" action="choose-authorisation-type" method="post">
+
+  {% if errorChooseType == true %}
+
+
+
+  {{ govukRadios({
+
+    idPrefix: "choose-type",
+    name: "choose-type",
+    errorMessage: {
+      text: "Enter your email address"
+    },
+    fieldset: {
+      legend: {
+        text: " ",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "digital",
+        text: "Digital authorisation",
+        hint: {
+  text: "Directors will be authorised to file online for the company as soon as it's incorporated. They will not need an authentication code."
+}
+      },
+      {
+        value: "paper",
+        text: "Authentication code",
+        hint: {
+  text: "We'll send the code to the registered office address once the company is incorporated. It takes up to 5 working days to arrive."
+}
+      }
+    ]
+  }) }}
 
 
 
 
+  {% else %}
 
-                  {{ govukRadios({
+
+        {{ govukRadios({
 
           idPrefix: "choose-type",
           name: "choose-type",
@@ -54,6 +105,9 @@ How do you want the directors to be authorised to file online for the company? -
             }
           ]
         }) }}
+        {% endif %}
+
+
 
                   {{ govukButton({
                   text: "Save and continue"
