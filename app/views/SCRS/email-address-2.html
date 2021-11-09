@@ -17,9 +17,33 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/SCRS/email-address-2" method="post">
+
+
+        {% if errorChooseEmail2 == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Select yes if Bob Thompson has an existing Companies House WebFiling account",
+                href: "#existingWFaccountBob"
+              }
+              ]
+          }) }}
+
+        {% endif %}
+
+        {% if errorChooseEmail2 == true %}
+
+
+
+
         {{ govukRadios({
           idPrefix: "existingWFaccountBob",
           name: "existingWFaccountBob",
+          errorMessage: {
+            text: "Select yes if Bob Thompson has an existing Companies House WebFiling account"
+          },
           fieldset: {
             legend: {
               text: "Does Bob Thompson have an existing Companies House WebFiling account?",
@@ -41,6 +65,36 @@
             }
            ]
         }) }}
+
+    {% else %}
+
+    {{ govukRadios({
+      idPrefix: "existingWFaccountBob",
+      name: "existingWFaccountBob",
+      fieldset: {
+        legend: {
+          text: "Does Bob Thompson have an existing Companies House WebFiling account?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "If they already have an account, we'll add the company to it once it's incorporated. If they do not have an existing account, we'll create one for them."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+       ]
+    }) }}
+  {% endif %}
+
+
         {{ govukDetails({
             summaryText: "What's a WebFiling account?",
             text: "This is used to access the Companies House WebFiling service, where you can submit company filings and updates online."

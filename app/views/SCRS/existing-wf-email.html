@@ -19,8 +19,22 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Which email address does Hannah Salt use to sign in to WebFiling?</h1>
-      <form class="form" action="/SCRS/email-address-2" method="get">
+      <form class="form" action="/SCRS/existing-wf-email" method="post">
+
+        {% if errorExistingWFEmail1 == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Enter your email address",
+                href: "#choose-type"
+              }
+              ]
+          }) }}
+
+        {% endif %}
+        <h1 class="govuk-heading-l">Which email address does Hannah Salt use to sign in to WebFiling?</h1>
 
         {% set emailHtml %}
         {{ govukInput({
@@ -37,10 +51,20 @@
 
 
 
+
+
+
+        {% if errorExistingWFEmail1 == true %}
+
+
+
                   {{ govukRadios({
 
-          idPrefix: "filing-reminders",
-          name: "filing-reminders",
+          idPrefix: "existingWFemail1",
+          name: "existingWFemail1",
+          errorMessage: {
+            text: "Enter your email address"
+          },
           fieldset: {
             legend: {
               text: " ",
@@ -62,6 +86,37 @@
             }
           ]
         }) }}
+
+
+          {% else %}
+          {{ govukRadios({
+
+  idPrefix: "existingWFemail1",
+  name: "existingWFemail1",
+  fieldset: {
+    legend: {
+      text: " ",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "existing-email",
+      text: "hannah.salt@example.com"
+    },
+    {
+      value: "different-email",
+      text: "A different email address",
+      conditional: {
+        html: emailHtml
+      }
+    }
+  ]
+}) }}
+
+          {% endif %}
+
 
                   {{ govukButton({
                   text: "Save and continue"

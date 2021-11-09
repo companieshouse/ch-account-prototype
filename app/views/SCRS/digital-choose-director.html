@@ -17,9 +17,33 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="digital-choose-director" method="post">
+
+
+        {% if errorChooseDirectors == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Select which directors you want to digitally authorise to file online",
+                href: "#digitalChooseDirectors"
+              }
+              ]
+          }) }}
+
+        {% endif %}
+
+        {% if errorChooseDirectors == true %}
+
+
+
+
         {{ govukCheckboxes({
           idPrefix: "digitalChooseDirectors",
           name: "digitalChooseDirectors",
+          errorMessage: {
+            text: "Select which directors you want to digitally authorise to file online"
+          },
           fieldset: {
             legend: {
               text: "Which directors do you want to digitally authorise to file online?",
@@ -54,6 +78,52 @@
             }
            ]
         }) }}
+
+
+        {% else %}
+
+        {{ govukCheckboxes({
+          idPrefix: "digitalChooseDirectors",
+          name: "digitalChooseDirectors",
+
+          fieldset: {
+            legend: {
+              text: "Which directors do you want to digitally authorise to file online?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply. You must select at least one director."
+          },
+          items: [
+            {
+              value: "hannah",
+              text: "Hannah Salt",
+              hint: {
+        text: "Born 8 September 1987"
+      }
+            },
+            {
+              value: "bob",
+              text: "Bob Thompson",
+              hint: {
+        text: "Born 27 January 1985"
+      }
+            },
+            {
+              value: "lisa",
+              text: "Lisa Miller",
+              hint: {
+        text: "Born 18 October 1986"
+      }
+            }
+           ]
+        }) }}
+
+        {% endif %}
+
+
 
         {{ govukButton({
           text: "Continue"

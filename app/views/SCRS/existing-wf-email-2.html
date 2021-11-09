@@ -19,20 +19,57 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/SCRS/authorisation-check-and-confirm-2" method="get">
+      <form class="form" action="/SCRS/existing-wf-email-2" method="post">
+
+
+        {% if errorBobEmail == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Enter your email address",
+                href: "#BobEmail"
+              }
+              ]
+          }) }}
+
+        {% endif %}
+
+
+
+        {% if errorBobEmail == true %}
 
 
         {{ govukInput({
-          label: {
-            text: "Which email address does Bob Thompson use to sign in to WebFiling?",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          id: "BobEmail",
-          name: "BobEmail"
-        }) }}
+            label: {
+              text: "Which email address does Bob Thompson use to sign in to WebFiling?",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            id: "BobEmail",
+            name: "BobEmail",
+            errorMessage: {
+              text: "Enter your email address"
+            }
+          }) }}
 
 
+
+            {% else %}
+
+
+            {{ govukInput({
+                label: {
+                  text: "Which email address does Bob Thompson use to sign in to WebFiling?",
+                  classes: "govuk-label--l",
+                  isPageHeading: true
+                },
+                id: "BobEmail",
+                name: "BobEmail"
+              }) }}
+
+        {% endif %}
 
                   {{ govukButton({
                   text: "Save and continue"
