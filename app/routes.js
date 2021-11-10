@@ -660,7 +660,7 @@ router.post('/SCRS/email-address-2', function (req, res) {
 
 
 router.post('/SCRS/existing-wf-email-2', function (req, res) {
-  if (typeof req.session.data['BobEmail'] === 'undefined') {
+  if (typeof req.session.data['BobEmail'] === 'hannah.salt@example.com') {
     res.render('SCRS/existing-wf-email-2', {
       errorBobEmail: true
     })
