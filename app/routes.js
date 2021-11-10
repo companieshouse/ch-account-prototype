@@ -298,7 +298,6 @@ router.post('/SCRS/digital-choose-director', function (req, res) {
   }
 })
 
-
 // new device sign in - verify option
 router.post('/mfa/choose-verify-option', function (req, res) {
   if (req.session.data['verify-option'] == 'mfa-email') {
@@ -594,8 +593,6 @@ router.post('/authentication-code-v2', function (req, res) {
 
 // / Added October 2021
 
-
-
 // Does Hannah Salt have an existing WebFiling account?
 
 router.post('/SCRS/email-address', function (req, res) {
@@ -604,40 +601,38 @@ router.post('/SCRS/email-address', function (req, res) {
       errorChooseEmail1: true
     })
     return
-  }  if (req.session.data['existingWFaccount'] === 'no') {
-      res.redirect('no-existing-wf-email')
-    } else {
-      res.redirect('existing-wf-email')
-    }
+  } if (req.session.data['existingWFaccount'] === 'no') {
+    res.redirect('no-existing-wf-email')
+  } else {
+    res.redirect('existing-wf-email')
+  }
 })
-
-
 
 // Which email address does Hannah Salt use to sign in to WebFiling?
 
 router.post('/SCRS/existing-wf-email', function (req, res) {
   if (typeof req.session.data['existingWFemail1'] === 'undefined') {
     res.render('SCRS/existing-wf-email', {
-     errorExistingWFEmail1: true
+      errorExistingWFEmail1: true
     })
     return
-   } else {
-      res.redirect('email-address-2')
-    }
-  })
+  } else {
+    res.redirect('email-address-2')
+  }
+})
 
 // Which email address does Hannah Salt want to use to create their WebFiling account?
 
-  router.post('/SCRS/no-existing-wf-email', function (req, res) {
-    if (typeof req.session.data['NoExistingEmail1'] === 'undefined') {
-      res.render('SCRS/no-existing-wf-email', {
-       errorNoExistingEmail1: true
-      })
-      return
-     } else {
-        res.redirect('email-address-2')
-      }
+router.post('/SCRS/no-existing-wf-email', function (req, res) {
+  if (typeof req.session.data['NoExistingEmail1'] === 'undefined') {
+    res.render('SCRS/no-existing-wf-email', {
+      errorNoExistingEmail1: true
     })
+    return
+  } else {
+    res.redirect('email-address-2')
+  }
+})
 
 // Does Bob Pepper have an existing WebFiling account?
 
@@ -647,31 +642,25 @@ router.post('/SCRS/email-address-2', function (req, res) {
       errorChooseEmail2: true
     })
     return
-  }    if (req.session.data['existingWFaccountBob'] === 'no') {
-      res.redirect('no-existing-wf-email-2')
-    } else {
-      res.redirect('existing-wf-email-2')
-    }
-  })
-
+  } if (req.session.data['existingWFaccountBob'] === 'no') {
+    res.redirect('no-existing-wf-email-2')
+  } else {
+    res.redirect('existing-wf-email-2')
+  }
+})
 
 // Which email address does Bob Thompson use to sign in to WebFiling?
 
-
-
 router.post('/SCRS/existing-wf-email-2', function (req, res) {
-  if (typeof req.session.data['BobEmail'] === 'hannah.salt@example.com') {
+  if (req.session.data['BobEmail'] === 'hannah.salt@example.com') {
     res.render('SCRS/existing-wf-email-2', {
       errorBobEmail: true
     })
     return
-    } else {
-      res.redirect('/SCRS/authorisation-check-and-confirm-2')
-    }
-  })
-
-
-
+  } else {
+    res.redirect('/SCRS/authorisation-check-and-confirm-2')
+  }
+})
 
 // Does Hannah Salt want to receive filing reminders by email?
 router.post('/SCRS/director-details/filing-reminders-email', function (req, res) {

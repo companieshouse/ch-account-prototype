@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
-
 {% block header %}
-    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+  {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
 {% endblock %}
 
 {% block pageTitle %}
@@ -20,10 +19,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/SCRS/existing-wf-email-2" method="post">
-
-
         {% if errorBobEmail == true %}
-
           {{ govukErrorSummary({
             titleText: "There is a problem",
             errorList: [
@@ -33,15 +29,9 @@
               }
               ]
           }) }}
-
         {% endif %}
-
-
-
         {% if errorBobEmail == true %}
-
-
-        {{ govukInput({
+          {{ govukInput({
             label: {
               text: "Which email address does Bob Thompson use to sign in to WebFiling?",
               classes: "govuk-label--l",
@@ -53,13 +43,8 @@
               text: "Enter your email address"
             }
           }) }}
-
-
-
-            {% else %}
-
-
-            {{ govukInput({
+        {% else %}
+          {{ govukInput({
                 label: {
                   text: "Which email address does Bob Thompson use to sign in to WebFiling?",
                   classes: "govuk-label--l",
@@ -68,18 +53,11 @@
                 id: "BobEmail",
                 name: "BobEmail"
               }) }}
-
         {% endif %}
-
-                  {{ govukButton({
+        {{ govukButton({
                   text: "Save and continue"
                 }) }}
-
-
-
-        </form>
-
-      </div>
+      </form>
     </div>
-
-  {% endblock %}
+  </div>
+{% endblock %}
