@@ -651,9 +651,9 @@ router.post('/SCRS/email-address-2', function (req, res) {
 
 // Which email address does Bob Thompson use to sign in to WebFiling?
 
-router.post('/SCRS/existing-wf-email-2', function (req, res) {
+router.post('/SCRS/no-existing-wf-email-2', function (req, res) {
   if (req.session.data['BobEmail'] === 'hannah.salt@example.com') {
-    res.render('SCRS/existing-wf-email-2', {
+    res.render('SCRS/no-existing-wf-email-2', {
       errorBobEmail: true
     })
     return

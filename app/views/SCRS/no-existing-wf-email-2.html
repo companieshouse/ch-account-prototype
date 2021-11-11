@@ -19,8 +19,23 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="authorisation-check-and-confirm-2" method="get">
+      <form class="form" action="/SCRS/no-existing-wf-email-2" method="post">
 
+
+
+      {% if errorBobEmail == true %}
+        {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Enter an email address that is different to hannah.salt@example.com",
+              href: "#BobEmail"
+            }
+            ]
+        }) }}
+      {% endif %}
+
+      {% if errorBobEmail == true %}
 
         {{ govukInput({
           label: {
@@ -31,8 +46,26 @@
             text: "This should be an email address that only Bob Thompson can access. We'll use it to create a WebFiling account once the company is incorporated."
           },
           id: "BobEmail",
-          name: "BobEmail"
+          name: "BobEmail",
+          errorMessage: {
+            text: "Enter an email address that is different to hannah.salt@example.com"
+          }
         }) }}
+
+                {% else %}
+
+                {{ govukInput({
+                  label: {
+                    text: "What is Bob Thompson's email address?",
+                    classes: "govuk-label--l"
+                  },
+                  hint: {
+                    text: "This should be an email address that only Bob Thompson can access. We'll use it to create a WebFiling account once the company is incorporated."
+                  },
+                  id: "BobEmail",
+                  name: "BobEmail"
+                }) }}
+                {% endif %}
 
           {{ govukButton({
           text: "Save and continue"
