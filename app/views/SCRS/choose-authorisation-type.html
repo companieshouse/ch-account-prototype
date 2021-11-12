@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  How do you want the directors to be authorised to file online for the company? - Set up a limited company and register for Corporation Tax - GOV.UK
+  Do you want the directors to be digitally authorised to file for the company? - Set up a limited company and register for Corporation Tax - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -44,22 +44,23 @@
     },
     fieldset: {
       legend: {
-        text: "How do you want the directors to be authorised to file online for the company?",
+        text: "Do you want the directors to be digitally authorised to file for the company?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+
     items: [
       {
         value: "digital",
-        text: "Digital authorisation",
+        text: "Yes",
         hint: {
   text: "Directors will be authorised to file online for the company as soon as it's incorporated. They will not need an authentication code."
 }
       },
       {
         value: "paper",
-        text: "Authentication code",
+        text: "No",
         hint: {
   text: "We'll send the code to the registered office address once the company is incorporated. It takes up to 5 working days to arrive."
 }
@@ -75,24 +76,27 @@
           name: "choose-type",
           fieldset: {
             legend: {
-              text: "How do you want the directors to be authorised to file online for the company?",
+              text: "Do you want the directors to be digitally authorised to file for the company?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
+          hint: {
+  text: "You can choose which directors you want to be digitally authorised."
+},
           items: [
             {
               value: "digital",
-              text: "Digital authorisation",
+              text: "Yes",
               hint: {
-        text: "Directors will be authorised to file online for the company as soon as it's incorporated. They will not need an authentication code."
+        text: ""
       }
             },
             {
               value: "paper",
-              text: "Authentication code",
+              text: "No",
               hint: {
-        text: "We'll send the code to the registered office address once the company is incorporated. It takes up to 5 working days to arrive."
+        text: ""
       }
             }
           ]
