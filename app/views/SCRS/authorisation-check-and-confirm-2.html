@@ -50,15 +50,7 @@
                     }
                   ]
                 }
-              }
-            ]
-          }) }}
-
-
-          {{ govukSummaryList({
-                classes: 'govuk-!-margin-bottom-9',
-                rows: [
-
+              },
                 {
                   key: {
                     text: "Which directors do you want to digitally authorise to file online?"
@@ -88,32 +80,66 @@
 
               {
                 key: {
-                  text: "Which email address does Hannah Salt use or want to use for their WebFiling account?"
+                  text: "Does Hannah Salt have an existing Companies House WebFiling account?"
                 },
                 value: {
-                  text: "info@flowers.com"
+                  text: "Yes"
                 },
                 actions: {
                   items: [
                     {
                       href: "/SCRS/email-address",
                       text: "Change",
-                      visuallyHiddenText: "Which email address does Hannah Salt use or want to use for their WebFiling account"
+                      visuallyHiddenText: "Does Hannah Salt have an existing Companies House WebFiling account?"
                     }
                   ]
                 }
-              }
-            ]
-          }) }}
+              },
+                {
+                  key: {
+                    text: "Which email address does Hannah Salt use to sign in to WebFiling?"
+                  },
+                  value: {
+                    text: "info@flowers.com"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "/SCRS/existing-wf-email",
+                        text: "Change",
+                        visuallyHiddenText: "Which email address does Hannah Salt use to sign in to WebFiling?"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
 
               <h2 class="govuk-heading-m">Bob Thompson</h2>
               {{ govukSummaryList({
-                    classes: 'govuk-!-margin-bottom-9',
-                    rows: [
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
 
+              {
+                key: {
+                  text: "Does Bob Thompson have an existing Companies House WebFiling account?"
+                },
+                value: {
+                  text: "No"
+                },
+                actions: {
+                  items: [
                     {
+                      href: "/SCRS/email-address-2",
+                      text: "Change",
+                      visuallyHiddenText: "Does Bob Thompson have an existing Companies House WebFiling account?"
+                    }
+                  ]
+                }
+              },
+                {
                   key: {
-                    text: "Which email address does Bob Thompson use or want to use for their WebFiling account?"
+                    text: "What is Bob Thompson's email address?"
                   },
                   value: {
                     text: "bob.thompson@example.com"
@@ -121,15 +147,17 @@
                   actions: {
                     items: [
                       {
-                        href: "/SCRS/email-address-2",
+                        href: "/SCRS/no-existing-wf-email-2",
                         text: "Change",
-                        visuallyHiddenText: "Which email address does Hannah Salt use or want to use for their WebFiling account"
+                        visuallyHiddenText: "What is Bob Thompson's email address?"
                       }
                     ]
                   }
                 }
               ]
             }) }}
+
+
         {{ govukButton({
         text: "Confirm and continue"
       }) }}
