@@ -12,20 +12,32 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-
-
-            {% set html %}
-              <p class="govuk-notification-banner__heading">Try our new File a confirmation statement service</p>
-            <p>If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our <a class="govuk-notification-banner__link" href="https://find-and-update.company-information.service.gov.uk/confirmation-statement">new File a confirmation statement service</a>.<p>
-              <p>You will not be able to pay with a Companies House payment account.</p>
-            {% endset %}
-
-            {{ govukNotificationBanner({
-              html: html,
-              titleText: 'For information'
-            }) }}
- 
-
+      {# CH Notification banner #}
+      <div class="ch-notification-banner" role="region">
+        <div class="ch-notification-title">
+          For information
+          {# By default disable the following button by setting its CSS display attriute to "none" (it isn't rendered to the viewport) #}
+          <button class="ch-show-hide-button" id="ch-show-hide-button" style="display: none;" onclick="chShowHideNotificationBanner()">
+            Hide message
+          </button>
+          {# In the event JavaScript is available, then hard reference the above button ID and set its CSS display attribute to "block" (making it visible) #}
+          <script>
+            document.getElementById("ch-show-hide-button").style.display = "block";
+          </script>
+        </div>
+        <div class="ch-notification-content" id="ch-notification-content">
+          <p class="govuk-notification-banner__heading">
+            Try our new File a confirmation statement service
+          </p>
+          <p>
+            If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our 
+            <a class="govuk-notification-banner__link" href="https://find-and-update.company-information.service.gov.uk/confirmation-statement">new File a confirmation statement service</a>.
+          </p>
+          <p>
+            You will not be able to pay with a Companies House payment account.
+          </p>
+        </div>
+      </div>
 
         <h1 class="govuk-heading-l">Home
         <span class="govuk-caption-xl" >hannah.salt@example.com</span> </h1>
