@@ -11,18 +11,11 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/sign-in-summary" method="post" novalidate>
 
-        {% set html %}
-          <p class="govuk-notification-banner__heading">Try our new File a confirmation statement service</p>
-          <p>If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our <a class="govuk-notification-banner__link" href="https://find-and-update.company-information.service.gov.uk/confirmation-statement">new File a confirmation statement service</a>.<p>
-          <p>You will not be able to pay with a Companies House payment account.</p>
-        {% endset %}
-
-        {{ govukNotificationBanner({
-          html: html,
-          titleText: 'For information'
-        }) }}
-
       <h1 class="govuk-heading-xl">Sign in to WebFiling</h1>
+
+      <div class="govuk-inset-text">
+Your WebFiling account has changed. <a href="https://www.gov.uk/government/news/companies-house-will-soon-be-introducing-a-new-webfiling-account" class="govuk-link">Read about the introduction of the new WebFiling account</a>.</p>
+      </div>
 
       <p class="govuk-body">In WebFiling, you can:</p>
       <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
@@ -33,6 +26,8 @@
         <li>digitally authorise people to file for your company online</li>
       </ul>
 
+<h2 class="govuk-heading-m">Try our new File a confirmation statement service</h2>
+<p class="govuk-body">If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our <a href="https://find-and-update.company-information.service.gov.uk/confirmation-statement" class="govuk-link">new File a confirmation statement service (opens in a new tab)</a>. You will not be able to pay with a Companies House payment account.</p>
 
           {{ govukButton({
           text: "Sign in",
@@ -48,6 +43,8 @@
 
 
         <p> <a href="https://ewf.companieshouse.gov.uk/sframe?name=aboutWebFiling&lang=en" class="govuk-link">Who can use WebFiling</a><p>
+
+        <p> <a href="https://ewf-kermit.companieshouse.gov.uk/help/en/stdwf/glossaryHelp.html" class="govuk-link">Read the WebFiling guidance</a><p>
 
         <p> <a href="https://ewf.companieshouse.gov.uk/" class="govuk-link">I need to file a charge (mortgage) document using a lender authentication code</a><p>
 
