@@ -1,0 +1,64 @@
+.account-menu{
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+//item in menu
+.account-menu-item{
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+//current item in menu 
+.account-menu__item--current {
+
+    padding-bottom: 18px;
+    border-bottom: 4px solid #1d70b8;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+//menu link style
+.account-menu-link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+    line-height: 1.25;
+    text-decoration: none;
+    margin-right: 3ex;
+}
+
+.accounts-menu__item {
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+
+.account-menu-link-description {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.1428571429;
+    display: block;
+    margin-top: 5px;
+}
+
+

@@ -1,0 +1,101 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Manage your account <span class="govuk-caption-m" style = "padding-top:0.5em;">Make changes to your details and account settings</span></h1>
+
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Full name"
+              },
+              value: {
+                text: "Hannah Salt"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Email"
+              },
+              value: {
+                text: "hannah.salt@example.com"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Password"
+              },
+              value: {
+                html: "******************"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "../manage-your-account/password/change-your-password",
+                    text: "Change",
+                    visuallyHiddenText: "contact information"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Mobile number"
+              },
+              value: {
+                html: ''
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Add",
+                    visuallyHiddenText: "contact information"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+      </div>
+
+    </div>
+</div>
+        
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+{% endblock %}
+

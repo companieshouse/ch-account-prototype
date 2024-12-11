@@ -1,0 +1,73 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Your companies - Authorised person's details - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/authorised-person-hannah" method="post" novalidate>
+
+
+
+    <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
+
+    <h1 class="govuk-heading-xl">Authorised person's details</h1>
+
+    {{ govukSummaryList({
+                rows: [
+                  {
+                    key: {
+                      text: "Name"
+                    },
+                    value: {
+                      text: "Hannah Salt"
+                    }
+                  },
+
+                  {
+                    key: {
+                      text: "Email address"
+                    },
+                    value: {
+                      text: "hannah.salt@example.com"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Authorisation status"
+                    },
+                    value: {
+                      html: "<strong class='govuk-tag govuk-tag--green'> Confirmed </strong>"
+                    }
+                  }
+                ]
+              }) }}
+
+             <p><a href="../../user-account/remove-authorised-person/remove-authorised-person-hannah" class="govuk-link">Remove digital authorisation to file online for this company</a><p></p>
+
+
+            </div>
+        </div>
+
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

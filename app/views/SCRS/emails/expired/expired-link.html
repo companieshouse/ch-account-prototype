@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Company incorporation email
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Link has expired</h1>
+
+        <p class="govuk-body">
+          The link to access your WebFiling account has expired.
+        </p>
+
+        <p class="govuk-body">
+          We've sent an email with a new link to <strong>hannah.salt@example.com</strong>.</p>
+          <p class="govuk-body">
+            It may take a few minutes to arrive.</p>
+          {{ govukDetails({
+              summaryText: "I have not received an email",
+              html: "Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-code' class='govuk-link'>ask us to send you another email</a>."
+            }) }}
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}

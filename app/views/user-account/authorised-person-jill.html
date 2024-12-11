@@ -1,0 +1,82 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:""
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl" >FLOWERS LIMITED</span>
+
+    <h1 class="govuk-heading-xl">Authorised person's details</h1>
+
+    {{ govukSummaryList({
+                rows: [
+                  {
+                    key: {
+                      text: "Name"
+                    },
+                    value: {
+                      text: "Jill Edwards"
+                    }
+                  },
+
+                  {
+                    key: {
+                      text: "Email address"
+                    },
+                    value: {
+                      text: "jill.edwards@example.com"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Authorisation status"
+                    },
+                    value: {
+                      html: "<strong class='govuk-tag govuk-tag--yellow'> Awaiting confirmation </strong> <p class='govuk-body govuk-!-font-weight-normal'><br>We have sent an email to jill.edwards@example.com. They must select the link in the email to be digitally authorised to file online for FLOWERS LIMITED.</p>"
+                      },
+                    actions: {
+                      items: [
+                        {
+                          href: "authorised-person-jill-resend-email",
+                          text: "Resend email",
+                          visuallyHiddenText: "agents email address"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+              {{ govukButton({
+                text: "Cancel authorisation",
+                classes: "govuk-button--warning",
+                href:"authorised-person-jill-cancel-request"
+              }) }}
+
+
+
+            </div>
+        </div>
+</div>
+</div>
+</div>
+
+
+{% endblock %}

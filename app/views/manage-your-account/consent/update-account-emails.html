@@ -1,0 +1,62 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Manage account - Can we email you to tell you about a new message in your account? - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"./user-account/manage-account"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "sign-in",
+          name: "sign-in",
+          fieldset: {
+            legend: {
+              text: "Can we email you to tell you about a new message in your account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+            text: "In the future, we'd like to send you emails to let you know you've received a new message in your account"
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Save",
+          preventDoubleClick: true,
+          href:"./manage-account-notification"
+        }) }}
+
+       <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+
+    </div>
+  </div>
+{% endblock %}

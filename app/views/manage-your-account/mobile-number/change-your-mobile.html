@@ -1,0 +1,95 @@
+{% extends "layout/layout-account-signout-manage-account.html" %}
+
+{% block pageTitle %}
+  Manage account - Change your mobile number - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"./user-account/manage-account"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <script>
+    function showPassword() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("show-hide");
+    if (x.type === "password") {
+      x.type = "text";
+      y.text = 'Hide'
+    } else {
+      x.type = "password";
+      y.text = 'Show'
+    }
+  }
+
+    function showConfirmPassword() {
+    var x = document.getElementById("confirm-password");
+    var y = document.getElementById("show-hide-confirm");
+    if (x.type === "password") {
+      x.type = "text";
+      y.text = 'Hide'
+    } else {
+      x.type = "password";
+      y.text = 'Show'
+    }
+  }
+  </script>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+        <h1 class="govuk-heading-l">Update your mobile number</h1>
+
+
+
+        {{ govukInput({
+            label: {
+            text: "Mobile number"
+          },
+          hint:{
+            text:"Enter the mobile number you want to be stored in this account. We'll send a security code to this number by text message."
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          spellcheck: false
+          }) }}
+
+
+
+          {{ govukInput({
+            label: {
+            text: "Password"
+          },
+          hint:{
+            text:"Enter your WebFiling account password."
+          },
+          suffix: {
+            html: "<a id='show-hide' href='javascript:showPassword();' class='govuk-link' style = 'padding: 1em'>Show</a>"
+          },
+          id: "password",
+          name: "password",
+          type: "password"
+          }) }}
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          preventDoubleClick: true,
+          href:"./check-your-phone"
+        }) }}
+
+        <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+
+    </div>
+  </div>
+{% endblock %}

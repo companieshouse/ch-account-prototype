@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Activate your Companies House account
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/sign-in" method="post" novalidate>
+
+    <h1 class="govuk-heading-l">Companies House WebFiling account:<br>email address already registered</h1>
+
+    <p class="govuk-body">You’ve received this email because you tried to create a new WebFiling account using the email address peterdenton@example.com.<br>
+
+    </p>
+    <p class="govuk-body">This email address has already been used to create a WebFiling account.<br>
+
+    </p>
+    <p class="govuk-body">If you've forgotten your password, you can reset it by selecting the following link:<br>
+      <a href="#" class="govuk-link">https://find-and-update.company-information.service.gov.uk/create_password_sdfhjbsjhbfjs_jhsdjhbsjhbjh</a>
+    </p>
+    {{ govukInsetText({
+    text: "This link expires in 24 hours. If you run out of time, return to WebFiling and select 'I've forgotten my password'."
+  }) }}
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}

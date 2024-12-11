@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Which directors do you want to digitally authorise to file online? - Set up a limited company and register for Corporation Tax - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="digital-choose-director" method="post">
+
+
+        {% if errorChooseDirectors == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Select the directors you want to digitally authorise to file online",
+                href: "#digitalChooseDirectors"
+              }
+              ]
+          }) }}
+
+        {% endif %}
+
+        {% if errorChooseDirectors == true %}
+
+
+
+
+        {{ govukCheckboxes({
+          idPrefix: "digitalChooseDirectors",
+          name: "digitalChooseDirectors",
+          errorMessage: {
+            text: "Select the directors you want to digitally authorise to file online"
+          },
+          fieldset: {
+            legend: {
+              text: "Which directors do you want to digitally authorise to file online?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply. You must select at least one director."
+          },
+          items: [
+            {
+              value: "hannah",
+              text: "Hannah Salt",
+              hint: {
+        text: "Born 8 September 1987"
+      }
+            },
+            {
+              value: "bob",
+              text: "Bob Thompson",
+              hint: {
+        text: "Born 27 January 1985"
+      }
+            },
+            {
+              value: "lisa",
+              text: "Lisa Miller",
+              hint: {
+        text: "Born 18 October 1986"
+      }
+            }
+           ]
+        }) }}
+
+
+        {% else %}
+
+        {{ govukCheckboxes({
+          idPrefix: "digitalChooseDirectors",
+          name: "digitalChooseDirectors",
+
+          fieldset: {
+            legend: {
+              text: "Which directors do you want to digitally authorise to file online?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply. You must select at least one director."
+          },
+          items: [
+            {
+              value: "hannah",
+              text: "Hannah Salt",
+              hint: {
+        text: "Born 8 September 1987"
+      }
+            },
+            {
+              value: "bob",
+              text: "Bob Thompson",
+              hint: {
+        text: "Born 27 January 1985"
+      }
+            },
+            {
+              value: "lisa",
+              text: "Lisa Miller",
+              hint: {
+        text: "Born 18 October 1986"
+      }
+            }
+           ]
+        }) }}
+
+        {% endif %}
+
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

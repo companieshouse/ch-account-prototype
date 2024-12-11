@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Send new security code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/mfa/check-your-email" method="post" novalidate>
+
+
+      <h1 class="govuk-heading-xl">Send a new email</h1>
+
+       <p class='govuk-body'>We'll send another email to <strong>hannah.salt@example.com</strong> which contains a security code.</p>
+
+
+        {{ govukButton({
+          text: "Send email",
+          href:"check-your-email-resent-notification"
+        }) }}
+
+        <p class='govuk-body'> <a href="check-your-phone" class="govuk-link">Get security code by text message instead</a></p>
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

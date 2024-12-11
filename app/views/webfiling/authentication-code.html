@@ -1,0 +1,78 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Enter the company authentication code - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"add-a-company"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="webfiling/authentication-code" method="post" novalidate>
+
+              {% if errorAuthenticationCode == true %}
+
+                {{ govukErrorSummary({
+                    titleText: "There is a problem",
+                    errorList: errorList
+                  }) }}
+
+              {% endif %}
+
+
+              {% if errorAuthenticationCode == true %}
+
+              {{ govukInput({
+                label: {
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>  Enter the company authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
+                },
+
+                classes: "govuk-input--width-10",
+                id: "authentication-code",
+                name: "authentication-code"
+              }) }}
+
+               {% else %}
+
+               {{ govukInput({
+                label: {
+                  html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span> Enter the company authentication code",
+                  classes: "govuk-label--xl",
+                  isPageHeading: true
+                },
+
+                classes: "govuk-input--width-10",
+                id: "authentication-code",
+                name: "authentication-code"
+              }) }}
+
+              {% endif %}
+
+
+
+              {{ govukButton({
+                text: "Continue",
+                href:"add-company-to-account"
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "Help with authentication code",
+                html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.<br><br> <p class="govuk-body"><a href="../request-an-authentication-code" class="govuk-link">Request an authentication code</a></p>'
+              }) }}
+
+              <p> <a href="#" class="govuk-link">I need to file a charge (mortgage) document using a lender authentication code</a><p>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

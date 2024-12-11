@@ -1,0 +1,118 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Request an authentication code
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href:"check-company-details"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+
+<div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <form action="/request-authorisation-to-file" method="post">
+
+            {% if errorRequestAuthorisation  == true %}
+
+            {{ govukErrorSummary({
+                titleText: "There is a problem",
+                errorList: errorList
+            }) }}
+
+            {% endif %}
+
+            {% if errorRequestAuthorisation  == true %}
+
+            {{ govukRadios({
+            idPrefix: "request-authorisation",
+            name: "request-authorisation",
+            fieldset: {
+              legend: {
+                text: "Do you want to request authorisation to file for this company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            hint:{
+              text:"We will send an email request to the person or people who added this company to their account using the authentication code."
+            },
+            errorMessage: {
+              text: "Select yes to request authorisation to file for this company"
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: "<p> We will send an email request to the person or people who added this company to their account using the authentication code.</p>"
+                }
+              },
+              {
+                value: "no",
+                text: "No",
+                conditional: {
+                  html: "<p> Send the authentication code sent to the regsitered office address which will take 5 days.</p>"
+                }
+              }
+            ]
+          }) }}
+
+          {% else %}
+
+          {{ govukRadios({
+            idPrefix: "request-authorisation",
+            name: "request-authorisation",
+            fieldset: {
+              legend: {
+                text: "Do you want to request authorisation to file for this company?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: "<p> We'll send an email request to the person or people who added this company to their account using the authentication code. As soon as the request has been granted, you will be authorised to file online for this company.</p>"
+                }
+
+              },
+              {
+                value: "no",
+                text: "No",
+                conditional: {
+                  html: "<p>We can send the authentication code to the registered office address by post. This usually takes up to 5 days.</p>"
+                }
+              }
+            ]
+          }) }}
+
+          {% endif %}
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+</div>
+
+
+{% endblock %}

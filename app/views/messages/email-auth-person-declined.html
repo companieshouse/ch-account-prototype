@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Activate your Companies House account
+{% endblock %}
+
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/sign-in" method="post" novalidate>
+
+    <h1 class="govuk-heading-l">Companies House WebFiling account:
+Jill Edwards declined to be digitally authorised to file online for FLOWERS LIMITED
+</h1>
+
+<p class="govuk-body">If you were not expecting Jill Edwards to decline, you must resolve this within the company. Companies House cannot give or remove digital authorisation to file online for a company.</p>
+
+
+</form>
+
+  </div>
+  </div>
+{% endblock %}

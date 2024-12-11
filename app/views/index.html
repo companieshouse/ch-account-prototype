@@ -1,0 +1,360 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Shortcuts for Companies House account
+{% endblock %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Companies House account" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">(Prototype V9)</span>
+
+      <h1 class="govuk-heading-l">Companies House account</h1>
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">WebFiling account</h2>
+
+        <p class="govuk-body">Journeys:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Create an account</li>
+            <li>First time a WebFiling user is sigining in to their account</li>
+          </ul>
+
+
+        {{ govukButton({
+          text: "Start the webfiling journey",
+          classes: "govuk-button--secondary",
+          href: "sign-in-webfiling"
+        }) }}
+
+        <p class="govuk-body">Journey: Sign in to WebFiling with multi-factor authentication</p>
+
+        {{ govukButton({
+          text: "Sign in to WebFiling",
+          classes: "govuk-button--secondary",
+          href: "sign-in-MFA-webfiling"
+        }) }}
+
+        <ul class="govuk-list">
+          <li>
+            <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="../messages/security-code-email" class="govuk-link" target="blank">Email security code (opens in new tab)</a>
+          </li>
+
+
+
+<!--
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Account homepage</h2>
+
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href="../user-account/home-no-companies">Homepage (opens in a new tab)</a>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="">Mulitple companies within account (opens in a new tab)</a>
+          </li>
+        </ul> -->
+
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h2 class="govuk-heading-m">Confirm or decline authorised person email request</h2>
+
+        <p class="govuk-body">Scenario: Hannah Salt has authorised Hannah Salt to file online for FLOWERS LIMITED. Jill Edwards needs to sign in and confirm or decline the request. </p>
+
+        {{ govukButton({
+          text: "User with an existing account",
+          classes: "govuk-button--secondary",
+          href: "/confirm-presenter-email"
+        }) }}
+
+        <p class="govuk-body">Scenario: If a user doesn't have an account they will need to create an account before they can accept or decline the request.</p>
+
+        {{ govukButton({
+          text: "User who doesn't have an account",
+          classes: "govuk-button--secondary",
+          href: "/no-account-confirm-presenter-email"
+        }) }}
+
+        <h3 class="govuk-heading-s">Emails to notify all existing authorised people when:</h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a href="../messages/email-auth-person-invited" class="govuk-link" target="_blank">An authorised person has been invited</a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-added-to-company" class="govuk-link" target="_blank">An authorised person has been added by another authorised person</a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-added" class="govuk-link" target="_blank">A user has added the company using the authentication code </a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-declined" class="govuk-link" target="_blank">A user has declined to be added as an authorised person </a>
+          </li>
+
+        <h3 class="govuk-heading-s govuk-!-padding-top-3">Notifications shown within the account after sign in</h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a href="../messages/email-auth-person-request-already-accepted-declined" class="govuk-link" target="blank">The user has already confirmed or declined the request (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="../messages/email-auth-person-request-already-associated" class="govuk-link" target="blank">The user is already associated with this company (opens in new tab)</a>
+          </li>
+
+          <li>
+            <a href="../messages/email-auth-person-request-withdrawn-expired" class="govuk-link" target="blank">The request has been withdrawn or is expired (opens in new tab)</a>
+          </li>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+        <h2 class="govuk-heading-m">Removing an authorised person</h2>
+
+
+        <p class="govuk-body">Scenario: Jill Edwards is removing Hannah Salt as an authorised person.</p>
+
+        {{ govukButton({
+          text: "Remove an authorised person",
+          classes: "govuk-button--secondary",
+          href: "./user-account/remove-authorised-person/your-companies"
+        }) }}
+
+        <h3 class="govuk-heading-s">Emails to notify:</h3>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-authorised-person-removed">All authorised people (except the person being removed) that an authorised person has been removed (opens in a new tab)</a>
+          </li>
+
+          <li>
+            <a class="govuk-link" target="_blank" href="user-account/remove-authorised-person/email-you-are-no-longer-an-authorised-person">The authorised person that they have been removed (opens in a new tab)</a>
+          </li>
+        </ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">View and search multiple companies</h2>
+
+        <ul class="govuk-list">
+          <li>
+            <a class="govuk-link" target="_blank"  href="user-account/home-multiple-companies">Search for a company within your account</a>
+          </li>
+        </ul>
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m"> Manage account</h2>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Update your name</li>
+            <li>Update your email address - MFA should be included (code will be sent to the new email address for validation)</li>
+            <li>Update your password</li>
+            <li> Update your mobile number</li>
+          </ul>
+
+          {{ govukButton({
+            text: "Update account information",
+            classes: "govuk-button--secondary",
+            href: "manage-your-account/manage-account"
+          }) }}
+
+
+        <p> Adding mobile number to your account later, using a notification as a prompt - * Future *</p>
+
+        {{ govukButton({
+          text: "Add your mobile number",
+          classes: "govuk-button--secondary",
+          href: "../add-mobile/manage-account"
+        }) }}
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+        <h2 class="govuk-heading-m">I've forgotten my password</h2>
+
+        <h3 class="govuk-heading-s"> Verify by email </h3>
+
+
+        {{ govukButton({
+          text: "Create a new password",
+          classes: "govuk-button--secondary",
+          href: "sign-in-password-email-only"
+        }) }}
+
+        <h3 class="govuk-heading-s"> Verify by email or mobile </h3>
+
+         {{ govukButton({
+            text: "Create a new password - verify choice given",
+            classes: "govuk-button--secondary",
+            href: "sign-in-password-mobile"
+          }) }}
+
+        <p> <a href="../forgotten-password/email-reset-password" class="govuk-link" target="blank">Email reset your password (opens in new tab)</a></p>
+
+        <p> <a href="../forgotten-password/text-message-reset-password" class="govuk-link" target="blank">Text message reset your password (opens in new tab)</a></p>
+
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h2 class="govuk-heading-m">SCRS</h2>
+
+        <p> New CH account page within the SCRS journey to capture directors email address.</p>
+
+        <p> <a href="SCRS/director-details/secure" class="govuk-link" target="blank">Directors journey - Set up a limited company and register for Corporation Tax (opens in new tab)</a></p>
+        <p> <a href="SCRS/director-details/interruption-card-no-form" class="govuk-link" target="blank">Interrupt card ('blue' styling) detailing changes to authorisation</a></p>
+        <p> <a href="SCRS/final-check-and-confirm" class="govuk-link" target="blank">'Final' confirmation page (digital)</a></p>
+        <p> <a href="SCRS/final-check-and-confirm-auth-code" class="govuk-link" target="blank">'Final' confirmation page (auth code)</a></p>
+
+
+
+
+
+        <p> SCRS confirmation email</p>
+
+        <p> <a href="SCRS/emails/confirmation" class="govuk-link" target="blank">SCRS confirmation email (opens in new tab)</a></p>
+
+        <p>CH account follow up emails</h3>
+
+
+
+        <p> <a href="/scrs-new-user" class="govuk-link" target="blank">1. Follow-up email with details about online filing for a new user (opens in new tab)</a></p>
+
+
+        <p> <a href="/scrs-existing-user" class="govuk-link" target="blank">2. Email to existing WebFiling user (opens in new tab)</a></p>
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h2 class="govuk-heading-m">API filing sign in and consent </h2>
+
+
+        {{ govukButton({
+          text: "Sign in to API filing",
+          classes: "govuk-button--secondary",
+          href: "api-filing/sign-in"
+        }) }}
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">** Future ** </h2>
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Hannah Salt - 'FLOWERS LIMITED' </h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>User has the authentication code. Company added.</li>
+          <li>User does not have their authentication code and requests code to their registered office address.</li>
+        </ul>
+
+        {{ govukButton({
+          text: "Hannah's account",
+          classes: "govuk-button--secondary",
+          href:"start-page-s1-s2"
+        }) }}
+
+        <ul class="govuk-list">
+          <li>
+            <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="../messages/security-code-email" class="govuk-link" target="blank">Email security code (opens in new tab)</a>
+          </li>
+          <li>
+            <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification - create an account (opens in new tab)</a>
+          </li>
+          <li>
+            <a class="govuk-link" target="_blank"  href="sign-in-with-mobile">CHS sign in with mobile multi-factor including tick box (opens in a new tab)</a>
+          </li>
+
+       <!--- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Second 'FLOWERS LIMITED' user </h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>User has their authentication code. Company added.</li>
+          <li>User does not have their authentication code. Requests authorisation.</li>
+        </ul>
+
+
+        {{ govukButton({
+          text: "Second user for 'FLOWERS LIMITED'",
+          classes: "govuk-button--secondary",
+          href: "start-page-s3"
+        }) }}
+
+
+        <p> <a href="../messages/verify-text-message" class="govuk-link" target="blank">Text message security code (opens in new tab)</a></p>
+
+        <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
+
+        --->
+
+
+        <!-- <h2 class="govuk-heading-m">Log in from a new device **Remove**</h2>
+
+        {{ govukButton({
+          text: "Sign in ",
+          classes: "govuk-button--secondary",
+          href: "sign-in-new-device"
+        }) }}
+
+        <p> <a href="../new-device/verify-email" class="govuk-link" target="blank">Email - confirm new device login(opens in new tab)</a></p>
+
+        <p> <a href="../new-device/verify-text-message" class="govuk-link" target="blank">Text message - confirm new device login(opens in new tab)</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <h2 class="govuk-heading-m">Change Registered office address within CHS </h2>
+
+
+        {{ govukButton({
+          text: "Start service",
+          classes: "govuk-button--secondary",
+          href: "change-address"
+        }) }}
+
+
+        <p> <a href="../messages/verify-email" class="govuk-link" target="blank">Email verification (opens in new tab)</a></p>
+
+
+
+
+
+    </div>
+  </div>
+{% endblock %}

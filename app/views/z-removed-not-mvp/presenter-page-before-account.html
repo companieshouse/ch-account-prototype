@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Companies House account
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your Companies House account has been updated</h1>
+
+      <p class="govuk-body">FLOWERS LIMITED has been linked to your account.</p>
+
+      <p class="govuk-body">A confirmation email has been sent to hannah.salt@example.com.</p>
+
+
+
+      <p class="govuk-body">View your account to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>link more companies you are connected with to your account</li>
+        <li>add authorised people who can file for this company on your behalf</li>
+          <li>update your details</li>
+      </ul>
+
+
+      {{ govukButton({
+        text: "View your account",
+        href:"user-account/home"
+      }) }}
+
+
+    </div>
+  </div>
+{% endblock %}
+
+
+
+ <h2 class="govuk-heading-m">Presenter</h2>
+
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>An email has been sent to 'NAME'.</li>
+        <li>They need to click the link in the email to confirm you are their presenter.</li>
+        <li>Once this has be confirmed, the company will be added to your account and you can file on behalf of your company.</li>
+        <li>You can view the status of this request in your account.</li>
+      </ul>

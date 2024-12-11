@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Set up a limited company and register for Corporation Tax" }) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Which email address does Hannah Salt want to use to create their WebFiling account? - Set up a limited company and register for Corporation Tax - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/SCRS/no-existing-wf-email" method="post">
+
+
+
+
+        {% if errorNoExistingEmail1 == true %}
+
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Select the email address Hannah Salt wants to use to create their WebFiling account",
+                href: "#NoExistingEmail1"
+              }
+              ]
+          }) }}
+
+          {% endif %}
+
+
+
+          <h1 class="govuk-heading-l">Which email address does Hannah Salt want to use to create their WebFiling account?</h1>
+
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  label: {
+    text: "Email address"
+  }
+}) }}
+{% endset -%}
+
+
+{% if errorNoExistingEmail1 == true %}
+
+
+
+
+          {{ govukRadios({
+
+  idPrefix: "NoExistingEmail1",
+  name: "NoExistingEmail1",
+  errorMessage: {
+    text: "Select the email address Hannah Salt wants to use to create their WebFiling account"
+  },
+    hint: {
+      text: "This should be an email address that only Hannah Salt can access."
+  },
+  fieldset: {
+    legend: {
+      text: " ",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "existing-email",
+      text: "info@flowers.com"
+    },
+    {
+      value: "different-email",
+      text: "A different email address",
+      conditional: {
+        html: emailHtml
+      }
+    }
+  ]
+}) }}
+
+{% else %}
+
+{{ govukRadios({
+
+idPrefix: "NoExistingEmail1",
+name: "NoExistingEmail1",
+hint: {
+  text: "This should be an email address that only Hannah Salt can access."
+},
+fieldset: {
+legend: {
+text: " ",
+isPageHeading: false,
+classes: "govuk-fieldset__legend--l"
+}
+},
+items: [
+{
+value: "existing-email",
+text: "info@flowers.com"
+},
+{
+value: "different-email",
+text: "A different email address",
+conditional: {
+html: emailHtml
+}
+}
+]
+}) }}
+
+{% endif %}
+
+          {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+        </form>
+
+      </div>
+    </div>
+
+  {% endblock %}

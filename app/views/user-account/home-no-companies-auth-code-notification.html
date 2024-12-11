@@ -1,0 +1,61 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Your companies - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
+      The authentication code for FLOWERS LIMITED will be posted to the registered office address. <br><p class="govuk-body">It can take up to 5 days to arrive.</p>
+
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html,
+    type: 'success'
+  }) }}
+
+          <h1 class="govuk-heading-l">Your companies </h1>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;"</div>
+
+              <h1 class="govuk-heading-m">You have not added any companies to this account</h1>
+
+
+                <p class="govuk-body">Add a company to your account so that you can:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>file for the company online</li>
+                  <li>digitally authorise people to file for the company on your behalf</li>
+
+
+
+              </ul>
+
+              {{ govukButton({
+                  text: "Add a company",
+                  href:"../add-a-company"
+              }) }}
+            </div>
+
+        </div>
+    </div>
+
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "layout/layout-account-signout-your-companies.html" %}
+
+{% block pageTitle %}
+  Your companies - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+ {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        FLOWERS LIMITED has been added to your account.<br>
+
+
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;"></span></h1>
+
+
+          {{ govukButton({
+              text: "Add a company",
+              href:"../../add-a-company"
+          }) }}
+
+
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                 <h2 class="govuk-heading-m">FLOWERS LIMITED  <span class="govuk-caption-m">18882777</span></h2>
+               
+
+                </div>
+              </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+             
+
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+              2nd Floor Red House, 17 London Road, London  SA73 8PH </p>
+
+
+
+
+                   <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                    <table class="govuk-table govuk-!-margin-top-2">
+                        <caption class="govuk-table__caption govuk-table__caption--m govuk-!-margin-bottom-1">
+                          People digitally authorised to file online for this company
+                          <p class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-1">Anyone with access to the current authentication code can also file online for this company</p>
+                        </caption>
+
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> Name
+
+                          <th class="govuk-table__header" scope="col"> Authorisation status </th>
+                          <th class="govuk-table__header" scope="col">  </th>
+
+                        </tr>
+
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-margin-top-1"> Hannah Salt (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--green"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                          <a href="authorised-person-hannah" class="govuk-link">View details</a>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                    <p> <a href="../webfiling/webfiling-profile" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>
+                    <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Digitally authorise a person to file online for this company</a></p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+{% endblock %}

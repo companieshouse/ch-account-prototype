@@ -1,0 +1,111 @@
+{% extends "layout/layout-account-signout-home.html" %}
+
+
+{% block pageTitle %}
+  Home - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {# CH Notification banner #}
+      <div class="ch-notification-banner" role="region">
+        <div class="ch-notification-title">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title" style="display: inline;">
+            For information
+          </h2>
+          {# By default disable the following button by setting its CSS display attriute to "none" (it isn't rendered to the viewport) #}
+          <button class="ch-show-hide-button" id="ch-show-hide-button" style="display: none;" onclick="chShowHideNotificationBanner()">
+            Hide message
+          </button>
+          {# In the event JavaScript is available, then hard reference the above button ID and set its CSS display attribute to "block" (making it visible) #}
+          <script>
+            document.getElementById("ch-show-hide-button").style.display = "block";
+          </script>
+        </div>
+
+        <div class="ch-notification-content" id="ch-notification-content">
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              Try our new File a confirmation statement service
+            </p>
+            <p>
+              If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our
+              <a class="govuk-notification-banner__link" href="https://find-and-update.company-information.service.gov.uk/confirmation-statement">new File a confirmation statement service</a>.
+              You will not be able to pay with a Companies House payment account.
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <h1 class="govuk-heading-l">Home
+        <span class="govuk-caption-xl" >hannah.salt@example.com</span> </h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row" style="margin-bottom: 10px;">
+      <div class="govuk-grid-column-full">
+
+
+        <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+        <div class="govuk-grid-column-one-third" style=" background-color:#f3f2f1;  border-width: 1px; padding: 2em; height: 390px; width: 313px; margin-top: 10px;margin-right: 10px;">
+
+            <h2 class="govuk-heading-m govuk-!-padding-top-1" style= "color:#003078"><a href="../webfiling/company-number" class="govuk-link ">WebFiling</a></h2>
+
+            <p class="govuk-body govuk-!-font-size-16">You can:</p>
+
+            <ul class="govuk-list govuk-list--bullet govuk-!-font-size-16">
+              <li>file your company’s annual accounts</li>
+              <li>file your company’s confirmation statement</li>
+              <li>file your company’s director or secretary changes</li>
+              <li>sign up to get email reminders</li>
+            </ul>
+
+
+          </div>
+
+
+          <div class="govuk-grid-column-one-third" style=" border-width: 1px; padding: 1.75em; height: 390px; width: 313px;  margin-right: 10px; margin-top: 10px; background-color:#f3f2f1 ">
+
+
+            <h2 class="govuk-heading-m govuk-!-padding-top-1 govuk-!-margin-bottom-1"style= "color:#003078" > <a href="../user-account/home-no-companies-no-notification" class="govuk-link"> Your companies</a> </h2>
+
+            <p class="govuk-body govuk-!-font-size-18 govuk-!-margin-top-3" style= "color:#4c2c92">0 companies </p>
+
+            <p class="govuk-body govuk-body govuk-!-font-size-16">You can:</p>
+
+            <ul class="govuk-list govuk-list--bullet govuk-body govuk-!-font-size-16">
+              <li>add a company to your WebFiling account</li>
+              <li>view, manage and file for companies you’ve added</li>
+              <li>digitally authorise people to file for your company online</li>
+              <li>view and manage digitally authorised people</li>
+
+            </ul>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third" style=" background-color:#f3f2f1;  border-width: 1px; padding: 1.75em; height: 390px; width: 313px; margin-top: 10px;">
+
+            <h2 class="govuk-heading-m govuk-!-padding-top-1 govuk-!-margin-bottom-1" style= "color:#003078"> <a href="../messages/no-messages" class="govuk-link"> Messages</a></h2>
+
+            <p class="govuk-body govuk-!-font-size-18 govuk-!-margin-top-3" style= "color:#4c2c92">4 new messages </p>
+
+            <p  class="govuk-body govuk-!-font-size-16">View messages relating to your WebFiling account.</p>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+</div>
+</div>
+
+
+{% endblock %}

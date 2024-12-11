@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How do you want to verify that the person updating the account is you? - Companies House WebFiling account - GOV.UK
+{% endblock %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/choose-verify-option" method="post" novalidate>
+
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "verify-option",
+        name: "verify-option",
+        fieldset: {
+          legend: {
+            text: "How do you want to verify that the person updating the account is you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "Before you can reset the password on your account, we need to confirm it's you. This helps us keep your account secure."
+        },
+        items: [
+          {
+            value: "email",
+            text: "Email"
+          },
+          {
+            value: "text-message",
+            text: "Text message"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

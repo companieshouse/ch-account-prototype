@@ -1,0 +1,115 @@
+{% extends "layout/layout-account-signout-your-companies-jill.html" %}
+
+{% block pageTitle %}
+  Your companies
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+
+     <div class="govuk-grid-column-full">
+
+ {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        You are now digitally authorised to file online for FLOWERS LIMITED.
+
+{% endset %}
+
+    {{ govukNotificationBanner({
+      html: html,
+      type: 'success'
+    }) }}
+
+          <h1 class="govuk-heading-l">Your companies <span class="govuk-caption-m" style = "padding-top:0.5em;"></span></h1>
+
+           {{ govukButton({
+          text: "Add a company",
+          href:"../add-a-company"
+      }) }}
+
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <div style=" border-color: #b1b4b6; border-style: solid; border-width: 1px; padding: 2em;">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                 <h2 class="govuk-heading-m">FLOWERS LIMITED</h2>
+                </div>
+              </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <p class="govuk-body govuk-!-font-weight-bold">
+                      <span class="govuk-body ">Company number</span><br>
+                 </span>18882777</p>
+
+                    <p class="govuk-body govuk-!-font-weight-bold">
+                        <span class="govuk-body">Correspondence address</span><br>
+                   </span> 2nd Floor Red House, 17 London Road, London SA73 8PH </p>
+
+                   <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+
+                        <tr class="govuk-table__row">
+                          <th class="govuk-table__header" scope="col"> People digitally authorised <br> to file online for this company</th>
+                          <th class="govuk-table__header" scope="col"> Authorisation <br>status </th>
+                          <th class="govuk-table__header" scope="col"> View </th>
+                        </tr>
+
+
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Hannah Salt</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--turquoise"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                  <a href="../user-account/authorised-person-hannah" class="govuk-link">View details</a>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <p class="govuk-body"> Jill Edwards (you)</p>
+                          </td>
+                          <td class="govuk-table__cell">
+                            {{govukTag({
+                              text: "CONFIRMED",
+                              classes: "govuk-tag--turquoise"
+                            })}}
+                          </td>
+                          <td class="govuk-table__cell">
+                  <a href="" class="govuk-link">View details</a>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p> <a href="../webfiling/webfiling-profile" class="govuk-link govuk-link--no-visited-state">File for this company</a></p>
+                    <p> <a href="../../delegate-to-presenter/enter-presenter-details" class="govuk-link govuk-link--no-visited-state">Digitally authorise a person to file online for this company</a></p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div>
+</div>
+
+
+{% endblock %}
