@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+
+
+{% block pageTitle %}
+We are changing the way you sign in to some of our services – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <form action="verify-email-address" method="post" novalidate>
+
+      <h1 class="govuk-heading-l">Check your email</h1>
+     
+      <p class='govuk-body'>We've sent an email to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span> which contains a verification link.</p>
+
+      <ol class="govuk-list govuk-list--number">
+        <li>Open the email.</li>
+        <li>Select the verification link in the email.</li>
+      </ol>
+
+      {{ govukInsetText({
+        text: "The link will expire in 24 hours."
+      }) }}
+
+      {{ govukDetails({
+        summaryText: "I have not received an email",
+        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address, you can <a href='create-an-account' class='govuk-link'>give us a different email address</a>."
+      }) }}
+     
+
+
+      <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling">Email sent</a>
+      <p class="govuk-body-s ">
+   
+
+
+ 
+     </form>
+   </div>
+ </div>
+ 
+
+ {% endblock %}
