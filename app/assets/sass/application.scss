@@ -1,30 +1,10 @@
-// global styles for <a> and <p> tags
-$govuk-global-styles: true;
-$govuk-new-link-styles: true;
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
 
-// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
-$govuk-assets-path: '/govuk/assets/';
+// Add extra styles here
 
-// Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import ".tmp/sass/extensions";
-
-// Patterns that aren't in Frontend
-@import "patterns/contents-list";
-@import "patterns/mainstream-guide";
-@import "patterns/pagination";
-@import "patterns/related-items";
-@import "patterns/task-list";
-
-//Defining new account menu style
-@import "components/account-menu";
-
-//Defining new cards style
-@import "components/cards";
-
-//Defining new language toggle style
-@import "components/govuk-language-select";
-
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 // CH NOTIFICATION BANNER
 // The banner takes the form of a container div which in-turn is made of two separate divs. These being:

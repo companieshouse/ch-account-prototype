@@ -1,0 +1,164 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ENCOM VIDEO GAMES LIMITED (01234567) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+{% block stylesheets %}
+ {{ super() }}
+<style type="text/css">
+.govuk-header__container.govuk-width-container {
+  background-color: #00144D !important;
+}
+  .govuk-width-container, .govuk-template__body, .govuk-template {
+    background-color: #f6f6f6 !important;
+}
+.govuk-main-wrapper {
+  padding-top:10px;
+}
+
+</style>
+{% endblock %}
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-three-quarters wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+</button>
+
+<h1 class="govuk-heading-l">Your companies</h1>
+
+<p class="govuk-body">Your companies overview here.</p>
+
+
+ <button type="submit" class="govuk-button" data-module="govuk-button">
+  Add a company
+ </button>
+
+ <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <h2 class="govuk-heading-m">Search for a company</h2>
+    <p class="govuk-body">Enter the company number, or part of a company number. </strong></p>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+    <table class="govuk-table govuk-!-margin-top-7">
+      <caption class="govuk-table__caption govuk-table__caption--m visuallyhidden">Your companies</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Company name</th>
+          <th scope="col" class="govuk-table__header">Company number</th>
+          <th scope="col" class="govuk-table__header">Authorisation status</th>
+          <th scope="col" class="govuk-table__header ">Manage digital authorisation</th>
+
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD 
+
+        
+          </th>
+          <td class="govuk-table__cell">10866549</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+            Not authorised 
+           </strong> </td>
+
+
+          <td class="govuk-table__cell"><a href="authentication-code-2" class="govuk-link govuk-link--no-visited-state">Become digitally authorised<span class="govuk-visually-hidden"> for ANDROID TECHNOLOGY LTD</span> </a></td>
+          <td class="govuk-table__cell"> </td>
+
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">ENCOM VIDEO GAMES LIMITED
+
+            <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a>
+          </th>
+          <td class="govuk-table__cell">01234567</td>
+          <td class="govuk-table__cell"> 
+            <strong class="govuk-tag govuk-tag--blue">
+              Active 
+             </strong>
+            </td>
+          <td class="govuk-table__cell"><a href="manage-authorised-people" class="govuk-link govuk-link--no-visited-state"> View and manage  <span class="govuk-visually-hidden">ARCHITECTS WALES LIMITED</span> </a></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED</th>
+          <td class="govuk-table__cell">08449801</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+            Not authorised 
+           </strong>  </td>
+
+          <td class="govuk-table__cell"><a href="authentication-code-2" class="govuk-link govuk-link--no-visited-state">Become digitally authorised<span class="govuk-visually-hidden"> for ANDROID TECHNOLOGY LTD</span> </a> </td>
+          <td class="govuk-table__cell"></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED</th>
+          <td class="govuk-table__cell">09433214</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+            Not authorised 
+           </strong> </td>
+
+
+          <td class="govuk-table__cell"><a href="authentication-code-2" class="govuk-link govuk-link--no-visited-state">Become digitally authorised<span class="govuk-visually-hidden"> for ANDROID TECHNOLOGY LTD</span> </a></td>
+          <td class="govuk-table__cell"> </td>
+
+        </tr>
+        
+       
+      </tbody>
+    </table>
+
+
+
+
+
+    </div>
+
+
+
+
+  
+  </div>
+     </form>
+{% endblock %}

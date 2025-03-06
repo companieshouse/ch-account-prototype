@@ -1,4 +1,6 @@
-{% extends "layout.html" %}
+{% extends "layouts/layout.html" %}
+
+
 {% block pageTitle %}
   {{serviceName}} - GOV.UK
 {% endblock %}
@@ -16,10 +18,6 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">      
       <form action="one-login-sign-in" method="post" novalidate="">
 
-        {{ govukBackLink({
-          text: "Back",
-          href: "/"
-        }) }}
 
         {{ govukInput({
           label: {
