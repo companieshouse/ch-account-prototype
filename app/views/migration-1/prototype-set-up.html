@@ -26,20 +26,25 @@
         items: [
           {
             value: "WC1",
-            text: "WC1 - A user has a WebFiling account, 
-            but does not have a Companies House account with this email address.",
+            text: "Task 1",
             hint: {
-              text: ""
+              text: "A user creates or signs into a GOV.UK One Login with the same email address as their WebFiling account. They do not have a Companies House account with this email address. We create a Companies House account in the background."
             }
 
           },
           {
             value: "WC2",
-            text: "WC2 - A user has a WebFiling account and a Companies House account with the same email address. Their CHS account is not linked to a GOV.UK One Login."
+            text: "Task 2",
+            hint: {
+              text: "A user has a WebFiling account and a Companies House account with the same email address. Their CHS account is not currently linked to a GOV.UK One Login."
+            }
           },
           {
             value: "WC3",
-            text: "WC3 - A users GOV.UK One Login which does not match an existing Webfiling or Companies House account."
+            text: "Task 3",
+            hint: {
+              text: "A user has a GOV.UK One Login with a different email address to their existing Webfiling or Companies House account."
+            }
           }
 
         ]

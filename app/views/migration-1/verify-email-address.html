@@ -27,26 +27,41 @@ We are changing the way you sign in to some of our services – {{ serviceName }
 
       <h1 class="govuk-heading-l">Check your email</h1>
      
-      <p class='govuk-body'>We've sent an email to <span class='govuk-body govuk-!-font-weight-bold'> hannah.salt@example.com</span> which contains a verification link. Your WebFiling and GOV.UK One Login will then be connected. </p>
 
-      <ol class="govuk-list govuk-list--number">
-        <li>Open the email.</li>
-        <li>Select the verification link in the email.</li>
-      </ol>
 
-      {{ govukInsetText({
-        text: "The link will expire in 24 hours."
-      }) }}
+      <div class="govuk-inset-text">
+        <p> We have sent a code to  <span class="govuk-!-font-weight-bold"> h*****t@example.com</span></p>
+      </div>
+  
+      <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 15 minutes.
+      </p>
+  
+          {{ govukInput({
+            label: {
+              text: "Enter the 6 digit code."
+            },
+            classes: "govuk-input--width-10",
+            id: "width-3",
+            name: "width-3"
+          }) }}
+
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+    
+    
+
 
       {{ govukDetails({
         summaryText: "I have not received an email",
-        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another email</a></a>. </br></br> If you have given us the wrong email address, you can <a href='create-an-account' class='govuk-link'>give us a different email address</a>."
+        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another email</a></a>."
       }) }}
      
 
 
-      <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling">Email sent</a>
-      <p class="govuk-body-s ">
+      <p class="govuk-body-s ">  <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling" target="_blank">Email sent (opens in a new tab)</a> </p>
+     
    
 
 

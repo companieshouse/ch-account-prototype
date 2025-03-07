@@ -21,27 +21,45 @@ We are changing the way you sign in to some of our services – {{ serviceName }
 {% block content %}
 
 
+
+
+
+
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
       <form action="no-webfiling-found" method="post" novalidate>
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              We have not found a Webfiling account with this email address.
+            </p>
+          </div>
+        </div>
+        
 
         {{ govukRadios({
           name: "no-webfiling-found",
           fieldset: {
             legend: {
-              text: "Do you want to save information from an existing WebFiling account?",
+              text: "Do you have a Webfiling account with a different email address?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
-              value: "no",
-              text: "No"
-            },
-            {
               value: "yes",
               text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
             }
           ]
         }) }}

@@ -25,27 +25,40 @@ We are changing the way you sign in to some of our services – {{ serviceName }
       <div class="govuk-grid-column-two-thirds">
       <form action="no-chs-found-interrupt" method="post" novalidate>
 
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              We have not found a Companies House account with this email address.
+            </p>
+          </div>
+        </div>
+
+
+
+
         {{ govukRadios({
           name: "no-chs-found",
           fieldset: {
             legend: {
-              text: "Do you want to connect this GOV.UK One Login with an existing Companies House account?",
+              text: "Do you have a Companies House account with a different email address?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
+              value: "yes",
+              text: "Yes"
+            },
+            {
               value: "no",
               text: "No"
-            },
-            {
-              value: "yes",
-              text: "Yes, do this now"
-            },
-            {
-              value: "later",
-              text: "Yes, do this later"
             }
           ]
         }) }}
