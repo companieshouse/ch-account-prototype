@@ -239,8 +239,17 @@ router.post('/migration-1/webfiling-new-email-address', function (req, res) {
 /*  WebFiling change email address to same as One Login */
 router.post('/migration-1/webfiling-email-changed', function (req, res) {
 
+    res.redirect('webfiling-interupt')
+
+  
+})
+
+/*  WebFiling change email address to same as One Login */
+router.post('/migration-1/webfiling-email-changed', function (req, res) {
+
     res.redirect('verify-email-address')
 
   
 })
+
 
