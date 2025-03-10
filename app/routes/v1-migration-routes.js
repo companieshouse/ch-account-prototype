@@ -147,9 +147,11 @@ router.post('/migration-1/link-to-existing-chs-account', function (req, res) {
 /* Linking CHS accounts */
 router.post('/migration-1/chs-account-linked', function (req, res) {
 
-    res.redirect('verify-email-address')
+    res.redirect('webfiling-interupt')
 
 })
+
+
 
 
 
