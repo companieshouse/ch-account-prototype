@@ -27,21 +27,19 @@ We are changing the way you sign in to some of our services – {{ serviceName }
 
         <a href="#" class="govuk-back-link govuk-!-padding-top-0">Back</a>
       <h1 class="govuk-heading-xl">We're taking you to GOV.UK One Login</h1>
-     
-      <p class="govuk-body">GOV.UK One Login will allow you to access many government services using the same email address and password.</p>
 
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          To save your existing Companies House account information, you must sign in to or create a GOV.UK One Login using {% if (data['chs-email-2'] === "") %}
+          To save your existing WebFiling account information, you must sign in to or create a GOV.UK One Login using the same email address you use to sign in to WebFiling. <!--{% if (data['chs-email-2'] === "") %}
           <strong>  {{data['email-address-2']}} </strong>
           {% elseif (data['chs-email'] !== "") %}
           <strong> {{data['chs-email']}} </strong>
           {% else %}
           <strong> email111@example.com</strong>
-          {% endif %}
+          {% endif %}-->
         </strong>
       </div>
        <p class="govuk-body"> This will enable us to connect your account to your GOV.UK One Login.</p>
