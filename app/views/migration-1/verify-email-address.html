@@ -30,7 +30,7 @@ We are changing the way you sign in to some of our services – {{ serviceName }
 
 
       <div class="govuk-inset-text">
-        <p> We have sent a code to  <span class="govuk-!-font-weight-bold"> h*****t@example.com</span></p>
+        <p> We have sent a code to  <span class="govuk-!-font-weight-bold"> h*****@example.com</span></p>
       </div>
   
       <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 15 minutes.
@@ -38,7 +38,7 @@ We are changing the way you sign in to some of our services – {{ serviceName }
   
           {{ govukInput({
             label: {
-              text: "Enter the 6 digit code."
+              text: "Enter the 6 digit code"
             },
             classes: "govuk-input--width-10",
             id: "width-3",
@@ -55,12 +55,13 @@ We are changing the way you sign in to some of our services – {{ serviceName }
 
       {{ govukDetails({
         summaryText: "I have not received an email",
-        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House: verify your email address'. </br> </br> Check your junk folder. If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another email</a></a>."
+        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House WebFiling security code’. You could also check your junk folder.</br> </br> If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another code</a></a>."
       }) }}
      
+      <br>
 
 
-      <p class="govuk-body-s ">  <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling" target="_blank">Email sent (opens in a new tab)</a> </p>
+      <p class="govuk-body-s ">  <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling" target="_blank">Email with code (opens in a new tab)</a> </p>
      
    
 
