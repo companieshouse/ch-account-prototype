@@ -24,17 +24,13 @@ We are changing the way you sign in to some of our services – {{ serviceName }
     <form action="email-verify-webfiling" method="post" novalidate>
 
        
-      <h1 class="govuk-heading-l">Companies House: verify your Webfiling account email address</h1>
+      <h1 class="govuk-heading-l">Companies House WebFiling security code</h1>
      
-      <p class='govuk-body'>The security code is: 79903222 </p>
+      <p class='govuk-body'>Your security code is <strong>261444</strong></p>
         
-        
-
-    <p class='govuk-body'>This link will expire in 24 hours. </p>
-
-
-
-    <p class='govuk-body'>If you didn't sign in to WebFiling, ... </p>
+      {{ govukInsetText({
+        text: "This code expires in 15 minutes. If you run out of time, go back to WebFiling and get another code."
+      }) }}
 
 
 
