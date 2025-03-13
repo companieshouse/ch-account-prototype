@@ -25,18 +25,25 @@ We are changing the way you sign in to some of our services – {{ serviceName }
       <form action="no-webfiling-found-change-email" method="post" novalidate>
 
      
-        <h1 class="govuk-heading-l">You'll need to change your WebFiling email address </h1> 
+        <h1 class="govuk-heading-l">Email addresses must be the same if you want to save existing information </h1> 
 
         <p class="govuk-body">To connect your WebFiling account to your GOV.UK One Login and save your existing information, you'll need to change your WebFiling email address to the same one as your GOV.UK One Login.</p> 
        
     
-     
+
+        <div class="govuk-inset-text">
+          You can continue without updating your email address if you want to. However, this means we will not be able to connect your WebFiling account to your GOV.UK One Login and we will not be able to save any existing information.
+        </div> 
     
     
        {{ govukButton({
          text: "Continue"
        }) }}
  
+       <p class="govuk-body">
+        <a href="#" class="govuk-link">Continue without updating email address</a>
+      </p>
+
      </form>
    </div>
  </div>
