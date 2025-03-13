@@ -29,6 +29,7 @@ We are changing the way you sign in to some of our services – {{ serviceName }
       <div class="govuk-grid-column-two-thirds">
       <form action="no-webfiling-found" method="post" novalidate>
 
+        <!--
         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
           <div class="govuk-notification-banner__header">
             <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -40,14 +41,14 @@ We are changing the way you sign in to some of our services – {{ serviceName }
               We have not found a Webfiling account with this email address.
             </p>
           </div>
-        </div>
+        </div>-->
         
 
         {{ govukRadios({
           name: "no-webfiling-found",
           fieldset: {
             legend: {
-              text: "Do you have a Webfiling account with a different email address?",
+              text: "Do you have an existing WebFiling account?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
