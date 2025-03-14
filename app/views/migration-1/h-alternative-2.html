@@ -1,0 +1,53 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">Connecting your Companies House account</h1>
+
+  <p class="govuk-body">The email address you have chosen to use across all your accounts is <strong>example@example.com</strong>
+    
+    
+  <p class="govuk-body">We will create a new Companies House account for you using this email address, unless you select you wish to change the email address of an existing Companies House Account.</p>
+
+
+
+
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Create new Companies House Account and Continue
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Change email address of existing Companies House Account
+    </button>
+  </div>
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
