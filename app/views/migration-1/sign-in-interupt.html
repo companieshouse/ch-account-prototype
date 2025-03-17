@@ -26,20 +26,24 @@ We are changing the way you sign in to some of our services – {{ serviceName }
       <form action="start-page" method="post" novalidate>
 
         <a href="#" class="govuk-back-link govuk-!-padding-top-0">Back</a>
-      <h1 class="govuk-heading-xl">We're taking you to GOV.UK One Login</h1>
+      <h1 class="govuk-heading-xl">Connecting existing accounts</h1>
 
 
-      <p class="govuk-body">If this is the first time you’ve signed in to WebFiling since the introduction of GOV.UK One Login, and you have an existing WebFiling account, you can save any information stored. For example:</p>
+      <p class="govuk-body">If you have an existing WebFiling account or Companies House account (or both), you’ll need to connect them to your GOV.UK One Login the first time you sign in. To do this, you’ll need to enter:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>details of companies you file for</li>
-        <li>email reminders</li>
+        <li>your Companies House account password</li>
+        <li>a security code that we’ll send to your WebFiling email address</li>
       </ul>
+
+      <p>You only need to do this once. It will enable us to save any information you have stored in your accounts. For example, details of companies you file for, email reminders, or companies you follow.</p>
+
+
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          If you want to save your existing WebFiling information, you must sign in to or create a GOV.UK One Login using the same email address. <!--{% if (data['chs-email-2'] === "") %}
+          To save existing information, each account must use the same email address. You must also sign in to or create a GOV.UK One Login using the same email address. <!--{% if (data['chs-email-2'] === "") %}
           <strong>  {{data['email-address-2']}} </strong>
           {% elseif (data['chs-email'] !== "") %}
           <strong> {{data['chs-email']}} </strong>
@@ -48,22 +52,26 @@ We are changing the way you sign in to some of our services – {{ serviceName }
           {% endif %}-->
         </strong>
       </div>
-       <p class="govuk-body"> This will enable us to connect your account to your GOV.UK One Login.</p>
+      
 
-       <br>
+      
  
        <details class="govuk-details" data-module="govuk-details">
          <summary class="govuk-details__summary">
            <span class="govuk-details__summary-text">
-            What to do if you already have a GOV.UK One Login that uses a different email address
+            What to do if you already have existing accounts or a GOV.UK One Login that use different email addresses
            </span>
          </summary>
          <div class="govuk-details__text">
-           <p class="govuk-body">If you want to connect this WebFiling account to a GOV.UK One Login that uses a different email address, you have 2 options:</p>
-           <h3 class="govuk-heading-s">Option 1</h3>
-           <p class="govuk-body"><a href="#" class="govuk-link">Change your WebFiling email address</a> to match your GOV.UK One Login email address. Then come back to WebFiling and sign in.</p>
-           <h3 class="govuk-heading-s">Option 2</h3>
-           <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your GOV.UK One Login email address (opens in a new tab)</a> to match your WebFiling email address. Then come back to WebFiling and sign in.</p>
+          <p>If you want to connect your accounts and save existing information, and they use different email addresses, you'll need to update them so they're all the same.</p>
+          <p class="govuk-body">The following links open in a new tab. It is up to you which email addresses you update:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">update your WebFiling email address</a></li>
+  <li><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">update your Companies House account email address</a></li>
+  <li><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">update your GOV.UK One Login email address</a></li>
+</ul>
+
+<p>Then come back to this page and continue to sign in.</p>
            </ul>
          </div>
        </details>
@@ -74,18 +82,18 @@ We are changing the way you sign in to some of our services – {{ serviceName }
          <summary class="govuk-details__summary">
            <span class="govuk-details__summary-text">
          
-        What to do if you share access to this WebFiling account with other people
+            What to do if you share access to your accounts with other people
            </span>
          </summary>
          <div class="govuk-details__text">
-           <p class="govuk-body">Only one person can connect this WebFiling account to their GOV.UK One Login.</p>
+           <p class="govuk-body">Only one person can connect each account to their GOV.UK One Login.</p>
            <p class="govuk-body">
-         Anyone else who shares access to this account will need to create their own GOV.UK One Login, using a different email address. They will no longer be able to access the information in this account.
+            Anyone else who shares access to these accounts will need to create their own GOV.UK One Login, using a different email address. They will no longer be able to access the information in the accounts.
            </p>
          </div>
        </details>
 
- 
+ <p>We'll now take you to sign into or create your GOV.UK One Login.</p>
     
        {{ govukButton({
          text: "Go to GOV.UK One Login",
