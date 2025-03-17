@@ -1,0 +1,45 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="chs-interrupt" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">Connecting your Companies House account</h1>
+
+  <p class="govuk-body">You'll need enter the password for your Companies House account, to save existing account information.</p>
+
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+    
+  </div>
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

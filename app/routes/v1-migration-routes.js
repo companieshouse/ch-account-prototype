@@ -18,20 +18,9 @@ router.post('/migration-1/prototype-set-up', function (req, res) {
 
 /* Start page for sign in */
 router.post('/migration-1/start-page', function (req, res) {
-
-
-    if (req.session.data['set-journey'].includes('WC2')) {
-       
-        res.redirect('sign-in-webfiling-interupt-simplified')
-    }
-    else    
-    {
-           
-        res.redirect('sign-in-interupt')
-    }
-
-
     
+    res.redirect('sign-in-interupt')
+
 })
 
 /* Start page for sign in */
@@ -96,12 +85,13 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('../webfiling-interupt')
+        res.redirect('../chs-interrupt')
     }
     else if (req.session.data['set-journey'].includes('WC2'))     
     {
            
-        res.redirect('../link-to-existing-chs-account')
+        res.redirect('../chs-interrupt-no-account-found')
+
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
    {
@@ -109,6 +99,12 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
         res.redirect('../no-chs-found-interrupt')
 
    }
+})
+
+/* CHS interupt */
+router.post('/migration-1/chs-interrupt', function (req, res) {
+
+    res.redirect('link-to-existing-chs-account')
 })
 
 
