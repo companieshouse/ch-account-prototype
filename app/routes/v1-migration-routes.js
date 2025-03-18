@@ -153,7 +153,16 @@ router.post('/migration-1/link-to-existing-chs-account', function (req, res) {
 /* Linking CHS accounts */
 router.post('/migration-1/chs-account-linked', function (req, res) {
 
-    res.redirect('webfiling-interupt')
+    if (req.session.data['set-journey'].includes('WC1')) {
+       
+        res.redirect('webfiling-interupt')
+    }
+    else if (req.session.data['set-journey'].includes('WC3')) {
+       
+        res.redirect('no-webfiling-found')
+    }
+
+   
 
 })
 
