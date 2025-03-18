@@ -26,20 +26,27 @@ We are changing the way you sign in to some of our services – {{ serviceName }
       <form action="no-chs-found-change-email" method="post" novalidate>
 
   
-        <h1 class="govuk-heading-l">Email addresses must match</h1> 
+        <h1 class="govuk-heading-l">Email addresses must match <strong class="govuk-tag">
+          Content TBC
+        </strong></h1>
 
         <p class="govuk-body">To connect your Companies House account to your GOV.UK One Login, you must use the same email address for both. You have 2 options.</p> 
        
     
         <h2 class="govuk-heading-m">Option 1</h2>
         <h3 class="govuk-heading-s">Change your Companies House account email address</h3>
+
+
     
         <ol class="govuk-list govuk-list--number">
-          <li>Go to 
-          <a href="change-email-address" class="govuk-link" rel="noreferrer noopener" target="_blank">‘Change email address’ (opens in a new tab)</a>.</li>
+
+          <li>
+            <a href="choose-sign-in" class="govuk-link" rel="noreferrer noopener" target="_blank"> Sign in to your existing Companies House account (opens in a new tab)</a>.
+
+          <li>Go to 'Your details'.</li>
           <li>Change your Companies House account email address to <strong> {{data['one-login-email']}}</strong>.</li>
-          <li>Select <a href="your-details-public-beta" class="govuk-link" rel="noreferrer noopener" target="_blank">Manage account (opens in a new tab)</a>.</li>
-          <li>Select continue to connect your account to your GOV.UK One Login.</li>
+          <li>Then, go back to the <a href="prototype-set-up" class="govuk-link" rel="noreferrer noopener" target="_blank">WebFiling and sign in</a>. </li>
+         
         </ol>
     
         <h2 class="govuk-heading-m">Option 2</h2>
@@ -49,9 +56,9 @@ We are changing the way you sign in to some of our services – {{ serviceName }
           <li>
             <a href="create-or-sign-in-9" class="govuk-link" rel="noreferrer noopener" target="_blank">Sign in to your GOV.UK One Login (opens in a new tab)</a>.
          </li>
-          <li>Change your GOV.UK One Login email address to <strong>{{ data['chs-email'] }}</strong>.</li>
-          <li>Go back to your Companies House account and select <a href="your-details-public-beta" class="govuk-link" rel="noreferrer noopener" target="_blank">Manage account (opens in a new tab)</a>.</li>
-          <li>Select continue to connect your account to your GOV.UK One Login.</li>
+          <li>Go to 'security' and change your GOV.UK One Login email address to <strong>{{ data['chs-email'] }}</strong>.</li>
+          <li>Then, go back to WebFiling and sign in.</li>
+        
         </ol>
     
        

@@ -96,7 +96,7 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC3'))     
    {
 
-        res.redirect('../no-chs-found-interrupt')
+        res.redirect('../chs-interrupt')
 
    }
 })
@@ -105,6 +105,16 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
 router.post('/migration-1/chs-interrupt', function (req, res) {
 
     res.redirect('link-to-existing-chs-account')
+})
+
+
+/* CHS interupt - not found  */
+router.post('/migration-1/chs-interrupt-no-account-found', function (req, res) {
+
+    if (req.session.data['set-journey'].includes('WC2')) {
+       
+        res.redirect('webfiling-interupt')
+    }
 })
 
 
