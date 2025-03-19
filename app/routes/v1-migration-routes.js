@@ -99,6 +99,12 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
         res.redirect('../chs-interrupt')
 
    }
+   else if (req.session.data['set-journey'].includes('WC4'))     
+    {
+ 
+         res.redirect('../webfiling-interrupt')
+ 
+    }
 })
 
 /* CHS interupt */
@@ -113,13 +119,13 @@ router.post('/migration-1/chs-interrupt-no-account-found', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('webfiling-interupt')
+        res.redirect('webfiling-interrupt')
     }
 })
 
 
 /* Webfiling interupt */
-router.post('/migration-1/webfiling-interupt', function (req, res) {
+router.post('/migration-1/webfiling-interrupt', function (req, res) {
 
     res.redirect('verify-email-address')
 })
@@ -155,7 +161,7 @@ router.post('/migration-1/chs-account-linked', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('webfiling-interupt')
+        res.redirect('webfiling-interrupt')
     }
     else if (req.session.data['set-journey'].includes('WC3')) {
        
@@ -254,7 +260,7 @@ router.post('/migration-1/webfiling-new-email-address', function (req, res) {
 /*  WebFiling change email address to same as One Login */
 router.post('/migration-1/webfiling-email-changed', function (req, res) {
 
-    res.redirect('webfiling-interupt')
+    res.redirect('webfiling-interrupt')
 
   
 })

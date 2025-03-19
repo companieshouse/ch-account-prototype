@@ -36,16 +36,24 @@
             value: "WC2",
             text: "Scenario 2",
             hint: {
-              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account."
+              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. We ask the user in the journey if they have a Companies House account with a different email address."
             }
           },
           {
             value: "WC3",
             text: "Scenario 3",
             hint: {
-              text: "A users GOV.UK One Login matches their Companies House  account email address. However, they use a different email address for WebFiling."
+              text: "A users GOV.UK One Login matches their Companies House  account email address. However, they use a different email address for WebFiling. The user needs to change their WebFiling email address, and then continue on the sign in journey."
+            }
+          },
+          {
+            value: "WC4",
+            text: "Scenario 4",
+            hint: {
+              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. No information will be saved to the Companies House account."
             }
           }
+
 
         ]
       }) }}
@@ -54,6 +62,7 @@
       {{ govukButton({
         text: "Continue"
       }) }}
+
 
 </form>
     </div>
