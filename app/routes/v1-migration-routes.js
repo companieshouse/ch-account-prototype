@@ -19,7 +19,7 @@ router.post('/migration-1/prototype-set-up', function (req, res) {
 /* Start page for sign in */
 router.post('/migration-1/start-page', function (req, res) {
     
-    res.redirect('sign-in-interupt')
+    res.redirect('sign-in-interrupt')
 
 })
 
@@ -232,13 +232,22 @@ router.post('/migration-1/no-webfiling-found-change-email', function (req, res) 
 
 })
 
-/*  WebFiling password */
+/*  Changing WebFiling email address  */
 router.post('/migration-1/webfiling-email-address', function (req, res) {
 
     res.redirect('webfiling-password')
 
 })
 
+
+/* Changing WebFiling email address */
+router.get('/migration-1/webfiling-email-address-return-to-sign-in', function (req, res) {
+
+
+    req.session.data['return-to-sign-in-page'] = true;
+    res.redirect('webfiling-password')
+
+})
 
 
 /*  WebFiling change email address to same as One Login */
@@ -260,7 +269,21 @@ router.post('/migration-1/webfiling-new-email-address', function (req, res) {
 /*  WebFiling change email address to same as One Login */
 router.post('/migration-1/webfiling-email-changed', function (req, res) {
 
-    res.redirect('webfiling-interrupt')
+
+    // User changed their email address from the sign in - return to sign in page 
+    if(req.session.data['return-to-sign-in-page'] === true){
+
+        req.session.data['return-to-sign-in-page'] = false;
+        res.redirect('sign-in-interrupt')
+
+    }
+
+    else{
+        res.redirect('webfiling-interrupt')
+
+    }
+
+
 
   
 })
