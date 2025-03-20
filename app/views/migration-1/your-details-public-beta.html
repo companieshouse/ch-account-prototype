@@ -1,0 +1,258 @@
+{% extends "layouts/layout-chs-signed-out-r1.html" %}
+
+{% block pageTitle %}
+  Manage account - Companies House - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+
+Find and update company information
+ 
+{% endset %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="your-details-public-beta" method="post" novalidate>
+
+
+    <h1 class="govuk-heading-xl">Manage account </h1>
+
+    <!-- Note: GOV.UK One Login uses Security as the title for this page -->
+ 
+    <p class="govuk-body">You're signed in as 
+      
+      {% if (data['chs-email-2'] === "") %}
+
+      <strong>  {{data['email-address-2']}} </strong>
+
+      {% elseif (data['chs-email'] !== "") %}
+
+      <strong> {{data['chs-email']}} </strong>
+
+      {% else %}
+
+      <strong> email111@example.com </strong>
+
+      {% endif %}
+      
+     </p>
+
+     <ul class="govuk-list govuk-list--spaced">
+      <li>
+        <a href="#" class="govuk-link">Change email address</a>
+      </li>
+      <li>
+        <a href="#" class="govuk-link">Change password</a>
+      </li>
+      <li>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Manage third party applications</a>
+      </li>
+      <li>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Search for a company</a>
+      </li>
+    </ul>
+
+    
+
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    
+
+    <h2 class="govuk-heading-m">
+      Connect this account to GOV.UK One Login
+    </h2>
+
+    <p class="govuk-body">GOV.UK One Login is the new way to sign in, and will make your Companies House account more secure. </p>
+
+    <p class="govuk-body">You must use 
+
+      {% if (data['chs-email'] !== "") %}
+
+      <strong> {{data['chs-email']}} </strong>
+
+      {% else %}
+
+      <strong> email111@example.com </strong>
+
+      {% endif %} for your GOV.UK One Login if you want to save your existing account information.</p>
+
+   
+
+
+
+  
+
+
+    {{ govukButton({
+      text: "Continue",
+      href:"start-page"
+    }) }}
+
+
+
+   
+    
+ 
+
+    
+
+ <!--    <p class="govuk-body">You can change your sign in details for this service in your GOV.UK One Login.</p>
+    
+    <p class="govuk-body"> You'll be able to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>change your email address</li>
+      <li>change your password</li>
+      <li>change how you get security codes to sign in</li>
+      <li>delete your GOV.UK One Login</li>
+    </ul>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Go to your GOV.UK One Login to change your sign in details (opens in a new tab) </a>
+    </p> -->
+
+   <!-- <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Your details </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How we display your name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if (data['display-name'] === "") %}
+
+              {% else %}
+              
+              {{data['display-name']}} 
+  
+              {% endif %}
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="name-account">
+                Update<span class="govuk-visually-hidden"></span>
+              </a>
+            </dd>
+          </div>
+          
+        </dl>
+
+      </div>
+    </div> -->
+
+  <!--  IDV commenting out for User Research purposes 
+    
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Identity verification</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              View code history<span class="govuk-visually-hidden"> of personal code</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Create new code<span class="govuk-visually-hidden"> Create new code</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Companies House personal code
+            </dt>
+            <dd class="govuk-summary-list__value">
+              **************
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Show<span class="govuk-visually-hidden"> Show personal code</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div> -->
+
+
+  <!--   <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Sign in details </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body">You use your GOV.UK One Login to sign in to your Companies House account.</p>
+      
+    
+        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your email address</li>
+          <li>your password</li>
+          <li>how you get security codes to sign in</li>
+        </ul>
+
+        <p class="govuk-body">
+          <a href="https://home.account.gov.uk/settings" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your sign in details in your GOV.UK One Login (opens in a new tab) </a>
+        </p>
+    
+      </div>
+    </div> -->
+
+   <!--  <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Email preferences</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+
+        <p class="govuk-body">We’ll sometimes need to send you essential emails to help you manage your account.</p>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                Can we send you emails related to Companies House? <p class="govuk-hint"> For example, changes to services or legislation, information from other government departments which may be important to you, or information to help you run your company responsibly if you’re a new or existing director.</p> 
+              </dt>
+            <dd class="govuk-summary-list__value" style="text-align: center;">
+              Yes
+            </dd>
+             <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="email-preferences-ch">
+                Change<span class="govuk-visually-hidden"> emails related to Companies House </span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <div class="">
+              <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                Can we send you emails to invite you to take part in user research? <p class="govuk-hint"> This will help us to improve our services. </p>
+              </dt>
+            </div>
+            <dd class="govuk-summary-list__value" style="text-align: center;">
+              Yes
+            </dd>
+             <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="email-preferences-ur">
+                Change<span class="govuk-visually-hidden"> emails to manage account</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div> -->
+
+
+
+
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
