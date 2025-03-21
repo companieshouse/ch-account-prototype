@@ -72,14 +72,14 @@ router.post('/migration-1/one-login/one-login-sign-in', function (req, res) {
     res.redirect('one-login/one-login-enter-password')
 })
 
-
+/* GOV.UK One login */
 router.post('one-login/one-login-enter-password', function (req, res) {
 
     res.redirect('enter-code')
   })
   
 
-/* End of GOV.UK One Login */
+/* End of GOV.UK One Login sign in */
 router.post('/migration-1/one-login/enter-code', function (req, res) {
 
 
@@ -106,6 +106,68 @@ router.post('/migration-1/one-login/enter-code', function (req, res) {
  
     }
 })
+
+
+
+/* Create a GOV.UK One login */
+router.post('/migration-1/one-login/create-enter-email', function (req, res) {
+
+    res.redirect('create-check-your-email')
+  })
+
+
+/* Create a GOV.UK One login */
+router.post('/migration-1/one-login/create-check-your-email', function (req, res) {
+
+    res.redirect('create-enter-password')
+  })
+
+/* Create a GOV.UK One login */
+router.post('/migration-1/one-login/create-enter-password', function (req, res) {
+
+    res.redirect('create-choose-security-type')
+  })
+
+
+  //Create a GOV.UK One login
+  router.post('/migration-1/one-login/create-choose-security-type', function (req, res) {
+  
+   
+    if (req.session.data['choose-security-type'] === 'text-message-on-sign-in') {
+         
+     res.redirect('create-enter-mobile-number')
+   }
+   // Otherwise take them to a stop screen
+   else{
+
+       res.redirect('create-set-up-auth-app')
+ 
+   }
+ })
+
+ /* Create a GOV.UK One login */
+router.post('/migration-1/one-login/create-set-up-auth-app', function (req, res) {
+
+    res.redirect('create-complete')
+})
+
+ /* Create a GOV.UK One login */
+ router.post('/migration-1/one-login/create-enter-mobile-number', function (req, res) {
+
+    res.redirect('create-complete')
+})
+
+ /* Create a GOV.UK One login */
+ router.post('/migration-1/one-login/create-complete', function (req, res) {
+
+    res.redirect('../chs-interrupt')
+})
+
+
+
+
+
+
 
 /* CHS interupt */
 router.post('/migration-1/chs-interrupt', function (req, res) {
