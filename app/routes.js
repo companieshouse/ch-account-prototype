@@ -14,3 +14,5 @@ module.exports = router
 
 router.use('/', require('./routes/v1-migration-routes.js'))
 
+router.use('/', require('./routes/v2-migration-routes.js'))
+

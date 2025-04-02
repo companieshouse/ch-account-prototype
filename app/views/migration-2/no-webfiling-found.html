@@ -1,0 +1,80 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">Connecting your WebFiling account</h1>
+
+  <p class="govuk-body">The email address you have chosen to use across all your accounts is <strong>example@example.com</strong>
+    
+    
+  <p class="govuk-body">We will create a new Webfiling account for you using this email address, unless you select you wish to change the email address of an existing Webfiling Account.</p>
+
+  <p class="govuk-body">If you have an existing Webfiling account but wish to start a new one you may do so. However, you will lose access to all previous filing information</p>
+
+ 
+  <p class="govuk-body">
+    <a href="no-webfiling-found-change-email" class="govuk-link"> Change email address of existing Webfiling Account
+    </a>
+  </p>
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Create new WebFiling account
+    </button>
+   
+  </div>
+
+
+
+<!--         {{ govukRadios({
+          name: "no-webfiling-found",
+          fieldset: {
+            legend: {
+              text: "Do you have an existing WebFiling account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }} -->
+    
+  
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
+

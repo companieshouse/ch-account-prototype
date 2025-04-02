@@ -1,0 +1,48 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="chs-interrupt" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">We need you to enter your Companies House account password before we take you to WebFiling</h1>
+
+  <p class="govuk-body">You only need to do this once.</p>
+
+  <p>It will enable us to connect your GOV.UK One Login to your Companies House account that uses the email address <strong>e*****@gmail.com</strong>. We will save any existing information that's in the account.</p>
+
+  <p class="govuk-body">We'll ask for the password on the next screen.</p>
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+    
+  </div>
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
