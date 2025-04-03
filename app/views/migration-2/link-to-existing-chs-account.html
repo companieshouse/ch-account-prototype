@@ -36,7 +36,7 @@
           <label class="govuk-label" for="password-input">
            
           </label><div id="authentication-code-hint" class="govuk-hint">
-            This may be different to your WebFiling password
+            This may be different to your WebFiling password or your GOV.UK One Login password.
           </div>
           <div class="govuk-input__wrapper govuk-password-input__wrapper">
             <input class="govuk-input govuk-password-input__input govuk-js-password-input-input govuk-!-width-two-thirds" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
@@ -54,6 +54,22 @@
      account to your GOV.UK One Login and save any existing information.
 
     </div>-->
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is a Companies House account?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">This is the account you can use to sign in to:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>the Companies House register - sometimes known as the 'Companies House service' or 'Find and update company information'</li>
+    <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+  </ul>
+  <p>It is different to a WebFiling account.</p>
+      </div>
+    </details>
 
          {{ govukButton({
            text: "Continue"
