@@ -45,6 +45,18 @@ This HTML is completely unsuitable for use in production sites
 
 <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">Companies you file for</p>
 
+<span class="warning"><span class="govuk-visually-hidden">Warning: </span>I am a warning, and check my HTML as you'll see a visually hidden bit of text.</span>
+<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
+<span class="warning fullwidth"><span class="govuk-visually-hidden">Warning: </span>I am a full width warning, and check my HTML as you'll see a visually hidden bit of text.</span>
+<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
+
+
+<div class="information message">
+            <p class="header">Information banner header</p>
+            <p>Information banner text</p>
+        </div>
+
+
 
 
 <div class="govuk-form-group">
@@ -53,13 +65,16 @@ This HTML is completely unsuitable for use in production sites
     <p class="govuk-body">Enter the company number, or part of a company number. </strong></p>
   </label>
   <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+  <button type="submit" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+    Search
+   </button>
+   <a href="" class="govuk-link govuk-link--no-visited-state govuk-!-margin-left-2"> Clear  <span class="govuk-visually-hidden"></span> </a>
 </div>
 
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-<table class="govuk-table govuk-!-margin-top-7">
-<caption class="govuk-table__caption govuk-table__caption--s visuallyhidden">Your companies</caption>
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-table__caption--s visuallyhidden"></caption>
 
 
   <thead class="govuk-table__head">
@@ -75,7 +90,7 @@ This HTML is completely unsuitable for use in production sites
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p> </th>
+      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Authentication code needed to file for this company </a></p> </th>
       <td class="govuk-table__cell">10866549</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
         Not authorised 
@@ -110,7 +125,7 @@ This HTML is completely unsuitable for use in production sites
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED
-        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p>
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Authentication code needed to file for this company </a></p>
       </th>
       <td class="govuk-table__cell">08449801</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
@@ -123,7 +138,7 @@ This HTML is completely unsuitable for use in production sites
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED
-        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p>
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Authentication code needed to file for this company</a></p>
       </th>
       <td class="govuk-table__cell">09433214</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">

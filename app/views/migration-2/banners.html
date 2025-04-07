@@ -1,0 +1,92 @@
+{% extends "layouts/webfiling.html" %}
+
+
+{% block pageTitle %}
+ENCOM VIDEO GAMES LIMITED (01234567) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+{% block stylesheets %}
+ {{ super() }}
+<style type="text/css">
+.govuk-header__container.govuk-width-container {
+  background-color: #00144D !important;
+}
+  .govuk-width-container, .govuk-template__body, .govuk-template {
+    background-color: #f6f6f6 !important;
+}
+.govuk-main-wrapper {
+  padding-top:10px;
+}
+
+</style>
+{% endblock %}
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-three-quarters wfOverview">
+
+
+
+<span class="warning"><span class="govuk-visually-hidden">Warning: </span>I am a warning, and check my HTML as you'll see a visually hidden bit of text.</span>
+<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
+<span class="warning fullwidth"><span class="govuk-visually-hidden">Warning: </span>I am a full width warning, and check my HTML as you'll see a visually hidden bit of text.</span>
+<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
+
+<div class="information message">
+            <p class="header">Information banner header</p>
+            <p>Information banner text</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
