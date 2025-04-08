@@ -1,38 +1,84 @@
+{% extends "layouts/layout.html" %}
 
 
-{{ govukRadios({
-  idPrefix: "add-to-account",
-  name: "add-to-account",
-  fieldset: {
-    legend: {
-      html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>  Do you want to add this company to your Companies House account?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--xl"
-    }
-  },
+{% set serviceName %}
+  
+{% endset%}
 
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ]
-}) }}
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Benefits of adding this company to your Companies House account
-</span>
-</summary>
-<div class="govuk-details__text">
-<p class="govuk-body">By adding this company to your account, you:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>will not need to re-enter the company's authentication code for most online filings</li>
-<li>can authorise other people to file on your behalf</li>
-</ul>
+{% block pageTitle %}
+Do you want to add this company to your Companies House account?
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="save-company-to-account" method="post" novalidate="">
+
+        {{ govukRadios({
+          idPrefix: "add-to-account",
+          name: "add-to-account",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>  Do you want to add this company to your Companies House account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+            <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            Benefits of adding this company to your Companies House account
+            </span>
+            </summary>
+            <div class="govuk-details__text">
+            <p class="govuk-body">By adding this company to your account, you:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>will not need to re-enter the company's authentication code for most online filings</li>
+            <li>can authorise other people to file on your behalf</li>
+            </ul>
+            </div>
+            </details>
+
+
+
+
+              {{ govukButton({
+                text: "Continue",
+                classes:"govuk-!-margin-top-5"
+              }) }} 
+  
+            
+  
+            
+          
+          
+          
+          
+</form>
+          
 </div>
-</details>
+</div>
+          
+{% endblock %}
+          

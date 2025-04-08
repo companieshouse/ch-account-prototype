@@ -38,27 +38,22 @@ This HTML is completely unsuitable for use in production sites
 
   <button type="submit" class="govuk-button allForms" data-module="govuk-button">
   All forms
-</button>
+  </button>
 
 
 
 
-<p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">Companies you file for</p>
+  <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">Companies you file for</p>
 
-<span class="warning"><span class="govuk-visually-hidden">Warning: </span>I am a warning, and check my HTML as you'll see a visually hidden bit of text.
-
-You will need to enter the authentication code again in order to file for some of your companies. Alternatively, you can ask someone else who has added the authentication code and is digitally authorised for the company, to add you to the company.
-</span>
-<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
-<span class="warning fullwidth"><span class="govuk-visually-hidden">Warning: </span>I am a full width warning, and check my HTML as you'll see a visually hidden bit of text.</span>
-<br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
+<span class="warning fullwidth govuk-!-margin-left-0"><span class="govuk-visually-hidden">Warning: </span>You are no longer digitally authorised to file for companies that are added to your account. You will need to enter the authentication code in order to file. If you do not have the authentication code you'll need to ask someone who is digitally authorised to add you or request the authentication code. </span>
+  <br> <!-- note the visually hidden class on WebFiling is just "hidden"-->
 
 
 
 
 <div class="govuk-form-group govuk-!-margin-top-4">
   <label class="govuk-label" for="event-name">
-    <p class="govuk-body govuk-!-font-size-20 govuk-!-font-weight-bold">Search for a company</p>
+    <p class="govuk-body govuk-!-font-size-20 govuk-!-font-weight-bold">Search for a company on your account</p>
     <p class="govuk-body">Enter the company number, or part of a company number. </strong></p>
   </label>
   <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
@@ -68,7 +63,9 @@ You will need to enter the authentication code again in order to file for some o
    <a href="" class="govuk-link govuk-link--no-visited-state govuk-!-margin-left-2"> Clear  <span class="govuk-visually-hidden"></span> </a>
 </div>
 
-
+<button type="submit" class="govuk-button govuk-!-margin-left-0" data-module="govuk-button">
+  File for a different company
+ </button>
 
 <table class="govuk-table">
 <caption class="govuk-table__caption govuk-table__caption--s visuallyhidden"></caption>
