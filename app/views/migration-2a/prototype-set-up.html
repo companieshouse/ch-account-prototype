@@ -20,37 +20,16 @@
           legend: {
             text: "WebFiling account prototype flows:",
             isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
+            classes: "govuk-fieldset__legend--l" 
           }
         },
         items: [
-          {
-            value: "WC1",
-            text: "Scenario 1",
-            hint: {
-              text: "A user uses the same email address."
-            }
-
-          },
-          {
-            value: "WC2",
-            text: "Scenario 2",
-            hint: {
-              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. We ask the user in the journey if they have a Companies House account with a different email address."
-            }
-          },
-          {
-            value: "WC3",
-            text: "Scenario 3",
-            hint: {
-              text: "A users GOV.UK One Login matches their Companies House  account email address. However, they use a different email address for WebFiling. The user needs to change their WebFiling email address, and then continue on the sign in journey."
-            }
-          },
+   
           {
             value: "WC4",
-            text: "Scenario 4",
+            text: "Scenario 1 - No CHS password needed",
             hint: {
-              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. No information will be saved to the Companies House account."
+              text: "A users GOV.UK One Login matches both their WebFiling and CHS account email addresses. However, no separate screens are used for entering their CHS details."
             }
           }
 
