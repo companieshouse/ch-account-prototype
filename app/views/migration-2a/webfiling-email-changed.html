@@ -1,0 +1,48 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+We are changing the way you sign in to some of our services – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <form action="webfiling-email-changed" method="post" novalidate>
+
+
+      <h1 class="govuk-heading-l">Email address updated successfully</h1> 
+
+           
+      <p class="govuk-body">You've updated your WebFiling email address to <strong>e*****@gmail.com</strong>. </p>
+
+
+    
+    
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+ 
+     </form>
+   </div>
+ </div>
+ 
+
+ {% endblock %}
