@@ -41,69 +41,25 @@ This HTML is completely unsuitable for use in production sites
   </button>
 
 
-  <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
-
-  <h2 class="govuk-heading-l">FLOWERS LIMITED</h2>
-
-  {{ govukSummaryList({
-    classes: 'govuk-!-margin-bottom-9',
-    rows: [
-      {
-        key: {
-          text: "Company number"
-        },
-        value: {
-          text: "18882777"
-        }
-      },
-      {
-        key: {
-          text: "Status"
-        },
-        value: {
-          text: "Active"
-        }
-      },
-      {
-        key: {
-          text: "Incorporation date"
-        },
-        value: {
-          text: "11 December 2006"
-        }
-      },
-      {
-        key: {
-          text: "Company type"
-        },
-        value: {
-          text: "Private Limited Company"
-        }
-      },
-      {
-        key: {
-          text: "Registered office address"
-        },
-        value: {
-          html: "2nd Floor Red House<br>17 London Road<br>London<br>SA73 8PH"
-        }
-      }
-    ]
-  }) }}
+  <h1 class="govuk-heading-xl">Manage account </h1>
 
 
-
-  {{ govukButton({
-      text: "Confirm and continue",
-      href:"authentication-code"
-  }) }}
-
-  <p class="govuk-body"> <a href="company-number" class="govuk-link">Choose a different company</a></p>
+  <p class='govuk-body govuk-!-padding-bottom-2'>  You're signed in as<span class='govuk-body govuk-!-font-weight-bold'> <strong> email111@example.com </strong></p>
 
 
+    
+        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your email address</li>
+          <li>your password</li>
+          <li>how you get security codes to sign in</li>
+        </ul>
+
+        <p class="govuk-body">
+          <a href="https://home.account.gov.uk/settings" class="govuk-link">Change your sign in details in your GOV.UK One Login</a>
+        </p>
 
 
- 
 
 
  </div>
