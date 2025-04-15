@@ -40,31 +40,46 @@ This HTML is completely unsuitable for use in production sites
   All forms
   </button>
 
-  
-
-   
-    {{ govukInput({
-      label: {
-        html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>
-     Enter the company authentication code",
-        classes: "govuk-!-font-size-24 govuk-!-font-weight-bold",
-        isPageHeading: true
-      },
-      classes: "govuk-input--width-10",
-      id: "authentication-code",
-      name: "authentication-code"
-    }) }}
+  <span class="govuk-caption-xl">FLOWERS LIMITED</span>
+        <h1 class="govuk-heading-l">Store company details for future online filings?</h1>
 
 
+        <p class="govuk-body">We can securely store the company details you entered to make online filing quicker and easier in the future.</p>
+
+        <p class="govuk-body">This means you:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
+          <li>will not need to re-enter the company's authentication code for most online filings</li>
+          <li>can authorise other people to file online for the company</li>
+          
+        </ul>
+
+
+
+        {{ govukRadios({
+          name: "add-to-account",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-body govuk-!-font-weight-bold'> Do you want us to store the company details for FLOWERS LIMITED?<span>"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+       
 
     {{ govukButton({
       text: "Continue",
-      href:"save-company"
-    }) }}
-
-    {{ govukDetails({
-      summaryText: "Help with authentication code",
-      html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.<br><br> <p class="govuk-body"><a href="request-an-authentication-code" class="govuk-link">I do not have an authentication code</a></p>'
+      href:"company-overview"
     }) }}
 
 
