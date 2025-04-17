@@ -1,0 +1,117 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Request an authentication code – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+
+  <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
+
+  <h2 class="govuk-heading-l">FLOWERS LIMITED</h2>
+
+  {{ govukSummaryList({
+    classes: 'govuk-!-margin-bottom-9',
+    rows: [
+      {
+        key: {
+          text: "Company number"
+        },
+        value: {
+          text: "18882777"
+        }
+      },
+      {
+        key: {
+          text: "Status"
+        },
+        value: {
+          text: "Active"
+        }
+      },
+      {
+        key: {
+          text: "Incorporation date"
+        },
+        value: {
+          text: "11 December 2006"
+        }
+      },
+      {
+        key: {
+          text: "Company type"
+        },
+        value: {
+          text: "Private Limited Company"
+        }
+      },
+      {
+        key: {
+          text: "Registered office address"
+        },
+        value: {
+          html: "2nd Floor Red House<br>17 London Road<br>London<br>SA73 8PH"
+        }
+      }
+    ]
+  }) }}
+
+  <p class="govuk-body"> <a href="company-number" class="govuk-link">Choose a different company</a></p>
+
+
+  <p class="govuk-body">When you select the 'Request code' button, your Company Authentication Code reminder will be sent by post to the company's registered office address. </p>
+
+  {{ govukButton({
+      text: "Request code",
+      href:""
+  }) }}
+
+
+
+
+ </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+
