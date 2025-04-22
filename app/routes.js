@@ -18,3 +18,4 @@ router.use('/', require('./routes/v2-migration-routes.js'))
 
 router.use('/', require('./routes/v2a-migration-routes.js'))
 
+router.use('/', require('./routes/v3-migration-routes.js'))

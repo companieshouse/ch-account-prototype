@@ -1,0 +1,321 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+    <h1 class="govuk-heading-l">
+      WebFiling
+      <span class="govuk-caption-xl">Version 3</span>
+    </h1>
+    
+
+
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
+
+
+    <h2 class="govuk-heading-m">Prototype set up</h2>
+    
+
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-list" href="prototype-set-up.html">Prototype set up / scenarios</a>
+      </li>
+
+  </ul>
+
+<h2 class="govuk-heading-m">Sign in to Webfiling introductory screens</h2>
+ <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="start-page.html">Sign in to Webfiling</a> <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+       Content TBC
+      </strong>
+    </li>
+    <li>
+      <a class="govuk-link" href="sign-in-interrupt.html">We're taking you to GOV.UK One Login to sign in to this service <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong></a> 
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Change Webfiling email address screens <strong class="govuk-tag govuk-tag">
+  Design and flow TBC
+ </strong></h2> 
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-list" href="webfiling-email-address.html">Webfiling email address</a> 
+  </li>
+  <li>
+    <a class="govuk-list" href="webfiling-password.html">Webfiling password</a> 
+  </li>
+  <li>
+    <a class="govuk-list" href="webfiling-new-email-address.html">New Webfiling email address</a> 
+  </li>
+  <li>
+    <a class="govuk-list" href="webfiling-email-changed.html">Webfiling details changed</a> 
+  </li>
+</ul>
+
+
+  <h2 class="govuk-heading-m">GOV.UK One Login <strong class="govuk-tag govuk-tag--pink">
+    Not for development
+   </strong></h2> 
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="one-login/create-or-sign-in.html">Create One login or sign-in</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/one-login-sign-in.html">One Login sign-in</a> 
+    </li> 
+    <li>
+      <a class="govuk-link" href="one-login/one-login-enter-password.html">One login password</a> 
+    </li> 
+    <li>
+      <a class="govuk-link" href="one-login/enter-code.html">One login code</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-enter-email.html">Create email for one login</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-check-your-email.html">One login security code</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-enter-password.html">One login password creation</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-choose-security-type.html">One login choose security type</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-set-up-auth-app.html">One login set up authenticator app</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-complete.html">One login creation confirmation</a> 
+    </li>
+  </ul>
+
+ <h2 class="govuk-heading-m">Connecting Companies House account</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="chs-interrupt.html">We need to connect your CH account - email recognised<strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong> </a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="link-to-existing-chs-account.html">Enter CHS account password</a> <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong>
+    </li>
+    <li>
+      <a class="govuk-link" href="chs-account-linked.html"> CHS account connected to GOV.UK One login confirmation</a> <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong>
+    </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">CHS reset password <strong class="govuk-tag govuk-tag--pink">
+    Not for development
+   </strong></h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="forgotten-your-password.html">CHS enter email address - for forgotten password </a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="password-reset-email-sent.html">Password email sent</a> 
+  </ul>
+
+
+
+
+  <h2 class="govuk-heading-m">Connecting WebFiling account to GOV.UK One login</h2> 
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-list" href="webfiling-interrupt.html">We need to connect your Webfiling - email recognised</a> <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong>
+    </li>
+
+    <li>
+      <a class="govuk-list" href="verify-email-address.html">Security code webfiling</a> <strong class="govuk-tag govuk-tag--green">
+       Content and design dev-ready
+       </strong> 
+    </li>
+
+    <li>
+      <a class="govuk-list" href="end-linking.html">Webfiling connected to One login confirmation</a> <strong class="govuk-tag govuk-tag">
+        Design TBC
+       </strong> <strong class="govuk-tag govuk-tag--yellow">
+        Content TBC
+       </strong>
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Information screens<strong class="govuk-tag govuk-tag--pink">
+  Not for development
+ </strong></h2> 
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-list" href="comms-article.html">Comms article</a> 
+  </li>
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+    <h2 class="govuk-heading-m" id="userRole">Your Companies</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="your-companies-no-search">Your companies</a> <strong class="govuk-tag govuk-tag">
+          Design TBC
+         </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Content TBC
+         </strong></h2> 
+      </li>
+
+      <li>
+        <a class="govuk-list" href="your-companies-save-via-chs">Your companies, save a company using CHS</a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong></h2> 
+      </li>
+
+
+      <li>
+        <a class="govuk-list" href="your-companies-2">Your companies with search and pagination</a> <strong class="govuk-tag govuk-tag">
+          Design TBC
+         </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Content TBC
+         </strong>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="userRole">File for a different company and store company details <strong class="govuk-tag govuk-tag">
+      Design and flow TBC
+     </strong></h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="company-number">Enter the details of the company you want to access</a> <strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="check-company-details">Confirm this is the correct company</a><strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="authentication-code">Enter the company authentication code</a><strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="save-company">Store company details for future online filings?</a><strong class="govuk-tag govuk-tag--turquoise">
+          Content TBC
+         </strong>
+      </li>
+    </ul>
+
+
+    <h2 class="govuk-heading-m" id="userRole">Company overview <strong class="govuk-tag govuk-tag--pink">
+      Not for development
+     </strong></h2>
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="company-overview">Company overview</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="userRole">Manage account</h2>
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="manage-account">Manage account</a><strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready
+         </strong>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="userRole">Request an authentication code </h2>
+    <ul class="govuk-list govuk-list--bullet">
+
+      <li>
+        <a class="govuk-list" href="request-authentication-code">Request an authentication code</a> <strong class="govuk-tag govuk-tag">
+          CHS service
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="">Company authentication codes for online filing on Companies House services(CHS)</a> <strong class="govuk-tag govuk-tag">
+          Design TBC
+         </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Content TBC
+         </strong>
+      </li>
+  
+      <li>
+        <a class="govuk-list" href="request-authentication-details">Confirm this is the correct company</a> <strong class="govuk-tag govuk-tag">
+          Design TBC
+         </strong> <strong class="govuk-tag govuk-tag--yellow">
+          Content TBC
+         </strong>
+      </li>
+    </ul>
+   
+  
+  
+
+  <!-- 
+
+  <h2 class="govuk-heading-m"id="finalScreens">Stop screens</h2>
+  <h2 class="govuk-heading-m"id="finalScreens">Emails</h2>
+    
+ -->
+  </div>
+  
+
+</div>
+
+
+{% endblock %}
