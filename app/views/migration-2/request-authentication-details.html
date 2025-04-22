@@ -41,13 +41,22 @@ This HTML is completely unsuitable for use in production sites
   </button>
 
 
-  <h1 class="govuk-heading-xl">Request the company authentication code</h1>
+  <h1 class="govuk-heading-xl">Request the authentication code</h1>
+  <p class="govuk-body">When you select 'Request code', we'll send the authentication code to the company's registered office address.</p>
 
-  <h2 class="govuk-heading-l">FLOWERS LIMITED</h2>
+  <h2 class="govuk-heading-l">Company details</h2>
 
   {{ govukSummaryList({
     classes: 'govuk-!-margin-bottom-9',
     rows: [
+    {
+      key: {
+        text: "Company name"
+      },
+      value: {
+        text: "FLOWERS LIMITED"
+      }
+    },
       {
         key: {
           text: "Company number"
@@ -93,8 +102,7 @@ This HTML is completely unsuitable for use in production sites
 
   <p class="govuk-body"> <a href="company-number" class="govuk-link">Choose a different company</a></p>
 
-
-  <p class="govuk-body">When you select 'Request code', we'll send the authentication code to the company's registered office address.</p>
+  <br>
 
   {{ govukButton({
       text: "Request code",
