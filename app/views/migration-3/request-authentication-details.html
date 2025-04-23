@@ -41,43 +41,28 @@ This HTML is completely unsuitable for use in production sites
   </button>
 
 
-  <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
+  <h1 class="govuk-heading-xl">Request the authentication code</h1>
+  <p class="govuk-body">After you select 'request code', we'll post the authentication code to the company's registered office address. If the company does not have an existing code, we'll generate a new one.</p>
 
-  <h2 class="govuk-heading-l">FLOWERS LIMITED</h2>
+  <h2 class="govuk-heading-l">Company details</h2>
 
   {{ govukSummaryList({
     classes: 'govuk-!-margin-bottom-9',
     rows: [
+    {
+      key: {
+        text: "Company name"
+      },
+      value: {
+        text: "FLOWERS LIMITED"
+      }
+    },
       {
         key: {
           text: "Company number"
         },
         value: {
           text: "18882777"
-        }
-      },
-      {
-        key: {
-          text: "Status"
-        },
-        value: {
-          text: "Active"
-        }
-      },
-      {
-        key: {
-          text: "Incorporation date"
-        },
-        value: {
-          text: "11 December 2006"
-        }
-      },
-      {
-        key: {
-          text: "Company type"
-        },
-        value: {
-          text: "Private Limited Company"
         }
       },
       {
@@ -93,8 +78,7 @@ This HTML is completely unsuitable for use in production sites
 
   <p class="govuk-body"> <a href="company-number" class="govuk-link">Choose a different company</a></p>
 
-
-  <p class="govuk-body">When you select the 'Request code' button, your Company Authentication Code reminder will be sent by post to the company's registered office address. </p>
+  <br>
 
   {{ govukButton({
       text: "Request code",
@@ -111,7 +95,5 @@ This HTML is completely unsuitable for use in production sites
   </div>
      </form>
 {% endblock %}
-
-
 
 
