@@ -10,63 +10,45 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form action="prototype-set-up" method="post" novalidate="">
 
-      {{ govukRadios({
-        name: "set-journey",
-        fieldset: {
-          legend: {
-            text: "WebFiling account prototype flows:",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="prototype-set-up" method="post" novalidate="">
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          text: "Link CHS and webfilling using OTP:",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l" 
+        }
+      },
+      items: [
+ 
+        {
+          value: "WC4",
+          text: "Link CHS, webfiling and onelogin using OTP",
+          hint: {
+            text: "User has accounts with CHS and webfilling which use the same email address. Link at same time with Onelogin using OTP"
           }
-        },
-        items: [
-          {
-            value: "WC1",
-            text: "Scenario 1",
-            hint: {
-              text: "A user uses the same email address."
-            }
-
-          },
-          {
-            value: "WC2",
-            text: "Scenario 2",
-            hint: {
-              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. We ask the user in the journey if they have a Companies House account with a different email address."
-            }
-          },
-          {
-            value: "WC3",
-            text: "Scenario 3",
-            hint: {
-              text: "A users GOV.UK One Login matches their Companies House  account email address. However, they use a different email address for WebFiling. The user needs to change their WebFiling email address, and then continue on the sign in journey."
-            }
-          },
-          {
-            value: "WC4",
-            text: "Scenario 4",
-            hint: {
-              text: "A users GOV.UK One Login matches their WebFiling account email address. However, they use a different email address for Companies House account. No information will be saved to the Companies House account."
-            }
-          }
+        }
 
 
-        ]
-      }) }}
+      ]
+    }) }}
 
 
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+    {{ govukButton({
+      text: "Continue"
+    }) }}
 
 
 </form>
-    </div>
   </div>
+</div>
+
+
 {% endblock %}
 
 
