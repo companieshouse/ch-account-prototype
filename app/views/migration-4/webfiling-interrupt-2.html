@@ -1,0 +1,43 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="webfiling-interrupt" method="post" novalidate="">
+
+
+
+  <h1 class="govuk-heading-l">We need to connect your Webfiling account to your GOV.UK One Login</h1>
+
+  <p class="govuk-body">This will enable us to save any existing information in your WebFiling account.</p>
+
+  <p class="govuk-body">We'll send a security code to <strong> e****e@g****l.com</strong> when you select continue. After you've entered the code, we'll connect your account. You only need to do this once.</p>
+
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}   
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

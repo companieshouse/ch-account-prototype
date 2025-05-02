@@ -90,7 +90,7 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC2'))     
     {
            
-        res.redirect('../chs-interrupt-no-account-found')
+        res.redirect('../webfiling-interrupt-2')
 
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
@@ -315,18 +315,9 @@ router.get('/migration-4/webfiling-email-address-return-to-sign-in', function (r
 /*  WebFiling change email address to same as One Login */
 router.post('/migration-4/webfiling-password', function (req, res) {
 
-if (req.session.data['set-journey'].includes('WC3')) {
-       
-    res.redirect('webfiling-interrupt')
-}
-else if (req.session.data['set-journey'].includes('WC1')) {
-   
-    res.redirect('no-webfiling-found')
-}
+    res.redirect('webfiling-new-email-address')
 
 })
-
-
 
 
 /*  WebFiling change email address to same as One Login */
