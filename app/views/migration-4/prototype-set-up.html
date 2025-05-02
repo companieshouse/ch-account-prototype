@@ -11,6 +11,8 @@
 
 {% block content %}
 
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="prototype-set-up" method="post" novalidate="">
@@ -19,21 +21,49 @@
       name: "set-journey",
       fieldset: {
         legend: {
-          text: "Link CHS and webfilling using OTP:",
+          text: "WebFiling account prototype flows:",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--l" 
+          classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
- 
+        {
+          value: "WC1",
+          text: "Scenario 1",
+          hint: {
+            text: "A return user to Webfiling who has already linked accounts"
+          }
+
+        },
+        {
+          value: "WC2",
+          text: "Scenario 2",
+          hint: {
+            text: "A users GOV.UK One Login matches their WebFiling account email address. A CHS account is created in the background"
+          }
+        },
+        {
+          value: "WC3",
+          text: "Scenario 3",
+          hint: {
+            text: "A users GOV.UK One Login does not match CHS or Webfiling. User offered opportunity to change webfiling email after onelogin created. User changes alternative webfiling email. No further reference to CHS after onelogin"
+          }
+        },
+
+      
         {
           value: "WC4",
-          text: "Link CHS, webfiling and onelogin using OTP",
+          text: "Scenario 4",
           hint: {
-            text: "User has accounts with CHS and webfilling which use the same email address. Link at same time with Onelogin using OTP"
+            text: "Link CHS, webfiling and onelogin using OTP. User has accounts with CHS and webfilling which use the same email address. Link at same time with Onelogin using OTP"
           }
+        },
+        
+        {
+          
         }
 
+        
 
       ]
     }) }}
@@ -42,13 +72,6 @@
     {{ govukButton({
       text: "Continue"
     }) }}
-
-
-</form>
-  </div>
-</div>
-
-
 {% endblock %}
 
 
