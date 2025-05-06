@@ -112,7 +112,28 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
 /* Create a GOV.UK One login */
 router.post('/migration-4/one-login/create-enter-email', function (req, res) {
 
-    res.redirect('create-check-your-email')
+    if (req.session.data['set-journey'].includes('WC1')) {
+       
+        res.redirect('../one-login/create-check-your-email')
+    }
+    else if (req.session.data['set-journey'].includes('WC3'))     
+    {
+           
+        res.redirect('../one-login/create-check-your-email')
+
+    }
+    else if (req.session.data['set-journey'].includes('WC2'))     
+   {
+
+        res.redirect('../one-login/create-check-your-email')
+
+   }
+   else if (req.session.data['set-journey'].includes('WC4'))     
+    {
+ 
+         res.redirect('../one-login/email-exists')
+ 
+    }
   })
 
 
@@ -149,6 +170,8 @@ router.post('/migration-4/one-login/create-enter-password', function (req, res) 
 router.post('/migration-4/one-login/create-set-up-auth-app', function (req, res) {
 
     res.redirect('create-complete')
+
+    
 })
 
  /* Create a GOV.UK One login */
@@ -160,7 +183,29 @@ router.post('/migration-4/one-login/create-set-up-auth-app', function (req, res)
  /* Create a GOV.UK One login */
  router.post('/migration-4/one-login/create-complete', function (req, res) {
 
-    res.redirect('../chs-interrupt')
+
+    if (req.session.data['set-journey'].includes('WC1')) {
+       
+        res.redirect('../webfiling-interrupt')
+    }
+    else if (req.session.data['set-journey'].includes('WC3'))     
+    {
+           
+        res.redirect('../webfiling-interrupt-2')
+
+    }
+    else if (req.session.data['set-journey'].includes('WC2'))     
+   {
+
+        res.redirect('../no-webfiling-found')
+
+   }
+   else if (req.session.data['set-journey'].includes('WC4'))     
+    {
+ 
+         res.redirect('../company-overview')
+ 
+    }
 })
 
 
