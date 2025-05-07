@@ -2,7 +2,7 @@
 {% extends "layouts/webfiling.html" %}
 
 {% block pageTitle %}
-Your companies {{ serviceName }} – GOV.UK Prototype Kit
+Your companies – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 <!-- 
@@ -54,18 +54,18 @@ This HTML is completely unsuitable for use in production sites
   </div>
   
   
+  <h1 class="govuk-heading-l">File for a company</h1>
 
-  <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">File for a company</p>
 
-  
+  <h2 class="govuk-heading-m">Manage your companies</h2>
 
 <!--     <div class="govuk-!-padding-3" style="background-color:#f3f2f1;"></div> -->
 <p> Go to
     <a href="https://find-update-company-info.herokuapp.com/v8-your-companies/company-added" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span>Your companies (opens in a new tab)</a> if you want to:</p>
    
     <ul class="govuk-list govuk-list--bullet">
-      <li>view and manage people who are digitally authorised</li>
       <li>view invitations to be digitally authorised</li>
+      <li>view and manage people who are digitally authorised</li>
       <li>remove a company</li>
     </ul>
 
@@ -85,6 +85,31 @@ This HTML is completely unsuitable for use in production sites
   <br> -->
 
 
+
+  <h2 class="govuk-heading-m">Your companies</h2>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <p class="govuk-body">Enter the company number, or part of a company number. </strong></p>
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+    <button type="submit" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+      Search
+     </button>
+     <a href="" class="govuk-link govuk-link--no-visited-state govuk-!-margin-left-2"> Cancel search  <span class="govuk-visually-hidden"></span> </a>
+
+     
+     <p class="govuk-body"><a href="company-overview" class="govuk-link--no-visited-state">File for a different company </a>
+  </div>
+
+
+
+<!--   
+  <button type="submit" class="govuk-button govuk-!-margin-left-0" data-module="govuk-button">
+    File for a different company
+   </button> -->
+
 <table class="govuk-table">
 <caption class="govuk-table__caption govuk-table__caption--s visuallyhidden"></caption>
 
@@ -102,7 +127,10 @@ This HTML is completely unsuitable for use in production sites
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2">You'll need to enter the authentication code to <a href="" class="govuk-link--no-visited-state">file for this company</a></p> </th>
+      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Enter the authentication code to become digitally authorised for this company</a></p> </th> 
+
+      
+      <!-- <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2">You'll need to enter the authentication code to <a href="" class="govuk-link--no-visited-state">file for this company</a></p> </th> -->
       <td class="govuk-table__cell">10866549</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
         Not digitally authorised 
@@ -137,7 +165,7 @@ This HTML is completely unsuitable for use in production sites
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED
-        <p class="govuk-body govuk-!-margin-top-2">You'll need to enter the authentication code to <a href="" class="govuk-link--no-visited-state">file for this company</a></p>
+        <p class="govuk-body govuk-!-margin-top-2"> <a href="" class="govuk-link--no-visited-state">Enter the authentication code to become digitally authorised for this company</a></p>
       </th>
       <td class="govuk-table__cell">08449801</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
@@ -150,7 +178,7 @@ This HTML is completely unsuitable for use in production sites
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED
-        <p class="govuk-body govuk-!-margin-top-2">You'll need to enter the authentication code to <a href="" class="govuk-link--no-visited-state">file for this company</a></p>
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Enter the authentication code to become digitally authorised for this company</a></p>
       </th>
       <td class="govuk-table__cell">09433214</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
