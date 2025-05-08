@@ -102,7 +102,7 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
    else if (req.session.data['set-journey'].includes('WC4'))     
     {
  
-         res.redirect('../company-overview')
+         res.redirect('../your-companies-3')
  
     }
 })
@@ -203,7 +203,7 @@ router.post('/migration-4/one-login/create-set-up-auth-app', function (req, res)
    else if (req.session.data['set-journey'].includes('WC4'))     
     {
  
-         res.redirect('../company-overview')
+         res.redirect('../your-companies-3')
  
     }
 })
@@ -271,7 +271,7 @@ router.post('/migration-4/verify-email-address', function (req, res) {
 /* Bringing the user back to Companies House from GOV.UK One Login */
 router.post('/migration-4/end-linking', function (req, res) {
 
-    res.redirect('company-overview')
+    res.redirect('your-companies-3')
        
 })
 

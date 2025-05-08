@@ -1,0 +1,56 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+
+
+  {{ govukInput({
+    label: {
+      html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>
+   Enter the company authentication code",
+      classes: "govuk-!-font-size-24 govuk-!-font-weight-bold",
+      isPageHeading: true
+    },
+    classes: "govuk-input--width-10",
+    id: "authentication-code",
+    name: "authentication-code"
+  }) }}
+
+
+
+  {{ govukButton({
+    text: "Continue",
+    href:"save-company"
+  }) }}
+
+  {{ govukDetails({
+    summaryText: "Help with authentication code",
+    html: 'This is a 6 character code issued by us to each company. The code is used to authorise online filings.<br><br> <p class="govuk-body"><a href="request-an-authentication-code" class="govuk-link">I do not have an authentication code</a></p>'
+  }) }}
+
+
+
+
+
+
+
+   </form>
+{% endblock %}
+
+   
+
+
+
+
+
