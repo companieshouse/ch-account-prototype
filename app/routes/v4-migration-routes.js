@@ -105,6 +105,13 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
          res.redirect('../your-companies-3')
  
     }
+
+    else if (req.session.data['set-journey'].includes('WC5'))     
+        {
+     
+             res.redirect('../chs-interrupt-2')
+     
+        }
 })
 
 
@@ -260,7 +267,13 @@ router.post('/migration-4/verify-email-address', function (req, res) {
     
         }
  
-    
+        else if (req.session.data['set-journey'].includes('WC5'))     
+            {
+                   
+                res.redirect('../migration-4/no-webfiling-found')
+        
+            }
+     
     
     res.redirect('end-linking')
 })
@@ -366,7 +379,10 @@ router.post('/migration-4/webfiling-password', function (req, res) {
        
         res.redirect('no-webfiling-found')
     }
-
+    else if (req.session.data['set-journey'].includes('WC5')) {
+       
+        res.redirect('your-companies-3')
+    }
    
 })
 
