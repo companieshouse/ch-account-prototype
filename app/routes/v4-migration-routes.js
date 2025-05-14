@@ -184,8 +184,10 @@ router.post('/migration-4/one-login/create-set-up-auth-app', function (req, res)
  /* Create a GOV.UK One login */
  router.post('/migration-4/one-login/create-enter-mobile-number', function (req, res) {
 
-    res.redirect('create-complete')
+    res.redirect('enter-code')
 })
+
+
 
  /* Create a GOV.UK One login */
  router.post('/migration-4/one-login/create-complete', function (req, res) {
