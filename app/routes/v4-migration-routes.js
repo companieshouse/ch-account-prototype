@@ -85,12 +85,12 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('../webfiling-interrupt')
+        res.redirect('../verify-email-address')
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
            
-        res.redirect('../webfiling-interrupt-2')
+        res.redirect('../verify-email-address')
 
     }
     else if (req.session.data['set-journey'].includes('WC2'))     
@@ -193,12 +193,12 @@ router.post('/migration-4/one-login/create-set-up-auth-app', function (req, res)
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('../webfiling-interrupt')
+        res.redirect('../verify-email-address')
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
            
-        res.redirect('../webfiling-interrupt-2')
+        res.redirect('../verify-email-address')
 
     }
     else if (req.session.data['set-journey'].includes('WC2'))     
