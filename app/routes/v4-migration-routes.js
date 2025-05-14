@@ -85,7 +85,7 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('../verify-email-address')
+        res.redirect('create-complete')
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
