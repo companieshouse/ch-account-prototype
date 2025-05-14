@@ -75,7 +75,7 @@ router.post('/migration-4/one-login/one-login-sign-in', function (req, res) {
 /* GOV.UK One login */
 router.post('one-login/one-login-enter-password', function (req, res) {
 
-    res.redirect('enter-code')
+    res.redirect('enter-code-sign-in')
   })
   
 
