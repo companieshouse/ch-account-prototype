@@ -26,37 +26,23 @@ Check your email – {{ serviceName }} - GOV.UK
       <form action="verify-email-address" method="post" novalidate>
 
 
-         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-              Important
-            </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-            <p class="govuk-notification-banner__heading">
-              Save existing information from Companies House.
-            </p>
-          </div>
-        </div> 
+ 
 
 
-      <h1 class="govuk-heading-l">Check your email</h1>
+      <h1 class="govuk-heading-l">We've sent you a security code to verify your email address for Companies House</h1>
      
-
+<p class="govuk-body">This will also enable us to save your existing information. You only need to do this once.</p>
 
       <div class="govuk-inset-text">
-        <p> We've sent a security code to  <span class="govuk-!-font-weight-bold">e****e@g****l.com</span></p>
+        <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">e******@gmail.com</span></p>
       </div>
   
-      <p class="govuk-body"> It might take a few minutes to arrive. </p>
+      <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 30 minutes.</p>
       
-      <p class="govuk-body"> 
-      The code will expire after 30 minutes.
-      </p>
-  
+  <br>
           {{ govukInput({
             label: {
-              text: "Security code"
+              text: "Enter your 6 digit security code"
             },
             classes: "govuk-input--width-10",
             id: "width-3",
@@ -73,7 +59,7 @@ Check your email – {{ serviceName }} - GOV.UK
 
       {{ govukDetails({
         summaryText: "I have not received an email",
-        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House WebFiling account: security code'. You could also check your junk folder.</br> </br> If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another code</a></a>."
+        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House security code'. You could also check your junk folder.</br> </br> If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another code</a></a>."
       }) }}
      
       <br>
