@@ -102,6 +102,14 @@ router.post('/migration-4/one-login/enter-code-sign-in', function (req, res) {
        
         res.redirect('../no-webfiling-found')
     }
+    else if (req.session.data['set-journey'].includes('WC3')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC4')) {
+       
+        res.redirect('../your-companies-3')
+    }
 })
   
 
@@ -124,7 +132,7 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC3'))     
    {
 
-        res.redirect('')
+        res.redirect('create-complete')
 
    }
    else if (req.session.data['set-journey'].includes('WC4'))     
