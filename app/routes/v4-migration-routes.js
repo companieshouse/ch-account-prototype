@@ -72,12 +72,40 @@ router.post('/migration-4/one-login/one-login-sign-in', function (req, res) {
     res.redirect('one-login/one-login-enter-password')
 })
 
+
+
 /* GOV.UK One login */
-router.post('one-login/one-login-enter-password', function (req, res) {
+router.post('/migration-4/one-login/one-login-enter-password', function (req, res) {
+
+    res.redirect('enter-code')
+})
+  
+
+/* GOV.UK One login */
+router.post('/migration-4/one-login/one-login-enter-password-sign-in', function (req, res) {
 
     res.redirect('enter-code-sign-in')
-  })
+})
   
+
+
+
+
+/* GOV.UK One login */
+router.post('/migration-4/one-login/enter-code-sign-in', function (req, res) {
+
+    if (req.session.data['set-journey'].includes('WC1')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC2')) {
+       
+        res.redirect('../no-webfiling-found')
+    }
+})
+  
+
+
 
 /* End of GOV.UK One Login sign in */
 router.post('/migration-4/one-login/enter-code', function (req, res) {
@@ -87,16 +115,16 @@ router.post('/migration-4/one-login/enter-code', function (req, res) {
        
         res.redirect('create-complete')
     }
-    else if (req.session.data['set-journey'].includes('WC3'))     
+    else if (req.session.data['set-journey'].includes('WC2'))     
     {
            
-        res.redirect('../verify-email-address')
+        res.redirect('create-complete')
 
     }
-    else if (req.session.data['set-journey'].includes('WC2'))     
+    else if (req.session.data['set-journey'].includes('WC3'))     
    {
 
-        res.redirect('../no-webfiling-found')
+        res.redirect('')
 
    }
    else if (req.session.data['set-journey'].includes('WC4'))     
@@ -375,7 +403,7 @@ router.post('/migration-4/webfiling-password', function (req, res) {
   
     if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('webfiling-interrupt-2')
+        res.redirect('verify-email-address')
     }   
     else if (req.session.data['set-journey'].includes('WC3')) {
        
