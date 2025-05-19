@@ -33,9 +33,25 @@ Check your email – {{ serviceName }} - GOV.UK
      
 <p class="govuk-body">This will also enable us to save your existing information. You only need to do this once.</p>
 
+
+        <!-- scenario 2 only -->
+
+        {% if (data['set-journey'] === "WC2")%}
+
+      <div class="govuk-inset-text">
+        <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">o*****@hotmail.com</span></p>
+      </div>
+
+      <!-- all other scenarios -->
+      {% else %}
+      
       <div class="govuk-inset-text">
         <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">e*****@gmail.com</span></p>
       </div>
+
+    {% endif %}
+
+
   
       <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 30 minutes.</p>
       

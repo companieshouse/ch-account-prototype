@@ -1,5 +1,23 @@
 
-  <p>Signed in to WebFiling example@gmail.com </p>
+  
+  
+   <!-- scenario 2 only -->
+
+   {% if (data['set-journey'] === "WC2")%}
+
+  
+ <p>Signed in to WebFiling oldemail@hotmail.com </p>
+
+
+   <!-- all other scenarios -->
+   {% else %}
+   
+  
+ <p>Signed in to WebFiling example@gmail.com </p>
+
+ {% endif %}
+
+
 
 
 <ul class="govuk-list">
