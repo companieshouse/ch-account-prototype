@@ -12,26 +12,20 @@ Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 <form class="form" action="" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
 
-
+      <span class='govuk-caption-l'>FLOWERS LIMITED</span> 
+    <h1 class="govuk-heading-l">Company authentication</h1>  
 
   {{ govukInput({
     label: {
-      html: "<span class='govuk-caption-xl'>FLOWERS LIMITED</span>
-   Enter the company authentication code",
-      classes: "govuk-!-font-size-24 govuk-!-font-weight-bold",
-      isPageHeading: true
+      html: "Enter the company authentication code",
+      classes: "govuk-!-font-weight-bold"
     },
     classes: "govuk-input--width-10",
     id: "authentication-code",
     name: "authentication-code"
-  }) }}
-
-
-
-  {{ govukButton({
-    text: "Continue",
-    href:"save-company"
   }) }}
 
   {{ govukDetails({
@@ -41,9 +35,43 @@ Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
+  {{ govukCheckboxes({
+    name: "add-company",
+    fieldset: {
+      legend: {
+        text: "Add this company to your account",
+        classes: "govuk-!-font-weight-bold "
+      }
+    },
+    hint: {
+      text: "You will not need to re-enter the company's authentication code for most online filings. You can authorise other people to file online for the company."
+    },
+    items: [
+      {
+        value: "add-company",
+        text: "Add company",
+        hint: {
+          text: ""
+        }
+      }
+    ]
+  }) }}
 
 
 
+
+  {{ govukButton({
+    text: "Continue",
+    href:"company-overview"
+  }) }}
+
+
+
+
+
+
+</div>
+</div>
 
    </form>
 {% endblock %}

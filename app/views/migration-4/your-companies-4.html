@@ -1,0 +1,147 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Your companies – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+  <div class="govuk-grid-column-one-quarter webfiling-menu">
+    {% include "/includes/webfiling-left-menu.html" %}
+    </div>
+    
+<div class="govuk-grid-row">
+
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+  <div class="govuk-grid-column-two-thirds wfOverview">
+
+  <div class="information message">
+    <p class="header">Renew your digital authorisation</p>
+    <p>To file online, you'll need to enter each company authentication code to renew your digital authorisation. We'll then store the code, so that you're digitally authorised.<br><br>
+ 
+      If you do not have the authentication code, you'll either need to ask someone who is digitally authorised to add you, or <a href="https://find-update-company-info.herokuapp.com/v8-your-companies/company-added" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span> request the authentication code (opens in a new tab)</a>.</p>
+  </div>
+  
+  
+  <h1 class="govuk-heading-l">Saved companies</h1>
+
+
+ 
+<!--   <p class="govuk-body govuk-!-font-size-20 govuk-!-font-weight-bold">Managing saved companies</p> -->
+
+
+
+  <!-- <h2 class="govuk-heading-m">Manage your companies</h2> -->
+
+<!-- https://find-update-company-info.herokuapp.com/v8-your-companies/company-added -->
+<p> Go to
+    <a href="" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span>Your companies (opens in a new tab)</a> if you want to:</p>
+   
+    <ul class="govuk-list govuk-list--bullet">
+      <li>view invitations to be digitally authorised</li>
+      <li>view and manage people who are digitally authorised</li>
+      <li>remove a company</li>
+    </ul>
+
+    
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-table__caption--s visuallyhidden"></caption>
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Company name</th>
+      <th scope="col" class="govuk-table__header">Company number</th>
+      <th scope="col" class="govuk-table__header">Authorisation status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="authentication-code-standalone" class="govuk-link--no-visited-state">Renew digital authorisation</a></p> </th> 
+
+      
+
+      <td class="govuk-table__cell">10866549</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not digitally authorised 
+       </strong>
+      </a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ENCOM VIDEO GAMES LIMITED
+
+        <p class="govuk-body govuk-!-margin-top-2"><a href="company-overview" class="govuk-link--no-visited-state">File for this company </a></p>
+      </th>
+      <td class="govuk-table__cell">01234567</td>
+      <td class="govuk-table__cell"> 
+        <strong class="govuk-tag govuk-tag--green">
+          Digitally authorised 
+         </strong>
+        </td>
+    </tr>
+   
+    <!--BROWN AND SALTER LIMITED check-company-details -->
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED
+        <p class="govuk-body govuk-!-margin-top-2"> <a href="" class="govuk-link--no-visited-state">Renew digital authorisation</a></p>
+      </th>
+      <td class="govuk-table__cell">08449801</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not digitally authorised 
+       </strong>  </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Renew digital authorisation</a></p>
+      </th>
+      <td class="govuk-table__cell">09433214</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not digitally authorised 
+       </strong> </td>
+    </tr>
+    
+   
+  </tbody>
+</table>
+
+<button type="submit" class="govuk-button govuk-!-margin-left-0" data-module="govuk-button">
+  Add a company
+ </button>
+ 
+
+     </form>
+{% endblock %}
+
+
+
+
