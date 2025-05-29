@@ -1,0 +1,74 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">Decide which email you will use for all accounts.</h1>
+
+  <p class="govuk-body">All accounts must use the same email address. This is relevant for 3 accounts: One Login, Webfiling and Companies House.
+    
+    
+  <p class="govuk-body">Before starting the process of connecting these3 accounts you should decide which email you want to be used across all your accounts.</p>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      If you create a One Login with a different email address to your existing accounts this could result in you losing all previous filing information.
+    </strong>
+  </div>
+
+
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+    
+   What is the difference between a Companies House and a Webfiling Account
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p class="govuk-body">Details concerning Webfiling account. </p>
+      <p class="govuk-body">
+    Details concerning CHS account.
+      </p>
+    </div>
+  </details>
+
+  
+
+
+<p class="govuk-body govuk-!-margin-bottom-5"></p>
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue to One Login",
+    href:"h-sign-in-interupt"
+  }) }}
+
+</div>
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

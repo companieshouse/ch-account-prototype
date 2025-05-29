@@ -1,0 +1,67 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="account-support" method="post" novalidate="">
+
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        If you select 'no' but you do use an alternative email address for these accounts - then you will not be able to access the information held in these accounts. 
+      </strong>
+    </div>
+
+    {{ govukRadios({
+      name: "mutliple-accounts",
+      fieldset: {
+        legend: {
+          text: "Do you use different email addresses for Companies House and GOV.UK One Login?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "no",
+          text: "No, I use the same email address"
+        },
+        {
+          value: "yes",
+          text: "Yes, I use different email addresses"
+        }
+      ]
+    }) }}
+
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}   
+
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
