@@ -110,6 +110,10 @@ router.post('/migration-5/one-login/enter-code-sign-in', function (req, res) {
        
         res.redirect('../your-companies-3')
     }
+    else if (req.session.data['set-journey'].includes('WC5')) {
+       
+        res.redirect('../chs-interrupt-2')
+    }
 })
   
 
@@ -177,6 +181,12 @@ router.post('/migration-5/one-login/create-enter-email', function (req, res) {
          res.redirect('../one-login/email-exists')
  
     }
+    else if (req.session.data['set-journey'].includes('WC5'))     
+        {
+     
+             res.redirect('../one-login/set-journey')
+     
+        }
   })
 
 
