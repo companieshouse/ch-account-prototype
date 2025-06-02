@@ -289,26 +289,26 @@ router.post('/migration-5/verify-email-address', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
-        res.redirect('../migration-4/end-linking')
+        res.redirect('../migration-5/end-linking')
     }
     else if (req.session.data['set-journey'].includes('WC2'))     
     {
            
-        res.redirect('../migration-4/end-linking-wf')
+        res.redirect('../migration-5/end-linking-wf')
 
     }
  
     else if (req.session.data['set-journey'].includes('WC3'))     
         {
                
-            res.redirect('../migration-4/end-linking-wf')
+            res.redirect('../migration-5/end-linking-wf')
     
         }
  
         else if (req.session.data['set-journey'].includes('WC5'))     
             {
                    
-                res.redirect('../migration-4/no-webfiling-found')
+                res.redirect('../migration-5/no-webfiling-found')
         
             }
      
