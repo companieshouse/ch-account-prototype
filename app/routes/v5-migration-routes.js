@@ -114,6 +114,10 @@ router.post('/migration-5/one-login/enter-code-sign-in', function (req, res) {
        
         res.redirect('../verify-email-address')
     }
+    else if (req.session.data['set-journey'].includes('WC6')) {
+       
+        res.redirect('../email-address-changed')
+    }
 })
   
 
