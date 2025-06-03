@@ -151,11 +151,18 @@ router.post('/migration-5/one-login/enter-code', function (req, res) {
     }
 
     else if (req.session.data['set-journey'].includes('WC5'))     
-        {
+    {
      
-             res.redirect('../create-complete')
+        res.redirect('../create-complete')
      
-        }
+    }
+    else if (req.session.data['set-journey'].includes('WC6'))     
+    {
+     
+        res.redirect('create-complete')
+     
+    }
+
 })
 
 
@@ -186,11 +193,17 @@ router.post('/migration-5/one-login/create-enter-email', function (req, res) {
  
     }
     else if (req.session.data['set-journey'].includes('WC5'))     
-        {
+    {
      
-             res.redirect('../one-login/create-check-your-email')
+        res.redirect('../one-login/create-check-your-email')
      
-        }
+    }
+     else if (req.session.data['set-journey'].includes('WC6'))     
+    {
+     
+        res.redirect('../one-login/create-check-your-email')
+     
+    }
   })
 
 
@@ -266,11 +279,17 @@ router.post('/migration-5/one-login/create-set-up-auth-app', function (req, res)
  
     }
     else if (req.session.data['set-journey'].includes('WC5'))     
-        {
+    {
      
-             res.redirect('../verify-email-address')
+        res.redirect('../verify-email-address')
      
-        }
+    }
+    else if (req.session.data['set-journey'].includes('WC6'))     
+    {
+     
+        res.redirect('../email-address-changed')
+     
+    }
 })
 
 
