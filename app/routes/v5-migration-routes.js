@@ -112,7 +112,7 @@ router.post('/migration-5/one-login/enter-code-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('WC5')) {
        
-        res.redirect('../chs-interrupt-2')
+        res.redirect('../verify-email-address')
     }
 })
   
@@ -149,7 +149,7 @@ router.post('/migration-5/one-login/enter-code', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC5'))     
         {
      
-             res.redirect('../chs-interrupt-2')
+             res.redirect('../create-complete')
      
         }
 })
@@ -184,7 +184,7 @@ router.post('/migration-5/one-login/create-enter-email', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC5'))     
         {
      
-             res.redirect('../one-login/set-journey')
+             res.redirect('../one-login/check-your-email')
      
         }
   })
