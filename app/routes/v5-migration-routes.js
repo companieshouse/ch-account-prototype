@@ -458,7 +458,11 @@ router.post('/migration-5/webfiling-password', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('WC5')) {
        
-        res.redirect('your-companies-3')
+        res.redirect('verify-email-address-2')
+    }
+    else if (req.session.data['set-journey'].includes('WC1')) {
+       
+        res.redirect('webfiling-new-email-address')
     }
    
 })
@@ -471,6 +475,12 @@ router.post('/migration-5/webfiling-new-email-address', function (req, res) {
 
 })
 
+/*  WebFiling old email connected to new One Login*/
+router.post('/migration-5/verify-email-address-2', function (req, res) {
+
+    res.redirect('end-linking-wf')
+
+})
 
 /*  WebFiling change email address to same as One Login */
 router.post('/migration-5/webfiling-email-changed', function (req, res) {
