@@ -1,5 +1,5 @@
 
-{% extends "layouts/webfiling.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
 Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
@@ -26,21 +26,8 @@ This HTML is completely unsuitable for use in production sites
 {% block content %}
 <form class="form" action="" method="post">
 
-<div class="govuk-grid-row">
 
 
-<div class="govuk-grid-column-one-quarter webfiling-menu">
-{% include "/includes/webfiling-left-menu.html" %}
-</div>
-
-
-<div class="govuk-grid-column-two-thirds wfOverview">
-
-  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
-  All forms
-  </button>
-
-  
 
    
     {{ govukInput({
@@ -59,7 +46,7 @@ This HTML is completely unsuitable for use in production sites
 
     {{ govukButton({
       text: "Continue",
-      href:"save-company"
+      href:"company-overview"
     }) }}
 
     {{ govukDetails({
@@ -73,7 +60,7 @@ This HTML is completely unsuitable for use in production sites
 
 
   
-  </div>
+
      </form>
 {% endblock %}
 

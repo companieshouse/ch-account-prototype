@@ -124,7 +124,7 @@ This HTML is completely unsuitable for use in production sites
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">Restore digital authorisation</a></p> </th> 
+      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="authentication-code" class="govuk-link--no-visited-state">Restore digital authorisation</a></p> </th> 
 
       
       <!-- <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2">You'll need to enter the authentication code to <a href="" class="govuk-link--no-visited-state">file for this company</a></p> </th> -->
@@ -192,10 +192,12 @@ This HTML is completely unsuitable for use in production sites
   </tbody>
 </table>
 
-<button type="submit" class="govuk-button govuk-!-margin-left-0" data-module="govuk-button">
-  File for a different company
- </button> 
- 
+{{ govukButton({
+  text: "File for a different company",
+  href:"authentication-code-standalone"
+}) }}
+
+
  </div>
 
 
