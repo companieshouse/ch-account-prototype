@@ -100,7 +100,7 @@ router.post('/migration-6/one-login/enter-code-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('../no-webfiling-found')
+        res.redirect('../verify-email-address-3')
     }
     else if (req.session.data['set-journey'].includes('WC3')) {
        
@@ -513,3 +513,9 @@ router.post('/migration-6/webfiling-email-changed', function (req, res) {
 })
 
 
+router.post('/migration-6/verify-email-address-3', function (req, res) {
+
+    res.redirect('no-webfiling-found')
+
+  
+})
