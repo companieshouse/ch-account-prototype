@@ -1,0 +1,102 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="chs-interrupt-no-account-found" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">We need to check Companies House account details before we take you to WebFiling</h1>
+
+ <!-- <p class="govuk-body">The email address you use for GOV.UK One Login is  <strong>email@example.com</strong>.</p>-->
+   
+  <p class="govuk-body">You may have a Companies House account that uses a different email address to the one you use for GOV.UK One Login, which is <strong>email@example.com</strong>. </p>
+    
+  <p class="govuk-body">If you do, and you want to keep the existing information in your account, you’ll need to update the email address for your Companies House account to <strong>email@example.com</strong>. This will also enable you to access all Companies House services using your GOV.UK One Login.</p>
+    
+  <p class="govuk-body">If you do not have an existing account, select 'Create a new Companies House account'. </p>
+
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        What is a Companies House account?
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <p class="govuk-body">This is the account you can use to sign in to:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the Companies House register - sometimes known as 'Companies House service' or 'Find and update company information'</li>
+  <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+</ul>
+<p>A Companies House account is not the same as WebFiling.</p>
+    </div>
+  </details>
+
+  <form action="/form-handler" method="post" novalidate>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          What do you want to do?
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="interviewNeeds" name="interviewNeeds" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="interviewNeeds">
+              Create a new Companies House account using <strong>email@example.com</strong>
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="interviewNeeds-2" name="interviewNeeds" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="interviewNeeds-2">
+              Update the email address of an existing Companies House account to    
+<strong>email@example.com</strong>
+<div id="email-hint" class="govuk-hint">
+  We will save any information you have in this account.
+</div>
+
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+ 
+
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+  <!--   <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Change email address of existing Companies House account
+    </button> -->
+  </div>
+
+
+
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

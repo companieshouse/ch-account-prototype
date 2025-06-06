@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+We noticed you've updated your email address with GOV.UK One Login -  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-changed" method="post" novalidate="">
+
+   <p>  <strong class="govuk-tag govuk-tag--turquoise">
+      Content TBC
+    </strong> </p>
+
+    <h1 class="govuk-heading-l">We noticed you've updated your email address with GOV.UK One Login</h1>
+    
+
+   <!--  <p>You updated your email address to <span class="govuk-body govuk-!-font-weight-bold">emailaddress2@example.com</span> with GOV.UK One Login.</p>
+ -->
+    <div class="govuk-inset-text">
+      The email address <span class="govuk-body govuk-!-font-weight-bold">emailaddress2@example.com</span> matches an existing account we have on file.
+    </div>
+
+    
+
+    <h2 class="govuk-heading-m">You need to change your GOV.UK One Login email address</h2>
+    <p class="govuk-body">You have 2 options. You can either change your email address back to match your Companies House account email address. Alternatively you could choose a different email address which does not match a Companies House account.</p>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Change email address
+    </button>
+   
+  </form>
+
+
+
+</div>
+</div>
+
+{% endblock %}

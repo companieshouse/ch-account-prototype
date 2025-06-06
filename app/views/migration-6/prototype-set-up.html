@@ -1,0 +1,142 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+  Shortcuts for Companies House account
+{% endblock %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Companies House account" }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="prototype-set-up" method="post" novalidate="">
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          text: "WebFiling account prototype flows:",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "WC1",
+          text: "Scenario 1",
+          hint: {
+            text: "Link Companies House account, WebFiling and GOV.UK One Login using OTP. User has Companies House account and WebFiling account which use the same email address. Link at same time with GOV.UK One Login using OTP"
+          }
+
+        },
+        {
+          value: "WC2",
+          text: "Scenario 2",
+          hint: {
+            text: "A users GOV.UK One Login does not match Companies House account or WebFiling. User offered opportunity to change WebFiling email after GOV.UK One Login created. User changes alternative WebFiling email. No further reference to Companies House account after sign-in to GOV.UK One Login"
+          }
+        },
+        {
+          value: "WC3",
+          text: "Scenario 3",
+          hint: {
+            text: "A user's GOV.UK One Login matches their WebFiling account email address. A Companies House account is created in the background"
+          }
+        },
+
+      
+        {
+          value: "WC4",
+          text: "Scenario 4",
+          hint: {
+            text: "A return user to WebFiling who has already linked accounts"
+          }
+        },
+        {
+          value: "WC5",
+          text: "Scenario 5",
+          hint: {
+            text: "A Companies House account email matches with One Login. It is linked with a OTP. Then a legacy Web Filing account linked with an OTP."
+          }
+        },
+        {
+          value: "WC6",
+          text: "Scenario 6",
+          hint: {
+            html: 'Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account. <strong class="govuk-tag">
+  In progress
+</strong>'
+          }
+        }
+
+        
+
+      ]
+    }) }}
+
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+{% endblock %}
+
+
+<!--        
+
+{
+            value: "WC1",
+            text: "WC1 - A user has a WebFiling account, 
+            but does not have a CHS account or GOV.UK One Login"
+          },
+          {
+            value: "WC2",
+            text: "WC2 - A user has a WebFiling account and a CHS account with the same email address. They do not have a GOV.UK One Login."
+          },
+          {
+            value: "WC3",
+            text: "WC3 - A user has a WebFiling account with a different email address to a CHS account. They do not have a GOV.UK One Login."
+          }
+          {
+            value: "WC3",
+            text: "WC3 - A user has a WebFiling account with a different email address to a CHS account. They do not have a GOV.UK One Login."
+          },
+          {
+            value: "WC4",
+            html: "WC4 - A user has a WebFiling account and a CHS account with different email addresses. They do not have a GOV.UK One Login. <br> 
+
+            The user chooses to link accounts to the CHS account email address."
+          },
+          {
+            value: "WC5",
+            html: "WC5 - A user has a WebFiling account, CHS account and a GOV.UK One Login, all with different email addresses. <br>
+
+            The user chooses to link their WebFiling and CHS accounts to their GOV.UK One Login."
+          },
+          {
+            value: "WC6",
+            text: "WC6 - A user has a WebFiling account, CHS account and a GOV.UK One Login, all with different email addresses.
+
+           The user chooses to link their GOV.UK One Login and CHS account to their WebFiling account. "
+          },
+          {
+            value: "WC7",
+            text: "WC7 - Same email address' across 3 accounts - A user has a WebFiling, CHS account and a GOV.UK One Login, all with the same email address."
+          },
+          {
+            value: "WC8",
+            text: "WC8 - A user has a Webfiling account, and they have many CHS accounts."
+          },
+          {
+            value: "WC9",
+            text: "WC9 - A user has many WebFiling accounts, and one CHS and GOV.UK One Login."
+          },
+          {
+            value: "WC10",
+            text: "WC10 - The user does not have a Webfiling or CHS account, but they may have a GOV.UK One Login."
+          } -->

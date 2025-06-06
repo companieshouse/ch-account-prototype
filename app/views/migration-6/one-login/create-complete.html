@@ -1,0 +1,36 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create-complete" method="post" novalidate>
+        <h1 class="govuk-heading-l">
+        
+          You’ve created your GOV.UK One Login
+        
+        </h1>
+
+        <p class="govuk-body">Now continue to use the Companies House service.</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

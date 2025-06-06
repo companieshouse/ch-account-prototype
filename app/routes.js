@@ -23,3 +23,5 @@ router.use('/', require('./routes/v3-migration-routes.js'))
 router.use('/', require('./routes/v4-migration-routes.js'))
 
 router.use('/', require('./routes/v5-migration-routes.js'))
+
+router.use('/', require('./routes/v6-migration-routes.js'))

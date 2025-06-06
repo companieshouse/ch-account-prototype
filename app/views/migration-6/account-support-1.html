@@ -1,0 +1,66 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="account-support-1" method="post" novalidate="">
+
+
+    <h1 class="govuk-heading-l">Email addresses must match</h1>
+
+    <p class="govuk-body">To connect a Companies House or a Webfiling account to a GOV.UK One Login, they must use the same email address.</p>
+
+
+
+    <h2 class="govuk-heading-m">Change your account email addresses</h2>
+
+
+    {{ govukInsetText({
+      text: "You need to change the account email address so they are all the same before you continue."
+    }) }}
+
+
+        <h3 class="govuk-heading-s">Webfiling account</h3>
+        <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your Webfiling email address (opens in a new tab)</a>. Then .... </p>
+
+        <h3 class="govuk-heading-s">Companies House account</h3>
+        <p class="govuk-body"><a href="#" class="govuk-link">Change your Companies House account email address (opens in a new tab)</a>. Then come back and sign in to Webfiling.</p>
+        <h3 class="govuk-heading-s">GOV.UK One Login</h3>
+        <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your GOV.UK One Login email address (opens in a new tab)</a>.
+          Then come back and sign in to Webfiling.</p>
+
+
+    
+
+  
+
+
+  {{ govukButton({
+    text: "Go to GOV.UK One Login"
+  }) }}   
+
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create-choose-security-type" method="post" novalidate>
+       
+        {{ govukRadios({
+          classes: "govuk-radios",
+          name: "choose-security-type",
+          fieldset: {
+            legend: {
+              text: " Choose how to get security codes",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "To finish creating your account, choose a way to prove it's you when you sign in."
+          },
+          items: [
+            {
+              value: "text-message-on-sign-in",
+              text: "Text message"
+            },
+            {
+              value: "auth-app-on-sign-in",
+              text: "Authenticator app for smartphone, tablet or computer"
+            }
+          ]
+        }) }}
+
+        {{ govukDetails({
+          summaryText: "What is an authenticator app?",
+          html: "An authenticator app creates a security code that helps confirm it's you when you sign in. <br> <br> You can use an authenticator app on your smartphone, tablet or desktop computer. Download an authenticator app for your smartphone or tablet from your app store or search online for an authenticator app for your computer."
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
