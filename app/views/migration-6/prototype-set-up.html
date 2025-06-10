@@ -31,7 +31,7 @@
           value: "WC1",
           text: "Scenario 1",
           hint: {
-            text: "Link Companies House account, WebFiling and GOV.UK One Login using OTP. User has Companies House account and WebFiling account which use the same email address. Link at same time with GOV.UK One Login using OTP"
+            text: "Journey to link existing Companies House account, WebFiling and GOV.UK One Login (all with same email) using OTP. "
           }
 
         },
@@ -39,41 +39,61 @@
           value: "WC2",
           text: "Scenario 2",
           hint: {
-            text: "A users GOV.UK One Login does not match Companies House account or WebFiling. User offered opportunity to change WebFiling email after GOV.UK One Login created. User changes alternative WebFiling email. No further reference to Companies House account after sign-in to GOV.UK One Login"
+            text: "A users GOV.UK One Login does not match Companies House account or WebFiling. User offered opportunity to change WebFiling email after GOV.UK One Login created. User changes alternative WebFiling email."
           }
         },
         {
           value: "WC3",
           text: "Scenario 3",
           hint: {
-            text: "A user's GOV.UK One Login matches their WebFiling account email address. A Companies House account is created in the background"
+            text: "A users GOV.UK One Login does not match Companies House account or WebFiling. New user completes journey setting up new Webfiling and CHS."
           }
         },
-
-      
         {
           value: "WC4",
           text: "Scenario 4",
           hint: {
-            text: "A return user to WebFiling who has already linked accounts"
+            text: "A user's GOV.UK One Login matches only their WebFiling account email address which is linked in this journey. A new Companies House account is also created"
           }
         },
         {
           value: "WC5",
           text: "Scenario 5",
           hint: {
-            text: "A Companies House account email matches with One Login. It is linked with a OTP. Then a legacy Web Filing account linked with an OTP."
+            text: "A user's GOV.UK One Login matches only their WebFiling account email address. A Companies House account has already been linked"
           }
         },
+      
         {
           value: "WC6",
           text: "Scenario 6",
           hint: {
-            html: 'Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account. <strong class="govuk-tag">
-  In progress
-</strong>'
+            text: "A Companies House account email matches with One Login. It is linked with a OTP. Then a legacy Web Filing account linked with an OTP"
+          }
+        },
+        {
+          value: "W7",
+          text: "Scenario 7",
+          hint: {
+            text: "Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account."
+          }
+        },
+        {
+          value: "W8",
+          text: "Scenario 8",
+          hint: {
+            text: "Previously linked CHS to One Login. Creating a brand new webfiling account"
+          }
+        },
+        {
+          value: "W9",
+          text: "Scenario 9",
+          hint: {
+            text: "Accounts already linked - return user"
           }
         }
+
+        
 
         
 
