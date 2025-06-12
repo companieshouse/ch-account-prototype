@@ -100,15 +100,15 @@ router.post('/migration-6/one-login/enter-code-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('../verify-email-address-3')
+        res.redirect('../no-webfiling-found')
     }
     else if (req.session.data['set-journey'].includes('WC3')) {
        
-        res.redirect('../verify-email-address')
+        res.redirect('../no-webfiling-found')
     }
-    else if (req.session.data['set-journey'].includes('WC4')) {
+    else if (req.session.data['set-journey'].includes('WC9')) {
        
-        res.redirect('../your-companies-3')
+        res.redirect('../verify-email-address')
     }
     else if (req.session.data['set-journey'].includes('WC5')) {
        
@@ -117,6 +117,18 @@ router.post('/migration-6/one-login/enter-code-sign-in', function (req, res) {
     else if (req.session.data['set-journey'].includes('WC6')) {
        
         res.redirect('../email-address-changed')
+    }
+    else if (req.session.data['set-journey'].includes('WC7')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC8')) {
+       
+        res.redirect('../no-webfiling-found')
+    }
+    else if (req.session.data['set-journey'].includes('WC9')) {
+       
+        res.redirect('../your-companies-3')
     }
 })
   
@@ -143,7 +155,7 @@ router.post('/migration-6/one-login/enter-code', function (req, res) {
         res.redirect('create-complete')
 
    }
-   else if (req.session.data['set-journey'].includes('WC4'))     
+   else if (req.session.data['set-journey'].includes('WC9'))     
     {
  
          res.redirect('../your-companies-3')
@@ -189,7 +201,7 @@ router.post('/migration-6/one-login/create-enter-email', function (req, res) {
    else if (req.session.data['set-journey'].includes('WC4'))     
     {
  
-         res.redirect('../one-login/email-exists')
+         res.redirect('../one-login/create-check-your-email')
  
     }
     else if (req.session.data['set-journey'].includes('WC5'))     
@@ -204,6 +216,24 @@ router.post('/migration-6/one-login/create-enter-email', function (req, res) {
         res.redirect('../one-login/create-check-your-email')
      
     }
+    else if (req.session.data['set-journey'].includes('WC7'))     
+        {
+         
+            res.redirect('../one-login/create-check-your-email')
+         
+        }
+        else if (req.session.data['set-journey'].includes('WC8'))     
+            {
+             
+                res.redirect('../one-login/create-check-your-email')
+             
+            }
+    else if (req.session.data['set-journey'].includes('WC9'))     
+        {
+     
+             res.redirect('../one-login/email-exists')
+     
+        }
   })
 
 
@@ -263,7 +293,7 @@ router.post('/migration-6/one-login/create-set-up-auth-app', function (req, res)
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
            
-        res.redirect('../verify-email-address')
+        res.redirect('../no-webfiling-found')
 
     }
     else if (req.session.data['set-journey'].includes('WC2'))     
@@ -275,7 +305,7 @@ router.post('/migration-6/one-login/create-set-up-auth-app', function (req, res)
    else if (req.session.data['set-journey'].includes('WC4'))     
     {
  
-         res.redirect('../your-companies-3')
+         res.redirect('../verify-email-address')
  
     }
     else if (req.session.data['set-journey'].includes('WC5'))     
@@ -290,6 +320,24 @@ router.post('/migration-6/one-login/create-set-up-auth-app', function (req, res)
         res.redirect('../email-address-changed')
      
     }
+    else if (req.session.data['set-journey'].includes('WC7'))     
+        {
+         
+            res.redirect('../verify-email-address')
+         
+        }
+    else if (req.session.data['set-journey'].includes('WC8'))     
+          {
+             
+               res.redirect('../no-webfiling-found')
+             
+            }
+    else if (req.session.data['set-journey'].includes('WC9'))     
+          {
+                 
+              res.redirect('../your-companies-3')
+                 
+          }
 })
 
 
