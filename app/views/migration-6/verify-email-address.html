@@ -31,23 +31,19 @@ Check your email – {{ serviceName }} - GOV.UK
 
       <h1 class="govuk-heading-l">We've sent you a security code to verify your email address for Companies House</h1>
      
-<p class="govuk-body">This will also enable us to save your existing information. You only need to do this once.</p>
+<p class="govuk-body">We've sent the security code to  <span class="govuk-!-font-weight-bold">o*****@hotmail.com</p>
 
 
         <!-- scenario 2 only -->
 
         {% if (data['set-journey'] === "WC2")%}
 
-      <div class="govuk-inset-text">
-        <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">o*****@hotmail.com</span></p>
-      </div>
+  
 
       <!-- all other scenarios -->
       {% else %}
       
-      <div class="govuk-inset-text">
-        <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">e*****@gmail.com</span></p>
-      </div>
+     
 
     {% endif %}
 
@@ -58,7 +54,7 @@ Check your email – {{ serviceName }} - GOV.UK
   <br>
           {{ govukInput({
             label: {
-              text: "Enter your 6 digit security code"
+              text: "Enter your 6 character security code"
             },
             classes: "govuk-input--width-10",
             id: "width-3",
