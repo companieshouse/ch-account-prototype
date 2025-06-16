@@ -13,22 +13,23 @@ Company authentication {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 <form class="form" action="" method="post">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds ">
+    <div class="govuk-grid-column-two-thirds">
 
-      <span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span> 
-    <h1 class="govuk-heading-l">Enter the company authentication code</h1>  
-     <div id="event-name-hint" class="govuk-hint">
-    This is a 6 character code issued by us to each company.
-  </div>
+       
 
+  
   {{ govukInput({
     label: {
-      html: "",
-      classes: "govuk-!-font-weight-bold"
+      html: "<span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span><h1 class='govuk-heading-l'>Enter the company authentication code</h1>",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m" 
     },
-    classes: "govuk-input--width-10",
+    hint: {
+    text: "This is a 6 character code issued by us to each company."
+  },
     id: "authentication-code",
-    name: "authentication-code"
+    name: "authentication-code",
+    classes: "govuk-input--width-10" 
   }) }}
 
 {{ govukDetails({
@@ -36,15 +37,13 @@ Company authentication {{ serviceName }} – GOV.UK Prototype Kit
                 html: '<p class="govuk-body">You can <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> request the authentication code</a> to be sent by post.</p>'
               }) }}
 
-
-
-
   {{ govukCheckboxes({
     name: "add-company",
     fieldset: {
       legend: {
         text: "Save company details for future online filings",
-        classes: "govuk-!-font-weight-bold "
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--s"
       }
     },
     hint: {
@@ -53,13 +52,14 @@ Company authentication {{ serviceName }} – GOV.UK Prototype Kit
     items: [
       {
         value: "add-company",
-        text: "Save company details for FLOWERS LIMITED",
+        text: "Save company details for FLOWERS LIMITED (18882777)",
         hint: {
           text: ""
         }
       }
     ]
   }) }}
+
 
 
 
