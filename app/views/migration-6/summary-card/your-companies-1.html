@@ -48,9 +48,9 @@ This HTML is completely unsuitable for use in production sites
 
   <div class="information message">
     <p class="header">Restore your digital authorisation</p>
-    <p>To file online, you'll need to enter the authentication code for each company to restore your digital authorisation. We'll then store the code, so that you're digitally authorised.<br><br>
+    <p>To file online, you'll need to enter the authentication code for each company that has a 'not authorised' status. This will restore your digital authorisation. We'll then store the code, so that you're digitally authorised.<br><br>
  
-      If you do not have the authentication code, you'll either need to ask someone who is digitally authorised to add you, or <a href="https://find-update-company-info.herokuapp.com/v8-your-companies/company-added" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span> request the authentication code (opens in a new tab)</a>.</p>
+      If you do not have the authentication code, you'll either need to ask someone who is digitally authorised to add you, or <a href="" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span> request the authentication code (opens in a new tab)</a>.</p>
   </div>
   
   
@@ -61,7 +61,7 @@ This HTML is completely unsuitable for use in production sites
 
 <!-- https://find-update-company-info.herokuapp.com/v8-your-companies/company-added -->
 <p> Go to
-    <a href="" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span>Your companies (opens in a new tab)</a> if you want to:</p>
+    <a href="https://find-update-company-info.herokuapp.com/v8-your-companies/your-companies-no-longer-authorised-summary-card-alt-2" class="govuk-link" rel="noreferrer noopener" target="_blank"> <span class="govuk-visually-hidden"></span>Your companies (opens in a new tab)</a> if you want to:</p>
    
     <ul class="govuk-list govuk-list--bullet">
       <li>view invitations to be digitally authorised</li>
@@ -75,7 +75,7 @@ This HTML is completely unsuitable for use in production sites
 
   {{ govukButton({
   text: "File for a different company",
-  href:"authentication-code-standalone"
+  href:"../company-number-chs"
 }) }}
 
 
@@ -123,8 +123,8 @@ This HTML is completely unsuitable for use in production sites
     actions: {
       items: [
         {
-          href: "#",
-          text: "Restore",
+          href: "../authentication-code-beta",
+          text: "Restore authorisation",
           visuallyHiddenText: ""
         }
       ]
@@ -161,8 +161,8 @@ This HTML is completely unsuitable for use in production sites
     actions: {
       items: [
         {
-          href: "",
-          text: "View company",
+          href: "../company-overview",
+          text: "View company details",
           visuallyHiddenText: ""
         }
       ]
@@ -209,7 +209,7 @@ This HTML is completely unsuitable for use in production sites
       items: [
         {
           href: "",
-          text: "View company",
+          text: "View company details",
           visuallyHiddenText: ""
         }
       ]
