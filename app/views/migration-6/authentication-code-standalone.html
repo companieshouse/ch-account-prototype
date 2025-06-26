@@ -31,10 +31,16 @@ Company authentication {{ serviceName }} – GOV.UK Prototype Kit
     name: "authentication-code"
   }) }}
 
-{{ govukDetails({
-                summaryText: "I do not have an authentication code",
-                html: '<p class="govuk-body">You can <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> request the authentication code</a> to be sent by post.</p>'
-              }) }}
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I do not have an authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">You'll need to <a href="https://www.gov.uk/guidance/company-authentication-codes-for-online-filing" class="govuk-link"> request the authentication code</a>. It is sent by post.</p>
+  </div>
+</details>
 
 
 
@@ -44,16 +50,16 @@ Company authentication {{ serviceName }} – GOV.UK Prototype Kit
     fieldset: {
       legend: {
         text: "Save company details for future online filings",
-        classes: "govuk-!-font-weight-bold "
+        classes: "govuk-fieldset__legend--m "
       }
     },
     hint: {
-      text: "You can securely save the company details so you do not need to re-enter the authentication code for most online filings. You'll also be able to digitally authorise other people to file online for the company."
+      text: "You can securely save the company details you entered so you do not need to re-enter the authentication code for most online filings. You'll also be able to digitally authorise other people to file online for the company."
     },
     items: [
       {
         value: "add-company",
-        text: "Save company details for FLOWERS LIMITED",
+        text: "I want to save the details for this company",
         hint: {
           text: ""
         }
