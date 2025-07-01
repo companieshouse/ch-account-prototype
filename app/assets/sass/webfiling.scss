@@ -229,3 +229,17 @@ div.message p,dl.message dd {
     margin: 0 0 5px 0;
     font-weight: 700
 }
+
+
+.wf-version-of-govuk-summary-card {
+	h2 {
+		font-size: 16px !important;
+	}
+	.govuk-summary-list {
+		font-size: 16px !important;
+	}
+	.govuk-tag {
+		font-size: 16px !important;
+	}
+}
+
