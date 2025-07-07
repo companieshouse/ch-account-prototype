@@ -1,0 +1,84 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create-enter-mobile-number" method="post" novalidate>
+
+        <h1 class="govuk-heading-l">
+            Enter your mobile phone number
+          
+          </h1>
+
+          <p class="govuk-body">We will send a 6 digit security code to the number you give us.</p>
+
+          {{ govukInput({
+            label: {
+              text: "UK mobile phone number"
+            },
+            id: "telephone-number",
+            name: "telephone-number",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-input--width-20"
+          }) }}
+
+
+          {% set phoneHtml %}
+          {{ govukInput({
+            id: "contact-by-phone",
+            name: "contact-by-phone",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-input--width-20",
+            label: {
+              text: "Mobile phone number"
+            },
+            hint: {
+              text: "Include the country code, for example +33 for France."
+            }
+          }) }}
+          {% endset -%}
+
+
+          {{ govukCheckboxes({
+            name: "contact",
+            fieldset: {
+              legend: {
+                html: ""
+              }
+            },
+            items: [
+              {
+                value: "phone",
+                text: "I do not have a UK mobile number",
+                conditional: {
+                  html: phoneHtml
+                }
+              }
+            ]
+          }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

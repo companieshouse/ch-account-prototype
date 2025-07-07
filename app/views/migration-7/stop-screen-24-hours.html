@@ -1,0 +1,41 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+      <form action="end-linking" method="post" novalidate>
+
+    
+     
+     
+
+    <h1 class="govuk-heading-l">You asked to resend the security code too many times
+</h1>
+    
+
+    
+    <p>For security reasons, you will not be able to request another code for 24 hours.</p>
+
+    <p>You'll then need to go back to the service you were trying to use and start again.</p>
+
+
+    </form>
+    </div>
+</div>
+
+{% endblock %}

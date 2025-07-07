@@ -3,7 +3,7 @@
 
 
 {% block pageTitle %}
-Check your email – {{ serviceName }} - GOV.UK
+We've sent you a security code to verify your email address for Companies House - GOV.UK
 {% endblock %}
 
 {% set serviceName %}
@@ -23,7 +23,7 @@ Check your email – {{ serviceName }} - GOV.UK
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-      <form action="verify-email-address-3" method="post" novalidate>
+      <form action="verify-email-address" method="post" novalidate>
 
 
  
@@ -31,24 +31,24 @@ Check your email – {{ serviceName }} - GOV.UK
 
       <h1 class="govuk-heading-l">We've sent you a security code to verify your email address for Companies House</h1>
      
-<p class="govuk-body">This will also enable us to save your existing information. You only need to do this once.</p>
+<p class="govuk-body">We've sent the security code to  <span class="govuk-!-font-weight-bold">o*****@hotmail.com</p>
 
 
-   
-    <div class="govuk-inset-text">
-      <p> We've sent the security code to  <span class="govuk-!-font-weight-bold">e*****@gmail.com</span></p>
-    </div>
+
+
   
       <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 30 minutes.</p>
       
-  <br>
+
           {{ govukInput({
             label: {
               text: "Enter your 6 digit security code"
             },
             classes: "govuk-input--width-10",
-            id: "width-3",
-            name: "width-3"
+            id: "otp",
+            name: "otp",
+            spellcheck: false,
+            inputmode: "numeric"
           }) }}
 
 
@@ -60,11 +60,11 @@ Check your email – {{ serviceName }} - GOV.UK
 
 
       {{ govukDetails({
-        summaryText: "I have not received an email",
-        html: "The email may take a few minutes to arrive. Its subject line is 'Companies House security code'. You could also check your junk folder.</br> </br> If it still has not arrived, you can <a href='check-your-email-send-new-link' class='govuk-link'>ask us to send you another code</a></a>."
+        summaryText: "Problems with the code",
+        html: "If you have not received the email yet, wait a few minutes for it to arrive. Its subject line is 'Companies House security code'. You could also check your spam folder.</br> </br> If it still has not arrived, you can <a href='send-a-new-email' class='govuk-link'>request a new security code</a></a>."
       }) }}
      
-      <br>
+  
 
 
       <!-- <p class="govuk-body-s ">  <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling" target="_blank">Email with code (opens in a new tab)</a> </p>

@@ -1,0 +1,109 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+
+  <h1 class="govuk-heading-l">Manage account </h1>
+
+
+  <p class='govuk-body govuk-!-padding-bottom-2'>  You're signed in as<span class='govuk-body govuk-!-font-weight-bold'> <strong> example@gmail.com </strong></p>
+
+
+
+
+  <!-- Identity verification  -->
+    
+
+  <div class="govuk-summary-card wf-version-of-govuk-summary-card" >
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+
+      Identity verification
+      
+    </h2>
+   
+  
+  </div>
+  <div class="govuk-summary-card__content">
+
+    <p>Your Companies House personal code can be viewed <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">in your Companies House account (opens in new tab)</a>.</p>
+
+  </div>
+</div>
+ 
+  <div class="govuk-summary-card wf-version-of-govuk-summary-card" >
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+
+      Sign in details
+      
+    </h2>
+   
+  
+  </div>
+  <div class="govuk-summary-card__content">
+
+   <p class="govuk-body">You use your GOV.UK One Login to sign in to your Companies House account.</p>
+      
+    
+        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your password</li>
+          <li>how you get security codes to sign in</li>
+        </ul>
+
+        <p class="govuk-body">
+          <a href="https://home.account.gov.uk/settings" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your sign in details in your GOV.UK One Login (opens in a new tab) </a>
+        </p>
+
+  </div>
+</div>
+ 
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+

@@ -18,6 +18,52 @@
       <h2 class="govuk-heading-m">Migration of WebFiling account</h2>
 
 
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Migration - Version 7"
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Migrating WebFiling accounts"
+            },
+            value: {
+              html: '<ul class="govuk-list">
+                <li> 
+                  <a href="migration-7/prototype-set-up" class="govuk-link">WebFiling prototype</a> 
+                </li>
+                <li>
+                  <a href="migration-7/" class="govuk-link">WebFiling page shortcuts</a>
+                </li>
+                 '
+            }
+          },
+          {
+            key: {
+              text: "Summary"
+            },
+            value: {
+              html: '<p class="govuk-body">WebFiling migration to GOV.UK One Login. No micro service and new confirmation screen</p>'
+            }
+          },
+          {
+            key: {
+              text: "User Research"
+            },
+            value: {
+              html: '<a href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1742910286553/fa8ac2f0a324f184f322b8eaf5431e38a7c56a3f" class="govuk-link" rel="noreferrer noopener" target="_blank">Mural link (opens in new tab)
+              </a>'
+            }
+            
+          }
+          
+          
+        ]
+      }) }}
+
       {{ govukSummaryList({
         card: {
           title: {
