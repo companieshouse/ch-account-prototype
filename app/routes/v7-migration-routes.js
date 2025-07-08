@@ -664,27 +664,29 @@ router.post('/migration-7/send-a-new-email', function (req, res) {
     if (req.session.data['set-journey'].includes('WC16')) {
        
         res.redirect('../migration-7/verify-email-address-4')
-    } }
-
+    } 
     else if (req.session.data['set-journey'].includes('WC17'))     
     {
            
         res.redirect('../migration-7/verify-email-address-4')
 
     }
+})
 
     router.post('/migration-7/verify-email-address-4', function (req, res) {
 
         if (req.session.data['set-journey'].includes('WC16')) {
            
             res.redirect('../migration-7/end-linking-new-account')
-        }}
+        }
         else if (req.session.data['set-journey'].includes('WC17'))     
         {
                
             res.redirect('../migration-7/end-linking')
     
-        })
+        }
+
+    })
 
 
 
