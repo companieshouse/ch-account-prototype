@@ -89,6 +89,38 @@ router.post('/migration-7/one-login/enter-code-sign-in', function (req, res) {
        
         res.redirect('../your-companies-3')
     }
+    else if (req.session.data['set-journey'].includes('WC16')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC17')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC10')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC11')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC12')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC13')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC14')) {
+       
+        res.redirect('../verify-email-address')
+    }
+    else if (req.session.data['set-journey'].includes('WC15')) {
+       
+        res.redirect('../verify-email-address')
+    }
 })
   
 
@@ -139,18 +171,66 @@ router.post('/migration-7/one-login/enter-code', function (req, res) {
             res.redirect('create-complete')
          
         }
-        else if (req.session.data['set-journey'].includes('WC8'))     
-            {
-             
+  else if (req.session.data['set-journey'].includes('WC8'))     
+       {
+                
+             res.redirect('create-complete')
+                
+           }
+       else if (req.session.data['set-journey'].includes('WC9'))     
+             {
+                 
+             res.redirect('create-complete')
+                 
+           }
+          else if (req.session.data['set-journey'].includes('WC16'))     
+              {
+                     
                 res.redirect('create-complete')
-             
+               
             }
-            else if (req.session.data['set-journey'].includes('WC9'))     
-                {
-                 
+            else if (req.session.data['set-journey'].includes('WC17'))     
+              {
+                         
                     res.redirect('create-complete')
+                         
+            }
+              else if (req.session.data['set-journey'].includes('WC10'))     
+              {
                  
+                   res.redirect('create-complete')
+                             
+                 }
+             else if (req.session.data['set-journey'].includes('WC11'))     
+                        {
+                                 
+                       res.redirect('create-complete')
+                                 
+                    }
+                      else if (req.session.data['set-journey'].includes('WC12'))     
+                          {
+                                     
+                       res.redirect('create-complete')
+                                     
                 }
+              else if (req.session.data['set-journey'].includes('WC13'))     
+                              {
+                                         
+                         res.redirect('create-complete')
+                                         
+                        }
+              else if (req.session.data['set-journey'].includes('WC14'))     
+                       {
+                                             
+           res.redirect('create-complete')
+                                             
+              }
+               else if (req.session.data['set-journey'].includes('WC15'))     
+                 {
+                                                 
+                   res.redirect('create-complete')
+                                                 
+            }
 
 })
 
@@ -211,6 +291,55 @@ router.post('/migration-7/one-login/create-enter-email', function (req, res) {
              res.redirect('../one-login/email-exists')
      
         }
+        else if (req.session.data['set-journey'].includes('WC16'))     
+            {
+             
+                res.redirect('../one-login/create-check-your-email')
+             
+            }
+            else if (req.session.data['set-journey'].includes('WC17'))     
+                {
+                 
+                    res.redirect('../one-login/create-check-your-email')
+                 
+                }
+    else if (req.session.data['set-journey'].includes('WC10'))     
+             {
+             
+           res.redirect('../one-login/create-check-your-email')
+                     
+       }
+     else if (req.session.data['set-journey'].includes('WC11'))     
+    {
+                         
+     res.redirect('../one-login/create-check-your-email')
+                         
+           } 
+
+          else if (req.session.data['set-journey'].includes('WC12'))     
+        {
+                             
+           res.redirect('../one-login/create-check-your-email')
+                             
+           }
+         else if (req.session.data['set-journey'].includes('WC13'))     
+             {
+                                 
+        res.redirect('../one-login/create-check-your-email')
+                                 
+         }
+      else if (req.session.data['set-journey'].includes('WC14'))     
+          {
+                                     
+                  res.redirect('../one-login/create-check-your-email')
+                                     
+          }
+      else if (req.session.data['set-journey'].includes('WC15'))     
+          {
+                                         
+             res.redirect('../one-login/create-check-your-email')
+                                         
+         }
   })
 
 
@@ -315,6 +444,54 @@ router.post('/migration-7/one-login/create-set-up-auth-app', function (req, res)
               res.redirect('../your-companies-3')
                  
           }
+          else if (req.session.data['set-journey'].includes('WC16'))     
+    {
+               
+             res.redirect('../verify-email-address')
+               
+       }
+       else if (req.session.data['set-journey'].includes('WC17'))     
+          {
+                   
+                    res.redirect('../verify-email-address')
+                   
+        }
+        else if (req.session.data['set-journey'].includes('WC10'))     
+          {
+                    
+                  res.redirect('../verify-email-address')
+                
+          }
+         else if (req.session.data['set-journey'].includes('WC11'))     
+           {
+                           
+           res.redirect('../verify-email-address')
+                           
+             }
+           else if (req.session.data['set-journey'].includes('WC12'))     
+            {
+                               
+                res.redirect('../verify-email-address')
+                               
+               }
+             else if (req.session.data['set-journey'].includes('WC13'))     
+               {
+                                   
+                   res.redirect('../verify-email-address')
+                                   
+                }
+          else if (req.session.data['set-journey'].includes('WC14'))     
+             {
+                                       
+               res.redirect('../verify-email-address')
+                                       
+           }
+           else if (req.session.data['set-journey'].includes('WC15'))                 {
+                                           
+          res.redirect('../verify-email-address')
+                                           
+          }
+
 })
 
 
@@ -324,12 +501,12 @@ router.post('/migration-7/verify-email-address', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('../migration-7/no-webfiling-found')
+        res.redirect('../migration-7/end-linking-new-account')
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
            
-        res.redirect('../migration-7/no-webfiling-found')
+        res.redirect('../migration-7/end-linking-new-account')
 
     }
  
@@ -340,24 +517,36 @@ router.post('/migration-7/verify-email-address', function (req, res) {
     
         }
  
-        else if (req.session.data['set-journey'].includes('WC5'))     
+      else if (req.session.data['set-journey'].includes('WC5'))     
             {
                    
                 res.redirect('../migration-7/end-linking')
         
             }
-          else if (req.session.data['set-journey'].includes('WC7'))     
+      else if (req.session.data['set-journey'].includes('WC7'))     
                 {
                        
                     res.redirect('../migration-7/no-webfiling-found')
             
                 }
-          else if (req.session.data['set-journey'].includes('WC8'))     
+     else if (req.session.data['set-journey'].includes('WC8'))     
                   {
                            
                         res.redirect('../migration-7/no-webfiling-found')
                 
-                    }
+             }
+       else if (req.session.data['set-journey'].includes('WC16'))     
+            {
+                               
+              res.redirect('../migration-7/send-a-new-email')
+                    
+          }
+             else if (req.session.data['set-journey'].includes('WC17'))     
+                {
+                                   
+             res.redirect('../migration-7/send-a-new-email')
+                        
+             }
     
     res.redirect('end-linking')
 })
@@ -469,3 +658,35 @@ router.post('/migration-7/verify-email-address-3', function (req, res) {
 
   
 })
+
+router.post('/migration-7/send-a-new-email', function (req, res) {
+
+    if (req.session.data['set-journey'].includes('WC16')) {
+       
+        res.redirect('../migration-7/verify-email-address-4')
+    } }
+
+    else if (req.session.data['set-journey'].includes('WC17'))     
+    {
+           
+        res.redirect('../migration-7/verify-email-address-4')
+
+    }
+
+    router.post('/migration-7/verify-email-address-4', function (req, res) {
+
+        if (req.session.data['set-journey'].includes('WC16')) {
+           
+            res.redirect('../migration-7/end-linking-new-account')
+        }}
+        else if (req.session.data['set-journey'].includes('WC17'))     
+        {
+               
+            res.redirect('../migration-7/end-linking')
+    
+        })
+
+
+
+
+
