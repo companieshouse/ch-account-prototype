@@ -66,31 +66,74 @@
       
         {
           value: "WC6",
-          text: "Scenario 6",
+          text: "Scenario 6 - NOT TO BE BUILT YET",
           hint: {
-            text: "Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account."
-          }
-        },
-        {
-          value: "WC7",
-          text: "Scenario 7",
-          hint: {
-            text: "A Companies House account email matches with One Login. It is linked with a OTP. Then a legacy Web Filing account linked with an OTP."
-          }
-        },
-        {
-          value: "WC8",
-          text: "Scenario 8",
-          hint: {
-            text: "A users GOV.UK One Login does not match Companies House account or WebFiling. User offered opportunity to change WebFiling email after GOV.UK One Login created. User changes alternative WebFiling email."
-          }
-        },
+            text: "Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account." 
+          } 
+        }, 
         {
           value: "WC9",
+          text: "Scenario 7",
+          hint: {
+            text: "Accounts already linked - return user." 
+          } 
+        }, 
+        {
+          value: "WC16",
+          text: "Scenario 8",
+          hint: {
+            text: "Email address not reocgnised in webfiling so create new Webfiling account in background. Something went wrong so requested a new code" 
+          } 
+        }, 
+        {
+          value: "WC17",
           text: "Scenario 9",
           hint: {
-            text: "Accounts already linked - return user."
+            text: "Email address recognised in webfiling so account linked. Something went wrong so requested a new code" 
+          } 
+        }, 
+        {
+          value: "WC10",
+          text: "Scenario 10",
+          hint: {
+            text: "Email address not recognised in webfiling so create a new webfiling. Incorrect code 1-4 times." 
+          } 
+        }, 
+        {
+          value: "WC11",
+          text: "Scenario 11",
+          hint: {
+            text: "Email address recognised in webfiling so accout linked. Incorrect code 1-4 times" 
+          } 
+        }, 
+        {
+          value: "WC12",
+          text: "Scenario 12",
+          hint: {
+            text: "Email address not recognised in Webfiling so create a new Webfiling account in background. Incorrect code 5 times/expired code." 
+          } 
+        }, 
+        {
+          value: "WC13",
+          text: "Scenario 13",
+          hint: {
+            text: "Email address recognised in Webfiling so link accounts. Incorrect code 5 times/expired code." 
+          } 
+        }, 
+        {
+          value: "WC14",
+          text: "Scenario 14",
+          hint: {
+            text: "Email address not recognised in Webfiling so create a new Webfiling account in background. 5th code requested and entered incorrectly 5 times or has expired" 
+          } 
+        }, 
+        {
+          value: "WC15",
+          text: "Scenario 15",
+          hint: {
+            text: "Email address recognised in Webfiling so accounts linked. 5th code requested and entered incorrectly 5 times or has expired"
           }
+          
         }
 
         
