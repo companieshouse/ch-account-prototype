@@ -541,12 +541,12 @@ router.post('/migration-7/verify-email-address', function (req, res) {
               res.redirect('../migration-7/send-a-new-email')
                     
           }
-             else if (req.session.data['set-journey'].includes('WC17'))     
-                {
+        else if (req.session.data['set-journey'].includes('WC17'))     
+        {
                                    
-             res.redirect('../migration-7/send-a-new-email')
+            res.redirect('../migration-7/send-a-new-email')
                         
-             }
+        }
     
     res.redirect('end-linking')
 })
@@ -662,6 +662,8 @@ router.post('/migration-7/verify-email-address-3', function (req, res) {
 router.post('/migration-7/send-a-new-email', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC16')) {
+
+        
        
         res.redirect('../migration-7/verify-email-address-4')
     } 
