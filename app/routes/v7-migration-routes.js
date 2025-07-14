@@ -530,15 +530,29 @@ router.post('/migration-7/verify-email-address', function (req, res) {
             
                 }
      else if (req.session.data['set-journey'].includes('WC8'))     
-                  {
+             {
                            
-                        res.redirect('../migration-7/no-webfiling-found')
+                res.redirect('../migration-7/no-webfiling-found')
                 
-             }
+            }
+
+         else if (req.session.data['set-journey'].includes('WC12'))     
+        {
+                           
+            res.redirect('../migration-7/verify-email-address-error-1')
+                
+        }
+
+        else if (req.session.data['set-journey'].includes('WC14'))     
+        {
+                           
+            res.redirect('../migration-7/stop-screen-24-hours')
+                
+        }
        else if (req.session.data['set-journey'].includes('WC16'))     
-            {
+        {
                                
-              res.redirect('../migration-7/send-a-new-email')
+            res.redirect('../migration-7/send-a-new-email')
                     
           }
         else if (req.session.data['set-journey'].includes('WC17'))     
@@ -551,6 +565,14 @@ router.post('/migration-7/verify-email-address', function (req, res) {
     res.redirect('end-linking')
 })
 
+
+
+/* Security code entered incorrectly too many times */
+router.post('/migration-7/verify-email-address-error-1', function (req, res) {
+
+    res.redirect('stop-screen-wrong-code-or-expired')
+       
+})
 
 
 
@@ -663,7 +685,6 @@ router.post('/migration-7/send-a-new-email', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC16')) {
 
-        
        
         res.redirect('../migration-7/verify-email-address-4')
     } 
@@ -673,7 +694,34 @@ router.post('/migration-7/send-a-new-email', function (req, res) {
         res.redirect('../migration-7/verify-email-address-4')
 
     }
+    else{
+
+        res.redirect('../migration-7/verify-email-address')
+
+    }
 })
+
+
+//scenario 12
+router.post('/migration-7/send-a-new-email-12', function (req, res) {
+
+
+    res.redirect('../migration-7/verify-email-address-12')
+
+
+})
+
+//scenario 12 
+router.post('/migration-7/verify-email-address-12', function (req, res) {
+
+
+    res.redirect('../migration-7/end-linking')
+
+
+})
+
+
+
 
     router.post('/migration-7/verify-email-address-4', function (req, res) {
 
