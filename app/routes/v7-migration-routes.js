@@ -742,3 +742,34 @@ router.post('/migration-7/verify-email-address-12', function (req, res) {
 
 
 
+/*
+ * Routes for WebFiling Your companies and setting flags for restored companies 
+ */
+
+
+/*
+ * You need to prove your identity
+ */
+router.get('/migration-7/summary-card/restore-beta-tech', function (req, res) {
+
+
+     // restored company flag
+    req.session.data['restored-beta-tech'] = true;
+     
+    res.redirect('../authentication-code-beta')
+    
+}) 
+
+
+/*
+ * File for a different company
+ */
+ router.get('/migration-7/summary-card/add-flowers', function (req, res) {
+
+    // company added flag
+    req.session.data['added-flowers'] = true;
+     
+    res.redirect('../company-number-chs')
+    
+}) 
+ 

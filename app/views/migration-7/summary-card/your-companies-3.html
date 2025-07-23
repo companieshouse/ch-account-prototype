@@ -74,7 +74,7 @@ This HTML is completely unsuitable for use in production sites
       <li>view and manage people who are digitally authorised</li>
       <li>remove a company</li>
     </ul>
-<p class="govuk-body"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/your-companies-no-longer-authorised-summary-card-alt-2" class="govuk-link" rel="noreferrer noopener" target="_blank"> Go to  your Companies House account (opens in new tab)<span class="govuk-visually-hidden"></span></a></p>
+<p class="govuk-body"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/your-companies-card" class="govuk-link" rel="noreferrer noopener" target="_blank"> Go to  your Companies House account (opens in new tab)<span class="govuk-visually-hidden"></span></a></p>
     
 
 
@@ -113,6 +113,50 @@ This HTML is completely unsuitable for use in production sites
 
  -->
 
+
+
+
+<!-- Authorised for FLOWERS LIMITED  -->
+
+{% if (data['added-flowers'] == true)%}
+ 
+ <div class="govuk-summary-card wf-version-of-govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      <a class="govuk-link" href="../company-overview-flowers">FLOWERS LIMITED</a>
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          18882777
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class='govuk-tag govuk-tag--green'>
+               Authorised
+               </strong>
+
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+{% endif %}
+
+
+
+ <!-- Not authorised for BETA TECHNOLOGY LIMITED  -->
+{% if (data['restored-beta-tech'] == 'undefined')%}
  <div class="govuk-summary-card wf-version-of-govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
@@ -139,7 +183,7 @@ This HTML is completely unsuitable for use in production sites
                </strong>
 
                <p class="govuk-body govuk-!-padding-top-3">
-                <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Restore authorisation</a>
+                <a href="restore-beta-tech" class="govuk-link">Restore authorisation</a>
               </p>
 
         </dd>
@@ -148,12 +192,54 @@ This HTML is completely unsuitable for use in production sites
   </div>
 </div>
 
+{% endif %}
+
+<!-- Authorised for BETA TECHNOLOGY LIMITED -->
+
+{% if (data['restored-beta-tech'] == true)%}
+ 
+ <div class="govuk-summary-card wf-version-of-govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      <a class="govuk-link" href="../company-overview-beta">BETA TECHNOLOGY LIMITED</a>
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10866549
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class='govuk-tag govuk-tag--green'>
+               Authorised
+               </strong>
+
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+{% endif %}
+
+
+
+
 
 
 <div class="govuk-summary-card wf-version-of-govuk-summary-card" >
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
-      <a class="govuk-link" href="../company-overview">ANDROID TECHNOLOGY UK LIMITED</a>
+      ANDROID TECHNOLOGY UK LIMITED
     </h2>
    
   
@@ -173,20 +259,59 @@ This HTML is completely unsuitable for use in production sites
           Digital authorisation status
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class='govuk-tag govuk-tag--green'>
-                Authorised
+          <strong class='govuk-tag govuk-tag--red'>
+                Not authorised
                </strong>
+                <p class="govuk-body govuk-!-padding-top-3">
+                <a href="" class="govuk-link" >Restore authorisation</a>
+              </p>
         </dd>
       </div>
     </dl>
   </div>
 </div>
  
+<!--../company-overview -->
+
+<div class="govuk-summary-card wf-version-of-govuk-summary-card" >
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      TEST COMPANY LIMITED
+    </h2>
+   
+  
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1245677
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital authorisation status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class='govuk-tag govuk-tag--red'>
+                Not authorised
+               </strong>
+             <p class="govuk-body govuk-!-padding-top-3">
+                <a href="#" class="govuk-link">Restore authorisation</a>
+              </p>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
 
 
   {{ govukButton({
   text: "File for a different company",
-  href:"../company-number-chs"
+  href:"add-flowers"
 }) }}
 
 
