@@ -579,7 +579,7 @@ router.post('/migration-7/verify-email-address-error-1', function (req, res) {
 /* Signing into Webfiling after confirmation screen */
 router.post('/migration-7/end-linking', function (req, res) {
 
-    res.redirect('your-companies-3')
+    res.redirect('summary-card/your-companies-3')
        
 })
 
