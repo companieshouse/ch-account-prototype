@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the company number? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <form action="verify-email-address-error-1" method="post" novalidate>
+
+
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <h2 class="govuk-error-summary__title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#otp">Enter a company number</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" aria-describedby="company-number-error">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What is the company number?
+                </h1>
+              </legend>
+              <div id="nationality-hint" class="govuk-hint">
+                A company number is 8 characters long.
+              </div>
+              <p id="ncompany-number-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a company number
+              </p>
+              <div class="govuk-form-group">
+                
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+              </div>
+            </fieldset>
+          </div>
+
+
+         
+            <div class="govuk-inset-text">
+  If you have a company number that's 7 characters or less, enter zeros at the start so that it's 8 characters in total. For example, if it's 12345, enter 00012345.
+</div>
+        
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              How do I find the company number?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can find this by searching for the company on the <a href="https://beta.companieshouse.gov.uk/" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House register (opens in new tab)</a>.
+          </div>
+        </details>
+        {{ govukButton({
+          text: "Continue",
+          href: "check-company-details-chs"
+        }) }}
+      
+{% endblock %}
