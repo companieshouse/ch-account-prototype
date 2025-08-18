@@ -666,7 +666,7 @@ router.post('/migration-8/webfiling-email-changed', function (req, res) {
 })
 
 /*  WebFiling change email address to same as One Login */
-router.post('/migration-7/webfiling-email-changed', function (req, res) {
+router.post('/migration-8/webfiling-email-changed', function (req, res) {
 
     res.redirect('verify-email-address')
 
@@ -674,48 +674,48 @@ router.post('/migration-7/webfiling-email-changed', function (req, res) {
 })
 
 
-router.post('/migration-7/verify-email-address-3', function (req, res) {
+router.post('/migration-8/verify-email-address-3', function (req, res) {
 
     res.redirect('no-webfiling-found')
 
   
 })
 
-router.post('/migration-7/send-a-new-email', function (req, res) {
+router.post('/migration-8/send-a-new-email', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC16')) {
 
        
-        res.redirect('../migration-7/verify-email-address-4')
+        res.redirect('../migration-8/verify-email-address-4')
     } 
     else if (req.session.data['set-journey'].includes('WC17'))     
     {
            
-        res.redirect('../migration-7/verify-email-address-4')
+        res.redirect('../migration-8/verify-email-address-4')
 
     }
     else{
 
-        res.redirect('../migration-7/verify-email-address')
+        res.redirect('../migration-8/verify-email-address')
 
     }
 })
 
 
 //scenario 12
-router.post('/migration-7/send-a-new-email-12', function (req, res) {
+router.post('/migration-8/send-a-new-email-12', function (req, res) {
 
 
-    res.redirect('../migration-7/verify-email-address-12')
+    res.redirect('../migration-8/verify-email-address-12')
 
 
 })
 
 //scenario 12 
-router.post('/migration-7/verify-email-address-12', function (req, res) {
+router.post('/migration-8/verify-email-address-12', function (req, res) {
 
 
-    res.redirect('../migration-7/end-linking')
+    res.redirect('../migration-8/end-linking')
 
 
 })
@@ -723,16 +723,16 @@ router.post('/migration-7/verify-email-address-12', function (req, res) {
 
 
 
-    router.post('/migration-7/verify-email-address-4', function (req, res) {
+    router.post('/migration-8/verify-email-address-4', function (req, res) {
 
         if (req.session.data['set-journey'].includes('WC16')) {
            
-            res.redirect('../migration-7/end-linking-new-account')
+            res.redirect('../migration-8/end-linking-new-account')
         }
         else if (req.session.data['set-journey'].includes('WC17'))     
         {
                
-            res.redirect('../migration-7/end-linking')
+            res.redirect('../migration-8/end-linking')
     
         }
 
@@ -750,7 +750,7 @@ router.post('/migration-7/verify-email-address-12', function (req, res) {
 /*
  * You need to prove your identity
  */
-router.get('/migration-7/summary-card/restore-beta-tech', function (req, res) {
+router.get('/migration-8/summary-card/restore-beta-tech', function (req, res) {
 
 
      // restored company flag
@@ -764,7 +764,7 @@ router.get('/migration-7/summary-card/restore-beta-tech', function (req, res) {
 /*
  * File for a different company
  */
- router.get('/migration-7/summary-card/add-flowers', function (req, res) {
+ router.get('/migration-8/summary-card/add-flowers', function (req, res) {
 
     // company added flag
     req.session.data['added-flowers'] = true;
