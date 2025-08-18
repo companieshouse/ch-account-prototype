@@ -1,0 +1,365 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+    <h1 class="govuk-heading-l">
+      WebFiling
+      <span class="govuk-caption-xl">Version 8
+      </span>
+    </h1>
+    
+
+
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
+
+
+    <h2 class="govuk-heading-m">Prototype set up</h2>
+    
+
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-list" href="prototype-set-up.html">Prototype set up / scenarios</a>
+      </li>
+
+  </ul>
+
+<h2 class="govuk-heading-m">Sign in to WebFiling introductory</h2>
+ <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="start-page.html">Sign in to WebFiling</a> <strong class="govuk-tag govuk-tag--green">
+       Design and content dev-ready 25.7.25
+       </strong>  
+    </li>
+    <li>
+      <a class="govuk-link" href="sign-in-interrupt.html">We're taking you to GOV.UK One Login to sign in to this service <strong class="govuk-tag govuk-tag--green">
+       Design and content dev-ready 25.7.25
+       </strong>  
+      </a> 
+    </li>
+</ul>
+
+
+
+<h2 class="govuk-heading-m">Stop screens</h2> 
+<ul class="govuk-list govuk-list--bullet">
+ 
+  <li>
+    <a class="govuk-list" href="stop-screen-24-hours.html">You asked to resend the security code too many times (24 hours) <strong class="govuk-tag govuk-tag--green">
+      Design and content dev-ready 25.7.25
+      </strong>  </a> 
+  </li>
+  <li>
+    <a class="govuk-list" href="stop-screen-wrong-code-or-expired.html">You entered the wrong security code too many times <strong class="govuk-tag govuk-tag--green">
+      Design and content dev-ready 25.7.25
+      </strong> </a> 
+  </li>
+  <li>
+    <a class="govuk-list" href="verify-email-address-error-1.html">Error page - there is a problem entering security code<strong class="govuk-tag govuk-tag--green">
+      Design and content dev-ready 25.7.25
+      </strong>  </a> 
+  </li>
+  </ul>
+
+
+
+  <h2 class="govuk-heading-m">Connecting WebFiling account to GOV.UK One login</h2> 
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-list" href="no-webfiling-found.html">We've taken you back to Companies House (no WebFiling account found)</a>  <strong class="govuk-tag govuk-tag--pink">
+        Not used in final design
+       </strong> 
+    </li>
+
+    <li>
+      <a class="govuk-list" href="verify-email-address.html">We've sent you a security code to verify your email address for Companies House
+</a> <strong class="govuk-tag govuk-tag--green">
+  Design and content dev-ready 25.7.25
+  </strong> 
+    </li>
+    <li>
+      <a class="govuk-list" href="send-a-new-email.html">Request a new security code</a><strong class="govuk-tag govuk-tag--green">
+       Design and content dev-ready 25.7.25
+       </strong> 
+    </li>
+    <li>
+      <a class="govuk-list" href="email-address-changed.html">Your GOV.UK One Login email address is already in use for another account at Companies House (Email changed with GOV.UK One Login and matches an existing account)</a> <strong class="govuk-tag govuk-tag--pink">
+       Not in scope yet
+       </strong> 
+    </li>
+    <li>
+      <a class="govuk-list" href="end-linking.html">Your WebFiling account is now connected to your GOV.UK One Login
+ (with reference to a Companies House account)</a> <strong class="govuk-tag govuk-tag--green">
+       Design and content dev-ready 25.7.25
+        </strong> 
+    </li>
+    <li>
+      <a class="govuk-list" href="end-linking-new-account.html">A new WebFiling is connected to your GOV.UK One Login
+ (with reference to a Companies House account)</a> <strong class="govuk-tag govuk-tag--green">
+  Design and content dev-ready 25.7.25
+  </strong>
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">Email </h2> 
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-list" href="email-security-code">Companies House security code</a>  <strong class="govuk-tag govuk-tag--green">
+       Design and content dev-ready 25.7.25
+       </strong>  
+    </li>
+
+  </ul>
+
+  <h2 class="govuk-heading-m">Change WebFiling email address <strong class="govuk-tag govuk-tag--pink">
+    Not for development
+    </strong> </h2> 
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-list" href="webfiling-email-address.html">What is your current WebFiling email address? </a>  
+    </li>
+    <li>
+      <a class="govuk-list" href="webfiling-password.html">What is your WebFiling password? </a> 
+    </li>
+    <li>
+      <a class="govuk-list" href="webfiling-new-email-address.html">What is your new WebFiling email address?</a> 
+    </li>
+    <li>
+      <a class="govuk-list" href="webfiling-email-changed.html">Email address updated successfully</a> 
+    </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">GOV.UK One Login <strong class="govuk-tag govuk-tag--pink">
+    Not for development
+   </strong></h2> 
+
+ 
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="one-login/create-or-sign-in.html">Create your GOV.UK One Login or sign in</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/one-login-sign-in.html">Enter your email address to sign in to your GOV.UK One Login</a> 
+    </li> 
+    <li>
+      <a class="govuk-link" href="one-login/one-login-enter-password.html">Enter your password
+</a> 
+    </li> 
+    <li>
+      <a class="govuk-link" href="one-login/enter-code.html">Check your phone
+</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-enter-email.html">Enter your email address
+</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-check-your-email.html">Check your email</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-enter-password.html">Create your password</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-choose-security-type.html">Choose how to get security codes</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-set-up-auth-app.html">Set up an authenticator app</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="one-login/create-complete.html">You’ve created your GOV.UK One Login
+</a> 
+    </li>
+  </ul>
+
+<h2 class="govuk-heading-m">Information screens<strong class="govuk-tag govuk-tag--pink">
+  Not for development
+ </strong></h2> 
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-list" href="comms-article.html">Comms article</a> 
+  </li>
+</ul>
+
+
+
+<h2 class="govuk-heading-m">Connecting Companies House account <strong class="govuk-tag govuk-tag--pink">
+  Pages not used in final design
+ </strong> </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href="chs-interrupt.html">We need to connect your Companies House account to your GOV.UK One Login </a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="link-to-existing-chs-account.html">Enter your Companies House account password
+</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="chs-account-linked.html">Your Companies House account is now connected to your GOV.UK One Login</a> 
+    </li>
+
+    <li>
+      <a class="govuk-link" href="send-a-new-email">Send a new email with the security code</a> 
+    </li>
+
+    <li>
+      <a class="govuk-link" href="forgotten-your-password.html">Forgotten your password
+</a> 
+    </li>
+    <li>
+      <a class="govuk-link" href="password-reset-email-sent.html">Password reset email sent
+</a> 
+  </ul>
+
+
+
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+    <h2 class="govuk-heading-m" id="userRole">Saved companies</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="summary-card/your-companies-2">Saved companies</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong></h2> 
+      </li>
+
+
+
+      <li>
+        <a class="govuk-list" href="summary-card/your-companies-2-pagination-search">Saved companies with search and pagination</a> <strong class="govuk-tag govuk-tag--green">
+          Content dev-ready 25.7.25
+         </strong> <strong class="govuk-tag govuk-tag--orange">
+          Should 'file for...' link be a button/moved to bottom of screen?
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="summary-card/your-companies-2-pagination-search-no-result.html">Saved companies - search and no results</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong></h2> 
+      </li>
+
+      <li>
+        <a class="govuk-list" href="summary-card/your-companies-2-pagination-search-1-result.html">Saved companies - search and 1 result</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong></h2> 
+      </li>
+
+      <li>
+        <a class="govuk-list" href="summary-card/your-companies-2-pagination-search-2-results.html">Saved companies - search and 2 or more results</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong></h2> 
+      </li>
+
+    </ul>
+
+    <h2 class="govuk-heading-m" id="userRole">File for a different company and store company details </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="company-number-chs">What is the company number?</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="company-number-chs-error">What is the company number? - error screen</a> <strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="check-company-details-chs">Confirm this is the correct company</a><strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="authentication-code-standalone">Enter the company authentication code</a><strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="save-company">Store company details for future online filings</a><strong class="govuk-tag govuk-tag--pink">
+        Not used in final design
+       </strong> 
+      </li>
+    </ul>
+
+
+    <h2 class="govuk-heading-m" id="userRole">Company overview <strong class="govuk-tag govuk-tag--pink">
+      Not for development
+     </strong></h2>
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="company-overview">Company overview</a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m" id="userRole">Manage account</h2>
+    <ul class="govuk-list govuk-list--bullet">
+  
+      <li>
+        <a class="govuk-list" href="manage-account-with-personal-code">Manage account - Personal code is displayed in WebFiling</a><strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong>
+      </li>
+
+      <li>
+        <a class="govuk-list" href="manage-account-personal-code-link">Manage account - We link to CHS to display the personal code</a><strong class="govuk-tag govuk-tag--green">
+          Design and content dev-ready 25.7.25
+         </strong>
+      </li>
+
+
+      
+
+
+    </ul>
+
+    
+  
+
+  <!-- 
+
+  <h2 class="govuk-heading-m"id="finalScreens">Stop screens</h2>
+  <h2 class="govuk-heading-m"id="finalScreens">Emails</h2>
+    
+ -->
+  </div>
+  
+
+</div>
+
+
+{% endblock %}

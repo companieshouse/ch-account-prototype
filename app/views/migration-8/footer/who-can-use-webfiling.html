@@ -1,0 +1,58 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+We are changing the way you sign in to some of our services – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="who-can-use-webfiling" method="post" novalidate>
+
+               <!--  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              Your Companies House account is now connected to this account
+            </h3>
+          <p>You have connected your Companies House account to this GOV.UK One Login. We have saved your existing account information.</p>
+          </div>
+          </div> -->
+
+
+      <h1 class="govuk-heading-l">Your Companies House account is now connected to your GOV.UK One Login</h1>
+     
+      
+      <p class='govuk-body'>We've saved your existing account information. </p>
+
+
+    
+       {{ govukButton({
+         text: "Continue",
+         classes: "govuk-!-margin-top-4"
+       }) }}
+ 
+     </form>
+   </div>
+ </div>
+ 
+
+ {% endblock %}

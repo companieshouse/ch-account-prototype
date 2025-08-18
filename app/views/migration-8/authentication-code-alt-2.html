@@ -1,0 +1,87 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Company authentication {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       
+
+  
+  {{ govukInput({
+    label: {
+      html: "<span class='govuk-caption-l'>FLOWERS LIMITED (18882777)</span><h1 class='govuk-heading-l'>Enter the company authentication code</h1>",
+      isPageHeading: true,
+    },
+    hint: {
+    text: "This is a 6 character code issued by us to each company."
+  },
+    id: "authentication-code",
+    name: "authentication-code",
+    classes: "govuk-input--width-10" 
+  }) }}
+
+{{ govukDetails({
+                summaryText: "I do not have an authentication code",
+                html: '<p class="govuk-body">You can <a href="" class="govuk-link"> request the authentication code</a> to be sent by post.</p>'
+              }) }}
+
+  {{ govukCheckboxes({
+    name: "add-company",
+    fieldset: {
+      legend: {
+        text: "Save company details for future online filings",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--s"
+      }
+    },
+    hint: {
+      text: "You can securely save the company details so you do not need to re-enter the authentication code for most online filings. You'll also be able to digitally authorise other people to file online for the company."
+    },
+    items: [
+      {
+        value: "add-company",
+        text: "Save company details for FLOWERS LIMITED (18882777)",
+        hint: {
+          text: ""
+        }
+      }
+    ]
+  }) }}
+
+
+
+
+
+  {{ govukButton({
+    text: "Continue",
+    href:"company-overview"
+  }) }}
+
+
+
+
+
+
+</div>
+</div>
+
+   </form>
+{% endblock %}
+
+   
+
+
+
+
+

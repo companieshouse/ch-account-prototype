@@ -1,0 +1,98 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+Error: We've sent you a security code to verify your email address for Companies House - Companies House - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <form action="verify-email-address-error-1" method="post" novalidate>
+
+
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#otp">Enter the security code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+
+
+      <h1 class="govuk-heading-l">We've sent you a security code to verify your email address for Companies House</h1>
+     
+<p class="govuk-body">We've sent the security code to  <span class="govuk-!-font-weight-bold">e*****@gmail.com</p>
+
+
+
+
+  
+      <p class="govuk-body"> It might take a few minutes to arrive. The code will expire after 30 minutes.</p>
+      
+     
+          {{ govukInput({
+            label: {
+              text: "Enter your 6 digit security code"
+            },
+            errorMessage: {
+              text: "Enter the security code"
+            },
+            classes: "govuk-input--width-10",
+            id: "otp",
+            name: "otp",
+            spellcheck: false,
+            inputmode: "numeric"
+          }) }}
+        
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+    
+    
+
+
+      {{ govukDetails({
+        summaryText: "Problems with the code",
+        html: "If you have not received the email yet, wait a few minutes for it to arrive. Its subject line is 'Companies House security code'. You could also check your spam folder.</br> </br> If it still has not arrived, you can <a href='send-a-new-email' class='govuk-link'>request a new security code</a></a>."
+      }) }}
+     
+  
+
+
+      <!-- <p class="govuk-body-s ">  <a style="color: #b1b4b6;" class="govuk-list govuk-!-font-size-14" href="email-verify-webfiling" target="_blank">Email with code (opens in a new tab)</a> </p>
+      -->
+   
+
+
+ 
+     </form>
+   </div>
+ </div>
+ 
+
+ {% endblock %}
