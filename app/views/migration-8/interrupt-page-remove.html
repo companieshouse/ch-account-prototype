@@ -1,0 +1,42 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+      <form action="end-linking" method="post" novalidate>
+
+    
+     
+     
+
+    <h1 class="govuk-heading-l">We're taking you to your Companies House account to remove a company
+</h1>
+    
+    <p>We’ll open this in a new tab, so that you can come back to WebFiling after you’ve removed the company if you need to.</p>
+
+    <p>If you are appointed as an officer, such as a director or secretary, removing the company does not remove your appointment. It only removes the company from the list of companies in your account.</p>
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Go to your Companies House account to remove company (opens in new tab)</a>
+</p>
+
+    </form>
+    </div>
+</div>
+
+{% endblock %}
