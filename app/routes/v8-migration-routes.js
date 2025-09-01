@@ -756,7 +756,7 @@ router.get('/migration-8/summary-card/restore-beta-tech', function (req, res) {
      // restored company flag
     req.session.data['restored-beta-tech'] = true;
      
-    res.redirect('../company-overview-beta')
+    res.redirect('../check-company-details-beta')
     
 }) 
 
