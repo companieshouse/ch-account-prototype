@@ -30,8 +30,8 @@ What is the company number? – {{ serviceName }} – GOV.UK Prototype Kit
             }) }}
 
             <div class="govuk-inset-text">
-  If you have a company number that's 7 characters or less, enter zeros at the start so that it's 8 characters in total. For example, if it's 12345, enter 00012345.
-</div>
+              If you have a company number that's 7 characters or less, enter zeros at the start so that it's 8 characters in total. For example, if it's 12345, enter 00012345.
+            </div>
         
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
@@ -44,7 +44,8 @@ What is the company number? – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </details>
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"check-company-details"
         }) }}
       </form>
     </div>
