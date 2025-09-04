@@ -748,7 +748,7 @@ router.post('/migration-8/verify-email-address-12', function (req, res) {
 
 
 /*
- * You need to prove your identity
+ * without auth code
  */
 router.get('/migration-8/summary-card/restore-beta-tech', function (req, res) {
 
@@ -757,6 +757,21 @@ router.get('/migration-8/summary-card/restore-beta-tech', function (req, res) {
     req.session.data['restored-beta-tech'] = true;
      
     res.redirect('../check-company-details-beta')
+    
+}) 
+
+
+
+/*
+ * with auth code
+ */
+router.get('/migration-8/summary-card/restore-beta-tech-alt', function (req, res) {
+
+
+     // restored company flag
+    req.session.data['restored-beta-tech'] = true;
+     
+    res.redirect('../check-company-details-beta-tech')
     
 }) 
 

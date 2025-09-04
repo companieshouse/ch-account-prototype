@@ -31,21 +31,79 @@ This HTML is completely unsuitable for use in production sites
     <div class="govuk-grid-column-two-thirds">
 
    
-    {{ govukInput({
-      label: {
-        html: "<span class='govuk-caption-l'>BETA TECHNOLOGY LIMITED(10866549)</span>
-     Enter the company authentication code",
-        classes: "govuk-!-font-size-36 govuk-!-font-weight-bold",
-        isPageHeading: true
-      },
-     hint: {
-        text: "This is a 6 character code issued by us to each company."
-      },
-      classes: "govuk-input--width-10",
-      id: "authentication-code",
-      name: "authentication-code"
-    }) }}
+      <span class='govuk-caption-l'>BETA TECHNOLOGY LIMITED (10866549)</span> 
+    <h1 class="govuk-heading-l">Enter the company authentication code</h1>  
+     <div id="event-name-hint" class="govuk-hint">
+    This is a 6 character code issued by us to each company.
+  </div>
 
+  {{ govukInput({
+    label: {
+      html: "",
+      classes: "govuk-!-font-weight-bold"
+    },
+    classes: "govuk-input--width-10",
+    id: "authentication-code",
+    name: "authentication-code"
+  }) }}
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I do not have an authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">You'll need to <a href="#" class="govuk-link"> request the authentication code</a>. It is sent by post.</p>
+  </div>
+</details>
+
+
+
+<!--
+  {{ govukCheckboxes({
+    name: "add-company",
+    fieldset: {
+      legend: {
+        text: "You can save the company details",
+        classes: "govuk-fieldset__legend--m "
+      }
+    },
+    hint: {
+      text: "If you save the details, we'll add the company to your account. You will not need to re-enter the authentication code for most online filings. You'll also be able to digitally authorise other people to file online for this company."
+    },
+    items: [
+      {
+        value: "add-company",
+        text: "I want to save the details for this company",
+        hint: {
+          text: ""
+        }
+      }
+    ]
+  }) }}-->
+
+ {{ govukCheckboxes({
+    name: "add-company",
+    fieldset: {
+      legend: {
+        text: "",
+        classes: "govuk-fieldset__legend--m "
+      }
+    },
+    hint: {
+      text: ""
+    },
+    items: [
+      {
+        value: "add-company",
+        text: "Save the company details",
+        hint: {
+          text: "If you save the details, we'll add the company to your account. You will not need to re-enter the authentication code for most online filings. You'll also be able to digitally authorise other people to file online for this company."
+        }
+      }
+    ]
+  }) }}
 
 
     {{ govukButton({
