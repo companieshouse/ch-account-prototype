@@ -1,0 +1,154 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+ENCOM VIDEO GAMES LIMITED (01234567) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-three-quarters wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+</button>
+
+
+
+
+<p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">Companies you file for</p>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <p class="govuk-body govuk-!-font-size-20 govuk-!-font-weight-bold">Search for a company</p>
+    <p class="govuk-body">Enter the company number, or part of a company number. </strong></p>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<table class="govuk-table govuk-!-margin-top-7">
+<caption class="govuk-table__caption govuk-table__caption--s visuallyhidden">Your companies</caption>
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Company name</th>
+      <th scope="col" class="govuk-table__header">Company number</th>
+      <th scope="col" class="govuk-table__header">Authorisation status</th>
+      <th scope="col" class="govuk-table__header ">People digitally authorised
+        to file online</th>
+        <th scope="col" class="govuk-table__header ">Remove company</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ANDROID TECHNOLOGY LTD<p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p> </th>
+      <td class="govuk-table__cell">10866549</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not authorised 
+       </strong>
+      </a>
+      </td>
+
+
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/remove-company" class="govuk-link govuk-link--no-visited-state"> Remove  <span class="govuk-visually-hidden">ANDROID TECHNOLOGY LTD</span> </a></td>
+
+      
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ENCOM VIDEO GAMES LIMITED
+
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p>
+      </th>
+      <td class="govuk-table__cell">01234567</td>
+      <td class="govuk-table__cell"> 
+        <strong class="govuk-tag govuk-tag--blue">
+          Active 
+         </strong>
+        </td>
+      <td class="govuk-table__cell"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/manage-authorised-people" class="govuk-link govuk-link--no-visited-state"> View and manage  <span class="govuk-visually-hidden">ENCOM VIDEO GAMES LIMITED</span> </a></td>
+
+      <td class="govuk-table__cell"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/remove-company" class="govuk-link govuk-link--no-visited-state"> Remove <span class="govuk-visually-hidden">ENCOM VIDEO GAMES LIMITED</span> </a></td>
+
+    </tr>
+   
+    <!--BROWN AND SALTER LIMITED -->
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">BROWN AND SALTER LIMITED
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p>
+      </th>
+      <td class="govuk-table__cell">08449801</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not authorised 
+       </strong>  </td>
+
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/remove-company" class="govuk-link govuk-link--no-visited-state"> Remove <span class="govuk-visually-hidden">BROWN AND SALTER LIMITED</span> </a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">CARNATION (UK) LIMITED
+        <p class="govuk-body govuk-!-margin-top-2"><a href="" class="govuk-link--no-visited-state">File for this company </a></p>
+      </th>
+      <td class="govuk-table__cell">09433214</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+        Not authorised 
+       </strong> </td>
+
+
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"><a href="https://find-update-company-info.herokuapp.com/v8-your-companies/remove-company" class="govuk-link govuk-link--no-visited-state"> Remove <span class="govuk-visually-hidden">CARNATION (UK) LIMITED</span> </a></td>
+
+    </tr>
+    
+   
+  </tbody>
+</table>
+
+
+ </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+

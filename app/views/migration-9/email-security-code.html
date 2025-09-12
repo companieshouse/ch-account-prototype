@@ -1,0 +1,49 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+We are changing the way you sign in to some of our services – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds ">
+    <form action="email-verify-webfiling" method="post" novalidate>
+
+       
+      <h1 class="govuk-heading-l">Companies House security code</h1>
+     
+      <p class='govuk-body'>Your security code is: 261444</p>
+        
+     <p class='govuk-body'>The code expires in 30 minutes. If you run out of time, you'll need to request another code.</p>
+
+
+     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+     <h1 class="govuk-heading-l">Cod diogelwch Tŷ'r Cwmnïau</h1>
+     
+     <p class='govuk-body'>Eich cod diogelwch yw: 261444</p>
+
+      <p class='govuk-body'>Mae'r cod yn dod i ben mewn 30 munud. Os ydych chi'n rhedeg allan o amser, bydd angen i chi ofyn am god arall.</p>
+
+
+
+ 
+     </form>
+   </div>
+ </div>
+
+ {% endblock %}

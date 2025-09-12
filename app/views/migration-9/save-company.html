@@ -1,0 +1,97 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+  <span class="govuk-caption-xl">FLOWERS LIMITED</span>
+        <h1 class="govuk-heading-l">Store company details for future online filings</h1>
+
+
+        <p class="govuk-body">We can securely store the company details you entered to make online filing quicker and easier in the future.</p>
+
+        <p class="govuk-body">This means you:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-3">
+          <li>will not need to re-enter the company's authentication code for most online filings</li>
+          <li>can authorise other people to file online for the company</li>
+          
+        </ul>
+
+
+
+        {{ govukRadios({
+          name: "add-to-account",
+          fieldset: {
+            legend: {
+              html: "<span class='govuk-body govuk-!-font-weight-bold'> Do you want us to store the company details for FLOWERS LIMITED?<span>"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+       
+
+    {{ govukButton({
+      text: "Continue",
+      href:"company-overview"
+    }) }}
+
+
+
+ </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+
