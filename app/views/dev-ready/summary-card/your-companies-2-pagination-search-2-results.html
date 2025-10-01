@@ -45,15 +45,15 @@ This HTML is completely unsuitable for use in production sites
 
 
   <div class="govuk-grid-column-two-thirds wfOverview">
- <!-- <div class="information message">
-    <p class="header">Restore your digital authorisation</p>
-    <p>To file online, you'll need to select 'restore authorisation' for each company that has a 'not authorised' status. This will restore your digital authorisation, so that you do not need to enter the company authentication code for most online filings.</p>
-  </div>
-   -->
-  
-  
-  <h1 class="govuk-heading-l govuk-!-padding-0">Saved companies</h1>
 
+  <!--
+  <div class="information message">
+     <p class="header">Restore your digital authorisation</p>
+    <p>To file online, you'll need to select 'restore authorisation' for each company that has a 'not authorised' status. This will restore your digital authorisation, so that you do not need to enter the company authentication code for most online filings.</p>
+  </div>-->
+  
+  
+  <h1 class="govuk-heading-l">Saved companies</h1>
 
 <p class="govuk-body">You can view your saved companies here. You need to go to your Companies House account if you want to:</p>
 <ul class="govuk-list govuk-list--bullet">
@@ -66,30 +66,23 @@ This HTML is completely unsuitable for use in production sites
   <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">'Your companies' section of your Companies House account (opens in new tab)</a>.
 </p>
 
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-  
-
-  <!-- <h2 class="govuk-!-font-size-16 govuk-!-font-weight-bold govuk-!-padding-bottom-0">Digitally authorised people and invitations</h2>
+<!--
+<h2 class="govuk-!-font-size-16 govuk-!-font-weight-bold govuk-!-padding-bottom-0">Digitally authorised people and invitations</h2>
   <p class="govuk-!-padding-top-0">View and manage people who are digitally authorised for a company, or accept or decline invitations to be digitally authorised.</p>
- 
-  <a href="../interrupt-page-wf" class="govuk-link">Manage digitally authorised people and invitations</a>
+  <a href="https://find-update-company-info.herokuapp.com/v9-your-companies/your-companies-card" class="govuk-link" rel="noreferrer noopener" target="_blank">Manage digitally authorised people and invitations</a>
 
   <br><br>
-
-
-
-
-<h2 class="govuk-!-font-size-16 govuk-!-font-weight-bold govuk-!-padding-bottom-0">Remove a company from your account</h2>
+    
+  <h2 class="govuk-!-font-size-16 govuk-!-font-weight-bold govuk-!-padding-bottom-0">Remove a company from your account</h2>
 
 <p class="govuk-!-padding-top-0">If you do not want to be digitally authorised for a company, you can remove it from the list of companies in your account.</p>
 
-<a href="../interrupt-page-wf" class="govuk-link">Remove a company</a>
+<a href="https://find-update-company-info.herokuapp.com/v9-your-companies/your-companies-card" class="govuk-link" rel="noreferrer noopener" target="_blank">Remove a company</a>-->
+
+    
+  </span>
 
 
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
- -->
   
 <!--  {{ govukButton({
   text: "Add a company",
@@ -124,49 +117,47 @@ This HTML is completely unsuitable for use in production sites
  -->
 
 
+   <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-margin-bottom-0">
+        
+        <label class="govuk-label--m" for="search">
+            Search saved companies
+        </label>
+        <div id="search-hint" class="govuk-hint govuk-!-padding-top-1">
+          Enter the company number, or part of a company number.
+        </div>
 
+        <div class="govuk-button-group ">
 
-<!-- Authorised for FLOWERS LIMITED  -->
+        <input class="govuk-input  govuk-input--width-10" id="search" name="search" type="text">
+          {{ govukButton({
+              text: "Search",
+              href:"",
+              classes: "govuk-!-margin-left-2"
+            }) }}
 
-{% if (data['added-flowers'] == true)%}
- 
- <div class="govuk-summary-card wf-version-of-govuk-summary-card">
-  <div class="govuk-summary-card__title-wrapper">
-    <h2 class="govuk-summary-card__title">
-      <a class="govuk-link" href="../company-overview-flowers">FLOWERS LIMITED</a>
-    </h2>
-  </div>
-  <div class="govuk-summary-card__content">
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Company number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          18882777
-        </dd>
+      
+
+        <a class="govuk-link" href="#">Clear search</a>
+
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Digital authorisation status
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <strong class='govuk-tag govuk-tag--green'>
-               Authorised
-               </strong>
 
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
+      <h3 class="govuk-heading-s">2 results</h3>
 
-{% endif %}
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-0">
+      
+      
+<!--   {{ govukButton({
+  text: "File for a different company",
+  href:"../company-number-chs"
+}) }} -->
 
 
 
- <!-- Not authorised for BETA TECHNOLOGY LIMITED  -->
-{% if (data['restored-beta-tech'] == undefined )%}
+    </div>
+
+
+
  <div class="govuk-summary-card wf-version-of-govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
@@ -185,75 +176,27 @@ This HTML is completely unsuitable for use in production sites
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Digital authorisation <!-- status -->
+          Digital authorisation
         </dt>
         <dd class="govuk-summary-list__value">
-          <!-- Removed for demo <strong class='govuk-tag govuk-tag--red'>
-                Not authorised
-               </strong> -->
-
-               <p class="govuk-body govuk-!-padding-top-3">
-                <a href="restore-beta-tech" class="govuk-link">Restore authorisation and view company information</a>
+                <p class="govuk-body govuk-!-padding-top-3">
+                <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">	
+Restore authorisation and view company information </a>
               </p>
-
-      
         </dd>
       </div>
     </dl>
   </div>
 </div>
 
-{% endif %}
 
-<!-- Authorised for BETA TECHNOLOGY LIMITED -->
 
-{% if (data['restored-beta-tech'] == true)%}
- 
- <div class="govuk-summary-card wf-version-of-govuk-summary-card">
+<div class="govuk-summary-card wf-version-of-govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
-      <a class="govuk-link" href="../company-overview-beta">BETA TECHNOLOGY LIMITED</a>
-    </h2>
-  </div>
-  <div class="govuk-summary-card__content">
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Company number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          10866549
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Digital authorisation status
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <strong class='govuk-tag govuk-tag--green'>
-               Authorised
-               </strong>
-
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
-
-{% endif %}
-
-
-
-
-
-
-<div class="govuk-summary-card wf-version-of-govuk-summary-card" >
-  <div class="govuk-summary-card__title-wrapper">
-    <h2 class="govuk-summary-card__title">
-      ANDROID TECHNOLOGY UK LIMITED
+       <a class="govuk-link" href="../company-overview">ANDROID TECHNOLOGY UK LIMITED</a>
     </h2>
    
-  
   </div>
   <div class="govuk-summary-card__content">
     <dl class="govuk-summary-list">
@@ -267,63 +210,17 @@ This HTML is completely unsuitable for use in production sites
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Digital authorisation <!-- status -->
+          Digital authorisation
         </dt>
         <dd class="govuk-summary-list__value">
-         <!--  <strong class='govuk-tag govuk-tag--red'>
-                Not authorised
-               </strong> -->
-                <p class="govuk-body govuk-!-padding-top-3">
-                <a href="" class="govuk-link" >Restore authorisation and view company information</a>
-              </p>
+          <strong class='govuk-tag govuk-tag--green'>
+                Authorised
+               </strong>
         </dd>
       </div>
     </dl>
   </div>
 </div>
- 
-<!--../company-overview -->
-
-<div class="govuk-summary-card wf-version-of-govuk-summary-card" >
-  <div class="govuk-summary-card__title-wrapper">
-    <h2 class="govuk-summary-card__title">
-      TEST COMPANY LIMITED
-    </h2>
-   
-  
-  </div>
-  <div class="govuk-summary-card__content">
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Company number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          1245677
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Digital authorisation <!-- status -->
-        </dt>
-        <dd class="govuk-summary-list__value">
-         <!--  <strong class='govuk-tag govuk-tag--red'>
-                Not authorised
-               </strong> -->
-             <p class="govuk-body govuk-!-padding-top-3">
-                <a href="#" class="govuk-link">Restore authorisation and view company information</a>
-              </p>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
-
-
-  {{ govukButton({
-  text: "File for a different company",
-  href:"add-flowers"
-}) }}
 
 
 

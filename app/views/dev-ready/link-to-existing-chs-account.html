@@ -1,0 +1,116 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+Enter your Companies House account password - {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="link-to-existing-chs-account" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">Enter your Companies House account password</h1>
+
+  
+        <!-- <p class="govuk-body"> You cannot use your WebFiling details to sign in. You must sign in to or register a Companies House account.</p>-->
+
+
+     
+        <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+          <label class="govuk-label" for="password-input">
+           
+          </label>
+          <div class="govuk-inset-text">
+            This may be different to your WebFiling password or your GOV.UK One Login password.
+          </div>
+          <div class="govuk-input__wrapper govuk-password-input__wrapper">
+            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input govuk-!-width-two-thirds" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+            <button type="button" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" data-module="govuk-button" aria-controls="password-input" aria-label="Show password" hidden>
+              Show
+            </button>
+          </div>
+        </div>  
+        
+    <p>If you've forgotten it, you can <a href="forgotten-your-password" class="govuk-link" rel="noreferrer noopener" target="_blank">reset your password (opens in a new tab)</a>. Then come back to this page.</p>
+     
+    <!--
+    <div class="govuk-inset-text">
+      If you are unable to reset it, you can <a href="#" class="govuk-link">continue without entering your password</a>. However, this means we will not be able to connect your Companies House  
+     account to your GOV.UK One Login and save any existing information.
+
+    </div>-->
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is a Companies House account?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">This is the account you can use to sign in to:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>the Companies House register - sometimes known as the 'Companies House service' or 'Find and update company information'</li>
+    <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
+  </ul>
+  <p>It is different to a WebFiling account.</p>
+      </div>
+    </details>
+
+         {{ govukButton({
+           text: "Continue"
+         }) }}   
+
+         
+         <!--<p class="govuk-body"><a href="#" class="govuk-link">Register</a></p>-->
+         
+        
+         
+  
+
+  </form>
+
+</div>
+</div>
+
+
+
+
+
+<!--       {{ govukRadios({
+        name: "email-does-not-match",
+        fieldset: {
+          legend: {
+            text: "Choose an option: ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "sameas-chs",
+            text: "Create or sign in to a GOV.UK One Login with   'example@gmail.com'"
+          },
+          {
+            value: "no",
+            text: "I have a GOV.UK One Login, but it not using the email addres 'example@gmail.com'"
+          }
+        ]
+      }) }} -->
+
+      {% endblock %}

@@ -1,0 +1,77 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+We're taking you to your Companies House account – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="end-linking" method="post" novalidate>
+
+    
+     
+     
+
+    <h1 class="govuk-heading-l">We're taking you to your Companies House account
+</h1>
+
+  <p class="govuk-body">We need to take you to the 'Your companies' section of your Companies House account to do any of the following:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>view and manage people who are digitally authorised</li>
+  <li>accept or decline invitations to be digitally authorised</li>
+  <li>remove a company from your account</li>
+</ul>
+
+    <p>We'll open it in a new tab, so that you can come back to WebFiling if you need to.</p>
+
+
+    <p class="govuk-body">
+  <a href="https://find-update-company-info.herokuapp.com/v9-your-companies/your-companies-card" class="govuk-link" rel="noreferrer noopener" target="_blank">Go to the 'Your companies' section of your Companies House account (opens in new tab)</a>
+</p>
+
+   
+
+
+ </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
