@@ -87,7 +87,7 @@ router.post('/migration-8/one-login/enter-code-sign-in', function (req, res) {
     }
     else if (req.session.data['set-journey'].includes('WC9')) {
        
-        res.redirect('../your-companies-3')
+        res.redirect('../summary-card/your-companies-3')
     }
     else if (req.session.data['set-journey'].includes('WC16')) {
        
