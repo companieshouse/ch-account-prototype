@@ -46,7 +46,7 @@ We are changing the way you sign in to some of our services – {{ serviceName }
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          You will lose any existing information if you do not use the same email address to sign in to each account. You must also use the same email address for your GOV.UK One Login.
+          You should use the same email address to create your GOV.UK One Login that you use for your Webfiling account. This is so you keep the existing information in your account.
  <!--{% if (data['chs-email-2'] === "") %}
           <strong>  {{data['email-address-2']}} </strong>
           {% elseif (data['chs-email'] !== "") %}
@@ -67,16 +67,11 @@ We are changing the way you sign in to some of our services – {{ serviceName }
            </span>
          </summary>
          <div class="govuk-details__text">
-          <p>If you want to connect your accounts that use different email addresses to sign in, you'll need to update them so they're all the same. It is up to you which email addresses you update. You'll need to sign in to do this. </p>
-           <p class="govuk-body">The following links open in a new tab:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><a href="webfiling-email-address-return-to-sign-in" class="govuk-link" rel="noreferrer noopener" target="_blank">update your WebFiling email address<span class="govuk-visually-hidden">(opens in a new tab)</span></a></li>
-              <li><a href="choose-sign-in" class="govuk-link" rel="noreferrer noopener" target="_blank">update your Companies House account email address<span class="govuk-visually-hidden">(opens in a new tab)</span></a></li>
-              <li><a href="https://find-update-company-info.herokuapp.com/public-beta-release-2/create-or-sign-in-9" class="govuk-link" rel="noreferrer noopener" target="_blank">update your GOV.UK One Login email address<span class="govuk-visually-hidden">(opens in a new tab)</span></a></li>
-            </ul>
+          <p>If you already have an existing GOV.UK One Login that uses a different email address to the one you use for WebFiling, <a href="https://find-update-company-info.herokuapp.com/public-beta-release-2/create-or-sign-in-9" class="govuk-link" rel="noreferrer noopener" target="_blank">update your GOV.UK One Login email address (opens in a new tab)</a> if you want to keep your existing information. You may need to sign in.</p>
+           <p class="govuk-body">If you do <a href="webfiling-email-address-return-to-sign-in" class="govuk-link" rel="noreferrer noopener" target="_blank">update your Webfiling email address (opens in a new tab)</a>, any companies you've previously added to your account will need to be added again.</p>
+           <p class="govuk-body">When you sign in, you'll need to select a link next to each company you've previously added to restore your authorisation. If you want to keep all the existing companies you've added, and you want to change your Webfiling email address, restore your authorisation first for each company. Otherwise, you'll need to add each company again.</p> 
 
-<p>Then come back to this page and continue to sign in.</p>
-           </ul>
+
          </div>
        </details>
 
