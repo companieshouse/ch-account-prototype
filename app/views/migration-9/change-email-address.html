@@ -11,6 +11,8 @@
 
 {% block beforeContent %}
 
+<a href="#" class="govuk-back-link">Back</a>
+
 {% endblock %}
 
 
@@ -25,15 +27,11 @@
 
   <h1 class="govuk-heading-l">Change email address</h1>
 
-  <p class="govuk-body">Current email address is <br>{% if (data['chs-email'] === "") %}
+  <p class="govuk-body">Current email address is
         
     <strong> email111@example.com </strong> 
 
-    {% else %}
-
-    <strong> {{data['chs-email']}} </strong>
-
-    {% endif %}
+    
 </p>
 
   {{ govukInput({
@@ -72,33 +70,20 @@
     type: "password",
     spellcheck: false
   }) }}
-            
-     
-<!--   <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-       What is a Companies House account?
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      <p class="govuk-body">This is the account you can use to sign in to:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the Companies House register - sometimes known as 'Companies House service'     
-   or 'Find and update company information'</li>
-        <li>some of our online services - for example, 'Register your company' or 'Upload a document to Companies House'</li>
-      </ul>
-        <p class="govuk-body">A Companies House account is not the same as WebFiling.</p>
+       
 
-        
-    
-    </div>
-  </details>
-
- -->
-
-  {{ govukButton({
-    text: "Send confirmation email"
+  
+   {{ govukButton({
+    text: "Continue"
   }) }}   
+
+<p class="govuk-body"> 
+    <a class="govuk-link" href="#">I do not want to change my email address</a>
+  </p>
+  
+
+
+
 
 
   </form>
