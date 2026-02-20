@@ -788,3 +788,12 @@ router.get('/migration-9/summary-card/restore-beta-tech-alt', function (req, res
     
 }) 
  
+
+/*  Alternate start page link to radio buttons*/
+router.post('/migration-9/start-page-2', function (req, res) {
+
+    res.redirect('sign-in-reason')
+
+})
+
+

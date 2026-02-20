@@ -1,0 +1,71 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+We are changing the way you sign in to some of our services – {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <form action="sign-in-interrupt" method="post" novalidate>
+
+        <a href="#" class="govuk-back-link govuk-!-padding-bottom-4 ">Back</a>
+     
+   
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4 ">
+              What are you here to do?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Sign in to One Login
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                File a mortgage document
+              </label>
+            </div>
+          
+          </div>
+        </fieldset>
+      </div>
+      
+
+     
+
+    
+       {{ govukButton({
+         text: "Continue",
+         href:"one-login/create-or-sign-in",
+         classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8"
+       }) }}
+ 
+     </form>
+   </div>
+ </div>
+ 
+ </div>
+ {% endblock %}
