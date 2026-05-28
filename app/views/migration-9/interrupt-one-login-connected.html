@@ -1,0 +1,60 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+      <form action="end-linking" method="post" novalidate>
+
+    
+     
+     
+
+    <h1 class="govuk-heading-l">You need to sign in using GOV.UK One Login
+</h1>
+
+  <p class="govuk-body">This email has been used to connect a GOV.UK One Login. </p>
+
+
+    <p>We'll open it in a new tab, so that you can come back to this page and <a href="" class="govuk-link">go back to WebFiling</a> if you need to.</p>
+
+
+
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If you are a lender
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You cannot sign in using an account which has been connectec to GOV.UK One Login. <a href="https://find-update-company-info.herokuapp.com/v9-your-companies/your-companies-card" class="govuk-link" rel="noreferrer noopener" target="_blank">You will need to sign into Webfiling using a different email address.</a>
+  </div>
+</details>
+    </form>
+
+
+    {{ govukButton({
+         text: "Go to GOV.UK One Login",
+         href:"one-login/create-or-sign-in",
+         classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-4"
+       }) }}
+    </div>
+</div>
+
+{% endblock %}
