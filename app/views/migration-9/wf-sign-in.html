@@ -1,0 +1,106 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+  
+    
+    <!--
+    {% set html %}
+    <p class="govuk-notification-banner__heading">
+     The way you sign in to WebFiling has changed.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}-->
+
+  <h1 class="govuk-heading-l">Sign in to Companies House WebFiling</h1>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+   <strong>Email address</strong>
+  </label>
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    <strong>Password</strong>
+  </label>
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+
+
+  {{ govukButton({
+    text: "Sign in",
+    classes:"govuk-!-margin-top-5"
+  }) }}   
+
+
+<p class="govuk-body">
+  <a href="#" class="govuk-link">Forgotten password</a>.
+</p>
+<br>
+
+<p class="govuk-body">If you are a lender you can
+  <a href="#" class="govuk-link">register for an account here</a> If you are not a lender you must <a href="">use GOV.UK One Login.</a>
+</p>
+
+
+
+
+
+
+  <br>
+
+
+  
+
+  <ul class="govuk-list">
+    <li>
+      <a href="https://ewf.companieshouse.gov.uk/sframe?name=aboutWebFiling&lang=en" class="govuk-link">Who can use WebFiling</a></p>
+    </li>
+
+    <li>
+    <a href="https://ewf.companieshouse.gov.uk/help/en/stdwf/faqHelp.html" class="govuk-link">Read the WebFiling guidance</a></p>
+    </li>
+  </ul>
+
+  <!--
+  <h2 class="govuk-heading-m">Try our new 'File a confirmation statement' service</h2>
+
+  <p class="govuk-body">If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our new
+    <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">'File a confirmation statement' service (opens in a new tab)</a>. You will not be able to pay with a Companies House payment account.
+  </p>-->
+
+  </form>
+
+
+  
+</div>
+</div>
+
+
+
+{% endblock %}
