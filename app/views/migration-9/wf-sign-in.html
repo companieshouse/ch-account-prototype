@@ -36,7 +36,10 @@
     html: html
   }) }}-->
 
-  <h1 class="govuk-heading-l">Sign in to Companies House WebFiling</h1>
+  <h1 class="govuk-heading-l">Sign in to WebFiling: lenders only</h1>
+
+  <p class="govuk-body">If you are not a lender, you'll need to <a href="">sign in using GOV.UK One Login</a> instead.
+</p>
 
   <div class="govuk-form-group">
   <label class="govuk-label" for="email">
@@ -51,6 +54,22 @@
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
 
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     What you can do in WebFiling
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">In WebFiling, you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>file your company’s annual accounts and confirmation statement</li>
+  <li>file director and secretary information</li>
+  <li>sign up to get <a href="https://www.gov.uk/guidance/register-for-email-reminders-from-companies-house" class="govuk-link govuk-link--no-visited-state">email reminders</a> when your accounts and confirmation statement are due</li>
+  <li>digitally authorise people to file for your company online</li>
+</ul>
+  </div>
+</details>
 
   {{ govukButton({
     text: "Sign in",
@@ -59,27 +78,16 @@
 
 
 <p class="govuk-body">
-  <a href="#" class="govuk-link">Forgotten password</a>.
-</p>
+  <a href="#" class="govuk-link--no-visited-state">I've forgotten my password</a></p>
+  <p class="govuk-body">
+  <a href="#" class="govuk-link--no-visited-state">Create a lenders WebFiling account</a></p>
 <br>
-
-<p class="govuk-body">If you are a lender you can
-  <a href="#" class="govuk-link">register for an account here</a> If you are not a lender you must <a href="">use GOV.UK One Login.</a>
-</p>
-
-
-
-
-
 
   <br>
 
-
-  
-
   <ul class="govuk-list">
     <li>
-      <a href="https://ewf.companieshouse.gov.uk/sframe?name=aboutWebFiling&lang=en" class="govuk-link">Who can use WebFiling</a></p>
+      <a href="https://ewf.companieshouse.gov.uk/sframe?name=aboutWebFiling&lang=en" class="govuk-link">Who can use WebFiling?</a></p>
     </li>
 
     <li>
