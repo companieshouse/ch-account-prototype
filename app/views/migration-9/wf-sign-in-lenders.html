@@ -38,39 +38,76 @@
 
 
 <p class="govuk-body govuk-!-text-align-right govuk-!-margin-bottom-1">
-  Edwardgordon@gmail.com
+  edwardgordon@gmail.com
 </p>
 
 <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
 
 
-  <h1 class="govuk-heading-l">Confirm you are a lender</h1>
+  <h1 class="govuk-heading-l">Lender details</h1>
   
   
 
   <div class="govuk-form-group govuk-!-margin-top-6">
   <label class="govuk-label" for="email">
-   <strong>Company Number</strong>
+   <strong>Company number</strong>
   </label>
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
   <div class="govuk-form-group">
   <label class="govuk-label" for="email">
-    <strong>Authentication Code</strong>
-  </label>
+    <strong>Lender authentication code</strong>
+  </label> 
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
   <div class="govuk-form-group">
   <label class="govuk-label" for="email">
-   <strong>Presenter Authentication Code</strong>
+   <strong>Presenter authentication code</strong>
   </label>
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
 <br>
- 
- <p class="govuk-body">You should only sign in to Webfiling using this method if you a lender. If you are not a lender <a href="">sign in using GOV.UK One Login.</a></p>
 
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with company number
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This is 8 characters long. You can find it by searching for the company on the <a href="https://find-and-update.company-information.service.gov.uk/" class="govuk-link--no-visited-state">Companies House register</a>.
+  </div>
+</details>
 
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with lender authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">This is an 8 character code. It's required if you need to file charge (mortgage) documents online for other companies.</p> 
+    
+    <p class="govuk-body">If you do not have the code, <a href="https://www.gov.uk/government/publications/apply-to-register-as-a-lender-to-file-charge-documents-for-a-company" class="govuk-link--no-visited-state">apply to register as a lender to file charge documents for a company</a>.</p> 
+    
+    <p class="govuk-body">If you lose your code or need a new one...</p>
+  </div>
+</details>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with presenter authentication code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p class="govuk-body">This is an 11 character code. This code is used by agents such as accountants. It is required when using software to make a filing.</p> 
+
+   <p class="govuk-body">If you do not have the code, <a href="https://www.gov.uk/government/publications/apply-to-register-as-a-lender-to-file-charge-documents-for-a-company" class="govuk-link--no-visited-state">apply to register as a lender to file charge documents for a company</a>.</p> 
+
+  <p class="govuk-body">If you lose your code or need a new one...</p>
+  </div>
+</details>
 
   {{ govukButton({
     text: "Continue",
