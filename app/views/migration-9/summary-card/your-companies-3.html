@@ -25,8 +25,8 @@ This HTML is completely unsuitable for use in production sites
 
 {% block content %}
 
-<p class="govuk-body">To view the skip link component tab to this example, or click inside this example and press tab.</p>
-<a href="#" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+<p class="govuk-body"><p>
+<a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 <form class="form" action="" method="post">
 
 <div class="govuk-grid-row">
@@ -55,6 +55,8 @@ This HTML is completely unsuitable for use in production sites
    -->
   
   
+<main id="main-content" class="govuk-main-wrapper"></main>
+
   <h1 class="govuk-heading-l govuk-!-padding-0">Saved companies</h1>
 
   <h2 class="govuk-!-font-size-16 govuk-!-font-weight-bold govuk-!-padding-bottom-0">Digitally authorised people and invitations</h2>
@@ -319,6 +321,12 @@ This HTML is completely unsuitable for use in production sites
   
   </div>
      </form>
+
+
+</form>
+</main>
+
+
 {% endblock %}
 
 
