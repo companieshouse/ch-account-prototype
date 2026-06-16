@@ -38,7 +38,7 @@
 
   <h1 class="govuk-heading-l">Sign in to WebFiling: lenders only</h1>
 
-  <p class="govuk-body">If you are not a lender, you'll need to <a href="">sign in using GOV.UK One Login</a> instead.
+  <p class="govuk-body">If you are not a lender, you'll need to <a href="one-login/create-or-sign-in.html">sign in using GOV.UK One Login</a> instead.
 </p>
 
   <div class="govuk-form-group">
@@ -47,11 +47,16 @@
   </label>
   <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 </div>
-  <div class="govuk-form-group">
-  <label class="govuk-label" for="email">
-    <strong>Password</strong>
+<div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+  <label class="govuk-label" for="password-input">
+   <strong>Password</strong>
   </label>
-  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+  <div class="govuk-input__wrapper govuk-password-input__wrapper">
+    <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+    <button type="button" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" data-module="govuk-button" aria-controls="password-input" aria-label="Show password" hidden>
+      Show
+    </button>
+  </div>
 </div>
 
 <details class="govuk-details">
@@ -71,16 +76,21 @@
   </div>
 </details>
 
-  {{ govukButton({
+
+
+ <div class="govuk-!-padding-top-4
+ ">
+    {{ govukButton({
     text: "Sign in",
-    classes:"govuk-!-margin-top-5"
-  }) }}   
+    href:"wf-sign-in-lenders"
+    
+  }) }}
 
-
+</div>
 <p class="govuk-body">
-  <a href="#" class="govuk-link--no-visited-state">I've forgotten my password</a></p>
+  <a href="https://ewf-legacy.companieshouse.gov.uk//myaccount?remind=1&.dyn=gcc5mei" class="govuk-link--no-visited-state">I've forgotten my password</a></p>
   <p class="govuk-body">
-  <a href="#" class="govuk-link--no-visited-state">Create a lenders WebFiling account</a></p>
+  <a href="https://ewf-legacy.companieshouse.gov.uk//runpage?page=webfilingRegister&signUpPage.lang=en" class="govuk-link--no-visited-state">Create a lenders WebFiling account</a></p>
 <br>
 
   <br>
