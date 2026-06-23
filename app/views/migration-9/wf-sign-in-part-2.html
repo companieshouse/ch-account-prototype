@@ -38,8 +38,32 @@
 
   <h1 class="govuk-heading-l">Sign in to WebFiling: lenders only</h1>
 
-  <p class="govuk-body">If you are a lender we will need [Content TBC] to sign you in. If you are not a lender, you'll need to <a href="one-login/create-or-sign-in.html">sign in using GOV.UK One Login</a> instead.
+<p class="govuk-body">You will need:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the company number</li>
+  <li>your lender authentication code</li>
+  <li>your presenter authentication code</li>
+</ul>
+
+  <p class="govuk-body">If you're not a lender, you need to <a href="one-login/create-or-sign-in.html">sign in using GOV.UK One Login</a> instead.
 </p>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     What you can do in WebFiling
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">In WebFiling, you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>file your company’s annual accounts and confirmation statement</li>
+  <li>file director and secretary information</li>
+  <li>sign up to get <a href="https://www.gov.uk/guidance/register-for-email-reminders-from-companies-house" class="govuk-link govuk-link--no-visited-state">email reminders</a> when your accounts and confirmation statement are due</li>
+  <li>digitally authorise people to file for your company online</li>
+</ul>
+  </div>
+</details>
 
   <div class="govuk-form-group">
   <label class="govuk-label" for="email">
@@ -59,30 +83,10 @@
   </div>
 </div>
 
-
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-     What you can do in WebFiling
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-   <p class="govuk-body">In WebFiling, you can:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>file your company’s annual accounts and confirmation statement</li>
-  <li>file director and secretary information</li>
-  <li>sign up to get <a href="https://www.gov.uk/guidance/register-for-email-reminders-from-companies-house" class="govuk-link govuk-link--no-visited-state">email reminders</a> when your accounts and confirmation statement are due</li>
-  <li>digitally authorise people to file for your company online</li>
-</ul>
-  </div>
-</details>
-
-
-
  <div class="govuk-!-padding-top-4
  ">
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Submit
+  Continue
 </button>
 
 
@@ -149,7 +153,7 @@
  <div class="govuk-!-padding-top-4
  ">
     {{ govukButton({
-    text: "Sign in to Webfiling",
+    text: "Sign in to WebFiling",
     href:"wf-sign-in-lenders"
     
   }) }}
