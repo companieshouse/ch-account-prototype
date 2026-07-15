@@ -1,0 +1,110 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+  
+    
+    <!--
+    {% set html %}
+    <p class="govuk-notification-banner__heading">
+     The way you sign in to WebFiling has changed.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}-->
+
+  <h1 class="govuk-heading-l">Sign in to your application</h1>
+
+  <p class="govuk-body">This service requires you to to create an account</a>. You will then be able to sign in an out of the application, saving your progress.
+</p>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+   <strong>Email address</strong>
+  </label>
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+<div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+  <label class="govuk-label" for="password-input">
+   <strong>Password</strong>
+  </label>
+  <div class="govuk-input__wrapper govuk-password-input__wrapper">
+    <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+    <button type="button" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" data-module="govuk-button" aria-controls="password-input" aria-label="Show password" hidden>
+      Show
+    </button>
+  </div>
+</div>
+
+<p class="govuk-body">
+  <a href="https://ewf-legacy.companieshouse.gov.uk//seclogin?remind=1&lang=en" class="govuk-link--no-visited-state">I've forgotten my password</a> </p>
+
+  <p class="govuk-body">
+
+<a href="https://ewf-legacy.companieshouse.gov.uk//seclogin?remind=1&lang=en" class="govuk-link--no-visited-state">Register an account</a></p>
+
+
+
+
+
+<br>
+
+
+
+
+
+ <div class="govuk-!-padding-top-4
+ ">
+    {{ govukButton({
+    text: "Continue",
+    href:""
+    
+  }) }}
+  
+</div>
+
+
+
+ 
+  
+
+  <!--
+  <h2 class="govuk-heading-m">Try our new 'File a confirmation statement' service</h2>
+
+  <p class="govuk-body">If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our new
+    <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">'File a confirmation statement' service (opens in a new tab)</a>. You will not be able to pay with a Companies House payment account.
+  </p>-->
+
+  </form>
+
+
+  
+</div>
+</div>
+
+
+
+{% endblock %}
