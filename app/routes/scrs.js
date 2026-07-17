@@ -10,14 +10,14 @@ module.exports = router
 
 
 /* Set journey */
-router.post('/migration-9/prototype-set-up', function (req, res) {
+router.post('/scrs/prototype-set-up', function (req, res) {
 
     res.redirect('start-page')
 })
 
 
 /* Start page for sign in */
-router.post('/migration-9/start-page', function (req, res) {
+router.post('/scrs/start-page', function (req, res) {
     
     res.redirect('sign-in-interrupt')
 
@@ -26,7 +26,7 @@ router.post('/migration-9/start-page', function (req, res) {
 
 
 /* GOV.UK One login */
-router.post('/migration-9/one-login/one-login-sign-in', function (req, res) {
+router.post('/scrs/one-login/one-login-sign-in', function (req, res) {
 
     res.redirect('one-login/one-login-enter-password')
 })
@@ -34,14 +34,14 @@ router.post('/migration-9/one-login/one-login-sign-in', function (req, res) {
 
 
 /* GOV.UK One login */
-router.post('/migration-9/one-login/one-login-enter-password', function (req, res) {
+router.post('/scrs/one-login/one-login-enter-password', function (req, res) {
 
     res.redirect('enter-code')
 })
   
 
 /* GOV.UK One login */
-router.post('/migration-9/one-login/one-login-enter-password-sign-in', function (req, res) {
+router.post('/scrs/one-login/one-login-enter-password-sign-in', function (req, res) {
 
     res.redirect('enter-code-sign-in')
 })
@@ -51,7 +51,7 @@ router.post('/migration-9/one-login/one-login-enter-password-sign-in', function 
 
 
 /* GOV.UK One login */
-router.post('/migration-9/one-login/enter-code-sign-in', function (req, res) {
+router.post('/scrs/one-login/enter-code-sign-in', function (req, res) {
 
     const journey = req.session.data['set-journey'] || ''
 
@@ -78,7 +78,7 @@ router.post('/migration-9/one-login/enter-code-sign-in', function (req, res) {
 
 
 /* End of GOV.UK One Login sign in */
-router.post('/migration-9/one-login/enter-code', function (req, res) {
+router.post('/scrs/one-login/enter-code', function (req, res) {
 
 
     if (req.session.data['set-journey'].includes('WC1')) {
@@ -188,7 +188,7 @@ router.post('/migration-9/one-login/enter-code', function (req, res) {
 
 
 /* Create a GOV.UK One login */
-router.post('/migration-9/one-login/create-enter-email', function (req, res) {
+router.post('/scrs/one-login/create-enter-email', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC1')) {
        
@@ -295,20 +295,20 @@ router.post('/migration-9/one-login/create-enter-email', function (req, res) {
 
 
 /* Create a GOV.UK One login */
-router.post('/migration-9/one-login/create-check-your-email', function (req, res) {
+router.post('/scrs/one-login/create-check-your-email', function (req, res) {
 
     res.redirect('create-enter-password')
   })
 
 /* Create a GOV.UK One login */
-router.post('/migration-9/one-login/create-enter-password', function (req, res) {
+router.post('/scrs/one-login/create-enter-password', function (req, res) {
 
     res.redirect('create-choose-security-type')
   })
 
 
   //Create a GOV.UK One login
-  router.post('/migration-9/one-login/create-choose-security-type', function (req, res) {
+  router.post('/scrs/one-login/create-choose-security-type', function (req, res) {
   
    
     if (req.session.data['choose-security-type'] === 'text-message-on-sign-in') {
@@ -324,7 +324,7 @@ router.post('/migration-9/one-login/create-enter-password', function (req, res) 
  })
 
  /* Create a GOV.UK One login */
-router.post('/migration-9/one-login/create-set-up-auth-app', function (req, res) {
+router.post('/scrs/one-login/create-set-up-auth-app', function (req, res) {
 
     res.redirect('create-complete')
 
@@ -332,7 +332,7 @@ router.post('/migration-9/one-login/create-set-up-auth-app', function (req, res)
 })
 
  /* Create a GOV.UK One login */
- router.post('/migration-9/one-login/create-enter-mobile-number', function (req, res) {
+ router.post('/scrs/one-login/create-enter-mobile-number', function (req, res) {
 
     res.redirect('enter-code')
 })
@@ -340,7 +340,7 @@ router.post('/migration-9/one-login/create-set-up-auth-app', function (req, res)
 
 
  /* Create a GOV.UK One login */
- router.post('/migration-9/one-login/create-complete', function (req, res) {
+ router.post('/scrs/one-login/create-complete', function (req, res) {
 
 
     if (req.session.data['set-journey'].includes('WC1')) {
@@ -448,68 +448,68 @@ router.post('/migration-9/one-login/create-set-up-auth-app', function (req, res)
 
 
 /* After OTP entered */
-router.post('/migration-9/verify-email-address', function (req, res) {
+router.post('/scrs/verify-email-address', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC2')) {
        
-        res.redirect('../migration-9/end-linking-new-account')
+        res.redirect('../scrs/end-linking-new-account')
     }
     else if (req.session.data['set-journey'].includes('WC3'))     
     {
            
-        res.redirect('../migration-9/end-linking-new-account')
+        res.redirect('../scrs/end-linking-new-account')
 
     }
  
     else if (req.session.data['set-journey'].includes('WC4'))     
         {
                
-            res.redirect('../migration-9/end-linking')
+            res.redirect('../scrsend-linking')
     
         }
  
       else if (req.session.data['set-journey'].includes('WC5'))     
             {
                    
-                res.redirect('../migration-9/end-linking')
+                res.redirect('../scrs/end-linking')
         
             }
       else if (req.session.data['set-journey'].includes('WC7'))     
                 {
                        
-                    res.redirect('../migration-9/no-webfiling-found')
+                    res.redirect('../scrs/no-webfiling-found')
             
                 }
      else if (req.session.data['set-journey'].includes('WC8'))     
              {
                            
-                res.redirect('../migration-9/no-webfiling-found')
+                res.redirect('../scrsno-webfiling-found')
                 
             }
 
          else if (req.session.data['set-journey'].includes('WC12'))     
         {
                            
-            res.redirect('../migration-9/verify-email-address-error-1')
+            res.redirect('../scrs/verify-email-address-error-1')
                 
         }
 
         else if (req.session.data['set-journey'].includes('WC14'))     
         {
                            
-            res.redirect('../migration-9/stop-screen-24-hours')
+            res.redirect('../scrs/stop-screen-24-hours')
                 
         }
        else if (req.session.data['set-journey'].includes('WC16'))     
         {
                                
-            res.redirect('../migration-9/send-a-new-email')
+            res.redirect('../scrs/send-a-new-email')
                     
           }
         else if (req.session.data['set-journey'].includes('WC17'))     
         {
                                    
-            res.redirect('../migration-9/send-a-new-email')
+            res.redirect('../scrs/send-a-new-email')
                         
         }
     
@@ -519,7 +519,7 @@ router.post('/migration-9/verify-email-address', function (req, res) {
 
 
 /* Security code entered incorrectly too many times */
-router.post('/migration-9/verify-email-address-error-1', function (req, res) {
+router.post('/scrs/verify-email-address-error-1', function (req, res) {
 
     res.redirect('stop-screen-wrong-code-or-expired')
        
@@ -528,7 +528,7 @@ router.post('/migration-9/verify-email-address-error-1', function (req, res) {
 
 
 /* Signing into Webfiling after confirmation screen */
-router.post('/migration-9/end-linking', function (req, res) {
+router.post('/scrs/end-linking', function (req, res) {
 
     res.redirect('summary-card/your-companies-3')
        
@@ -537,14 +537,14 @@ router.post('/migration-9/end-linking', function (req, res) {
 
 
 /* Changing WebFiling email address */
-router.post('/migration-9/no-webfiling-found-change-email', function (req, res) {
+router.post('/scrs/no-webfiling-found-change-email', function (req, res) {
 
     res.redirect('webfiling-email-address')
 
 })
 
 /*  Changing WebFiling email address  */
-router.post('/migration-9/webfiling-email-address', function (req, res) {
+router.post('/scrs/webfiling-email-address', function (req, res) {
 
     res.redirect('webfiling-password')
 
@@ -552,7 +552,7 @@ router.post('/migration-9/webfiling-email-address', function (req, res) {
 
 
 /* Changing WebFiling email address */
-router.get('/migration-9/webfiling-email-address-return-to-sign-in', function (req, res) {
+router.get('/scrs/webfiling-email-address-return-to-sign-in', function (req, res) {
 
 
     req.session.data['return-to-sign-in-page'] = true;
@@ -562,7 +562,7 @@ router.get('/migration-9/webfiling-email-address-return-to-sign-in', function (r
 
 
 /*  WebFiling change email address to same as One Login OR Scenario 7/8 link legacy email */
-router.post('/migration-9/webfiling-password', function (req, res) {
+router.post('/scrs/webfiling-password', function (req, res) {
 
   
     if (req.session.data['set-journey'].includes('WC7')) {
@@ -584,21 +584,21 @@ router.post('/migration-9/webfiling-password', function (req, res) {
 
 
 /*  WebFiling change email address to same as One Login */
-router.post('/migration-9/webfiling-new-email-address', function (req, res) {
+router.post('/scrs/webfiling-new-email-address', function (req, res) {
 
     res.redirect('webfiling-email-changed')
 
 })
 
 /*  WebFiling old email connected to new One Login*/
-router.post('/migration-9/verify-email-address-2', function (req, res) {
+router.post('/scrs/verify-email-address-2', function (req, res) {
 
     res.redirect('end-linking-wf')
 
 })
 
 /*  WebFiling change email address to same as One Login */
-router.post('/migration-9/webfiling-email-changed', function (req, res) {
+router.post('/scrs/webfiling-email-changed', function (req, res) {
 
 
     // User changed their email address from the sign in - return to sign in page 
@@ -617,7 +617,7 @@ router.post('/migration-9/webfiling-email-changed', function (req, res) {
 })
 
 /*  WebFiling change email address to same as One Login */
-router.post('/migration-9/webfiling-email-changed', function (req, res) {
+router.post('/scrs/webfiling-email-changed', function (req, res) {
 
     res.redirect('verify-email-address')
 
@@ -625,48 +625,48 @@ router.post('/migration-9/webfiling-email-changed', function (req, res) {
 })
 
 
-router.post('/migration-9/verify-email-address-3', function (req, res) {
+router.post('/scrs/verify-email-address-3', function (req, res) {
 
     res.redirect('no-webfiling-found')
 
   
 })
 
-router.post('/migration-9/send-a-new-email', function (req, res) {
+router.post('/scrs/send-a-new-email', function (req, res) {
 
     if (req.session.data['set-journey'].includes('WC16')) {
 
        
-        res.redirect('../migration-9/verify-email-address-4')
+        res.redirect('../scrs/verify-email-address-4')
     } 
     else if (req.session.data['set-journey'].includes('WC17'))     
     {
            
-        res.redirect('../migration-9/verify-email-address-4')
+        res.redirect('../scrs/verify-email-address-4')
 
     }
     else{
 
-        res.redirect('../migration-9/verify-email-address')
+        res.redirect('../scrs/verify-email-address')
 
     }
 })
 
 
 //scenario 12
-router.post('/migration-9/send-a-new-email-12', function (req, res) {
+router.post('/scrs/send-a-new-email-12', function (req, res) {
 
 
-    res.redirect('../migration-9/verify-email-address-12')
+    res.redirect('../scrs/verify-email-address-12')
 
 
 })
 
 //scenario 12 
-router.post('/migration-9/verify-email-address-12', function (req, res) {
+router.post('/scrs/verify-email-address-12', function (req, res) {
 
 
-    res.redirect('../migration-9/end-linking')
+    res.redirect('../scrs/end-linking')
 
 
 })
@@ -674,16 +674,16 @@ router.post('/migration-9/verify-email-address-12', function (req, res) {
 
 
 
-    router.post('/migration-9/verify-email-address-4', function (req, res) {
+    router.post('/scrs/verify-email-address-4', function (req, res) {
 
         if (req.session.data['set-journey'].includes('WC16')) {
            
-            res.redirect('../migration-9/end-linking-new-account')
+            res.redirect('../scrs/end-linking-new-account')
         }
         else if (req.session.data['set-journey'].includes('WC17'))     
         {
                
-            res.redirect('../migration-9/end-linking')
+            res.redirect('../scrs/end-linking')
     
         }
 
@@ -701,7 +701,7 @@ router.post('/migration-9/verify-email-address-12', function (req, res) {
 /*
  * without auth code
  */
-router.get('/migration-9/summary-card/restore-beta-tech', function (req, res) {
+router.get('/scrs/summary-card/restore-beta-tech', function (req, res) {
 
 
      // restored company flag
@@ -716,7 +716,7 @@ router.get('/migration-9/summary-card/restore-beta-tech', function (req, res) {
 /*
  * with auth code
  */
-router.get('/migration-9/summary-card/restore-beta-tech-alt', function (req, res) {
+router.get('/scrs/summary-card/restore-beta-tech-alt', function (req, res) {
 
 
      // restored company flag
@@ -730,7 +730,7 @@ router.get('/migration-9/summary-card/restore-beta-tech-alt', function (req, res
 /*
  * File for a different company
  */
- router.get('/migration-9/summary-card/add-flowers', function (req, res) {
+ router.get('/scrs/summary-card/add-flowers', function (req, res) {
 
     // company added flag
     req.session.data['added-flowers'] = true;
@@ -741,7 +741,7 @@ router.get('/migration-9/summary-card/restore-beta-tech-alt', function (req, res
  
 
 /*  Alternate start page link to radio buttons*/
-router.post('/migration-9/start-page-2', function (req, res) {
+router.post('/scrs/start-page-2', function (req, res) {
 
     res.redirect('sign-in-reason')
 

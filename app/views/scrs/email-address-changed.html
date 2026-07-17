@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+<!-- Overwrite suerfice name -->
+
+
+{% block pageTitle %}
+We noticed you've updated your email address with GOV.UK One Login -  {{ serviceName }} – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="email-address-changed" method="post" novalidate="">
+
+   
+
+    <h1 class="govuk-heading-l">Your GOV.UK One Login email address is already in use for another account at Companies House</h1>
+    
+
+   <!--  <p>You updated your email address to <span class="govuk-body govuk-!-font-weight-bold">emailaddress2@example.com</span> with GOV.UK One Login.</p>
+ -->
+    
+ <p class="govuk-body">You updated your GOV.UK One Login email address to <span class="govuk-body govuk-!-font-weight-bold">emailaddress2@example.com</span>. However, another account at Companies House already uses this email address.
+</p>
+
+ <p class="govuk-body">You must change your GOV.UK One Login email address. You have 2 options:</p>   
+
+ <h2 class="govuk-heading-s">Option 1</h2>
+
+ <p class="govuk-body">Change your GOV.UK One Login email address back to what it was, so that it matches the email address you currently use for your accounts at Companies House.</p>
+
+  <h2 class="govuk-heading-s">Option 2</h2>
+
+ <p class="govuk-body">Change your GOV.UK One Login email address to a different one, as long as it doesn't match one used for an existing account at Companies House.</p>
+
+
+    <div class="govuk-button-group">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Change GOV.UK One Login email address",
+          href: "https://find-update-company-info.herokuapp.com/public-beta-release-2/create-or-sign-in-9"
+        }) }}
+       
+      </div>
+    </div>
+   
+  </form>
+
+
+
+</div>
+</div>
+
+{% endblock %}

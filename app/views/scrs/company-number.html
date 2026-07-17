@@ -1,0 +1,116 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+  <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">Enter the details of the company you want to access</p>
+
+
+ 
+
+
+
+  {{ govukInput({
+    label: {
+      text: "What is the company number?"
+    },
+    id: "company-number",
+    name: "company-number",
+    classes: "govuk-input--width-10"
+  }) }}
+
+  
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with company number
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        You can find this by searching for the company on the <a href="https://beta.companieshouse.gov.uk/" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House register (opens in new tab)</a>.
+      </div>
+    </details>
+
+    {{ govukRadios({
+      idPrefix: "where-was-the-company-registered",
+      name: "where-was-the-company-registered",
+      fieldset: {
+        legend: {
+          text: "Where was the company registered?"
+        }
+      },
+      items: [
+        {
+          value: "england",
+          text: "England or Wales"
+        },
+        {
+          value: "scotland",
+          text: "Scotland"
+        },
+        {
+          value: "northern-ireland",
+          text: "Northern Ireland"
+        }
+      ]
+    }) }}
+
+
+
+    {{ govukButton({
+      text: "Continue",
+      href:"check-company-details"
+    }) }}
+
+
+
+ </div>
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+

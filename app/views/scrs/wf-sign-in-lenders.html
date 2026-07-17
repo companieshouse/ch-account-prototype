@@ -1,0 +1,117 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+  
+    
+    <!--
+    {% set html %}
+    <p class="govuk-notification-banner__heading">
+     The way you sign in to WebFiling has changed.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}-->
+
+
+<p class="govuk-body govuk-!-text-align-right govuk-!-margin-bottom-1">
+  edwardgordon@gmail.com
+</p>
+
+<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+
+
+  <h1 class="govuk-heading-l">Lender details</h1>
+  
+  
+
+  
+<div class="govuk-form-group govuk-!-margin-top-6">
+  <label class="govuk-label" for="width-10">
+   <strong>Company number</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   <strong>Lender authentication code</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   <strong>Presenter authentication code</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+
+
+
+<br>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with company number
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This is 8 characters long. You can find it by searching for the company on the <a href="https://find-and-update.company-information.service.gov.uk/" class="govuk-link--no-visited-state">Companies House register</a>.
+  </div>
+</details>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with authentication codes
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">A lender authentication code is an 8 character code. It's required if you need to file charge (mortgage) documents online for other companies.</p> 
+    
+ <p class="govuk-body">A presenter authentication code is an 11 character code. It's required when using software to make a filing.</p> 
+
+    <p class="govuk-body">If you're a lender and do not have the codes, you'll need to <a href="https://www.gov.uk/government/publications/apply-to-register-as-a-lender-to-file-charge-documents-for-a-company" class="govuk-link--no-visited-state">apply to register as a lender to file charge documents for a company</a>.</p> 
+    
+    <p class="govuk-body">If you've previously registered as a lender but no longer have the codes, contact us at <strong>enquiries@companieshouse.gov.uk</strong></p>
+  </div>
+</details>
+ 
+
+<div class="govuk-!-padding-top-4
+ ">
+    {{ govukButton({
+    text: "Continue",
+    href:"summary-card/your-companies-3"
+    
+  }) }}
+
+</div>
+
+  
+</div>
+</div>
+{% endblock %}

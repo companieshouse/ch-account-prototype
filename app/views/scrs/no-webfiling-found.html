@@ -1,0 +1,79 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">We've taken you back to Companies House</h1>
+
+  <h2 class="govuk-heading-m">What happens next</h2>
+
+  <p class="govuk-body">The email address you use for GOV.UK One Login is <strong>email@example.com</strong>. We'll create a WebFiling account for you using this email address, and connect it to your GOV.UK One Login.</p>
+
+  <p class="govuk-body">Next time you sign in to WebFiling, use your GOV.UK One Login sign in details.</p>
+
+  <h2 class="govuk-heading-s">If you have a WebFiling account that uses a different email address</h2>
+
+  <p class="govuk-body">You can <a href="webfiling-email-address.html" class="govuk-link">connect an existing WebFiling account to your GOV.UK One Login instead</a>. This will save any existing information in that account.</p>
+
+  
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue to WebFiling",
+      href:"your-companies-3",
+      classes: "govuk-!-margin-top-4 govuk-!-margin-bottom-8"
+    }) }}
+  </div>
+
+
+
+<!--         {{ govukRadios({
+          name: "no-webfiling-found",
+          fieldset: {
+            legend: {
+              text: "Do you have an existing WebFiling account?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }} -->
+    
+  
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
+

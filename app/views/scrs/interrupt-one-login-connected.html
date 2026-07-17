@@ -1,0 +1,53 @@
+{% extends "layouts/layout.html" %}
+<!-- Overwrite suerfice name -->
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  GOV.UK One Login  – Prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds ">
+      <form action="end-linking" method="post" novalidate>
+
+    
+     
+     
+
+    <h1 class="govuk-heading-l">You need to sign in with GOV.UK One Login instead
+</h1>
+
+  <p class="govuk-body">The email address <strong>example@email.com</strong> is connected to GOV.UK One Login. This means you'll need to sign in with GOV.UK One Login to use WebFiling with this email address.</p>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If you are a lender
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You cannot use a GOV.UK One Login to sign in, as this will prevent you from filing charges. You need to <a href="https://ewf-legacy.companieshouse.gov.uk//seclogin?tc=1" class="govuk-link" rel="noreferrer noopener" target="_blank">register or sign in to WebFiling</a> using an email address that is not connected to a GOV.UK One Login.
+  </div>
+</details>
+    </form>
+
+
+    {{ govukButton({
+         text: "Go to GOV.UK One Login",
+         href:"one-login/create-or-sign-in",
+         classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-4"
+       }) }}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+  Manage account - Companies House - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+  
+{% endset%}
+
+
+{% block beforeContent %}
+
+<a href="#" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="change-email-address" method="post" novalidate="">
+
+
+
+  <h1 class="govuk-heading-l">Change email address</h1>
+
+  <p class="govuk-body">Current email address is
+        
+    <strong> email111@example.com </strong> 
+
+    
+</p>
+
+  {{ govukInput({
+    label: {
+      text: "Enter new email address",
+      classes:"govuk-!-font-weight-bold"
+    },
+    id: "chs-email-new",
+    name: "chs-email-new",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false
+  }) }}       
+
+  {{ govukInput({
+    label: {
+      text: "Re-enter new email address",
+      classes:"govuk-!-font-weight-bold"
+    },
+    id: "chs-email-new-2",
+    name: "chs-email-new-2",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false
+  }) }}       
+
+
+
+  {{ govukInput({
+    label: {
+      text: "Enter password",
+      classes:"govuk-!-font-weight-bold"
+    }, 
+    id: "password",
+    name: "password",
+    type: "password",
+    spellcheck: false
+  }) }}
+       
+
+  
+   {{ govukButton({
+    text: "Continue"
+  }) }}   
+
+<p class="govuk-body"> 
+    <a class="govuk-link" href="#">I do not want to change my email address</a>
+  </p>
+  
+
+
+
+
+
+  </form>
+
+            </div>
+          </div>
+
+{% endblock %}

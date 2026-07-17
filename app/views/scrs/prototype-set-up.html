@@ -1,0 +1,219 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+  Shortcuts for Companies House account
+{% endblock %}
+
+
+{% block header %}
+    {{ govukHeader({ serviceName: "Companies House account" }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="prototype-set-up" method="post" novalidate="">
+
+    {{ govukRadios({
+      name: "set-journey",
+      fieldset: {
+        legend: {
+          text: "WebFiling account prototype flows:",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "WC1",
+          text: "Scenario 1",
+          hint: {
+            text: "Journey to link existing Companies House account, WebFiling and GOV.UK One Login (all with same email) using OTP. "
+          }
+
+        },
+        {
+          value: "WC2",
+          text: "Scenario 2",
+          hint: {
+            text: "New CHS and Webfiling user. A users GOV.UK One Login does not match Companies House account or WebFiling. New user completes journey setting up new Webfiling and CHS."
+          }
+        },
+        {
+          value: "WC3",
+          text: "Scenario 3",
+          hint: {
+            text: "Previously linked CHS to One Login. Creating a brand new webfiling account."
+          }
+        },
+        {
+          value: "WC4",
+          text: "Scenario 4",
+          hint: {
+            text: "A user's GOV.UK One Login matches only their WebFiling account email address which is linked in this journey. A new Companies House account is also created."
+          }
+        },
+        {
+          value: "WC5",
+          text: "Scenario 5",
+          hint: {
+            text: "A user's GOV.UK One Login matches their WebFiling account email address. A Companies House account has already been linked."
+          }
+        },
+      
+        {
+          value: "WC6",
+          html: "Scenario 6 <strong class='govuk-tag--orange'>
+  Later release
+</strong>",
+          hint: {
+            text: "Email address has been changed with GOV.UK One Login since they last logged in. The GOV.UK One Login email address matches an existing account." 
+          } 
+        }, 
+        {
+          value: "WC9",
+          text: "Scenario 7",
+          hint: {
+            text: "Accounts already linked - return user." 
+          } 
+        }, 
+        {
+          value: "WC16",
+          text: "Scenario 8",
+          hint: {
+            text: "Email address not recognised in WebFiling, a new Webfiling account is created in the background. Something went wrong so a new code is requested." 
+          } 
+        }, 
+   
+      
+        {
+          value: "WC12",
+          text: "Scenario 12",
+          hint: {
+            text: "Email address recognised in WebFiling, a new Webfiling account is created in the background. Within journey incorrect code entered 5 times and therefore includes screen to request new code" 
+          } 
+        }, 
+
+        {
+          value: "WC14",
+          text: "Scenario 14",
+          hint: {
+            text: "Email address recognised in WebFiling,  a Webfiling account would be linked. However 5th code has been requested and entered incorrectly 5 times or expired." 
+          } 
+        }
+  
+        
+
+      ]
+    }) }}
+
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+
+{% endblock %}
+
+
+<!--        
+
+{
+            value: "WC1",
+            text: "WC1 - A user has a WebFiling account, 
+            but does not have a CHS account or GOV.UK One Login"
+          },
+          {
+            value: "WC2",
+            text: "WC2 - A user has a WebFiling account and a CHS account with the same email address. They do not have a GOV.UK One Login."
+          },
+          {
+            value: "WC3",
+            text: "WC3 - A user has a WebFiling account with a different email address to a CHS account. They do not have a GOV.UK One Login."
+          }
+          {
+            value: "WC3",
+            text: "WC3 - A user has a WebFiling account with a different email address to a CHS account. They do not have a GOV.UK One Login."
+          },
+          {
+            value: "WC4",
+            html: "WC4 - A user has a WebFiling account and a CHS account with different email addresses. They do not have a GOV.UK One Login. <br> 
+
+            The user chooses to link accounts to the CHS account email address."
+          },
+          {
+            value: "WC5",
+            html: "WC5 - A user has a WebFiling account, CHS account and a GOV.UK One Login, all with different email addresses. <br>
+
+            The user chooses to link their WebFiling and CHS accounts to their GOV.UK One Login."
+          },
+          {
+            value: "WC6",
+            text: "WC6 - A user has a WebFiling account, CHS account and a GOV.UK One Login, all with different email addresses.
+
+           The user chooses to link their GOV.UK One Login and CHS account to their WebFiling account. "
+          },
+          {
+            value: "WC7",
+            text: "WC7 - Same email address' across 3 accounts - A user has a WebFiling, CHS account and a GOV.UK One Login, all with the same email address."
+          },
+          {
+            value: "WC8",
+            text: "WC8 - A user has a Webfiling account, and they have many CHS accounts."
+          },
+          {
+            value: "WC9",
+            text: "WC9 - A user has many WebFiling accounts, and one CHS and GOV.UK One Login."
+          },
+          {
+            value: "WC10",
+            text: "WC10 - The user does not have a Webfiling or CHS account, but they may have a GOV.UK One Login."
+          } 
+            
+          
+
+        //Removed duplicate scenarios or no longer needed to be in the prototype
+          
+        {
+          value: "WC17",
+          text: "Scenario 9",
+          hint: {
+            text: "Email address recognised in WebFiling, account linked. Something went wrong, a new code was requested." 
+          } 
+        }, 
+
+        {
+          value: "WC10",
+          text: "Scenario 10",
+          hint: {
+            text: "Email address not recognised in WebFiling, a new Webfiling account is created in the background. Incorrect code 1-4 times." 
+          } 
+        }, 
+        {
+          value: "WC11",
+          text: "Scenario 11",
+          hint: {
+            text: "Email address recognised in webfiling so accout linked. Incorrect code 1-4 times" 
+          } 
+        }, 
+        
+
+                {
+          value: "WC13",
+          text: "Scenario 13",
+          hint: {
+            text: "Email address recognised in Webfiling so link accounts. Incorrect code 5 times/expired code." 
+          } 
+        }, 
+
+             {
+          value: "WC15",
+          text: "Scenario 15",
+          hint: {
+            text: "Email address recognised in Webfiling so accounts linked. 5th code requested and entered incorrectly 5 times or has expired"
+          }
+        
+        -->

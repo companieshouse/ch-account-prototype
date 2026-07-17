@@ -1,0 +1,137 @@
+
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Companies you file for – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+
+
+
+
+
+{% block content %}
+<form class="form" action="" method="post">
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-one-quarter webfiling-menu">
+{% include "/includes/webfiling-left-menu.html" %}
+</div>
+
+
+<div class="govuk-grid-column-two-thirds wfOverview">
+
+  <button type="submit" class="govuk-button allForms" data-module="govuk-button">
+  All forms
+  </button>
+
+
+  <h1 class="govuk-heading-l">Manage account </h1>
+
+
+
+
+
+  <!-- Identity verification  -->
+    
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Identity verification</h2>
+        <ul class="govuk-summary-card__actions">
+          <!-- <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              View code history<span class="govuk-visually-hidden"> of personal code</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Create new code<span class="govuk-visually-hidden"> Create new code</span>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+
+       
+        <dl class="govuk-summary-list govuk-summary-list--no-border">
+          <div class="govuk-summary-list__row">
+        
+
+              <dt class="govuk-summary-list__key">
+                Companies House personal code
+              </dt>
+
+
+            <dd class="govuk-summary-list__value">
+              X77-R2D2-C3PQ
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Copy
+              </button>
+
+            </dd>
+          </div>
+          </dl>
+
+          <p class="govuk-body">
+            Keep this code safe - only share it with people you trust to file on your behalf.
+          </p>
+
+         
+          
+          
+      </div>
+    </div> 
+
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Sign in details </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <p class="govuk-body">You use your GOV.UK One Login to sign in to WebFiling.</p>
+      
+    
+        <p class="govuk-body">In your GOV.UK One Login, you can change:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your password</li>
+          <li>how you get security codes to sign in</li>
+        </ul>
+
+        <p class="govuk-body">
+          <a href="https://home.account.gov.uk/settings" class="govuk-link" rel="noreferrer noopener" target="_blank">Change your sign in details in your GOV.UK One Login (opens in new tab) </a>
+        </p>
+    
+      </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+  
+  </div>
+     </form>
+{% endblock %}
+
+
+
+

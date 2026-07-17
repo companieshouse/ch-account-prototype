@@ -1,0 +1,179 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+  
+    
+    <!--
+    {% set html %}
+    <p class="govuk-notification-banner__heading">
+     The way you sign in to WebFiling has changed.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}-->
+
+  <h1 class="govuk-heading-l">Sign in to WebFiling: lenders only</h1>
+
+  <p class="govuk-body">If you are not a lender, you'll need to <a href="start-page.html">sign in using GOV.UK One Login</a> instead.
+</p>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+   <strong>Email address</strong>
+  </label>
+  <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+</div>
+<div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+  <label class="govuk-label" for="password-input">
+   <strong>Password</strong>
+  </label>
+  <div class="govuk-input__wrapper govuk-password-input__wrapper">
+    <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+    <button type="button" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" data-module="govuk-button" aria-controls="password-input" aria-label="Show password" hidden>
+      Show
+    </button>
+  </div>
+</div>
+
+  <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     What you can do in WebFiling
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   <p class="govuk-body">In WebFiling, you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>file your company’s annual accounts and confirmation statement</li>
+  <li>file director and secretary information</li>
+  <li>sign up to get <a href="https://www.gov.uk/guidance/register-for-email-reminders-from-companies-house" class="govuk-link govuk-link--no-visited-state">email reminders</a> when your accounts and confirmation statement are due</li>
+  <li>digitally authorise people to file for your company online</li>
+</ul>
+  </div>
+</details>
+  
+<div class="govuk-form-group govuk-!-margin-top-6">
+  <label class="govuk-label" for="width-10">
+   <strong>Company number</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   <strong>Lender authentication code</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   <strong>Presenter authentication code</strong>
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+</div>
+
+
+
+<br>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with company number
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This is 8 characters long. You can find it by searching for the company on the <a href="https://find-and-update.company-information.service.gov.uk/" class="govuk-link--no-visited-state">Companies House register</a>.
+  </div>
+</details>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with authentication codes
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">A lender authentication code is an 8 character code. It's required if you need to file charge (mortgage) documents online for other companies.</p> 
+    
+ <p class="govuk-body">A presenter authentication code is an 11 character code. It's required when using software to make a filing.</p> 
+
+    <p class="govuk-body">If you're a lender and do not have the codes, you'll need to <a href="https://www.gov.uk/government/publications/apply-to-register-as-a-lender-to-file-charge-documents-for-a-company" class="govuk-link--no-visited-state">apply to register as a lender to file charge documents for a company</a>.</p> 
+    
+    <p class="govuk-body">If you've previously registered as a lender but no longer have the codes, contact us at <strong>enquiries@companieshouse.gov.uk</strong></p>
+  </div>
+</details>
+ 
+
+
+
+
+ <div class="govuk-!-padding-top-4
+ ">
+    {{ govukButton({
+    text: "Sign in",
+    href:"wf-sign-in-lenders"
+    
+  }) }}
+
+</div>
+<p class="govuk-body">
+  <a href="https://ewf-legacy.companieshouse.gov.uk//myaccount?remind=1&.dyn=gcc5mei" class="govuk-link--no-visited-state">I've forgotten my password</a></p>
+  <p class="govuk-body">
+  <a href="https://ewf-legacy.companieshouse.gov.uk//runpage?page=webfilingRegister&signUpPage.lang=en" class="govuk-link--no-visited-state">Create a lenders WebFiling account</a></p>
+<br>
+
+  <br>
+
+
+
+  <ul class="govuk-list">
+    <li>
+      <a href="https://ewf.companieshouse.gov.uk/sframe?name=aboutWebFiling&lang=en" class="govuk-link">Who can use WebFiling?</a></p>
+    </li>
+
+    <li>
+    <a href="https://ewf.companieshouse.gov.uk/help/en/stdwf/faqHelp.html" class="govuk-link">Read the WebFiling guidance</a></p>
+    </li>
+  </ul>
+
+  <!--
+  <h2 class="govuk-heading-m">Try our new 'File a confirmation statement' service</h2>
+
+  <p class="govuk-body">If you have a private company limited by shares, with 1 to 5 officers (including directors and secretaries), up to 5 people with significant control, and 1 shareholder, you can use our new
+    <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">'File a confirmation statement' service (opens in a new tab)</a>. You will not be able to pay with a Companies House payment account.
+  </p>-->
+
+  </form>
+
+
+  
+</div>
+</div>
+
+
+
+{% endblock %}

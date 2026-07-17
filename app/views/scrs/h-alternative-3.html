@@ -1,0 +1,53 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+  <form action="start-page" method="post" novalidate="">
+    
+    
+
+  <h1 class="govuk-heading-l">Connecting your Webfiling account</h1>
+
+  <p class="govuk-body">The email address you have chosen to use across all your accounts is <strong>example@example.com</strong>
+    
+    
+  <p class="govuk-body">We will create a new Webfiling account for you using this email address, unless you select you wish to change the email address of an existing Webfiling Account.</p>
+
+  <p class="govuk-body">If you have an existing Webfiling account but wish to start a new one you may do so. However, you will lose access to all previous filing information</p>
+
+
+  
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Create new Webfiling Account and Continue
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Change email address of existing Webfiling Account
+    </button>
+  </div>
+
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
