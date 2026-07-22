@@ -190,108 +190,15 @@ router.post('/scrs/one-login/enter-code', function (req, res) {
 /* Create a GOV.UK One login */
 router.post('/scrs/one-login/create-enter-email', function (req, res) {
 
-    if (req.session.data['set-journey'].includes('WC1')) {
-       
-        res.redirect('../one-login/create-check-your-email')
-    }
-    else if (req.session.data['set-journey'].includes('WC3'))     
-    {
-           
-        res.redirect('../one-login/create-check-your-email')
+  const journey = req.session.data['set-journey'] || '';
 
-    }
-    else if (req.session.data['set-journey'].includes('WC2'))     
-   {
+  if (journey.includes('WC6') || journey.includes('WC9')) {
+    res.redirect('../one-login/email-exists')
+  } else {
+    res.redirect('../one-login/create-check-your-email')
+  }
 
-        res.redirect('../one-login/create-check-your-email')
-
-   }
-   else if (req.session.data['set-journey'].includes('WC4'))     
-    {
- 
-         res.redirect('../one-login/create-check-your-email')
- 
-    }
-    else if (req.session.data['set-journey'].includes('WC5'))     
-    {
-     
-        res.redirect('../one-login/create-check-your-email')
-     
-    }
-     else if (req.session.data['set-journey'].includes('WC6'))     
-    {
-     
-        res.redirect('../one-login/email-exists')
-     
-    }
-    else if (req.session.data['set-journey'].includes('WC7'))     
-        {
-         
-            res.redirect('../one-login/create-check-your-email')
-         
-        }
-        else if (req.session.data['set-journey'].includes('WC8'))     
-            {
-             
-                res.redirect('../one-login/create-check-your-email')
-             
-            }
-    else if (req.session.data['set-journey'].includes('WC9'))     
-        {
-     
-             res.redirect('../one-login/email-exists')
-     
-        }
-        else if (req.session.data['set-journey'].includes('WC16'))     
-            {
-             
-                res.redirect('../one-login/create-check-your-email')
-             
-            }
-            else if (req.session.data['set-journey'].includes('WC17'))     
-                {
-                 
-                    res.redirect('../one-login/create-check-your-email')
-                 
-                }
-    else if (req.session.data['set-journey'].includes('WC10'))     
-             {
-             
-           res.redirect('../one-login/create-check-your-email')
-                     
-       }
-     else if (req.session.data['set-journey'].includes('WC11'))     
-    {
-                         
-     res.redirect('../one-login/create-check-your-email')
-                         
-           } 
-
-          else if (req.session.data['set-journey'].includes('WC12'))     
-        {
-                             
-           res.redirect('../one-login/create-check-your-email')
-                             
-           }
-         else if (req.session.data['set-journey'].includes('WC13'))     
-             {
-                                 
-        res.redirect('../one-login/create-check-your-email')
-                                 
-         }
-      else if (req.session.data['set-journey'].includes('WC14'))     
-          {
-                                     
-                  res.redirect('../one-login/create-check-your-email')
-                                     
-          }
-      else if (req.session.data['set-journey'].includes('WC15'))     
-          {
-                                         
-             res.redirect('../one-login/create-check-your-email')
-                                         
-         }
-  })
+})
 
 
 /* Create a GOV.UK One login */
@@ -340,183 +247,40 @@ router.post('/scrs/one-login/create-set-up-auth-app', function (req, res) {
 
 
  /* Create a GOV.UK One login */
- router.post('/scrs/one-login/create-complete', function (req, res) {
+router.post('/scrs/one-login/create-complete', function (req, res) {
 
+  const journey = req.session.data['set-journey'] || '';
 
-    if (req.session.data['set-journey'].includes('WC1')) {
-       
-        res.redirect('../verify-email-address')
-    }
-    else if (req.session.data['set-journey'].includes('WC3'))     
-    {
-           
-        res.redirect('../verify-email-address')
-
-    }
-    else if (req.session.data['set-journey'].includes('WC2'))     
-   {
-
-        res.redirect('../verify-email-address')
-
-   }
-   else if (req.session.data['set-journey'].includes('WC4'))     
-    {
- 
-         res.redirect('../verify-email-address')
- 
-    }
-    else if (req.session.data['set-journey'].includes('WC5'))     
-    {
-     
-        res.redirect('../verify-email-address')
-     
-    }
-    else if (req.session.data['set-journey'].includes('WC6'))     
-    {
-     
-        res.redirect('../email-address-changed')
-     
-    }
-    else if (req.session.data['set-journey'].includes('WC7'))     
-        {
-         
-            res.redirect('../verify-email-address')
-         
-        }
-    else if (req.session.data['set-journey'].includes('WC8'))     
-          {
-             
-               res.redirect('../verify-email-address')
-             
-            }
-    else if (req.session.data['set-journey'].includes('WC9'))     
-          {
-                 
-              res.redirect('../your-companies-3')
-                 
-          }
-          else if (req.session.data['set-journey'].includes('WC16'))     
-    {
-               
-             res.redirect('../verify-email-address')
-               
-       }
-       else if (req.session.data['set-journey'].includes('WC17'))     
-          {
-                   
-                    res.redirect('../verify-email-address')
-                   
-        }
-        else if (req.session.data['set-journey'].includes('WC10'))     
-          {
-                    
-                  res.redirect('../verify-email-address')
-                
-          }
-         else if (req.session.data['set-journey'].includes('WC11'))     
-           {
-                           
-           res.redirect('../verify-email-address')
-                           
-             }
-           else if (req.session.data['set-journey'].includes('WC12'))     
-            {
-                               
-                res.redirect('../verify-email-address')
-                               
-               }
-             else if (req.session.data['set-journey'].includes('WC13'))     
-               {
-                                   
-                   res.redirect('../verify-email-address')
-                                   
-                }
-          else if (req.session.data['set-journey'].includes('WC14'))     
-             {
-                                       
-               res.redirect('../verify-email-address')
-                                       
-           }
-           else if (req.session.data['set-journey'].includes('WC15'))                 {
-                                           
-          res.redirect('../verify-email-address')
-                                           
-          }
+  if (journey.includes('WC6')) {
+    res.redirect('../email-address-changed')
+  } else if (journey.includes('WC9')) {
+    res.redirect('../your-companies-3')
+  } else if (journey) {
+    res.redirect('../verify-email-address')
+  } else {
+    res.redirect('../scrs-end-linking')
+  }
 
 })
 
 
 
 /* After OTP entered */
-router.post('/scrs/verify-email-address', function (req, res) {
+router.post('/scrs/one-login/create-complete', function (req, res) {
 
-    if (req.session.data['set-journey'].includes('WC2')) {
-       
-        res.redirect('../scrs/end-linking-new-account')
-    }
-    else if (req.session.data['set-journey'].includes('WC3'))     
-    {
-           
-        res.redirect('../scrs/end-linking-new-account')
+  const journey = req.session.data['set-journey'] || '';
 
-    }
- 
-    else if (req.session.data['set-journey'].includes('WC4'))     
-        {
-               
-            res.redirect('../scrsend-linking')
-    
-        }
- 
-      else if (req.session.data['set-journey'].includes('WC5'))     
-            {
-                   
-                res.redirect('../scrs/end-linking')
-        
-            }
-      else if (req.session.data['set-journey'].includes('WC7'))     
-                {
-                       
-                    res.redirect('../scrs/no-webfiling-found')
-            
-                }
-     else if (req.session.data['set-journey'].includes('WC8'))     
-             {
-                           
-                res.redirect('../scrsno-webfiling-found')
-                
-            }
+  if (journey.includes('WC6')) {
+    res.redirect('../email-address-changed')
+  } else if (journey.includes('WC9')) {
+    res.redirect('../your-companies-3')
+  } else if (journey) {
+    res.redirect('../verify-email-address')
+  } else {
+    res.redirect('../scrs-end-linking')
+  }
 
-         else if (req.session.data['set-journey'].includes('WC12'))     
-        {
-                           
-            res.redirect('../scrs/verify-email-address-error-1')
-                
-        }
-
-        else if (req.session.data['set-journey'].includes('WC14'))     
-        {
-                           
-            res.redirect('../scrs/stop-screen-24-hours')
-                
-        }
-       else if (req.session.data['set-journey'].includes('WC16'))     
-        {
-                               
-            res.redirect('../scrs/send-a-new-email')
-                    
-          }
-        else if (req.session.data['set-journey'].includes('WC17'))     
-        {
-                                   
-            res.redirect('../scrs/send-a-new-email')
-                        
-        }
-    
-    res.redirect('end-linking')
 })
-
-
 
 /* Security code entered incorrectly too many times */
 router.post('/scrs/verify-email-address-error-1', function (req, res) {

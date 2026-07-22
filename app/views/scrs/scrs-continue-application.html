@@ -1,0 +1,104 @@
+{% extends "layouts/layout.html" %}
+
+
+
+{% block pageTitle %}
+Enter your Companies House account password - {{ serviceName }} – Prototype
+{% endblock %}
+
+
+{% set serviceName %}
+ 
+{% endset %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  
+<div class="govuk-grid-column-two-thirds ">
+  
+
+  <form action="link-to-existing-chs-account" method="post" novalidate="">
+
+  
+    <h1 class="govuk-heading-l">Do you want to continue with your current application?</h1>
+
+  
+     
+       
+    <p>You already have a limited company appliction in progress from the last time you signed in.</p>
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+   
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes - continue with my current application
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No - start new application
+        </label>
+      </div>
+
+  </fieldset>
+</div>
+     
+
+
+   
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue",
+    href: "#"
+  }) }}
+
+</div>
+         
+      
+         
+  
+
+  </form>
+
+</div>
+</div>
+
+
+
+
+
+<!--       {{ govukRadios({
+        name: "email-does-not-match",
+        fieldset: {
+          legend: {
+            text: "Choose an option: ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "sameas-chs",
+            text: "Create or sign in to a GOV.UK One Login with   'example@gmail.com'"
+          },
+          {
+            value: "no",
+            text: "I have a GOV.UK One Login, but it not using the email addres 'example@gmail.com'"
+          }
+        ]
+      }) }} -->
+
+      {% endblock %}
