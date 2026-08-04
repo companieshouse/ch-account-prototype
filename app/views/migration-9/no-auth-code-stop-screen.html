@@ -24,13 +24,22 @@
      
      
 
-    <h1 class="govuk-heading-l">You cannot request an authentication code
+    <h1 class="govuk-heading-l">You cannot file for this company (Content TBC)
 </h1>
 
-  <p class="govuk-body">This company is ineligile to file and therefore we are unable to provide an authentication code. This is because it is a UK Establishment of an overseas company.</p>
+  <p class="govuk-body"><strong>Overseas Bank</strong> is a UK Establishment of an overseas company. Therefore they are unable to file using this service.(Content TBC)</p>
+
+  <br>
+
+    {{ govukButton({
+          text: "Return to company overview",
+          href:"company-overview"
+      }) }}
+
+
 
     <p class="govuk-body"> 
-  <a href="https://find-update-company-info.herokuapp.com/v9-your-companies/your-companies-card" class="govuk-link" target="_blank">Return to company homepage</a>
+  <a href="company-number-chs.html" class="govuk-link" target="_blank">Enter another company number</a>
 </p>
 
     </form>
