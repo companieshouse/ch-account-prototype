@@ -1,0 +1,35 @@
+
+  
+  
+   <!-- scenario 2 only -->
+
+   {% if (data['set-journey'] === "WC2")%}
+
+  
+ <p>Signed in to WebFiling as <br> old-email@hotmail.com </p>
+
+
+   <!-- all other scenarios -->
+   {% else %}
+   
+  
+ <p>Signed in to Companies House</p>
+
+ {% endif %}
+
+
+
+
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="">Sign out</a>
+  </li>
+  <br>
+<li>
+    <a class="govuk-link govuk-link--no-visited-state" href="">My recent filings</a>
+  </li>
+<br>
+    <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="">Change account details</a>
+  </li>
+</ul>
