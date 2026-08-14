@@ -258,7 +258,7 @@ router.post('/scrs/one-login/create-complete', function (req, res) {
   } else if (journey) {
     res.redirect('../verify-email-address')
   } else {
-    res.redirect('../scrs-end-linking')
+    res.redirect('../verify-email-address')
   }
 
 })
@@ -277,7 +277,7 @@ router.post('/scrs/one-login/create-complete', function (req, res) {
   } else if (journey) {
     res.redirect('../verify-email-address')
   } else {
-    res.redirect('../scrs-end-linking')
+    res.redirect('../verify-email-address')
   }
 
 })
