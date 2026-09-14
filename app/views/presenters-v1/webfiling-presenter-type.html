@@ -1,0 +1,204 @@
+{% extends "layouts/webfiling.html" %}
+
+{% block pageTitle %}
+Change of offce address ({{ data['companyNumber'] }}) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+<!-- 
+##################################################################################################################
+
+DEVS 
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+This HTML is completely unsuitable for use in production sites
+
+##################################################################################################################
+-->
+
+{% block content %}
+<form action="{{currentUrl}}" method="post">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter webfiling-menu">
+    {% include "/includes/webfiling-left-menu.html" %}
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <span class="govuk-caption-m govuk-!-margin-bottom-4">Filing for: {{ data['company'] }} ({{ data['companyNumber'] }}) </span>
+      <h1 class="govuk-heading-l">What is your role in this filing?</h1>
+
+      <fieldset class="govuk-fieldset" aria-describedby="presenterType-hint">
+        <div class="govuk-radios" data-module="govuk-radios">
+
+          <!-- ACSP doing a company filing -->
+          {% if data['scenarios'] == 'acsp_company_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="acspEmployee">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an ACSP officer or employee
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-3" name="presenterType" type="radio" value="director">
+              <label class="govuk-label govuk-radios__label" for="presenterType-3">
+                I'm an officer or employee of {{ data['company'] }}
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-4" name="presenterType" type="radio" value="employeeCorporate">
+              <label class="govuk-label govuk-radios__label" for="presenterType-4">
+                I'm an officer or employee of a corporate director of {{ data['company'] }}
+              </label>
+            </div>
+
+
+          <!-- Sole trader ACSP doing a company filing -->
+          {% elif data['scenarios'] == 'sole_acsp_company_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="acspSoleTrader">
+              <label class="govuk-label govuk-radios__label" for="presenterType">
+                I am the ACSP 
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="director">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an officer or employee of {{ data['company'] }}
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-3" name="presenterType" type="radio" value="employeeCorporate">
+              <label class="govuk-label govuk-radios__label" for="presenterType-3">
+                I'm an officer or employee of a corporate director of {{ data['company'] }}
+              </label>
+            </div>
+
+          <!-- A verified company officer/ employee doing a company filing -->
+          {% elif data['scenarios'] == 'verified_employee_company_filing' %}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="director">
+            <label class="govuk-label govuk-radios__label" for="presenterType">
+              I'm an officer or employee of {{ data['company'] }}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="employeeCorporate">
+            <label class="govuk-label govuk-radios__label" for="presenterType-2">
+              I'm an officer or employee of a corporate director of {{ data['company'] }}
+            </label>
+          </div>
+
+          <!-- An unverified company officer/ employee doing a company filing -->
+          {% elif data['scenarios'] == 'unverified_employee_company_filing' %}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="director">
+            <label class="govuk-label govuk-radios__label" for="presenterType">
+              I'm an officer or employee of {{ data['company'] }}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="employeeCorporate">
+            <label class="govuk-label govuk-radios__label" for="presenterType-2">
+              I'm an officer or employee of a corporate director of {{ data['company'] }}
+            </label>
+          </div>
+
+          <!-- An ACSP doing an individual filing -->
+          {% elif data['scenarios'] == 'acsp_individual_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="acspEmployee">
+              <label class="govuk-label govuk-radios__label" for="presenterType">
+                I'm an ACSP officer or employee
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="myself">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an individual filing for myself
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-3" name="presenterType" type="radio" value="someoneElse">
+              <label class="govuk-label govuk-radios__label" for="presenterType-3">
+                I'm an individual filing on behalf of another person
+              </label>
+            </div>
+
+          <!-- An sole trader ACSP doing an individual filing -->
+          {% elif data['scenarios'] == 'sole_acsp_individual_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="acspSoleTrader">
+              <label class="govuk-label govuk-radios__label" for="presenterType">
+                I am the ACSP
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="myself">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an individual filing for myself
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-3" name="presenterType" type="radio" value="someoneElse">
+              <label class="govuk-label govuk-radios__label" for="presenterType-3">
+                I'm an individual filing on behalf of another person
+              </label>
+            </div>
+
+           <!-- An individual doing an individual filing -->
+          {% elif data['scenarios'] == 'individual_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="myself">
+              <label class="govuk-label govuk-radios__label" for="presenterType">
+                I'm an individual filing for myself
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="someoneElse">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an individual filing on behalf of another person
+              </label>
+            </div>
+
+          <!-- An unverified individual doing an individual filing -->
+          {% elif data['scenarios'] == 'unverified_individual_filing' %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType" name="presenterType" type="radio" value="myself">
+              <label class="govuk-label govuk-radios__label" for="presenterType">
+                I'm an individual filing for myself
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="presenterType-2" name="presenterType" type="radio" value="someoneElse">
+              <label class="govuk-label govuk-radios__label" for="presenterType-2">
+                I'm an individual filing on behalf of another person
+              </label>
+            </div>
+          {% else%} 
+            A N Other Company ltd
+          {% endif %}
+        </div>
+      </fieldset>
+
+      <form action="{{currentUrl}}" method="post">
+        <div class="horizontal-components-split govuk-!-margin-top-9">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        
+          <p class="govuk-body">
+            <a href="#" class="govuk-link">Cancel</a>
+          </p>
+        </div>
+      </form>
+
+
+    </div>
+
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,215 @@
+// @ts-nocheck
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+
+module.exports = router;
+
+// Show session data and URLs in the terminal  
+router.use((req, res, next) => {  
+  const log = {  
+    method: req.method,  
+    url: req.originalUrl,  
+    data: req.session.data  
+  }  
+  console.log(JSON.stringify(log, null, 2))  
+  next()  
+}) 
+
+
+// ******* scenario javascript ********************************
+router.get('/presenters-v1/scenario', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/scenario', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/scenario', function (req, res) {
+  res.redirect('/presenters-v1/sign-in')
+})
+
+
+// ******* Sign-in javascript ********************************
+router.get('/presenters-v1/sign-in', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/sign-in', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/sign-in', function (req, res) {
+  res.redirect('/presenters-v1/sign-in-interrupt')
+})
+
+
+// ******* sign-in-interrupt javascript ********************************
+router.get('/presenters-v1/sign-in-interrupt', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/sign-in-interrupt', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/sign-in-interrupt', function (req, res) {
+  res.redirect('/presenters-v1/create-or-sign-in')
+})
+
+
+// ******* create-or-sign-in javascript ********************************
+router.get('/presenters-v1/create-or-sign-in', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/create-or-sign-in', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/create-or-sign-in', function (req, res) {
+  res.redirect('/presenters-v1/one-login-email')
+})
+
+
+// ******* one-login-email javascript ********************************
+router.get('/presenters-v1/one-login-email', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/one-login-email', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/one-login-email', function (req, res) {
+  res.redirect('/presenters-v1/one-login-password')
+})
+
+
+// ******* one-login-password javascript ********************************
+router.get('/presenters-v1/one-login-password', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/one-login-password', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/one-login-password', function (req, res) {
+  res.redirect('/presenters-v1/one-login-enter-code')
+})
+
+
+// ******* one-login-enter-code javascript ********************************
+router.get('/presenters-v1/one-login-enter-code', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/one-login-enter-code', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/one-login-enter-code', function (req, res) {
+  res.redirect('/presenters-v1/your-companies')
+})
+
+
+
+// ******* company-overview-bigshop javascript ********************************
+router.get('/presenters-v1/company-overview-bigshop', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/company-overview-bigshop', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/company-overview-bigshop', function (req, res) {
+  // if (req.session.data['scenarios'] === 'acsp_company_filing' ||
+  //     req.session.data['scenarios'] === 'sole_acsp_company_filing' ||
+  //     req.session.data['scenarios'] === 'verified_employee_company_filing') {
+    res.redirect('/presenters-v1/webfiling-presenter-type')
+})
+
+
+// ******* company-overview-nr1 javascript ********************************
+router.get('/presenters-v1/company-overview-nr1', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/company-overview-nr1', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/company-overview-nr1', function (req, res) {
+  // if (req.session.data['scenarios'] === 'acsp_company_filing' ||
+  //     req.session.data['scenarios'] === 'sole_acsp_company_filing' ||
+  //     req.session.data['scenarios'] === 'verified_employee_company_filing') {
+    res.redirect('/presenters-v1/webfiling-presenter-type')
+})
+
+
+// ******* webfiling-presenter-type javascript ********************************
+router.get('/presenters-v1/webfiling-presenter-type', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/webfiling-presenter-type', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/webfiling-presenter-type', function (req, res) {
+
+  if (req.session.data['scenarios'] === 'unverified_employee_company_filing' ||
+      req.session.data['scenarios'] === 'unverified_individual_filing'
+  ) {
+    res.redirect('/presenters-v1/need-to-verify') }
+  else
+    {res.redirect('/presenters-v1/webfiling-presenter-statements')}
+})
+
+
+// ******* webfiling-presenter-statements javascript ********************************
+router.get('/presenters-v1/webfiling-presenter-statements', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/webfiling-presenter-statements', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/webfiling-presenter-statements', function (req, res) {
+  res.redirect('/presenters-v1/change-address')
+})
+
+
+// ******* change-address javascript ********************************
+router.get('/presenters-v1/change-address', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/change-address', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/change-address', function (req, res) {
+  res.redirect('/presenters-v1/change-address-confirmation')
+})
+
+
+// ******* change-address-lookup javascript ********************************
+router.get('/presenters-v1/change-address-lookup', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/change-address-lookup', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/change-address-lookup', function (req, res) {
+  res.redirect('/presenters-v1/change-address-confirmation')
+})
+
+
+// ******* change-address-confirmation javascript ********************************
+router.get('/presenters-v1/change-address-confirmation', function (req, res) {
+  // Set URl
+  res.render('presenters-v1/change-address-confirmation', {
+    currentUrl: req.originalUrl
+  })
+})
+
+router.post('/presenters-v1/change-address-confirmation', function (req, res) {
+  res.redirect('/presenters-v1/company-overview')
+})
+
+
+
+
