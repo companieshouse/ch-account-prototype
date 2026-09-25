@@ -1,0 +1,236 @@
+{% extends "layouts/layout.html" %}
+
+
+{% set serviceName %}
+  
+{% endset%}
+
+{% block pageTitle %}
+  Sign in to WebFiling
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+  <a href="lenders-saved-companies" class="govuk-back-link">Back to saved companies</a>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds ">
+
+
+  <form action="start-page" method="post" novalidate="">
+    
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">You've entered one (or both) of the codes incorrectly too many times for this company number. You need to wait 5 minutes before you can try again.
+ </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    <!--
+    {% set html %}
+    <p class="govuk-notification-banner__heading">
+     The way you sign in to WebFiling has changed.
+    </p>
+  {% endset %}
+
+  {{ govukNotificationBanner({
+    html: html
+  }) }}-->
+
+
+  <!--    <h1 class="govuk-heading-l">Enter your lender details</h1>
+
+
+    <p>This service is for lenders to file charge (mortgage) documents.</p>
+
+    <div class="govuk-form-group govuk-form-group--error">
+
+  <p id="lender-details-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+   You've entered one (or both) of the codes incorrectly too many times. You need to wait 5 minutes before you can try again.
+  <label class="govuk-label" for="company-number">
+    <strong>Company number</strong>
+  </label>
+
+  <div id="company-number-hint" class="govuk-hint">
+    This is 8 characters long.
+  </div>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="company-number"
+    name="company-number"
+    type="text"
+    aria-describedby="company-number-hint lender-details-error">
+
+
+  <label class="govuk-label govuk-!-margin-top-6" for="lender-authentication-code">
+    <strong>Lender authentication code</strong>
+  </label>
+<!--  -->
+<!--   <div id="lender-authentication-code-hint" class="govuk-hint">
+    This is an 8 character code. It's required if you need to file charge (mortgage) documents online for other companies.
+  </div>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="lender-authentication-code"
+    name="lender-authentication-code"
+    type="text"
+    aria-describedby="lender-authentication-code-hint lender-details-error">
+
+
+  <label class="govuk-label govuk-!-margin-top-6" for="presenter-authentication-code">
+    <strong>Presenter authentication code</strong>
+  </label>
+
+  <div id="presenter-authentication-code-hint" class="govuk-hint">
+    This is an 11 character code. It identifies the agent or software user who is submitting a filing.
+  </div>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="presenter-authentication-code"
+    name="presenter-authentication-code"
+    type="text"
+    aria-describedby="presenter-authentication-code-hint lender-details-error">
+
+</div> -->
+
+<div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-6">
+
+  <label class="govuk-label" for="company-number">
+    <strong>Company number</strong>
+  </label>
+
+  <div id="company-number-hint" class="govuk-hint">
+    This is 8 characters long.
+  </div>
+
+  <p id="company-number-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+    You've entered one (or both) of the codes incorrectly too many times for this company number. You need to wait 5 minutes before you can try again.
+ 
+  </p>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="company-number"
+    name="company-number"
+    type="text"
+    aria-describedby="company-number-hint company-number-error">
+
+</div>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How do I find the company number?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You can find this by searching for the company on the <a href="https://find-and-update.company-information.service.gov.uk/" class="govuk-link--no-visited-state rel="noreferrer noopener" target="_blank">Companies House register (opens in new tab)</a>.
+  </div>
+</details>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="lender-authentication-code">
+    <strong>Lender authentication code</strong>
+  </label>
+
+  <div id="lender-authentication-code-hint" class="govuk-hint">
+    This is an 8 character code. It's required if you need to file charge (mortgage) documents online for other companies.
+  </div>
+
+  <p id="lender-authentication-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+   You've entered one (or both) of the codes incorrectly too many times for this company number. You need to wait 5 minutes before you can try again.
+ 
+  </p>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="lender-authentication-code"
+    name="lender-authentication-code"
+    type="text"
+    aria-describedby="lender-authentication-code-hint lender-authentication-code-error">
+</div>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="presenter-authentication-code">
+    <strong>Presenter authentication code</strong>
+  </label>
+
+  <div id="presenter-authentication-code-hint" class="govuk-hint">
+    This is an 11 character code. It identifies the agent or software user who is submitting a filing.
+  </div>
+
+  <p id="presenter-authentication-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+  You've entered one (or both) of the codes incorrectly too many times for this company number. You need to wait 5 minutes before you can try again.
+  </p>
+
+  <input
+    class="govuk-input govuk-input--width-10 govuk-input--error"
+    id="presenter-authentication-code"
+    name="presenter-authentication-code"
+    type="text"
+    aria-describedby="presenter-authentication-code-hint presenter-authentication-code-error">
+</div>
+
+
+<br>
+
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I do not have the authentication codes
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  
+<p class="govuk-body">If you're a lender and do not have the authentication codes needed to access this service, you'll have to <a href="https://www.gov.uk/government/publications/apply-to-register-as-a-lender-to-file-charge-documents-for-a-company" class="govuk-link--no-visited-state rel="noreferrer noopener" target="_blank">apply to register as a lender to file charge documents for a company (opens in new tab)</a>.</p> 
+
+  <p class="govuk-body">If you've previously registered as a lender but no longer have the codes, contact us at <strong>enquiries@companieshouse.gov.uk</strong></p>
+  
+  </div>
+</details>
+ 
+
+<div class="govuk-!-padding-top-4
+ ">
+    {{ govukButton({
+    text: "Continue",
+    href:"company-overview-pearson"
+    
+  }) }}
+
+</div>
+
+  
+</div>
+</div>
+{% endblock %}
